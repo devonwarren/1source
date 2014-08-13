@@ -1,0 +1,14 @@
+$baseColor: #FFFFFF;
+$secondaryColor: #F36C21;
+$baseTextColor: #000000;
+
+
+body {
+	font-family: 'Abel', sans-serif;
+	background-color: $baseColor;
+	color: $baseTextColor;
+}
+
+h1 {
+	color: $secondaryColor;
+}
