@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'ordered_model',
     'sections',
+    'journal',
 )
 
 MIDDLEWARE_CLASSES = (
