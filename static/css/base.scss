@@ -3,12 +3,27 @@ $secondaryColor: #F36C21;
 $baseTextColor: #000000;
 
 
+@font-face {
+	font-family: 'AdelleSans';
+	src: url('../fonts/AdelleSans.woff2') format('woff2'),
+		url('../fonts/AdelleSans.woff') format('woff'),
+		url('../fonts/AdelleSans.otf') format('otf');
+}
+
+@font-face {
+	font-family: 'OfficinaSer';
+	src: url('../fonts/OfficinaSer.woff2') format('woff2'),
+		url('../fonts/OfficinaSer.woff') format('woff'),
+		url('../fonts/OfficinaSer.otf') format('otf');
+}
+
 body {
-	font-family: 'Abel', sans-serif;
+	font-family: 'AdelleSans', sans-serif;
 	background-color: $baseColor;
 	color: $baseTextColor;
 }
 
 h1 {
+	font-family: 'OfficinaSer', sans-serif;
 	color: $secondaryColor;
 }
