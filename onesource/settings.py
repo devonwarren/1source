@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'ordered_model',
     'sections',
     'journal',
+    'featured',
 )
 
 MIDDLEWARE_CLASSES = (
