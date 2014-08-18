@@ -8,3 +8,8 @@ def style_guide(request):
     html = t.render(Context())
     return HttpResponse(html)
     
+def homepage(request):
+    t = get_template('homepage.html')
+    html = t.render(Context())
+    return HttpResponse(html)
+    

@@ -1,14 +1,147 @@
 @font-face {
   font-family: 'AdelleSans';
-  src: url("../fonts/AdelleSans.woff2") format("woff2"), url("../fonts/AdelleSans.woff") format("woff"), url("../fonts/AdelleSans.otf") format("otf"); }
+  src: url("../fonts/AdelleSans.woff2") format("woff2"), url("../fonts/AdelleSans.woff") format("woff"), url("../fonts/AdelleSans.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url("../fonts/Adelle-Regular.woff2") format("woff2"), url("../fonts/Adelle-Regular.woff") format("woff"), url("../fonts/Adelle-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url("../fonts/Adelle-Italtic.woff2") format("woff2"), url("../fonts/Adelle-Italtic.woff") format("woff"), url("../fonts/Adelle-Italtic.otf") format("otf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url("../fonts/Adelle-Bold.woff2") format("woff2"), url("../fonts/Adelle-Bold.woff") format("woff"), url("../fonts/Adelle-Bold.otf") format("otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url("../fonts/Adelle-BoldItalic.woff2") format("woff2"), url("../fonts/Adelle-BoldItalic.woff") format("woff"), url("../fonts/Adelle-BoldItalic.otf") format("otf");
+  font-weight: bold;
+  font-style: italic;
+}
+
 @font-face {
   font-family: 'OfficinaSer';
-  src: url("../fonts/OfficinaSer.woff2") format("woff2"), url("../fonts/OfficinaSer.woff") format("woff"), url("../fonts/OfficinaSer.otf") format("otf"); }
-body {
-  font-family: 'AdelleSans', sans-serif;
-  background-color: white;
-  color: black; }
+  src: url("../fonts/OfficinaSer.woff2") format("woff2"), url("../fonts/OfficinaSer.woff") format("woff"), url("../fonts/OfficinaSer.otf") format("otf");
+}
 
+/* line 64, base.scss */
+body {
+  font-family: 'Adelle', sans-serif;
+  background-color: #d8d8d2;
+  color: #5c4c46;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 78, base.scss */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #5c4c46;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/* line 84, base.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 88, base.scss */
 h1 {
-  font-family: 'OfficinaSer', sans-serif;
-  color: #f36c21; }
+  font-family: 'OfficinaSer', serif;
+  color: white;
+  font-size: 3.2em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* line 96, base.scss */
+h2 {
+  font-family: 'OfficinaSer', serif;
+  color: #5c4c46;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+/* line 103, base.scss */
+h3 {
+  font-family: 'OfficinaSer', serif;
+  color: white;
+  font-size: 2.6em;
+  font-weight: bold;
+}
+
+/* line 110, base.scss */
+h4 {
+  font-family: 'OfficinaSer', serif;
+  color: #5c4c46;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+/* line 117, base.scss */
+a img {
+  border: none;
+}
+
+/* line 121, base.scss */
+nav ul {
+  list-style: none;
+  margin: 0;
+  float: right;
+  padding-right: 2em;
+  padding-top: 2em;
+}
+/* line 127, base.scss */
+nav ul li {
+  display: inline;
+  padding: 1em;
+}
+/* line 133, base.scss */
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:active {
+  font-family: 'AdelleSans', sans-serif;
+  color: #7f716b;
+  font-size: .9em;
+}
+
+/* line 142, base.scss */
+body.homepage div#logo {
+  padding: 10em 0 5em;
+  width: 100%;
+  text-align: center;
+}
+/* line 146, base.scss */
+body.homepage div#logo h1.logo_large {
+  background: url("../images/logo_large.png") no-repeat center top;
+  height: 112px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 154, base.scss */
+body.homepage header#hero {
+  background: url("../images/homepage_welcome.jpg") no-repeat center top;
+  background-size: cover;
+}

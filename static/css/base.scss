@@ -1,14 +1,58 @@
-$baseColor: #FFFFFF;
-$secondaryColor: #F36C21;
-$baseTextColor: #000000;
+// orangish colors
+$primary1: #E86432;
+$primary2: #C7522A;
 
+// greyish colors
+$secondary1: #3B2B26;
+$secondary2: #291D1A;
+$secondary3: #5C4C46;
+$secondary4: #7F716B;
+$secondary5: #A99E98;
+$secondary6: #D8D8D2;
 
 @font-face {
 	font-family: 'AdelleSans';
 	src: url('../fonts/AdelleSans.woff2') format('woff2'),
 		url('../fonts/AdelleSans.woff') format('woff'),
 		url('../fonts/AdelleSans.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
 }
+
+
+@font-face {
+	font-family: 'Adelle';
+	src: url('../fonts/Adelle-Regular.woff2') format('woff2'),
+		url('../fonts/Adelle-Regular.woff') format('woff'),
+		url('../fonts/Adelle-Regular.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Adelle';
+	src: url('../fonts/Adelle-Italtic.woff2') format('woff2'),
+		url('../fonts/Adelle-Italtic.woff') format('woff'),
+		url('../fonts/Adelle-Italtic.otf') format('otf');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Adelle';
+	src: url('../fonts/Adelle-Bold.woff2') format('woff2'),
+		url('../fonts/Adelle-Bold.woff') format('woff'),
+		url('../fonts/Adelle-Bold.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Adelle';
+	src: url('../fonts/Adelle-BoldItalic.woff2') format('woff2'),
+		url('../fonts/Adelle-BoldItalic.woff') format('woff'),
+		url('../fonts/Adelle-BoldItalic.otf') format('otf');
+	font-weight: bold;
+	font-style: italic;
+}
+
 
 @font-face {
 	font-family: 'OfficinaSer';
@@ -18,12 +62,97 @@ $baseTextColor: #000000;
 }
 
 body {
-	font-family: 'AdelleSans', sans-serif;
-	background-color: $baseColor;
-	color: $baseTextColor;
+	font-family: 'Adelle', sans-serif;
+	background-color: $secondary6;
+	color: $secondary3;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: $secondary3;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 h1 {
-	font-family: 'OfficinaSer', sans-serif;
-	color: $secondaryColor;
+	font-family: 'OfficinaSer', serif;
+	color: white;
+	font-size: 3.2em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: 'OfficinaSer', serif;
+	color: $secondary3;
+	font-size: 3em;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: 'OfficinaSer', serif;
+	color: white;
+	font-size: 2.6em;
+	font-weight: bold;
+}
+
+h4 {
+	font-family: 'OfficinaSer', serif;
+	color: $secondary3;
+	font-size: 2em;
+	font-weight: normal;
+}
+
+a img {
+	border: none;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	float: right;
+	padding-right: 2em;
+	padding-top: 2em;
+	li {
+		display: inline;
+		padding: 1em;
+		a:link,
+		a:visited,
+		a:hover,
+		a:active {
+			font-family: 'AdelleSans', sans-serif;
+			color: $secondary4;
+			font-size: .9em;
+		}
+	}
+}
+
+body.homepage {
+	div#logo {
+		padding: 10em 0 5em;
+		width: 100%;
+		text-align: center;
+		h1.logo_large {
+			background: url('../images/logo_large.png') no-repeat center top;
+			height: 112px;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+	header#hero {
+		background: url('../images/homepage_welcome.jpg') no-repeat center top;
+		background-size: cover;
+	}
 }
