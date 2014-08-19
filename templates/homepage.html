@@ -3,6 +3,8 @@
 <head>
 {% load staticfiles %}
 <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{% static "js/homepage.js" %}"></script>
 </head>
 <body class="homepage">
 <header id="hero">
@@ -13,7 +15,7 @@
 			<li><a href="/successes">SUCCESSES</a></li>
 			<li><a href="/journal">JOURNAL</a></li>
 			<li><a href="/contact">CONTACT</a></li>
-			<li><a href="http://www.linkedin.com"><img src="{% static "images/linkedin.png" %}" title="LinkedIn Profile"></a></li>
+			<li><a href="http://www.linkedin.com"><img src="{% static "images/linkedin.svg" %}" class="linkedin-icon" title="LinkedIn Profile"></a></li>
 		</ul>
 	</nav>
 	<div id="logo">

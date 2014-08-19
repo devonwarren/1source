@@ -138,14 +138,19 @@ nav ul {
 	}
 }
 
+.linkedin-icon {
+	width: 1.6em;
+	height: 1.6em;
+}
+
 body.homepage {
 	div#logo {
 		padding: 10em 0 5em;
 		width: 100%;
 		text-align: center;
 		h1.logo_large {
-			background: url('../images/logo_large.png') no-repeat center top;
-			height: 112px;
+			background: url('../images/logo_large.svg') no-repeat center top;
+			height: 4em;
 			text-indent: 100%;
 			white-space: nowrap;
 			overflow: hidden;

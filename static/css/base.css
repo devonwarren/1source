@@ -126,21 +126,27 @@ nav ul li a:active {
   font-size: .9em;
 }
 
-/* line 142, base.scss */
+/* line 141, base.scss */
+.linkedin-icon {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+/* line 147, base.scss */
 body.homepage div#logo {
   padding: 10em 0 5em;
   width: 100%;
   text-align: center;
 }
-/* line 146, base.scss */
+/* line 151, base.scss */
 body.homepage div#logo h1.logo_large {
-  background: url("../images/logo_large.png") no-repeat center top;
-  height: 112px;
+  background: url("../images/logo_large.svg") no-repeat center top;
+  height: 4em;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 154, base.scss */
+/* line 159, base.scss */
 body.homepage header#hero {
   background: url("../images/homepage_welcome.jpg") no-repeat center top;
   background-size: cover;
