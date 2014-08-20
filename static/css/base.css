@@ -58,14 +58,15 @@ a:active {
   color: #5c4c46;
   font-weight: normal;
   text-decoration: none;
+  outline: none;
 }
 
-/* line 84, base.scss */
+/* line 85, base.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 88, base.scss */
+/* line 89, base.scss */
 h1 {
   font-family: 'OfficinaSer', serif;
   color: white;
@@ -76,7 +77,7 @@ h1 {
   padding: 0;
 }
 
-/* line 98, base.scss */
+/* line 99, base.scss */
 h2 {
   font-family: 'OfficinaSer', serif;
   color: #5c4c46;
@@ -84,7 +85,7 @@ h2 {
   font-weight: normal;
 }
 
-/* line 105, base.scss */
+/* line 106, base.scss */
 h3 {
   font-family: 'OfficinaSer', serif;
   color: white;
@@ -92,7 +93,7 @@ h3 {
   font-weight: bold;
 }
 
-/* line 112, base.scss */
+/* line 113, base.scss */
 h4 {
   font-family: 'OfficinaSer', serif;
   color: #5c4c46;
@@ -100,12 +101,12 @@ h4 {
   font-weight: normal;
 }
 
-/* line 119, base.scss */
+/* line 120, base.scss */
 a img {
   border: none;
 }
 
-/* line 123, base.scss */
+/* line 124, base.scss */
 nav ul {
   list-style: none;
   margin: 0;
@@ -113,12 +114,12 @@ nav ul {
   padding-right: 2em;
   padding-top: 2em;
 }
-/* line 129, base.scss */
+/* line 130, base.scss */
 nav ul li {
   display: inline;
   padding: 1em;
 }
-/* line 135, base.scss */
+/* line 136, base.scss */
 nav ul li a:link,
 nav ul li a:visited,
 nav ul li a:hover,
@@ -128,50 +129,50 @@ nav ul li a:active {
   font-size: .9em;
 }
 
-/* line 143, base.scss */
+/* line 144, base.scss */
 .linkedin-icon {
   width: 1.6em;
   height: 1.6em;
 }
 
-/* line 148, base.scss */
+/* line 149, base.scss */
 footer {
   text-align: center;
   background-color: #c7522a;
   color: white;
 }
-/* line 152, base.scss */
+/* line 153, base.scss */
 footer > ul {
   margin: 0;
   padding: 1em;
   list-style: none;
   font-family: 'AdelleSans', sans-serif;
 }
-/* line 157, base.scss */
+/* line 158, base.scss */
 footer > ul > li {
   display: inline-block;
   vertical-align: top;
   padding: 1em;
   text-align: left;
 }
-/* line 162, base.scss */
+/* line 163, base.scss */
 footer > ul > li ul {
   list-style: none;
   font-size: .8em;
   padding-left: 0;
 }
-/* line 166, base.scss */
+/* line 167, base.scss */
 footer > ul > li ul li {
   padding-top: .4em;
 }
-/* line 172, base.scss */
+/* line 173, base.scss */
 footer #copyright {
   font-family: 'AdelleSans', sans-serif;
   font-size: .7em;
   padding-bottom: 1em;
 }
 
-/* line 179, base.scss */
+/* line 180, base.scss */
 .logo_white {
   background: url("../images/logo_white.svg") no-repeat center top;
   height: 2em;
@@ -180,13 +181,13 @@ footer #copyright {
   overflow: hidden;
 }
 
-/* line 190, base.scss */
+/* line 191, base.scss */
 body.homepage div#logo {
   padding: 10em 0 5em;
   width: 100%;
   text-align: center;
 }
-/* line 194, base.scss */
+/* line 195, base.scss */
 body.homepage div#logo h1.logo_large {
   background: url("../images/logo_large.svg") no-repeat center top;
   height: 4em;
@@ -194,20 +195,20 @@ body.homepage div#logo h1.logo_large {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 202, base.scss */
+/* line 203, base.scss */
 body.homepage header#hero {
   background: url("../images/homepage_welcome.jpg") no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
 }
-/* line 207, base.scss */
+/* line 208, base.scss */
 body.homepage div#enter {
   position: absolute;
   bottom: 2em;
   width: 100%;
   text-align: center;
 }
-/* line 212, base.scss */
+/* line 213, base.scss */
 body.homepage div#enter a {
   background-color: black;
   border-radius: 12em;
@@ -220,7 +221,7 @@ body.homepage div#enter a {
   background-size: 70%;
   opacity: .7;
 }
-/* line 223, base.scss */
+/* line 224, base.scss */
 body.homepage div#enter a:hover {
   opacity: 1;
 }
