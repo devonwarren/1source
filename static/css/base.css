@@ -212,18 +212,18 @@ body.homepage div#enter {
 }
 /* line 215, base.scss */
 body.homepage div#enter a {
-  background-color: black;
   border-radius: 12em;
   height: 4em;
   width: 4em;
   background-image: url("/static/images/arrow.png");
   display: inline-block;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 60%;
   background-size: 70%;
-  opacity: .6;
+  transition: all 300ms ease-in;
 }
-/* line 226, base.scss */
+/* line 225, base.scss */
 body.homepage div#enter a:hover {
-  opacity: .9;
+  background-color: #111;
+  transition: all 300ms ease-in;
 }
