@@ -5,7 +5,3 @@ function fullHeightHero() {
 jQuery(window).load(function() {
 	fullHeightHero();
 });
-
-jQuery(window).resize(function() {
-	fullHeightHero();
-});
