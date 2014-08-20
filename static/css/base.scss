@@ -128,8 +128,9 @@ nav ul {
 	padding-right: 2em;
 	padding-top: 2em;
 	li {
-		display: inline;
+		display: inline-block;
 		padding: 1em;
+		vertical-align: middle;
 		a:link,
 		a:visited,
 		a:hover,
