@@ -4,15 +4,16 @@
 {% load staticfiles %}
 <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{% static "js/main.js" %}"></script>
 <script src="{% static "js/homepage.js" %}"></script>
 </head>
 <body class="homepage">
 <header id="hero">
 	<nav>
 		<ul>
-			<li><a href="/story">STORY</a></li>
-			<li><a href="/services">SERVICES</a></li>
-			<li><a href="/successes">SUCCESSES</a></li>
+			<li><a href="/#story">STORY</a></li>
+			<li><a href="/#services">SERVICES</a></li>
+			<li><a href="/#successes">SUCCESSES</a></li>
 			<li><a href="/journal">JOURNAL</a></li>
 			<li><a href="/contact">CONTACT</a></li>
 			<li><a href="http://www.linkedin.com"><img src="{% static "images/linkedin.svg" %}" class="linkedin-icon" title="LinkedIn Profile"></a></li>
@@ -21,6 +22,34 @@
 	<div id="logo">
 		<a href="/"><h1 class="logo_large">1Source</h1></a>
 	</div>
+	<div id="enter">
+		<a href="#story" title="Enter"></a>
+	</div>
 </header>
+<main>
+	<a id="story" class="anchor"></a>
+</main>
+<footer>
+	<ul>
+		<li>STORY
+			<ul>
+				<li>OUR STORY</li>
+				<li>FOUNDERS</li>
+				<li>COMMUNITY COMMITMENT</li>
+			</ul>
+		</li>
+		<li>SERVICES
+			<ul>
+				<li>BUSINESS &amp; IT STRATEGY</li>
+				<li>MANAGING FOR SUCCESS</li>
+				<li>WHAT OTHERS ARE SAYING</li>
+				<li>CONTRACT VEHICLES</li>
+			</ul>
+		</li>
+		<li>SUCCESSES</li>
+		<li>JOURNAL</li>
+		<li>CONTACT</li>
+	</ul>
+</footer>
 </body>
 </html>

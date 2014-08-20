@@ -150,4 +150,29 @@ body.homepage div#logo h1.logo_large {
 body.homepage header#hero {
   background: url("../images/homepage_welcome.jpg") no-repeat center top;
   background-size: cover;
+  background-attachment: fixed;
+}
+/* line 164, base.scss */
+body.homepage div#enter {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  right: 50%;
+}
+/* line 169, base.scss */
+body.homepage div#enter a {
+  background-color: black;
+  border-radius: 12em;
+  height: 4em;
+  width: 4em;
+  background-image: url("/static/images/arrow.png");
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70%;
+  opacity: .7;
+}
+/* line 180, base.scss */
+body.homepage div#enter a:hover {
+  opacity: 1;
 }
