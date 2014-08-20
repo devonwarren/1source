@@ -156,8 +156,8 @@ body.homepage header#hero {
 body.homepage div#enter {
   position: absolute;
   bottom: 2em;
-  left: 50%;
-  right: 50%;
+  width: 100%;
+  text-align: center;
 }
 /* line 169, base.scss */
 body.homepage div#enter a {
