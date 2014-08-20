@@ -189,7 +189,8 @@ footer {
 
 body.homepage {
 	div#logo {
-		padding: 10em 0 5em;
+		position: absolute;
+		top: 30%;
 		width: 100%;
 		text-align: center;
 		h1.logo_large {
@@ -207,7 +208,7 @@ body.homepage {
 	}
 	div#enter {
 		position: absolute;
-		bottom: 2em;
+		bottom: 8%;
 		width: 100%;
 		text-align: center;
 		a {
@@ -220,9 +221,9 @@ body.homepage {
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: 70%;
-			opacity: .7;
+			opacity: .6;
 			&:hover {
-				opacity: 1;
+				opacity: .9;
 			}
 		}
 	}

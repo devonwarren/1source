@@ -183,11 +183,12 @@ footer #copyright {
 
 /* line 191, base.scss */
 body.homepage div#logo {
-  padding: 10em 0 5em;
+  position: absolute;
+  top: 30%;
   width: 100%;
   text-align: center;
 }
-/* line 195, base.scss */
+/* line 196, base.scss */
 body.homepage div#logo h1.logo_large {
   background: url("../images/logo_large.svg") no-repeat center top;
   height: 4em;
@@ -195,20 +196,20 @@ body.homepage div#logo h1.logo_large {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 203, base.scss */
+/* line 204, base.scss */
 body.homepage header#hero {
   background: url("../images/homepage_welcome.jpg") no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
 }
-/* line 208, base.scss */
+/* line 209, base.scss */
 body.homepage div#enter {
   position: absolute;
-  bottom: 2em;
+  bottom: 8%;
   width: 100%;
   text-align: center;
 }
-/* line 213, base.scss */
+/* line 214, base.scss */
 body.homepage div#enter a {
   background-color: black;
   border-radius: 12em;
@@ -219,9 +220,9 @@ body.homepage div#enter a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 70%;
-  opacity: .7;
+  opacity: .6;
 }
-/* line 224, base.scss */
+/* line 225, base.scss */
 body.homepage div#enter a:hover {
-  opacity: 1;
+  opacity: .9;
 }
