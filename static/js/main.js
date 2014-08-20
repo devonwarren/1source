@@ -12,3 +12,20 @@ $(function() {
     }
   });
 });
+
+$(document).ready(function() {
+
+  $(window).scroll(function() {
+    var top = $(this).scrollTop();
+    height = $('#hero').height();
+
+    if (top >= height) {
+        $('nav#main').addClass('sticky');
+    }
+
+    if (top < height && $('nav').hasClass('sticky')) {
+        $('nav#main').removeClass('sticky');
+    }
+  });
+
+});
