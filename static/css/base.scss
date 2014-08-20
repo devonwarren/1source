@@ -91,6 +91,8 @@ h1 {
 	font-size: 3.2em;
 	font-weight: normal;
 	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
 }
 
 h2 {
@@ -142,6 +144,47 @@ nav ul {
 	width: 1.6em;
 	height: 1.6em;
 }
+
+footer {
+	text-align: center;
+	background-color: $primary2;
+	color: white;
+	& > ul {
+		margin: 0;
+		padding: 1em;
+		list-style: none;
+		font-family: 'AdelleSans', sans-serif;
+		& > li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 1em;
+			text-align: left;
+			ul {
+				list-style: none;
+				font-size: .8em;
+				padding-left: 0;
+				li {
+					padding-top: .4em;
+				}
+			}
+		}
+	}
+	#copyright {
+		font-family: 'AdelleSans', sans-serif;
+		font-size: .7em;
+		padding-bottom: 1em;
+	}
+}
+
+.logo_white {
+	background: url('../images/logo_white.svg') no-repeat center top;
+	height: 2em;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// specific sections and overrides
 
 body.homepage {
 	div#logo {
