@@ -175,7 +175,7 @@ nav a#nav_logo {
   transition: all 300ms ease-in;
 }
 /* line 182, base.scss */
-nav .logo_dark {
+nav .logo_color {
   height: 1.3em;
   width: 4em;
   display: inline-block;
