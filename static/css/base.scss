@@ -303,7 +303,8 @@ body.homepage {
 	aside.homepage-left {
 		width: 50%;
 		float: left;
-		height: 25em;
+		height: 35em;
+		margin-top: 4em;
 		text-align: center;
 		ul {
 			list-style: none;
@@ -315,8 +316,8 @@ body.homepage {
 
 	section.homepage-right {
 		background-color: white;
-		height: 25em;
-		padding: 3em;
+		height: 35em;
+		padding: 6em 4em;
 		margin-left: 50%;
 	}
 }

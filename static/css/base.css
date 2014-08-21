@@ -312,20 +312,21 @@ body.homepage section.homepage-summary {
 body.homepage aside.homepage-left {
   width: 50%;
   float: left;
-  height: 25em;
+  height: 35em;
+  margin-top: 4em;
   text-align: center;
 }
-/* line 308, base.scss */
+/* line 309, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
   color: white;
 }
-/* line 316, base.scss */
+/* line 317, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
-  height: 25em;
-  padding: 3em;
+  height: 35em;
+  padding: 6em 4em;
   margin-left: 50%;
 }
