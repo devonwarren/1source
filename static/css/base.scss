@@ -336,5 +336,11 @@ body.homepage {
 		height: 35em;
 		padding: 6em 4em;
 		margin-left: 50%;
+		.details {
+			display: none;
+		}
+		.details.active {
+			display: block;
+		}
 	}
 }

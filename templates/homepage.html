@@ -30,41 +30,39 @@
 			</ul>
 		</nav>
 	</header>
+
+{% for section in sections %}
 	<section class="homepage-summary">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua.
+		{{ section.featured_text }}
 	</section>
 </div>
-<div class="bgimage" style="background:url('{% static "images/homepage_welcome.jpg" %}');">
-	<a id="story" class="anchor"></a>
-	<section class="homepage-detail">
+<div class="bgimage" style="background-image:url('{{ STATIC_URL }}images/{{ section.title|lower }}.jpg');">
+	<a id="{{ section.title|lower }}" class="anchor"></a>
+	<section class="homepage-detail section-{{ section|lower }}">
 		<aside class="homepage-left">
-			<h2>STORY</h2>
+			<h2>{{ section.title|upper }}</h2>
 			<ul>
-				<li>OUR STORY</li>
-				<li>FOUNDERS</li>
-				<li>COMMUNITY COMMITMENT</li>
+			{% for subsection in subsections %}
+				{% if subsection.section.id = section.id %}
+					{% if forloop.first	%}<li class="active">{% else %}<li>{% endif %}
+					{{ subsection.name|upper }}
+					</li>
+				{% endif %}
+			{% endfor %}
 			</ul>
 		</aside>
-		<section class="homepage-right">
-			<h4>
-				1 Source Consulting Inc. is a
-				service-driven IT strategy and
-				management services company
-				focused on developing, managing,
-				and maintaining large-scale IT
-				projects on time, on budget, and
-				within quality guidelines.
-			</h4>
-			<p>
-				Everything we do is infused with the belief that the successes we create
-				for our Federal clients translate directly into successes for the American
-				citizens and communities they serve. This belief powers our unwavering
-				commitment to excellence, because we understand that our ultimate
-				clients are the American people.
-			</p>
+		<section class="homepage-right section-{{ section|lower }}">
+			{% for subsection in subsections %}
+				{% if subsection.section.id = section.id %}
+					<div class="details{% if forloop.first %} active{%endif %}" id="subsection-{{ subsection.id }}">
+						<h4>{{ subsection.title|upper }}</h4>
+						<p>{{ subsection.description }}</p>
+					</div>
+				{% endif %}
+			{% endfor %}
 		</section>
 	</section>
+{% endfor %}
 
 	<footer>
 		<ul>

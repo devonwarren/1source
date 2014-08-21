@@ -349,3 +349,11 @@ body.homepage section.homepage-right {
   padding: 6em 4em;
   margin-left: 50%;
 }
+/* line 339, base.scss */
+body.homepage section.homepage-right .details {
+  display: none;
+}
+/* line 342, base.scss */
+body.homepage section.homepage-right .details.active {
+  display: block;
+}
