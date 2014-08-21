@@ -21,11 +21,11 @@ $(document).ready(function() {
     var navHeight = $('nav#main').height();
     var targetHeight = heroHeight - navHeight;
 
-    if (top >= targetHeight) {
+    if (!$('nav#main').hasClass('sticky') && top >= targetHeight) {
         $('nav#main').addClass('sticky');
     }
 
-    if (top < targetHeight && $('nav').hasClass('sticky')) {
+    if ($('nav#main').hasClass('sticky') && top < targetHeight) {
         $('nav#main').removeClass('sticky');
     }
   });
