@@ -161,7 +161,7 @@ nav.sticky {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: black;
+  background-color: white;
   opacity: .9;
 }
 /* line 173, base.scss */
@@ -175,7 +175,7 @@ nav a#nav_logo {
   transition: all 300ms ease-in;
 }
 /* line 182, base.scss */
-nav .logo_color {
+nav .logo_dark {
   height: 1.3em;
   width: 4em;
   display: inline-block;

@@ -168,7 +168,7 @@ nav {
 		top: 0;
 		left: 0;
 		z-index: 100;
-		background-color: black;
+		background-color: white;
 		opacity: .9;
 		a#nav_logo {
 			opacity: 1;
@@ -179,7 +179,7 @@ nav {
 		opacity: 0;
 		transition: all 300ms ease-in;
 	}
-	.logo_color {
+	.logo_dark {
 		height: 1.3em;
 		width: 4em;
 		display: inline-block;
