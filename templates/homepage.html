@@ -10,32 +10,34 @@
 </head>
 <body class="homepage">
 <a id="top" class="anchor"></a>
-<header id="hero">
-	<div id="logo">
-		<a href="/#story"><h1 class="logo_color">1Source</h1></a>
-	</div>
-	<div id="enter">
-		<a href="#story"><svg><g><path style="fill:#ffffff" d="M 2,1 32,32 62,1 63,2 32,34 1,2 z" id="arrow"/></g></svg></a>
-	</div>
-	<nav id="main">
-		<a href="/#top" id="nav_logo"><h1 class="logo_color">1Source</h1></a>
-		<ul>
-			<li><a href="/#story">STORY</a></li>
-			<li><a href="/#services">SERVICES</a></li>
-			<li><a href="/#successes">SUCCESSES</a></li>
-			<li><a href="/journal">JOURNAL</a></li>
-			<li><a href="/contact">CONTACT</a></li>
-			<li><a href="http://www.linkedin.com"><img src="{% static "images/linkedin.svg" %}" class="linkedin-icon" title="LinkedIn Profile"></a></li>
-		</ul>
-	</nav>
-</header>
-<main>
+<div class="bgimage" style="background-image:url('{% static "images/homepage_welcome.jpg" %}');">
+	<header id="hero">
+		<div id="logo">
+			<a href="/#story"><h1 class="logo_color">1Source</h1></a>
+		</div>
+		<div id="enter">
+			<a href="#story"><svg><g><path style="fill:#ffffff" d="M 2,1 32,32 62,1 63,2 32,34 1,2 z" id="arrow"/></g></svg></a>
+		</div>
+		<nav id="main">
+			<a href="/#top" id="nav_logo"><h1 class="logo_color">1Source</h1></a>
+			<ul>
+				<li><a href="/#story">STORY</a></li>
+				<li><a href="/#services">SERVICES</a></li>
+				<li><a href="/#success">SUCCESS</a></li>
+				<li><a href="/journal">JOURNAL</a></li>
+				<li><a href="/contact">CONTACT</a></li>
+				<li><a href="http://www.linkedin.com"><img src="{% static "images/linkedin.svg" %}" class="linkedin-icon" title="LinkedIn Profile"></a></li>
+			</ul>
+		</nav>
+	</header>
 	<section class="homepage-summary">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua.
 	</section>
+</div>
+<div class="bgimage" style="background:url('{% static "images/homepage_welcome.jpg" %}');">
 	<a id="story" class="anchor"></a>
-	<section class="homepage-detail" style="background:url('{% static "images/homepage_welcome.jpg" %}') no-repeat center center fixed; background-size: 100%;">
+	<section class="homepage-detail">
 		<aside class="homepage-left">
 			<h2>STORY</h2>
 			<ul>
@@ -63,40 +65,47 @@
 			</p>
 		</section>
 	</section>
-</main>
-<footer>
-	<ul>
-		<li>STORY
-			<ul>
-				<li>OUR STORY</li>
-				<li>FOUNDERS</li>
-				<li>COMMUNITY COMMITMENT</li>
-			</ul>
-		</li>
-		<li>SERVICES
-			<ul>
-				<li>BUSINESS &amp; IT STRATEGY</li>
-				<li>MANAGING FOR SUCCESS</li>
-				<li>CORE TECHNICAL COMPETENCIES</li>
-			</ul>
-		</li>
-		<li>SUCCESSES
-			<ul>
-				<li>CUSTOMER SUCCESS</li>
-				<li>WHAT OTHERS ARE SAYING</li>
-				<li>CONTRACT VEHICLES</li>
-			</ul>
-		</li>
-		<li>JOURNAL</li>
-		<li>CONTACT</li>
-	</ul>
 
-	<div id="branding">
-		<a href="/#top"><h1 class="logo_white">1Source</h1></a>
-		<div id="copyright">
-			&copy; 2014 1Source. All Rights Reserved | Legal &amp; Privacy
+	<footer>
+		<ul>
+			<li>STORY
+				<ul>
+					<li>OUR STORY</li>
+					<li>FOUNDERS</li>
+					<li>COMMUNITY COMMITMENT</li>
+				</ul>
+			</li>
+			<li>SERVICES
+				<ul>
+					<li>BUSINESS &amp; IT STRATEGY</li>
+					<li>MANAGING FOR SUCCESS</li>
+					<li>CORE TECHNICAL COMPETENCIES</li>
+				</ul>
+			</li>
+			<li>SUCCESSES
+				<ul>
+					<li>CUSTOMER SUCCESS</li>
+					<li>WHAT OTHERS ARE SAYING</li>
+					<li>CONTRACT VEHICLES</li>
+				</ul>
+			</li>
+			<li>JOURNAL</li>
+			<li>CONTACT
+				<ul>
+					<li>JOIN OUR TEAM</li>
+					<li>CONTACT / DIRECTIONS</li>
+					<li>SITE MAP</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div id="branding">
+			<a href="/#top"><h1 class="logo_white">1Source</h1></a>
+			<div id="copyright">
+				&copy; 2014 1Source. All Rights Reserved | Legal &amp; Privacy
+			</div>
 		</div>
-	</div>
-</footer>
+	</footer>
+</div>
 </body>
 </html>
