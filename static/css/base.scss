@@ -192,7 +192,7 @@ nav {
 				top: 100%;
 				left: 0;
 				width: 100%;
-				height: 1px;
+				height: 2px;
 				background: $primary1;
 				content: '';
 				opacity: 0;
@@ -285,12 +285,10 @@ body.homepage {
 			display: inline-block;
 			path {
 				fill: white;
-				stroke: white;
 				transition: all 300ms ease-in;
 			}
 			&:hover path {
 				fill: $primary1 !important;
-				stroke: $primary1 !important;
 				transition: all 300ms ease-in
 			}
 		}
