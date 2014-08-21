@@ -129,6 +129,14 @@ h1.logo_color {
 	overflow: hidden;
 }
 
+h1.logo_dark {
+	background: url('../images/logo_dark.svg') no-repeat center top;
+	height: 1em;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 .logo_white {
 	background: url('../images/logo_white.svg') no-repeat center top;
 	height: 2em;
@@ -160,6 +168,8 @@ nav {
 		top: 0;
 		left: 0;
 		z-index: 100;
+		background-color: black;
+		opacity: .9;
 		a#nav_logo {
 			opacity: 1;
 			transition: all 300ms ease-in;
@@ -169,7 +179,7 @@ nav {
 		opacity: 0;
 		transition: all 300ms ease-in;
 	}
-	.logo_color {
+	.logo_dark {
 		height: 1.3em;
 		width: 4em;
 		display: inline-block;

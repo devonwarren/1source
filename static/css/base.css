@@ -116,6 +116,15 @@ h1.logo_color {
 }
 
 /* line 132, base.scss */
+h1.logo_dark {
+  background: url("../images/logo_dark.svg") no-repeat center top;
+  height: 1em;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 140, base.scss */
 .logo_white {
   background: url("../images/logo_white.svg") no-repeat center top;
   height: 2em;
@@ -124,13 +133,13 @@ h1.logo_color {
   overflow: hidden;
 }
 
-/* line 140, base.scss */
+/* line 148, base.scss */
 .linkedin-icon {
   width: 1.6em;
   height: 1.6em;
 }
 
-/* line 145, base.scss */
+/* line 153, base.scss */
 .bgimage {
   background-repeat: no-repeat;
   background-position: center top;
@@ -138,7 +147,7 @@ h1.logo_color {
   background-attachment: fixed;
 }
 
-/* line 152, base.scss */
+/* line 160, base.scss */
 nav {
   width: 100%;
   height: 64px;
@@ -146,30 +155,32 @@ nav {
   bottom: 0;
   right: 0;
 }
-/* line 158, base.scss */
+/* line 166, base.scss */
 nav.sticky {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
+  background-color: black;
+  opacity: .9;
 }
-/* line 163, base.scss */
+/* line 173, base.scss */
 nav.sticky a#nav_logo {
   opacity: 1;
   transition: all 300ms ease-in;
 }
-/* line 168, base.scss */
+/* line 178, base.scss */
 nav a#nav_logo {
   opacity: 0;
   transition: all 300ms ease-in;
 }
-/* line 172, base.scss */
-nav .logo_color {
+/* line 182, base.scss */
+nav .logo_dark {
   height: 1.3em;
   width: 4em;
   display: inline-block;
 }
-/* line 177, base.scss */
+/* line 187, base.scss */
 nav ul {
   list-style: none;
   margin: 0;
@@ -177,13 +188,13 @@ nav ul {
   padding-right: 2em;
   padding-top: 12px;
 }
-/* line 183, base.scss */
+/* line 193, base.scss */
 nav ul li {
   display: inline-block;
   padding: .2em;
   vertical-align: middle;
 }
-/* line 190, base.scss */
+/* line 200, base.scss */
 nav ul li a:link,
 nav ul li a:visited,
 nav ul li a:hover,
@@ -195,12 +206,12 @@ nav ul li a:active {
   color: #7f716b;
   font-size: .9em;
 }
-/* line 199, base.scss */
+/* line 209, base.scss */
 nav ul li a:hover,
 nav ul li a:focus {
   text-decoration: none;
 }
-/* line 202, base.scss */
+/* line 212, base.scss */
 nav ul li a::after {
   position: absolute;
   top: 100%;
@@ -217,7 +228,7 @@ nav ul li a::after {
   -moz-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 219, base.scss */
+/* line 229, base.scss */
 nav ul li a:hover::after,
 nav ul li a:focus::after {
   height: 2px;
@@ -227,7 +238,7 @@ nav ul li a:focus::after {
   transform: translateY(0px);
 }
 
-/* line 230, base.scss */
+/* line 240, base.scss */
 footer {
   text-align: center;
   background-color: #c7522a;
@@ -235,76 +246,76 @@ footer {
   clear: both;
   opacity: .9;
 }
-/* line 236, base.scss */
+/* line 246, base.scss */
 footer > ul {
   margin: 0;
   padding: 1em;
   list-style: none;
   font-family: 'AdelleSans', sans-serif;
 }
-/* line 241, base.scss */
+/* line 251, base.scss */
 footer > ul > li {
   display: inline-block;
   vertical-align: top;
   padding: 1em;
   text-align: left;
 }
-/* line 246, base.scss */
+/* line 256, base.scss */
 footer > ul > li ul {
   list-style: none;
   font-size: .8em;
   padding-left: 0;
 }
-/* line 250, base.scss */
+/* line 260, base.scss */
 footer > ul > li ul li {
   padding-top: .4em;
 }
-/* line 256, base.scss */
+/* line 266, base.scss */
 footer #copyright {
   font-family: 'AdelleSans', sans-serif;
   font-size: .7em;
   padding-bottom: 1em;
 }
 
-/* line 266, base.scss */
+/* line 276, base.scss */
 body.homepage div#logo {
   position: absolute;
   top: 30%;
   width: 100%;
   text-align: center;
 }
-/* line 271, base.scss */
+/* line 281, base.scss */
 body.homepage div#logo h1.logo_color {
   height: 4em;
 }
-/* line 275, base.scss */
+/* line 285, base.scss */
 body.homepage header#hero {
   height: 100em;
 }
-/* line 278, base.scss */
+/* line 288, base.scss */
 body.homepage div#enter {
   position: absolute;
   bottom: 8%;
   width: 100%;
   text-align: center;
 }
-/* line 283, base.scss */
+/* line 293, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 287, base.scss */
+/* line 297, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 291, base.scss */
+/* line 301, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #e86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 298, base.scss */
+/* line 308, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 3.6em;
@@ -316,7 +327,7 @@ body.homepage section.homepage-summary {
   font-size: 2.6em;
   font-weight: normal;
 }
-/* line 310, base.scss */
+/* line 320, base.scss */
 body.homepage aside.homepage-left {
   width: 50%;
   float: left;
@@ -324,14 +335,14 @@ body.homepage aside.homepage-left {
   margin-top: 4em;
   text-align: center;
 }
-/* line 316, base.scss */
+/* line 326, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
   color: white;
 }
-/* line 324, base.scss */
+/* line 334, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   height: 35em;
