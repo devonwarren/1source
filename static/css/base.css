@@ -162,7 +162,7 @@ nav.sticky {
   left: 0;
   z-index: 100;
   background-color: white;
-  opacity: .9;
+  opacity: .95;
 }
 /* line 173, base.scss */
 nav.sticky a#nav_logo {
