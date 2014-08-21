@@ -17,13 +17,15 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     var top = $(this).scrollTop();
-    height = $('#hero').height();
+    var heroHeight = $('#hero').height();
+    var navHeight = $('nav#main').height();
+    var targetHeight = heroHeight - navHeight;
 
-    if (top >= height) {
+    if (top >= targetHeight) {
         $('nav#main').addClass('sticky');
     }
 
-    if (top < height && $('nav').hasClass('sticky')) {
+    if (top < targetHeight && $('nav').hasClass('sticky')) {
         $('nav#main').removeClass('sticky');
     }
   });
