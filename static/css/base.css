@@ -286,19 +286,20 @@ body.homepage div#enter {
   text-align: center;
 }
 /* line 281, base.scss */
-body.homepage div#enter a {
-  border-radius: 12em;
+body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
-  background-image: url("/static/images/arrow.png");
   display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center 60%;
-  background-size: 70%;
+}
+/* line 285, base.scss */
+body.homepage div#enter a svg path {
+  fill: white;
+  stroke: white;
   transition: all 300ms ease-in;
 }
-/* line 291, base.scss */
-body.homepage div#enter a:hover {
-  background-color: #111;
+/* line 290, base.scss */
+body.homepage div#enter a svg:hover path {
+  fill: #e86432 !important;
+  stroke: #e86432 !important;
   transition: all 300ms ease-in;
 }

@@ -278,19 +278,19 @@ body.homepage {
 		bottom: 8%;
 		width: 100%;
 		text-align: center;
-		a {
-			border-radius: 12em;
+		a svg {
 			height: 4em;
 			width: 4em;
-			background-image: url('/static/images/arrow.png');
 			display: inline-block;
-			background-repeat: no-repeat;
-			background-position: center 60%;
-			background-size: 70%;
-			transition: all 300ms ease-in;
-			&:hover {
-				background-color: #111;
+			path {
+				fill: white;
+				stroke: white;
 				transition: all 300ms ease-in;
+			}
+			&:hover path {
+				fill: $primary1 !important;
+				stroke: $primary1 !important;
+				transition: all 300ms ease-in
 			}
 		}
 	}
