@@ -98,7 +98,7 @@ h1 {
 
 h2 {
 	font-family: 'OfficinaSer', serif;
-	color: $secondary3;
+	color: white;
 	font-size: 3em;
 	font-weight: normal;
 }
@@ -212,21 +212,11 @@ nav {
 	}
 }
 
-summary.section {
-	display: block;
-	padding: 3.6em;
-	text-align: center;
-	background-color: $primary1;
-	color: white;
-	font-family: 'OfficinaSer', serif;
-	font-size: 2.6em;
-	font-weight: normal;
-}
-
 footer {
 	text-align: center;
 	background-color: $primary2;
 	color: white;
+	clear: both;
 	& > ul {
 		margin: 0;
 		padding: 1em;
@@ -289,5 +279,36 @@ body.homepage {
 				transition: all 300ms ease-in
 			}
 		}
+	}
+
+	section.homepage-summary {
+		display: block;
+		padding: 3.6em;
+		text-align: center;
+		background-color: $primary1;
+		color: white;
+		font-family: 'OfficinaSer', serif;
+		font-size: 2.6em;
+		font-weight: normal;
+	}
+
+	aside.homepage-left {
+		width: 50%;
+		float: left;
+		height: 25em;
+		text-align: center;
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			color: white;
+		}
+	}
+
+	section.homepage-right {
+		background-color: white;
+		height: 25em;
+		padding: 3em;
+		margin-left: 50%;
 	}
 }
