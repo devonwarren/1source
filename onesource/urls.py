@@ -9,6 +9,7 @@ urlpatterns = patterns('',
 	url(r'^$', homepage, name='homepage'),
 	url(r'^style_guide$', style_guide, name='style_guide'),
 
+	url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^ckeditor/', include('ckeditor.urls')),
 )
