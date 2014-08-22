@@ -352,23 +352,16 @@ body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .3em .5em 0;
 }
-/* line 338, base.scss */
-body.homepage aside.homepage-left ul li.active a {
+/* line 339, base.scss */
+body.homepage aside.homepage-left ul li.active a,
+body.homepage aside.homepage-left ul li a:hover {
   border: solid 1px #e86432;
   border-radius: .4em;
 }
-/* line 347, base.scss */
+/* line 348, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   height: 35em;
   padding: 6em 4em;
   margin-left: 50%;
-}
-/* line 352, base.scss */
-body.homepage section.homepage-right .details {
-  display: none;
-}
-/* line 355, base.scss */
-body.homepage section.homepage-right .details.active {
-  display: block;
 }

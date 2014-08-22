@@ -335,7 +335,8 @@ body.homepage {
 					color: white;
 					padding: .3em .5em 0;
 				}
-				&.active a {
+				&.active a,
+				a:hover {
 					border: solid 1px $primary1;
 					border-radius: .4em;
 				}
@@ -349,11 +350,5 @@ body.homepage {
 		height: 35em;
 		padding: 6em 4em;
 		margin-left: 50%;
-		.details {
-			display: none;
-		}
-		.details.active {
-			display: block;
-		}
 	}
 }

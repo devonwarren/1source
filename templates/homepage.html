@@ -40,22 +40,22 @@
 <div class="bgimage" style="background-image:url('{{ STATIC_URL }}images/{{ section.title|lower }}.jpg');">
 	<a id="{{ section.title|lower }}" class="anchor"></a>
 	<section class="homepage-detail section-{{ section|lower }}">
-		<aside class="homepage-left">
+		<aside class="homepage-left" id="aside-{{ section.id }}">
 			<h2>{{ section.title|upper }}</h2>
 			<ul>
 			{% for subsection in subsections %}
 				{% if subsection.section.id = section.id %}
-					{% if forloop.first	%}<li class="active">{% else %}<li>{% endif %}
-						<a href="javascript:homepageDetailLoad('');">{{ subsection.name|upper }}</a>
+					<li {% if forloop.first	%}class="active" {% endif %}id="subsection-select-{{ subsection.id }}">
+						<a href="javascript:homepageDetailLoad({{ section.id }}, {{ subsection.id }});">{{ subsection.name|upper }}</a>
 					</li>
 				{% endif %}
 			{% endfor %}
 			</ul>
 		</aside>
-		<section class="homepage-right section-{{ section|lower }}">
+		<section class="homepage-right section-{{ section|lower }}" id="section-{{ section.id }}">
 			{% for subsection in subsections %}
 				{% if subsection.section.id = section.id %}
-					<div class="details{% if forloop.first %} active{%endif %}" id="subsection-{{ subsection.id }}">
+					<div class="details{% if forloop.first %} active{%endif %}" id="subsection-{{ subsection.id }}" style="z-index:{{ forloop.counter }};">
 						<h4>{{ subsection.title|upper }}</h4>
 						<p>{{ subsection.description }}</p>
 					</div>
