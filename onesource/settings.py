@@ -93,4 +93,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, '../static_final')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_final')
