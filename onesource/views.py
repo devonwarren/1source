@@ -2,6 +2,7 @@ from django.template.loader import get_template
 from django.template import RequestContext, Context
 from django.http import HttpResponse
 from sections.models import Section, SubSection
+from django.conf import settings
 
 
 def style_guide(request):
