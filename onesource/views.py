@@ -15,5 +15,9 @@ def homepage(request):
 	subsections = SubSection.objects.all()
 	
 	t = get_template('homepage.html')
-	html = t.render(RequestContext(request, {'sections':sections, 'subsections':subsections}))
+	html = t.render(RequestContext(request, {
+		'sections':sections, 
+		'subsections':subsections, 
+		'STATIC_URL':settings.STATIC_URL
+	}))
 	return HttpResponse(html)
