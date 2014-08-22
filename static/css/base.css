@@ -340,20 +340,35 @@ body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: white;
+}
+/* line 330, base.scss */
+body.homepage aside.homepage-left ul li {
+  font-family: 'AdelleSans', sans-serif;
+  padding: .4em 1em;
+  margin: 1em;
 }
 /* line 334, base.scss */
+body.homepage aside.homepage-left ul li a {
+  color: white;
+  padding: .3em .5em 0;
+}
+/* line 338, base.scss */
+body.homepage aside.homepage-left ul li.active a {
+  border: solid 1px #e86432;
+  border-radius: .4em;
+}
+/* line 347, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   height: 35em;
   padding: 6em 4em;
   margin-left: 50%;
 }
-/* line 339, base.scss */
+/* line 352, base.scss */
 body.homepage section.homepage-right .details {
   display: none;
 }
-/* line 342, base.scss */
+/* line 355, base.scss */
 body.homepage section.homepage-right .details.active {
   display: block;
 }

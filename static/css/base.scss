@@ -327,7 +327,20 @@ body.homepage {
 			list-style: none;
 			margin: 0;
 			padding: 0;
-			color: white;
+			li {
+				font-family: 'AdelleSans', sans-serif;
+				padding: .4em 1em;
+				margin: 1em;
+				a {
+					color: white;
+					padding: .3em .5em 0;
+				}
+				&.active a {
+					border: solid 1px $primary1;
+					border-radius: .4em;
+				}
+			}
+
 		}
 	}
 

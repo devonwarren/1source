@@ -9,3 +9,7 @@ jQuery(window).load(function() {
 jQuery(window).resize(function() { 
 	fullHeightHero();
 });
+
+function homepageDetailLoad() {
+	return true;
+}

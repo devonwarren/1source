@@ -46,7 +46,7 @@
 			{% for subsection in subsections %}
 				{% if subsection.section.id = section.id %}
 					{% if forloop.first	%}<li class="active">{% else %}<li>{% endif %}
-					{{ subsection.name|upper }}
+						<a href="javascript:homepageDetailLoad('');">{{ subsection.name|upper }}</a>
 					</li>
 				{% endif %}
 			{% endfor %}
