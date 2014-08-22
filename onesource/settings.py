@@ -91,20 +91,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-)
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_final')
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
-)
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.request',
-    'django.contrib.auth.context_processors.auth',
 )
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
