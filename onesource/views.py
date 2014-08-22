@@ -10,12 +10,14 @@ def style_guide(request):
 	return HttpResponse(html)
     
 def homepage(request):
-	sections = Section.objects.all()
-	subsections = SubSection.objects.all()
+	subsections = []
+	sections = Section.objects.prefetch_related('subsection_set').all()
+	for s in sections:
+		subsections.append(s.subsection_set.all())
+	section_list = zip(sections, subsections)
 	
 	t = get_template('homepage.html')
 	html = t.render(RequestContext(request, {
-		'sections':sections, 
-		'subsections':subsections, 
+		'section_list':section_list, 
 	}))
 	return HttpResponse(html)

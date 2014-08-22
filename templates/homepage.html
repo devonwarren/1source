@@ -32,7 +32,7 @@
 		</nav>
 	</header>
 
-{% for section in sections %}
+{% for section, subsections in section_list %}
 	<section class="homepage-summary">
 		{{ section.featured_text }}
 	</section>
@@ -46,18 +46,17 @@
 			<h2>{{ section.title|upper }}</h2>
 			<ul>
 			{% for subsection in subsections %}
-				{% if subsection.section.id = section.id %}
-					<li {% if forloop.first	%}class="active" {% endif %}id="subsection-select-{{ subsection.id }}">
-						<a href="javascript:homepageDetailLoad({{ section.id }}, {{ subsection.id }});">{{ subsection.name|upper }}</a>
-					</li>
-				{% endif %}
+				<li {% if forloop.first	%}class="active" {% endif %}id="subsection-select-{{ subsection.id }}">
+					<a href="javascript:homepageDetailLoad({{ section.id }}, {{ subsection.id }});">{{ subsection.name|upper }}</a>
+				</li>
 			{% endfor %}
 			</ul>
 		</aside>
 		<section class="homepage-right section-{{ section|lower }}" id="section-{{ section.id }}">
 			{% for subsection in subsections %}
+				
 				{% if subsection.section.id = section.id %}
-					<div class="details{% if forloop.first %} active{%endif %}" id="subsection-{{ subsection.id }}"{% if not forloop.first %} style="display: none;"{% endif %}>
+					<div class="details{% if forloop.first %} active{% endif %}" id="subsection-{{ subsection.id }}"{% if not forloop.first %} style="display: none;"{% endif %}>
 						<h4>{{ subsection.title|upper }}</h4>
 						<p>{{ subsection.description|safe }}</p>
 					</div>
