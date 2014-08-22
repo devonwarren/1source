@@ -4,7 +4,7 @@ from ckeditor.fields import RichTextField
 
 class Section(OrderedModel):
 	title = models.CharField(max_length=100)
-	featured_text = RichTextField()
+	featured_text = models.TextField()
 
 	class Meta(OrderedModel.Meta):
 		pass
