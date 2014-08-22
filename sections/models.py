@@ -1,9 +1,10 @@
 from django.db import models
 from ordered_model.models import OrderedModel
+from ckeditor.fields import RichTextField
 
 class Section(OrderedModel):
 	title = models.CharField(max_length=100)
-	featured_text = models.TextField()
+	featured_text = RichTextField()
 
 	class Meta(OrderedModel.Meta):
 		pass
@@ -14,7 +15,7 @@ class Section(OrderedModel):
 class SubSection(OrderedModel):
 	name = models.CharField(max_length=100)
 	title = models.CharField(max_length=255)
-	description = models.TextField()
+	description = RichTextField()
 	section = models.ForeignKey(Section)
 
 	class Meta(OrderedModel.Meta):

@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ordered_model',
+    'ckeditor',
     'sections',
     'journal',
     'featured',
@@ -94,3 +95,5 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_final')
+
+CKEDITOR_UPLOAD_PATH = "uploads/"

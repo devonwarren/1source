@@ -10,4 +10,5 @@ urlpatterns = patterns('',
 	url(r'^style_guide$', style_guide, name='style_guide'),
 
     url(r'^admin/', include(admin.site.urls)),
+	url(r'^ckeditor/', include('ckeditor.urls')),
 )
