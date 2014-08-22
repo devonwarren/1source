@@ -2,7 +2,6 @@ from django.template.loader import get_template
 from django.template import RequestContext, Context
 from django.http import HttpResponse
 from sections.models import Section, SubSection
-from django.conf import settings
 
 
 def style_guide(request):
@@ -18,6 +17,5 @@ def homepage(request):
 	html = t.render(RequestContext(request, {
 		'sections':sections, 
 		'subsections':subsections, 
-		'STATIC_URL':settings.STATIC_URL
 	}))
 	return HttpResponse(html)

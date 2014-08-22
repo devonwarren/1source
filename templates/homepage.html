@@ -37,7 +37,9 @@
 		{{ section.featured_text }}
 	</section>
 </div>
-<div class="bgimage" style="background-image:url('{{ STATIC_URL }}images/{{ section.title|lower }}.jpg');">
+{% with imgsrc="images/"|add:section.title|lower|add:".jpg" %}
+<div class="bgimage" style="background-image:url('{% static imgsrc %}');">
+{% endwith %}
 	<a id="{{ section.title|lower }}" class="anchor"></a>
 	<section class="homepage-detail section-{{ section|lower }}">
 		<aside class="homepage-left" id="aside-{{ section.id }}">
@@ -57,7 +59,7 @@
 				{% if subsection.section.id = section.id %}
 					<div class="details{% if forloop.first %} active{%endif %}" id="subsection-{{ subsection.id }}"{% if not forloop.first %} style="display: none;"{% endif %}>
 						<h4>{{ subsection.title|upper }}</h4>
-						<p>{{ subsection.description }}</p>
+						<p>{{ subsection.description|safe }}</p>
 					</div>
 				{% endif %}
 			{% endfor %}
