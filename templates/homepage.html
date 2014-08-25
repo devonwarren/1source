@@ -1,15 +1,9 @@
-<!doctype html>
-<html>
-<head>
+{% extends "base.html" %}
 {% load staticfiles %}
-<meta name="viewport" content="width=device-width, user-scalable=no">
-<link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
-<link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="{% static "js/main.js" %}"></script>
-<script src="{% static "js/homepage.js" %}"></script>
-</head>
-<body class="homepage">
+
+{% block scriptload %}<script src="{% static "js/homepage.js" %}"></script>{% endblock %}
+{% block bodyclass %}homepage{% endblock %}
+{% block content %}
 <a id="top" class="anchor"></a>
 <div class="bgimage" style="background-image:url('{% static "images/homepage_welcome.jpg" %}');">
 	<header id="hero">
@@ -108,5 +102,4 @@
 		</div>
 	</footer>
 </div>
-</body>
-</html>
+{% endblock %}

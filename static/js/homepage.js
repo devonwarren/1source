@@ -29,7 +29,7 @@ $(document).ready(function() {
     var active = '';
     anchors.each(function(ind, val) {
     	var offset = $(val).offset();
-    	if (top >= offset.top && $('#nav-'+val.id).length > 0) {
+    	if (top >= offset.top - 10 && $('#nav-'+val.id).length > 0) {
     		active = val.id;
     	}
     });
