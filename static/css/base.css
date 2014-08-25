@@ -4,45 +4,39 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Adelle';
   src: url("../fonts/Adelle-Regular.woff2") format("woff2"), url("../fonts/Adelle-Regular.woff") format("woff"), url("../fonts/Adelle-Regular.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Adelle';
   src: url("../fonts/Adelle-Italtic.woff2") format("woff2"), url("../fonts/Adelle-Italtic.woff") format("woff"), url("../fonts/Adelle-Italtic.otf") format("otf");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
   font-family: 'Adelle';
   src: url("../fonts/Adelle-Bold.woff2") format("woff2"), url("../fonts/Adelle-Bold.woff") format("woff"), url("../fonts/Adelle-Bold.otf") format("otf");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Adelle';
   src: url("../fonts/Adelle-BoldItalic.woff2") format("woff2"), url("../fonts/Adelle-BoldItalic.woff") format("woff"), url("../fonts/Adelle-BoldItalic.otf") format("otf");
   font-weight: bold;
   font-style: italic;
 }
-
 @font-face {
   font-family: 'OfficinaSer';
   src: url("../fonts/OfficinaSer.woff2") format("woff2"), url("../fonts/OfficinaSer.woff") format("woff"), url("../fonts/OfficinaSer.otf") format("otf");
 }
-
 /* line 64, base.scss */
 body {
   font-family: 'Adelle', sans-serif;
-  background-color: #d8d8d2;
-  color: #5c4c46;
+  background-color: #D8D8D2;
+  color: #5C4C46;
   font-weight: normal;
   font-style: normal;
   font-size: 1em;
@@ -50,12 +44,12 @@ body {
   padding: 0;
 }
 
-/* line 78, base.scss */
+/* line 75, base.scss */
 a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #5c4c46;
+  color: #5C4C46;
   font-weight: normal;
   text-decoration: none;
   outline: none;
@@ -96,7 +90,7 @@ h3 {
 /* line 113, base.scss */
 h4 {
   font-family: 'OfficinaSer', serif;
-  color: #5c4c46;
+  color: #5C4C46;
   font-size: 2em;
   font-weight: normal;
 }
@@ -133,13 +127,27 @@ h1.logo_dark {
   overflow: hidden;
 }
 
-/* line 148, base.scss */
-.linkedin-icon {
+/* line 149, base.scss */
+.linkedin-icon::after {
+  height: 0 !important;
+}
+/* line 152, base.scss */
+.linkedin-icon svg {
   width: 1.6em;
   height: 1.6em;
 }
+/* line 155, base.scss */
+.linkedin-icon svg path {
+  fill: #a99e99;
+  transition: all 300ms ease-in;
+}
+/* line 159, base.scss */
+.linkedin-icon svg:hover path {
+  fill: #E86432 !important;
+  transition: all 300ms ease-in;
+}
 
-/* line 153, base.scss */
+/* line 166, base.scss */
 .bgimage {
   background-repeat: no-repeat;
   background-position: center top;
@@ -147,7 +155,7 @@ h1.logo_dark {
   background-attachment: fixed;
 }
 
-/* line 160, base.scss */
+/* line 173, base.scss */
 nav {
   width: 100%;
   height: 64px;
@@ -155,7 +163,7 @@ nav {
   bottom: 0;
   right: 0;
 }
-/* line 166, base.scss */
+/* line 179, base.scss */
 nav.sticky {
   position: fixed;
   top: 0;
@@ -164,23 +172,23 @@ nav.sticky {
   background-color: white;
   opacity: .95;
 }
-/* line 173, base.scss */
+/* line 186, base.scss */
 nav.sticky a#nav_logo {
   opacity: 1;
   transition: all 300ms ease-in;
 }
-/* line 178, base.scss */
+/* line 191, base.scss */
 nav a#nav_logo {
   opacity: 0;
   transition: all 300ms ease-in;
 }
-/* line 182, base.scss */
+/* line 195, base.scss */
 nav .logo_dark {
   height: 1.3em;
   width: 4em;
   display: inline-block;
 }
-/* line 187, base.scss */
+/* line 200, base.scss */
 nav ul {
   list-style: none;
   margin: 0;
@@ -188,13 +196,13 @@ nav ul {
   padding-right: 2em;
   padding-top: 12px;
 }
-/* line 193, base.scss */
+/* line 206, base.scss */
 nav ul li {
   display: inline-block;
   padding: .2em;
   vertical-align: middle;
 }
-/* line 200, base.scss */
+/* line 210, base.scss */
 nav ul li a:link,
 nav ul li a:visited,
 nav ul li a:hover,
@@ -203,22 +211,22 @@ nav ul li a:active {
   display: inline-block;
   margin: .2em .4em;
   font-family: 'AdelleSans', sans-serif;
-  color: #7f716b;
+  color: #7F716B;
   font-size: .9em;
 }
-/* line 209, base.scss */
+/* line 221, base.scss */
 nav ul li a:hover,
 nav ul li a:focus {
   text-decoration: none;
 }
-/* line 212, base.scss */
+/* line 225, base.scss */
 nav ul li a::after {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   height: 2px;
-  background: #e86432;
+  background: #E86432;
   content: '';
   opacity: 0;
   -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
@@ -228,7 +236,7 @@ nav ul li a::after {
   -moz-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 229, base.scss */
+/* line 241, base.scss */
 nav ul li a:hover::after,
 nav ul li a:focus::after {
   height: 2px;
@@ -238,96 +246,96 @@ nav ul li a:focus::after {
   transform: translateY(0px);
 }
 
-/* line 240, base.scss */
+/* line 253, base.scss */
 footer {
   text-align: center;
-  background-color: #c7522a;
+  background-color: #C7522A;
   color: white;
   clear: both;
   opacity: .9;
 }
-/* line 246, base.scss */
+/* line 259, base.scss */
 footer > ul {
   margin: 0;
   padding: 1em;
   list-style: none;
   font-family: 'AdelleSans', sans-serif;
 }
-/* line 251, base.scss */
+/* line 264, base.scss */
 footer > ul > li {
   display: inline-block;
   vertical-align: top;
   padding: 1em;
   text-align: left;
 }
-/* line 256, base.scss */
+/* line 269, base.scss */
 footer > ul > li ul {
   list-style: none;
   font-size: .8em;
   padding-left: 0;
 }
-/* line 260, base.scss */
+/* line 273, base.scss */
 footer > ul > li ul li {
   padding-top: .4em;
 }
-/* line 266, base.scss */
+/* line 279, base.scss */
 footer #copyright {
   font-family: 'AdelleSans', sans-serif;
   font-size: .7em;
   padding-bottom: 1em;
 }
 
-/* line 276, base.scss */
+/* line 289, base.scss */
 body.homepage div#logo {
   position: absolute;
   top: 30%;
   width: 100%;
   text-align: center;
 }
-/* line 281, base.scss */
+/* line 294, base.scss */
 body.homepage div#logo h1.logo_color {
   height: 4em;
 }
-/* line 285, base.scss */
+/* line 298, base.scss */
 body.homepage header#hero {
   height: 100em;
 }
-/* line 288, base.scss */
+/* line 301, base.scss */
 body.homepage div#enter {
   position: absolute;
   bottom: 8%;
   width: 100%;
   text-align: center;
 }
-/* line 293, base.scss */
+/* line 306, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 297, base.scss */
+/* line 310, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 301, base.scss */
+/* line 314, base.scss */
 body.homepage div#enter a svg:hover path {
-  fill: #e86432 !important;
+  fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 308, base.scss */
+/* line 321, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 3.6em;
   text-align: center;
-  background-color: #e86432;
+  background-color: #E86432;
   color: white;
   opacity: .9;
   font-family: 'OfficinaSer', serif;
   font-size: 2.6em;
   font-weight: normal;
 }
-/* line 320, base.scss */
+/* line 333, base.scss */
 body.homepage aside.homepage-left {
   width: 50%;
   float: left;
@@ -335,30 +343,30 @@ body.homepage aside.homepage-left {
   margin-top: 4em;
   text-align: center;
 }
-/* line 326, base.scss */
+/* line 339, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 330, base.scss */
+/* line 343, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: 'AdelleSans', sans-serif;
   padding: .4em 1em;
   margin: 1em;
 }
-/* line 334, base.scss */
+/* line 347, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .3em .5em 0;
 }
-/* line 339, base.scss */
+/* line 351, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
-  border: solid 1px #e86432;
+  border: solid 1px #E86432;
   border-radius: .4em;
 }
-/* line 348, base.scss */
+/* line 361, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   height: 35em;

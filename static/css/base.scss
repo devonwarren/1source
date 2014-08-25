@@ -146,8 +146,21 @@ h1.logo_dark {
 }
 
 .linkedin-icon {
-	width: 1.6em;
-	height: 1.6em;
+	&::after {
+		height: 0 !important;
+	}
+	svg {
+		width: 1.6em;
+		height: 1.6em;
+		path {
+			fill: #a99e99;
+			transition: all 300ms ease-in;
+		}
+		&:hover path {
+			fill: $primary1 !important;
+			transition: all 300ms ease-in
+		}
+	}
 }
 
 .bgimage {
