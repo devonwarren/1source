@@ -365,8 +365,9 @@ body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 1px #E86432;
   border-radius: .4em;
+  text-decoration: none;
 }
-/* line 361, base.scss */
+/* line 362, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   height: 35em;
