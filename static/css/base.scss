@@ -121,7 +121,7 @@ a img {
 	border: none;
 }
 
-h1.logo_color {
+h1.logo-color {
 	background: url('../images/logo_large.svg') no-repeat center top;
 	height: 1em;
 	text-indent: 100%;
@@ -129,7 +129,7 @@ h1.logo_color {
 	overflow: hidden;
 }
 
-h1.logo_dark {
+h1.logo-dark {
 	background: url('../images/logo_dark.svg') no-repeat center top;
 	height: 1em;
 	text-indent: 100%;
@@ -137,7 +137,7 @@ h1.logo_dark {
 	overflow: hidden;
 }
 
-.logo_white {
+.logo-white {
 	background: url('../images/logo_white.svg') no-repeat center top;
 	height: 2em;
 	text-indent: 100%;
@@ -145,7 +145,7 @@ h1.logo_dark {
 	overflow: hidden;
 }
 
-.linkedin-icon {
+#nav-linkedin {
 	&::after {
 		height: 0 !important;
 	}
@@ -185,16 +185,16 @@ nav {
 		background-color: white;
 		opacity: .95;
 		transition: all 300ms ease-in;
-		a#nav_logo {
+		a#nav-logo {
 			opacity: 1;
 			transition: all 300ms ease-in;
 		}
 	}
-	a#nav_logo {
+	a#nav-logo {
 		opacity: 0;
 		transition: all 300ms ease-in;
 	}
-	.logo_dark {
+	.logo-dark {
 		height: 1.3em;
 		width: 4em;
 		display: inline-block;
@@ -212,7 +212,8 @@ nav {
 			a:link,
 			a:visited,
 			a:hover,
-			a:active {
+			a:active,
+			a.active {
 				position: relative;
 				display: inline-block;
 				margin: .2em .4em;
@@ -241,7 +242,8 @@ nav {
 				transform: translateY(-10px);
 			}
 			a:hover::after,
-			a:focus::after {
+			a:focus::after,
+			a.active::after {
 				height: 2px;
 				opacity: 1;
 				-webkit-transform: translateY(0px);
@@ -293,7 +295,7 @@ body.homepage {
 		top: 30%;
 		width: 100%;
 		text-align: center;
-		h1.logo_color {
+		h1.logo-color {
 			height: 4em;
 		}
 	}

@@ -101,7 +101,7 @@ a img {
 }
 
 /* line 124, base.scss */
-h1.logo_color {
+h1.logo-color {
   background: url("../images/logo_large.svg") no-repeat center top;
   height: 1em;
   text-indent: 100%;
@@ -110,7 +110,7 @@ h1.logo_color {
 }
 
 /* line 132, base.scss */
-h1.logo_dark {
+h1.logo-dark {
   background: url("../images/logo_dark.svg") no-repeat center top;
   height: 1em;
   text-indent: 100%;
@@ -119,7 +119,7 @@ h1.logo_dark {
 }
 
 /* line 140, base.scss */
-.logo_white {
+.logo-white {
   background: url("../images/logo_white.svg") no-repeat center top;
   height: 2em;
   text-indent: 100%;
@@ -128,21 +128,21 @@ h1.logo_dark {
 }
 
 /* line 149, base.scss */
-.linkedin-icon::after {
+#nav-linkedin::after {
   height: 0 !important;
 }
 /* line 152, base.scss */
-.linkedin-icon svg {
+#nav-linkedin svg {
   width: 1.6em;
   height: 1.6em;
 }
 /* line 155, base.scss */
-.linkedin-icon svg path {
+#nav-linkedin svg path {
   fill: #a99e99;
   transition: all 300ms ease-in;
 }
 /* line 159, base.scss */
-.linkedin-icon svg:hover path {
+#nav-linkedin svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
@@ -175,17 +175,17 @@ nav.sticky {
   transition: all 300ms ease-in;
 }
 /* line 188, base.scss */
-nav.sticky a#nav_logo {
+nav.sticky a#nav-logo {
   opacity: 1;
   transition: all 300ms ease-in;
 }
 /* line 193, base.scss */
-nav a#nav_logo {
+nav a#nav-logo {
   opacity: 0;
   transition: all 300ms ease-in;
 }
 /* line 197, base.scss */
-nav .logo_dark {
+nav .logo-dark {
   height: 1.3em;
   width: 4em;
   display: inline-block;
@@ -208,7 +208,8 @@ nav ul li {
 nav ul li a:link,
 nav ul li a:visited,
 nav ul li a:hover,
-nav ul li a:active {
+nav ul li a:active,
+nav ul li a.active {
   position: relative;
   display: inline-block;
   margin: .2em .4em;
@@ -216,12 +217,12 @@ nav ul li a:active {
   color: #7F716B;
   font-size: .9em;
 }
-/* line 223, base.scss */
+/* line 224, base.scss */
 nav ul li a:hover,
 nav ul li a:focus {
   text-decoration: none;
 }
-/* line 227, base.scss */
+/* line 228, base.scss */
 nav ul li a::after {
   position: absolute;
   top: 100%;
@@ -238,9 +239,10 @@ nav ul li a::after {
   -moz-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 243, base.scss */
+/* line 244, base.scss */
 nav ul li a:hover::after,
-nav ul li a:focus::after {
+nav ul li a:focus::after,
+nav ul li a.active::after {
   height: 2px;
   opacity: 1;
   -webkit-transform: translateY(0px);
@@ -248,7 +250,7 @@ nav ul li a:focus::after {
   transform: translateY(0px);
 }
 
-/* line 255, base.scss */
+/* line 257, base.scss */
 footer {
   text-align: center;
   background-color: #C7522A;
@@ -256,76 +258,76 @@ footer {
   clear: both;
   opacity: .9;
 }
-/* line 261, base.scss */
+/* line 263, base.scss */
 footer > ul {
   margin: 0;
   padding: 1em;
   list-style: none;
   font-family: 'AdelleSans', sans-serif;
 }
-/* line 266, base.scss */
+/* line 268, base.scss */
 footer > ul > li {
   display: inline-block;
   vertical-align: top;
   padding: 1em;
   text-align: left;
 }
-/* line 271, base.scss */
+/* line 273, base.scss */
 footer > ul > li ul {
   list-style: none;
   font-size: .8em;
   padding-left: 0;
 }
-/* line 275, base.scss */
+/* line 277, base.scss */
 footer > ul > li ul li {
   padding-top: .4em;
 }
-/* line 281, base.scss */
+/* line 283, base.scss */
 footer #copyright {
   font-family: 'AdelleSans', sans-serif;
   font-size: .7em;
   padding-bottom: 1em;
 }
 
-/* line 291, base.scss */
+/* line 293, base.scss */
 body.homepage div#logo {
   position: absolute;
   top: 30%;
   width: 100%;
   text-align: center;
 }
-/* line 296, base.scss */
-body.homepage div#logo h1.logo_color {
+/* line 298, base.scss */
+body.homepage div#logo h1.logo-color {
   height: 4em;
 }
-/* line 300, base.scss */
+/* line 302, base.scss */
 body.homepage header#hero {
   height: 100em;
 }
-/* line 303, base.scss */
+/* line 305, base.scss */
 body.homepage div#enter {
   position: absolute;
   bottom: 8%;
   width: 100%;
   text-align: center;
 }
-/* line 308, base.scss */
+/* line 310, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 312, base.scss */
+/* line 314, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 316, base.scss */
+/* line 318, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 323, base.scss */
+/* line 325, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 3.6em;
@@ -337,7 +339,7 @@ body.homepage section.homepage-summary {
   font-size: 2.6em;
   font-weight: normal;
 }
-/* line 335, base.scss */
+/* line 337, base.scss */
 body.homepage aside.homepage-left {
   width: 50%;
   float: left;
@@ -345,42 +347,42 @@ body.homepage aside.homepage-left {
   margin-top: 4em;
   text-align: center;
 }
-/* line 341, base.scss */
+/* line 343, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 345, base.scss */
+/* line 347, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: 'AdelleSans', sans-serif;
   padding: .4em 1em;
   margin: 1em;
 }
-/* line 349, base.scss */
+/* line 351, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .3em .5em 0;
 }
-/* line 353, base.scss */
+/* line 355, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 364, base.scss */
+/* line 366, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   height: 35em;
   padding: 6em 4em;
   margin-left: 50%;
 }
-/* line 369, base.scss */
+/* line 371, base.scss */
 body.homepage section.homepage-right .learn-more {
   text-align: center;
 }
-/* line 371, base.scss */
+/* line 373, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -388,7 +390,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 377, base.scss */
+/* line 379, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
