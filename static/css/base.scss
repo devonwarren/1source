@@ -176,6 +176,7 @@ nav {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	transition: all 300ms ease-in;
 	&.sticky {
 		position: fixed;
 		top: 0;
@@ -183,6 +184,7 @@ nav {
 		z-index: 100;
 		background-color: white;
 		opacity: .95;
+		transition: all 300ms ease-in;
 		a#nav_logo {
 			opacity: 1;
 			transition: all 300ms ease-in;
