@@ -365,7 +365,7 @@ body.homepage aside.homepage-left ul li a {
 /* line 353, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
-  border: solid 1px #E86432;
+  border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
@@ -382,7 +382,7 @@ body.homepage section.homepage-right .learn-more {
 }
 /* line 371, base.scss */
 body.homepage section.homepage-right .learn-more a {
-  border: solid 1px #E86432;
+  border: solid 0.15em #E86432;
   border-radius: .4em;
   padding: .2em .6em;
   color: #E86432;

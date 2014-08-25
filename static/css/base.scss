@@ -352,7 +352,7 @@ body.homepage {
 				}
 				&.active a,
 				a:hover {
-					border: solid 1px $primary1;
+					border: solid .15em $primary1;
 					border-radius: .4em;
 					text-decoration: none;
 				}
@@ -369,7 +369,7 @@ body.homepage {
 		.learn-more {
 			text-align: center;
 			a {
-				border: solid 1px $primary1;
+				border: solid .15em $primary1;
 				border-radius: .4em;
 				padding: .2em .6em;
 				color: $primary1;
