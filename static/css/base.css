@@ -374,3 +374,20 @@ body.homepage section.homepage-right {
   padding: 6em 4em;
   margin-left: 50%;
 }
+/* line 367, base.scss */
+body.homepage section.homepage-right .learn-more {
+  text-align: center;
+}
+/* line 369, base.scss */
+body.homepage section.homepage-right .learn-more a {
+  border: solid 1px #E86432;
+  border-radius: .4em;
+  padding: .2em .6em;
+  color: #E86432;
+  text-decoration: none;
+}
+/* line 375, base.scss */
+body.homepage section.homepage-right .learn-more a:active {
+  padding: .16em .55em;
+  font-size: .92em;
+}

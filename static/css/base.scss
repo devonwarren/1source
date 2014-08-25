@@ -364,5 +364,19 @@ body.homepage {
 		height: 35em;
 		padding: 6em 4em;
 		margin-left: 50%;
+		.learn-more {
+			text-align: center;
+			a {
+				border: solid 1px $primary1;
+				border-radius: .4em;
+				padding: .2em .6em;
+				color: $primary1;
+				text-decoration: none;
+				&:active {
+					padding: .16em .55em;
+					font-size: .92em;
+				}
+			}
+		}
 	}
 }

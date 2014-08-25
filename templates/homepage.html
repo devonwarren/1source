@@ -59,6 +59,7 @@
 					<div class="details{% if forloop.first %} active{% endif %}" id="subsection-{{ subsection.id }}"{% if not forloop.first %} style="display: none;"{% endif %}>
 						<h4>{{ subsection.title|upper }}</h4>
 						<p>{{ subsection.description|safe }}</p>
+						<p class="learn-more"><a href="javascript:;">Learn more</a></p>
 					</div>
 				{% endif %}
 			{% endfor %}
