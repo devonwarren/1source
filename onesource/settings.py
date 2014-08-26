@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'sections',
     'journal',
     'featured',
+    'layout_elements',
 )
 
 MIDDLEWARE_CLASSES = (
