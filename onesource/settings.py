@@ -100,3 +100,20 @@ TEMPLATE_DIRS = (
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 GRAPPELLI_ADMIN_TITLE = '1Source Admin'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            [ '-', 'Bold', 'Italic', 'Underline',
+              '-', 'Link', 'Unlink',
+            ],
+            [ '-', 'BulletedList', 'NumberedList',
+              '-', 'Copy','PasteText','PasteFromWord',
+              '-', 'Source',
+            ]
+        ],
+        'width': 840,
+        'height': 200,
+        'toolbarCanCollapse': False,
+    }
+}
