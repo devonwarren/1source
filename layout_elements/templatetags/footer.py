@@ -5,7 +5,7 @@ from django.template import Context
 register = template.Library()
 
 @register.simple_tag
-def navigation(active = ''):
-	t = get_template('navigation.html')
-	return t.render(Context({ 'active' : active }))
+def footer():
+	t = get_template('footer.html')
+	return t.render(Context())
 
