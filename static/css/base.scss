@@ -12,9 +12,9 @@ $secondary6: #D8D8D2;
 
 @font-face {
 	font-family: 'AdelleSans';
-	src: url('../fonts/AdelleSans.woff2') format('woff2'),
-		url('../fonts/AdelleSans.woff') format('woff'),
-		url('../fonts/AdelleSans.otf') format('otf');
+	src: url('../fonts/AdelleSansLight.woff2') format('woff2'),
+		url('../fonts/AdelleSansLight.woff') format('woff'),
+		url('../fonts/AdelleSansLight.otf') format('otf');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -62,7 +62,7 @@ $secondary6: #D8D8D2;
 }
 
 body {
-	font-family: 'Adelle', sans-serif;
+	font-family: 'AdelleSans', sans-serif;
 	background-color: $secondary6;
 	color: $secondary3;
 	font-weight: normal;
@@ -111,9 +111,9 @@ h3 {
 }
 
 h4 {
-	font-family: 'OfficinaSer', serif;
+	font-family: 'AdelleSans', serif;
 	color: $secondary3;
-	font-size: 2em;
+	font-size: 1.8em;
 	font-weight: normal;
 }
 
@@ -207,7 +207,7 @@ nav {
 		padding-top: 12px;
 		li {
 			display: inline-block;
-			padding: .2em;
+			padding: .2em 1em;
 			vertical-align: middle;
 			a:link,
 			a:visited,
@@ -338,7 +338,7 @@ body.homepage {
 		width: 50%;
 		float: left;
 		height: 35em;
-		margin-top: 4em;
+		margin-top: 6.4em;
 		text-align: center;
 		ul {
 			list-style: none;
@@ -350,7 +350,7 @@ body.homepage {
 				margin: 1em;
 				a {
 					color: white;
-					padding: .3em .5em 0;
+					padding: .2em .5em;
 				}
 				&.active a,
 				a:hover {
@@ -369,6 +369,7 @@ body.homepage {
 		padding: 6em 4em;
 		margin-left: 50%;
 		.learn-more {
+			margin-top: 3em;
 			text-align: center;
 			a {
 				border: solid .15em $primary1;

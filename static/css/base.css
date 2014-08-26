@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'AdelleSans';
-  src: url("../fonts/AdelleSans.woff2") format("woff2"), url("../fonts/AdelleSans.woff") format("woff"), url("../fonts/AdelleSans.otf") format("otf");
+  src: url("../fonts/AdelleSansLight.woff2") format("woff2"), url("../fonts/AdelleSansLight.woff") format("woff"), url("../fonts/AdelleSansLight.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,7 +34,7 @@
 }
 /* line 64, base.scss */
 body {
-  font-family: 'Adelle', sans-serif;
+  font-family: 'AdelleSans', sans-serif;
   background-color: #D8D8D2;
   color: #5C4C46;
   font-weight: normal;
@@ -89,9 +89,9 @@ h3 {
 
 /* line 113, base.scss */
 h4 {
-  font-family: 'OfficinaSer', serif;
+  font-family: 'AdelleSans', serif;
   color: #5C4C46;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: normal;
 }
 
@@ -201,7 +201,7 @@ nav ul {
 /* line 208, base.scss */
 nav ul li {
   display: inline-block;
-  padding: .2em;
+  padding: .2em 1em;
   vertical-align: middle;
 }
 /* line 212, base.scss */
@@ -344,7 +344,7 @@ body.homepage aside.homepage-left {
   width: 50%;
   float: left;
   height: 35em;
-  margin-top: 4em;
+  margin-top: 6.4em;
   text-align: center;
 }
 /* line 343, base.scss */
@@ -362,7 +362,7 @@ body.homepage aside.homepage-left ul li {
 /* line 351, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
-  padding: .3em .5em 0;
+  padding: .2em .5em;
 }
 /* line 355, base.scss */
 body.homepage aside.homepage-left ul li.active a,
@@ -380,9 +380,10 @@ body.homepage section.homepage-right {
 }
 /* line 371, base.scss */
 body.homepage section.homepage-right .learn-more {
+  margin-top: 3em;
   text-align: center;
 }
-/* line 373, base.scss */
+/* line 374, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -390,7 +391,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 379, base.scss */
+/* line 380, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
