@@ -156,7 +156,7 @@ h1.logo-dark {
 }
 
 /* line 173, base.scss */
-header {
+header.not-fullscreen {
   height: 20em;
   width: 100%;
   background-image: url("../images/story.jpg");
