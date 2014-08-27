@@ -21,7 +21,13 @@
 					<li>CONTRACT VEHICLES</li>
 				</ul>
 			</li>
-			<li>JOURNAL</li>
+			<li>JOURNAL
+				<ul>
+					{% for entry in journal %}
+						<li>{{ entry.title|upper }}</li>
+					{% endfor %}
+				</ul>
+			</li>
 			<li>CONTACT
 				<ul>
 					<li>JOIN OUR TEAM</li>
