@@ -16,6 +16,16 @@
 			<div class="article-image large-image" style="background-image: url('{{ entry.image.url }}');">
 				<h1>{{ entry.title }} {{ entry.published_date|date:'m/d/Y' }}</h1>
 			</div>
+			<div class="article-content two-column">
+				{{ entry.body|safe }}
+			</div>
+		{% else %}
+			<div class="article-image" style="background-image: url('{{ entry.image.url }}');">
+			</div>
+			<div class="article-content">
+				<h4>{{ entry.title }}</h4>
+				{{ entry.body|safe }}
+			</div>
 		{% endif %}
 	</article>
 {% endfor %}
