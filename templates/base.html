@@ -2,13 +2,18 @@
 <html>
 <head>
 {% load staticfiles %}
+{% load compress %}
 <title>{% block title %}1Source{% endblock %}</title>
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
+{% compress css %}
 <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
+{% endcompress %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+{% compress js %}
 <script src="{% static "js/main.js" %}"></script>
 {% block scriptload %}{% endblock %}
+{% endcompress %}
 </head>
 <body class="{% block bodyclass %}other{% endblock %}">
 <a id="top" class="anchor"></a>
