@@ -5,7 +5,7 @@ from django.template import Context
 register = template.Library()
 
 @register.simple_tag
-def navigation(active = ''):
+def navigation(active = '', logoTheme = 'color'):
 	t = get_template('navigation.html')
-	return t.render(Context({ 'active' : active }))
+	return t.render(Context({ 'active' : active, 'logoTheme' : logoTheme }))
 

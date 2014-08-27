@@ -63,7 +63,7 @@ $secondary6: #D8D8D2;
 
 body {
 	font-family: 'AdelleSans', sans-serif;
-	background-color: $secondary6;
+	background-color: white;
 	color: $secondary3;
 	font-weight: normal;
 	font-style: normal;
@@ -170,31 +170,32 @@ h1.logo-dark {
 	background-attachment: fixed;
 }
 
+header {
+	height: 20em;
+	background-image: url('../images/story.jpg');
+}
+
+content {
+	display: block;
+	padding: 1em 4em;
+}
+
+article {
+	.article-image {
+		background-size: 100%;
+	}
+	.large-image {
+		text-align: center;
+		height: 12em;
+		padding: 4em 0 0;
+	}
+}
+
 nav {
 	width: 100%;
 	height: 64px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	transition: all 300ms ease-in;
-	&.sticky {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 100;
-		background-color: white;
-		opacity: .95;
-		transition: all 300ms ease-in;
-		a#nav-logo {
-			opacity: 1;
-			transition: all 300ms ease-in;
-		}
-	}
-	a#nav-logo {
-		opacity: 0;
-		transition: all 300ms ease-in;
-	}
-	.logo-dark {
+	.logo,
+	.logo {
 		height: 1.3em;
 		width: 4em;
 		display: inline-block;
@@ -301,6 +302,29 @@ body.homepage {
 	}
 	header#hero {
 		height: 100em; // initial value to avoid flashing before js load
+		nav {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transition: all 300ms ease-in;
+			&.sticky {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 100;
+				background-color: white;
+				opacity: .95;
+				transition: all 300ms ease-in;
+				a#nav-logo {
+					opacity: 1;
+					transition: all 300ms ease-in;
+				}
+			}
+			a#nav-logo {
+				opacity: 0;
+				transition: all 300ms ease-in;
+			}
+		}
 	}
 	div#enter {
 		position: absolute;

@@ -4,7 +4,6 @@
 {% block scriptload %}<script src="{% static "js/homepage.js" %}"></script>{% endblock %}
 {% block bodyclass %}homepage{% endblock %}
 {% block content %}
-<a id="top" class="anchor"></a>
 <div class="bgimage" style="background-image:url('{% static "images/homepage_welcome.jpg" %}');">
 	<header id="hero">
 		<div id="logo">
@@ -14,7 +13,7 @@
 			<a href="#story"><svg><g><path style="fill:#ffffff" d="M 2,1 32,32 62,1 63,2 32,34 1,2 z" id="arrow"/></g></svg></a>
 		</div>
 		{% load navigation %}
-		{% navigation %}
+		{% navigation "home" "dark" %}
 	</header>
 
 {% for section, subsections in section_list %}
