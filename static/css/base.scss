@@ -172,10 +172,16 @@ h1.logo-dark {
 
 header {
 	height: 20em;
+	width: 100%;
 	background-image: url('../images/story.jpg');
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
 }
 
-content {
+content#main {
+	margin-top: 20em;
 	display: block;
 	padding: 1em 4em;
 }
