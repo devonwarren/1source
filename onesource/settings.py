@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     'ckeditor',
     'sections',
     'journal',
-    'featured',
     'layout_elements',
 )
 
