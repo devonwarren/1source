@@ -15,7 +15,7 @@ class Section(OrderedModel):
 class SubSection(OrderedModel):
 	name = models.CharField(max_length=100)
 	title = models.TextField()
-	description = RichTextField()
+	description = RichTextField(blank=True)
 	section = models.ForeignKey(Section)
 
 	class Meta(OrderedModel.Meta):
