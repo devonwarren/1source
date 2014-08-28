@@ -18,7 +18,8 @@ $officina: 'OfficinaSerITCStd', serif;
 	font-family: 'Adelle Sans';
 	src: url('../fonts/AdelleSansLight.woff2') format('woff2'),
 		url('../fonts/AdelleSansLight.woff') format('woff'),
-		url('../fonts/AdelleSansLight.otf') format('otf');
+		url('../fonts/AdelleSansLight.otf') format('otf'),
+		url('../fonts/AdelleSansLight.eot') format('eot');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -62,7 +63,8 @@ $officina: 'OfficinaSerITCStd', serif;
 	font-family: 'OfficinaSerITCStd';
 	src: url('../fonts/OfficinaSer.woff2') format('woff2'),
 		url('../fonts/OfficinaSer.woff') format('woff'),
-		url('../fonts/OfficinaSer.otf') format('otf');
+		url('../fonts/OfficinaSer.otf') format('otf'),
+		url('../fonts/OfficinaSer.eot') format('eot');
 }
 
 body {
