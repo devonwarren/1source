@@ -10,8 +10,12 @@ $secondary4: #7F716B;
 $secondary5: #A99E98;
 $secondary6: #D8D8D2;
 
+// fonts:
+$adelle_sans: 'Adelle Sans', sans-serif;
+$officina: 'OfficinaSerITCStd', serif;
+
 @font-face {
-	font-family: 'AdelleSans';
+	font-family: 'Adelle Sans';
 	src: url('../fonts/AdelleSansLight.woff2') format('woff2'),
 		url('../fonts/AdelleSansLight.woff') format('woff'),
 		url('../fonts/AdelleSansLight.otf') format('otf');
@@ -55,14 +59,14 @@ $secondary6: #D8D8D2;
 
 
 @font-face {
-	font-family: 'OfficinaSer';
+	font-family: 'OfficinaSerITCStd';
 	src: url('../fonts/OfficinaSer.woff2') format('woff2'),
 		url('../fonts/OfficinaSer.woff') format('woff'),
 		url('../fonts/OfficinaSer.otf') format('otf');
 }
 
 body {
-	font-family: 'AdelleSans', sans-serif;
+	font-family: 'Adelle Sans', sans-serif;
 	background-color: white;
 	color: $secondary3;
 	font-weight: normal;
@@ -87,7 +91,7 @@ a:hover {
 }
 
 h1 {
-	font-family: 'OfficinaSer', serif;
+	font-family: $officina;
 	color: white;
 	font-size: 3.2em;
 	font-weight: normal;
@@ -97,21 +101,21 @@ h1 {
 }
 
 h2 {
-	font-family: 'OfficinaSer', serif;
+	font-family: $officina;
 	color: white;
 	font-size: 3em;
 	font-weight: normal;
 }
 
 h3 {
-	font-family: 'OfficinaSer', serif;
+	font-family: $officina;
 	color: white;
 	font-size: 2.6em;
 	font-weight: bold;
 }
 
 h4 {
-	font-family: 'AdelleSans', serif;
+	font-family: $adelle_sans;
 	color: $secondary3;
 	font-size: 1.7em;
 	font-weight: normal;
@@ -213,12 +217,6 @@ article {
     		margin: 0 0 2em;
     	}
 	}
-	.two-column {
-		-webkit-column-count: 2;
-    	-moz-column-count: 2;
-    	column-count: 2;
-    	margin-left: 0;
-	}
 }
 
 nav {
@@ -248,7 +246,7 @@ nav {
 				position: relative;
 				display: inline-block;
 				margin: .2em .4em;
-				font-family: 'AdelleSans', sans-serif;
+				font-family: $adelle_sans;
 				color: $secondary4;
 				font-size: .9em;
 			}
@@ -296,7 +294,7 @@ footer {
 		max-width: 80em;
 		padding: 1em;
 		list-style: none;
-		font-family: 'AdelleSans', sans-serif;
+		font-family: $adelle_sans;
 		& > li {
 			display: inline-block;
 			vertical-align: top;
@@ -313,7 +311,7 @@ footer {
 		}
 	}
 	#copyright {
-		font-family: 'AdelleSans', sans-serif;
+		font-family: $adelle_sans;
 		font-size: .7em;
 		padding-bottom: 1em;
 	}
@@ -384,7 +382,7 @@ body.homepage {
 		background-color: $primary1;
 		color: white;
 		opacity: .9;
-		font-family: 'OfficinaSer', serif;
+		font-family: $officina;
 		font-size: 2.6em;
 		font-weight: normal;
 	}
@@ -400,7 +398,7 @@ body.homepage {
 			margin: 0;
 			padding: 0;
 			li {
-				font-family: 'AdelleSans', sans-serif;
+				font-family: $adelle_sans;
 				padding: .4em 1em;
 				margin: 1em;
 				a {
