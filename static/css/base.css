@@ -193,14 +193,14 @@ article {
 article .article-image {
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 30em;
-  width: 30em;
+  height: 28em;
+  width: 28em;
   float: left;
 }
 /* line 209, base.scss */
 article .article-content {
   margin-top: 2em;
-  margin-left: 32em;
+  margin-left: 30em;
 }
 /* line 212, base.scss */
 article .article-content p {
