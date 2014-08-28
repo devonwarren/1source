@@ -2,11 +2,11 @@ function fullHeightHero() {
 	$('#hero').css('height', window.innerHeight + 'px');
 }
 
-jQuery(window).load(function() {
+$(window).load(function() {
 	fullHeightHero();
 });
 
-jQuery(window).resize(function() { 
+$(window).resize(function() { 
 	fullHeightHero();
 });
 
