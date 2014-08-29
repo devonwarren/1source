@@ -24,9 +24,17 @@ function homepageDetailLoad(subsection) {
 }
 
 $(document).ready(function() {
+ 	
  	if (window.location.hash) {
  		homepageDetailLoad(window.location.hash.replace('#subsec-',''));
   	}
+
+  	$('ul.subsection-links a').click(function() {
+  		idx = this.href.indexOf('#');
+  		if (idx != -1) {
+  			homepageDetailLoad(this.href.substring(idx).replace('#subsec-',''));	
+  		}
+  	});
 
  	$(window).scroll(function() {
 	    var top = $(this).scrollTop();

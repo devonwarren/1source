@@ -2,7 +2,7 @@
 		<ul>
 			{% for section, subsections in section_list %}
 				<li><a href="/#{{ section.title|slugify }}">{{ section.title|upper }}</a>
-					<ul>
+					<ul class="subsection-links">
 					{% for subsection in subsections %}
 						<li><a href="/#subsec-{{ subsection.name|slugify }}">{{ subsection.name|upper }}</li>
 					{% endfor %}
