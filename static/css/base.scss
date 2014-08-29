@@ -291,6 +291,13 @@ footer {
 	color: white;
 	clear: both;
 	opacity: .9;
+	a:link,
+	a:hover,
+	a:visited,
+	a:hover {
+		color: white;
+		text-decoration: none;
+	}
 	& > ul {
 		margin: 0 auto;
 		max-width: 80em;
