@@ -24,7 +24,7 @@
 {% with imgsrc="images/"|add:section.title|lower|add:".jpg" %}
 <div class="bgimage" style="background-image:url('{% static imgsrc %}');">
 {% endwith %}
-	<a id="{{ section.title|slugify }}" class="anchor"></a>
+	<a id="{{ section.title|slugify }}" class="anchor section-anchor"></a>
 	{% for subsection in subsections %}
 		<a id="subsec-{{ subsection.name|slugify }}" class="anchor"></a>
 	{% endfor %}

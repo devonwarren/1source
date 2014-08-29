@@ -35,24 +35,4 @@ $(document).ready(function() {
   			homepageDetailLoad(this.href.substring(idx).replace('#subsec-',''));	
   		}
   	});
-
- 	$(window).scroll(function() {
-	    var top = $(this).scrollTop();
-	    var anchors = $('.anchor');
-	    var active = '';
-	    anchors.each(function(ind, val) {
-	    	var offset = $(val).offset();
-	    	if (top >= offset.top - 10 && $('#nav-'+val.id).length > 0) {
-	    		active = val.id;
-	    	}
-	    });
-
-		$('nav a').each(function(ind, val) {
-			if (val.id != 'nav-'+active) {
-				$(val).removeClass('active');
-			} else {
-				$(val).addClass('active');
-			}
-		});
-	});
 });
