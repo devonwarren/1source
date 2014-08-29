@@ -1,26 +1,15 @@
 	<footer>
 		<ul>
-			<li><a href="/#story">STORY</a>
-				<ul>
-					<li>OUR STORY</li>
-					<li>FOUNDERS</li>
-					<li>COMMUNITY COMMITMENT</li>
-				</ul>
-			</li>
-			<li><a href="/#services">SERVICES</a>
-				<ul>
-					<li>BUSINESS &amp; IT STRATEGY</li>
-					<li>MANAGING FOR SUCCESS</li>
-					<li>CORE TECHNICAL COMPETENCIES</li>
-				</ul>
-			</li>
-			<li><a href="/#success">SUCCESS</a>
-				<ul>
-					<li>CUSTOMER SUCCESS</li>
-					<li>WHAT OTHERS ARE SAYING</li>
-					<li>CONTRACT VEHICLES</li>
-				</ul>
-			</li>
+			{% for section, subsections in section_list %}
+				<li><a href="/#{{ section.title|slugify }}">{{ section.title|upper }}</a>
+					<ul>
+					{% for subsection in subsections %}
+						<li><a href="/#subsec-{{ subsection.title|slugify }}">{{ subsection.title|upper }}</li>
+					{% endfor %}
+					</ul>
+				</li>
+			{% endfor %}
+
 			<li><a href="/journal">JOURNAL</a>
 				<ul>
 					{% for entry in journal %}
