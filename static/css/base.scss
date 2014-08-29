@@ -177,23 +177,16 @@ h1.logo-dark {
 }
 
 header.not-fullscreen {
-	height: 20em;
+	height: 18em;
 	width: 100%;
 	background-image: url('../images/story.jpg');
 	background-size: 100%;
+	background-position: center top;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
-	.gradient {
-		width: 100%;
-		position: absolute;
-		bottom: -64px;
-		height: 64px;
-		z-index: 101;
-		background-image: url('../images/transparent-gradient.png');
-		background-repeat: repeat-x;
-	}
+	border-bottom: solid 3px $primary1;
 }
 
 content#main {
