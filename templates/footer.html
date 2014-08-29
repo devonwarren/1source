@@ -4,7 +4,7 @@
 				<li><a href="/#{{ section.title|slugify }}">{{ section.title|upper }}</a>
 					<ul>
 					{% for subsection in subsections %}
-						<li><a href="/#subsec-{{ subsection.title|slugify }}">{{ subsection.title|upper }}</li>
+						<li><a href="/#subsec-{{ subsection.name|slugify }}">{{ subsection.name|upper }}</li>
 					{% endfor %}
 					</ul>
 				</li>

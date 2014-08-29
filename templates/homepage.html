@@ -26,15 +26,15 @@
 {% endwith %}
 	<a id="{{ section.title|slugify }}" class="anchor"></a>
 	{% for subsection in subsections %}
-		<a id="subsec-{{ subsection.title|slugify }}" class="anchor"></a>
+		<a id="subsec-{{ subsection.name|slugify }}" class="anchor"></a>
 	{% endfor %}
 	<section class="homepage-detail section-{{ section|slugify }}">
 		<aside class="homepage-left" id="aside-{{ section.title|slugify }}">
 			<h2>{{ section.title|upper }}</h2>
 			<ul>
 			{% for subsection in subsections %}
-				<li {% if forloop.first	%}class="active" {% endif %}id="subsection-select-{{ subsection.title|slugify }}">
-					<a href="javascript:homepageDetailLoad('{{ subsection.title|slugify }}');">{{ subsection.name|upper }}</a>
+				<li {% if forloop.first	%}class="active" {% endif %}id="subsection-select-{{ subsection.name|slugify }}">
+					<a href="javascript:homepageDetailLoad('{{ subsection.name|slugify }}');">{{ subsection.name|upper }}</a>
 				</li>
 			{% endfor %}
 			</ul>
@@ -43,7 +43,7 @@
 			{% for subsection in subsections %}
 				
 				{% if subsection.section.id = section.id %}
-					<div class="details{% if forloop.first %} active{% endif %}" id="subsection-{{ subsection.title|slugify }}"{% if not forloop.first %} style="display: none;"{% endif %}>
+					<div class="details{% if forloop.first %} active{% endif %}" id="subsection-{{ subsection.name|slugify }}"{% if not forloop.first %} style="display: none;"{% endif %}>
 						<h4>{{ subsection.title }}</h4>
 						<p>{{ subsection.description|safe }}</p>
 						<p class="learn-more"><a href="javascript:;">Learn more</a></p>

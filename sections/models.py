@@ -3,7 +3,7 @@ from ordered_model.models import OrderedModel
 from ckeditor.fields import RichTextField
 
 class Section(OrderedModel):
-	title = models.CharField(max_length=100)
+	title = models.CharField(max_length=100, unique=True)
 	featured_text = models.TextField()
 
 	class Meta(OrderedModel.Meta):
@@ -13,7 +13,7 @@ class Section(OrderedModel):
 		return self.title
 
 class SubSection(OrderedModel):
-	name = models.CharField(max_length=100)
+	name = models.CharField(max_length=100, unique=True)
 	title = models.TextField()
 	description = RichTextField(blank=True)
 	section = models.ForeignKey(Section)
