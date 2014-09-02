@@ -4,26 +4,23 @@
 				<li><a href="/#{{ section.title|slugify }}">{{ section.title|upper }}</a>
 					<ul class="subsection-links">
 					{% for subsection in subsections %}
-						<li><a href="/#subsec-{{ subsection.name|slugify }}">{{ subsection.name|upper }}</li>
+						<li><a href="/#subsec-{{ subsection.name|slugify }}">{{ subsection.name|upper }}
 					{% endfor %}
 					</ul>
-				</li>
 			{% endfor %}
 
 			<li><a href="/journal">JOURNAL</a>
 				<ul>
 					{% for entry in journal %}
-						<li>{{ entry.title|upper }}</li>
+						<li>{{ entry.title|upper }}
 					{% endfor %}
 				</ul>
-			</li>
 			<li><a href="/contact">CONTACT</a>
 				<ul>
-					<li>JOIN OUR TEAM</li>
-					<li>CONTACT / DIRECTIONS</li>
-					<li>SITE MAP</li>
+					<li>JOIN OUR TEAM
+					<li>CONTACT / DIRECTIONS
+					<li>SITE MAP
 				</ul>
-			</li>
 		</ul>
 
 		<div id="branding">

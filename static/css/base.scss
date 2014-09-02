@@ -24,41 +24,6 @@ $officina: 'OfficinaSerITCStd', serif;
 	font-style: normal;
 }
 
-
-@font-face {
-	font-family: 'Adelle';
-	src: url('../fonts/Adelle-Regular.woff2') format('woff2'),
-		url('../fonts/Adelle-Regular.woff') format('woff'),
-		url('../fonts/Adelle-Regular.otf') format('otf');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Adelle';
-	src: url('../fonts/Adelle-Italtic.woff2') format('woff2'),
-		url('../fonts/Adelle-Italtic.woff') format('woff'),
-		url('../fonts/Adelle-Italtic.otf') format('otf');
-	font-weight: normal;
-	font-style: italic;
-}
-@font-face {
-	font-family: 'Adelle';
-	src: url('../fonts/Adelle-Bold.woff2') format('woff2'),
-		url('../fonts/Adelle-Bold.woff') format('woff'),
-		url('../fonts/Adelle-Bold.otf') format('otf');
-	font-weight: bold;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Adelle';
-	src: url('../fonts/Adelle-BoldItalic.woff2') format('woff2'),
-		url('../fonts/Adelle-BoldItalic.woff') format('woff'),
-		url('../fonts/Adelle-BoldItalic.otf') format('otf');
-	font-weight: bold;
-	font-style: italic;
-}
-
-
 @font-face {
 	font-family: 'OfficinaSerITCStd';
 	src: url('../fonts/OfficinaSer.eot');
