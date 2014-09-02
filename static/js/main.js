@@ -29,22 +29,24 @@ function scrollEvent() {
   
 
   // set active nav items if applicable
-  var anchors = $('.section-anchor');
-  var active = '';
-  anchors.each(function(ind, val) {
-    var offset = $(val).offset();
-    if (top >= offset.top - 10 && $('#nav-'+val.id).length > 0) {
-      active = val.id;
-    }
-  });
+  if (is_sticky) {
+    var anchors = $('.section-anchor');
+    var active = '';
+    anchors.each(function(ind, val) {
+      var offset = $(val).offset();
+      if (top >= offset.top - 10 && $('#nav-'+val.id).length > 0) {
+        active = val.id;
+      }
+    });
 
-  $('nav a').each(function(ind, val) {
-    if (val.id != 'nav-'+active) {
-      $(val).removeClass('active');
-    } else {
-      $(val).addClass('active');
-    }
-  });
+    $('nav a').each(function(ind, val) {
+      if (val.id != 'nav-'+active) {
+        $(val).removeClass('active');
+      } else {
+        $(val).addClass('active');
+      }
+    });
+  }
 }
 
 $(document).ready(function() {
