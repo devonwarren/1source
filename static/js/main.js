@@ -18,15 +18,15 @@ function scrollEvent() {
   var heroHeight = $('#hero').height();
   var navHeight = $('nav#main').height();
   var targetHeight = heroHeight - navHeight;
+  var is_sticky = $('nav#main').hasClass('sticky');
 
   // sticky navigation ftw
-  if (!$('nav#main').hasClass('sticky')) {
-    if (top >= targetHeight) {
-      $('nav#main').addClass('sticky');
-    } else {
-      $('nav#main').removeClass('sticky');
-    }
+  if (top >= targetHeight && !is_sticky) {
+    $('nav#main').addClass('sticky');
+  } else if (top < targetHeight && is_sticky) {
+    $('nav#main').removeClass('sticky');
   }
+  
 
   // set active nav items if applicable
   var anchors = $('.section-anchor');
