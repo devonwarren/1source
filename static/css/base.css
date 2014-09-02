@@ -69,7 +69,7 @@ h3 {
 h4 {
   font-family: "Adelle Sans", sans-serif;
   color: #5C4C46;
-  font-size: 1.7em;
+  font-size: 1.4em;
   font-weight: normal;
 }
 
@@ -305,13 +305,13 @@ body.homepage div#enter a svg:hover path {
 /* line 297, base.scss */
 body.homepage section.homepage-summary {
   display: block;
-  padding: 3.6em;
+  padding: 2em;
   text-align: center;
   background-color: #E86432;
   color: white;
   opacity: .9;
   font-family: "OfficinaSerITCStd", serif;
-  font-size: 2.6em;
+  font-size: 2em;
   font-weight: normal;
 }
 /* line 309, base.scss */
@@ -374,30 +374,35 @@ body.homepage section.homepage-right .learn-more a:active {
 
 @media screen and (min-width: 44em) {
   /* line 1, breakpoint-medium.scss */
+  h4 {
+    font-size: 1.7em;
+  }
+
+  /* line 5, breakpoint-medium.scss */
   nav {
     display: block;
     height: 78px;
   }
-  /* line 4, breakpoint-medium.scss */
+  /* line 8, breakpoint-medium.scss */
   nav .logo {
     height: 1.3em;
     margin-top: .2em;
     width: 3em;
     display: inline-block;
   }
-  /* line 10, breakpoint-medium.scss */
+  /* line 14, breakpoint-medium.scss */
   nav ul {
     float: right;
     padding-right: 2em;
     padding-top: 30px;
   }
-  /* line 14, breakpoint-medium.scss */
+  /* line 18, breakpoint-medium.scss */
   nav ul li {
     display: inline-block;
     padding: .2em .2em;
     vertical-align: middle;
   }
-  /* line 18, breakpoint-medium.scss */
+  /* line 22, breakpoint-medium.scss */
   nav ul li a:link,
   nav ul li a:visited,
   nav ul li a:hover,
@@ -410,12 +415,12 @@ body.homepage section.homepage-right .learn-more a:active {
     color: #7F716B;
     font-size: .9em;
   }
-  /* line 30, breakpoint-medium.scss */
+  /* line 34, breakpoint-medium.scss */
   nav ul li a:hover,
   nav ul li a:focus {
     text-decoration: none;
   }
-  /* line 34, breakpoint-medium.scss */
+  /* line 38, breakpoint-medium.scss */
   nav ul li a::after {
     position: absolute;
     top: 100%;
@@ -432,7 +437,7 @@ body.homepage section.homepage-right .learn-more a:active {
     -moz-transform: translateY(-8px);
     transform: translateY(-8px);
   }
-  /* line 50, breakpoint-medium.scss */
+  /* line 54, breakpoint-medium.scss */
   nav ul li a:hover::after,
   nav ul li a:focus::after,
   nav ul li a.active::after {
@@ -443,11 +448,16 @@ body.homepage section.homepage-right .learn-more a:active {
     transform: translateY(2px);
   }
 
-  /* line 63, breakpoint-medium.scss */
-  body.homepage header#hero {
+  /* line 68, breakpoint-medium.scss */
+  body.homepage header#hero nav {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+  /* line 73, breakpoint-medium.scss */
+  body.homepage section.homepage-summary {
+    padding: 3.6em;
+    font-size: 2.6em;
   }
 }
 @media screen and (min-width: 56em) {

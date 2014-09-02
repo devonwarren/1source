@@ -1,3 +1,7 @@
+h4 {
+	font-size: 1.7em;
+}
+
 nav {
 	display: block;
 	height: 78px;
@@ -60,8 +64,14 @@ nav {
 	}
 }
 
-body.homepage header#hero {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+body.homepage {
+	header#hero nav {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	section.homepage-summary {
+		padding: 3.6em;
+		font-size: 2.6em;
+	}
 }
