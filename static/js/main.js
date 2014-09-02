@@ -20,32 +20,35 @@ function scrollEvent() {
   var targetHeight = heroHeight - navHeight;
   var is_sticky = $('nav#main').hasClass('sticky');
 
-  // sticky navigation ftw
-  if (top >= targetHeight && !is_sticky) {
-    $('nav#main').addClass('sticky');
-  } else if (top < targetHeight && is_sticky) {
-    $('nav#main').removeClass('sticky');
-  }
-  
+  if (heroHeight > 0) {
 
-  // set active nav items if applicable
-  if (is_sticky) {
-    var anchors = $('.section-anchor');
-    var active = '';
-    anchors.each(function(ind, val) {
-      var offset = $(val).offset();
-      if (top >= offset.top - 10 && $('#nav-'+val.id).length > 0) {
-        active = val.id;
-      }
-    });
+    // sticky navigation ftw
+    if (top >= targetHeight && !is_sticky) {
+      $('nav#main').addClass('sticky');
+    } else if (top < targetHeight && is_sticky) {
+      $('nav#main').removeClass('sticky');
+    }
+    
 
-    $('nav a').each(function(ind, val) {
-      if (val.id != 'nav-'+active) {
-        $(val).removeClass('active');
-      } else {
-        $(val).addClass('active');
-      }
-    });
+    // set active nav items if applicable
+    if (is_sticky) {
+      var anchors = $('.section-anchor');
+      var active = '';
+      anchors.each(function(ind, val) {
+        var offset = $(val).offset();
+        if (top >= offset.top - 10 && $('#nav-'+val.id).length > 0) {
+          active = val.id;
+        }
+      });
+
+      $('nav a').each(function(ind, val) {
+        if (val.id != 'nav-'+active) {
+          $(val).removeClass('active');
+        } else {
+          $(val).addClass('active');
+        }
+      });
+    }
   }
 }
 
