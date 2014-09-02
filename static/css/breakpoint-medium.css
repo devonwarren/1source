@@ -1,0 +1,103 @@
+/*
+Error: Undefined variable: "$adelle_sans".
+        on line 26 of /home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss
+
+21: 			a:active,
+22: 			a.active {
+23: 				position: relative;
+24: 				display: inline-block;
+25: 				margin: .2em .4em;
+26: 				font-family: $adelle_sans;
+27: 				color: $secondary4;
+28: 				font-size: .9em;
+29: 			}
+30: 			a:hover,
+31: 			a:focus {
+
+Backtrace:
+/home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss:26
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:378:in `visit_prop'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `map'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `block in visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:412:in `visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `map'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `block in visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:412:in `visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `map'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `block in visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:412:in `visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `map'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:414:in `block in visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:412:in `visit_rule'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/root_node.rb:20:in `render'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/engine.rb:268:in `render'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/lib/compass/sass_compiler.rb:40:in `compile!'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/lib/compass/commands/update_project.rb:49:in `perform'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/lib/compass/commands/base.rb:18:in `execute'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/lib/compass/commands/project_base.rb:19:in `execute'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/usr/bin/compass:34:in `block in <main>'
+/usr/bin/compass:48:in `call'
+/usr/bin/compass:48:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$adelle_sans\".\A         on line 26 of /home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss\A \A 21: 			a:active,\A 22: 			a.active {\A 23: 				position: relative;\A 24: 				display: inline-block;\A 25: 				margin: .2em .4em;\A 26: 				font-family: $adelle_sans;\A 27: 				color: $secondary4;\A 28: 				font-size: .9em;\A 29: 			}\A 30: 			a:hover,\A 31: 			a:focus {"; }

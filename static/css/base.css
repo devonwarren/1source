@@ -10,7 +10,7 @@
   src: url("../fonts/OfficinaSer.eot");
   src: url("../fonts/OfficinaSer.woff2") format("woff2"), url("../fonts/OfficinaSer.woff") format("woff"), url("../fonts/OfficinaSer.otf") format("otf");
 }
-/* line 35, base.scss */
+/* line 40, base.scss */
 body {
   font-family: 'Adelle Sans', sans-serif;
   background-color: white;
@@ -22,7 +22,7 @@ body {
   padding: 0;
 }
 
-/* line 46, base.scss */
+/* line 51, base.scss */
 a:link,
 a:visited,
 a:hover,
@@ -33,12 +33,12 @@ a:active {
   outline: none;
 }
 
-/* line 56, base.scss */
+/* line 61, base.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 60, base.scss */
+/* line 65, base.scss */
 h1 {
   font-family: "OfficinaSerITCStd", serif;
   color: white;
@@ -49,7 +49,7 @@ h1 {
   padding: 0;
 }
 
-/* line 70, base.scss */
+/* line 75, base.scss */
 h2 {
   font-family: "OfficinaSerITCStd", serif;
   color: white;
@@ -57,7 +57,7 @@ h2 {
   font-weight: normal;
 }
 
-/* line 77, base.scss */
+/* line 82, base.scss */
 h3 {
   font-family: "OfficinaSerITCStd", serif;
   color: white;
@@ -65,7 +65,7 @@ h3 {
   font-weight: bold;
 }
 
-/* line 84, base.scss */
+/* line 89, base.scss */
 h4 {
   font-family: "Adelle Sans", sans-serif;
   color: #5C4C46;
@@ -73,12 +73,12 @@ h4 {
   font-weight: normal;
 }
 
-/* line 91, base.scss */
+/* line 96, base.scss */
 a img {
   border: none;
 }
 
-/* line 95, base.scss */
+/* line 100, base.scss */
 h1.logo-color {
   background: url("../images/logo_large.svg") no-repeat center top;
   height: 1em;
@@ -87,7 +87,7 @@ h1.logo-color {
   overflow: hidden;
 }
 
-/* line 103, base.scss */
+/* line 108, base.scss */
 h1.logo-dark {
   background: url("../images/logo_dark.svg") no-repeat center top;
   height: 1em;
@@ -96,7 +96,7 @@ h1.logo-dark {
   overflow: hidden;
 }
 
-/* line 111, base.scss */
+/* line 116, base.scss */
 .logo-white {
   background: url("../images/logo_white.svg") no-repeat center top;
   height: 2em;
@@ -105,27 +105,27 @@ h1.logo-dark {
   overflow: hidden;
 }
 
-/* line 120, base.scss */
+/* line 125, base.scss */
 #nav-linkedin::after {
   height: 0 !important;
 }
-/* line 123, base.scss */
+/* line 128, base.scss */
 #nav-linkedin svg {
   width: 1.6em;
   height: 1.6em;
 }
-/* line 126, base.scss */
+/* line 131, base.scss */
 #nav-linkedin svg path {
   fill: #a99e99;
   transition: all 300ms ease-in;
 }
-/* line 130, base.scss */
+/* line 135, base.scss */
 #nav-linkedin svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
 
-/* line 137, base.scss */
+/* line 142, base.scss */
 .bgimage {
   background-repeat: no-repeat;
   background-position: center top;
@@ -133,7 +133,7 @@ h1.logo-dark {
   background-attachment: fixed;
 }
 
-/* line 144, base.scss */
+/* line 149, base.scss */
 header.not-fullscreen {
   height: 18em;
   width: 100%;
@@ -147,7 +147,7 @@ header.not-fullscreen {
   border-bottom: solid 3px #E86432;
 }
 
-/* line 157, base.scss */
+/* line 162, base.scss */
 content#main {
   display: block;
   padding: 1em 4em;
@@ -155,11 +155,11 @@ content#main {
   margin: 20em auto 0;
 }
 
-/* line 164, base.scss */
+/* line 169, base.scss */
 article {
   clear: both;
 }
-/* line 166, base.scss */
+/* line 171, base.scss */
 article .article-image {
   background-size: 100%;
   background-repeat: no-repeat;
@@ -167,90 +167,32 @@ article .article-image {
   width: 28em;
   float: left;
 }
-/* line 173, base.scss */
+/* line 178, base.scss */
 article .article-content {
   margin-top: 2em;
   margin-left: 30em;
 }
-/* line 176, base.scss */
+/* line 181, base.scss */
 article .article-content p {
   margin: 0 0 2em;
 }
 
-/* line 182, base.scss */
+/* line 188, base.scss */
 nav {
+  display: none;
   width: 100%;
-  height: 78px;
 }
-/* line 185, base.scss */
-nav .logo,
-nav .logo {
-  height: 1.3em;
-  margin-top: .2em;
-  width: 4em;
-  display: inline-block;
-}
-/* line 192, base.scss */
+/* line 191, base.scss */
 nav ul {
-  list-style: none;
-  margin: 0;
-  float: right;
-  padding-right: 2em;
-  padding-top: 30px;
+  list-style: none !important;
+  margin: 0 !important;
 }
-/* line 198, base.scss */
-nav ul li {
-  display: inline-block;
-  padding: .2em 1em;
-  vertical-align: middle;
-}
-/* line 202, base.scss */
-nav ul li a:link,
-nav ul li a:visited,
-nav ul li a:hover,
-nav ul li a:active,
-nav ul li a.active {
-  position: relative;
-  display: inline-block;
-  margin: .2em .4em;
-  font-family: "Adelle Sans", sans-serif;
-  color: #7F716B;
-  font-size: .9em;
-}
-/* line 214, base.scss */
-nav ul li a:hover,
-nav ul li a:focus {
-  text-decoration: none;
-}
-/* line 218, base.scss */
-nav ul li a::after {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #E86432;
-  content: '';
-  opacity: 0;
-  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
-  transition: height 0.3s, opacity 0.3s, transform 0.3s;
-  -webkit-transform: translateY(-8px);
-  -moz-transform: translateY(-8px);
-  transform: translateY(-8px);
-}
-/* line 234, base.scss */
-nav ul li a:hover::after,
-nav ul li a:focus::after,
-nav ul li a.active::after {
-  height: 2px;
-  opacity: 1;
-  -webkit-transform: translateY(2px);
-  -moz-transform: translateY(2px);
-  transform: translateY(2px);
+/* line 195, base.scss */
+nav.sticky {
+  display: block;
 }
 
-/* line 247, base.scss */
+/* line 201, base.scss */
 footer {
   text-align: center;
   background-color: #C7522A;
@@ -258,7 +200,7 @@ footer {
   clear: both;
   opacity: .9;
 }
-/* line 253, base.scss */
+/* line 207, base.scss */
 footer a:link,
 footer a:hover,
 footer a:visited,
@@ -266,7 +208,7 @@ footer a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 260, base.scss */
+/* line 214, base.scss */
 footer > ul {
   margin: 0 auto;
   max-width: 80em;
@@ -274,53 +216,50 @@ footer > ul {
   list-style: none;
   font-family: "Adelle Sans", sans-serif;
 }
-/* line 266, base.scss */
+/* line 220, base.scss */
 footer > ul > li {
   display: inline-block;
   vertical-align: top;
   padding: 1em;
   text-align: left;
 }
-/* line 271, base.scss */
+/* line 225, base.scss */
 footer > ul > li ul {
   list-style: none;
   font-size: .8em;
   padding-left: 0;
 }
-/* line 275, base.scss */
+/* line 229, base.scss */
 footer > ul > li ul li {
   padding-top: .4em;
 }
-/* line 281, base.scss */
+/* line 235, base.scss */
 footer #copyright {
   font-family: "Adelle Sans", sans-serif;
   font-size: .7em;
   padding-bottom: 1em;
 }
 
-/* line 291, base.scss */
+/* line 245, base.scss */
 body.homepage div#logo {
   position: absolute;
   top: 30%;
   width: 100%;
   text-align: center;
 }
-/* line 296, base.scss */
+/* line 250, base.scss */
 body.homepage div#logo h1.logo-color {
   height: 4em;
 }
-/* line 300, base.scss */
+/* line 254, base.scss */
 body.homepage header#hero {
   height: 100em;
 }
-/* line 302, base.scss */
+/* line 256, base.scss */
 body.homepage header#hero nav {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   transition: all 300ms ease-in;
 }
-/* line 307, base.scss */
+/* line 258, base.scss */
 body.homepage header#hero nav.sticky {
   position: fixed;
   top: 0;
@@ -330,40 +269,40 @@ body.homepage header#hero nav.sticky {
   opacity: .95;
   transition: all 300ms ease-in;
 }
-/* line 315, base.scss */
+/* line 266, base.scss */
 body.homepage header#hero nav.sticky a#nav-logo {
   opacity: 1;
   transition: all 300ms ease-in;
 }
-/* line 320, base.scss */
+/* line 271, base.scss */
 body.homepage header#hero nav a#nav-logo {
   opacity: 0;
   transition: all 300ms ease-in;
 }
-/* line 326, base.scss */
+/* line 277, base.scss */
 body.homepage div#enter {
   position: absolute;
   bottom: 8%;
   width: 100%;
   text-align: center;
 }
-/* line 331, base.scss */
+/* line 282, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 335, base.scss */
+/* line 286, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 339, base.scss */
+/* line 290, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 346, base.scss */
+/* line 297, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 3.6em;
@@ -375,7 +314,7 @@ body.homepage section.homepage-summary {
   font-size: 2.6em;
   font-weight: normal;
 }
-/* line 358, base.scss */
+/* line 309, base.scss */
 body.homepage aside.homepage-left {
   width: 50%;
   float: left;
@@ -383,43 +322,43 @@ body.homepage aside.homepage-left {
   margin-top: 14em;
   text-align: center;
 }
-/* line 364, base.scss */
+/* line 315, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 368, base.scss */
+/* line 319, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: "Adelle Sans", sans-serif;
   padding: .4em 1em;
   margin: 1em;
 }
-/* line 372, base.scss */
+/* line 323, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .2em .5em;
 }
-/* line 376, base.scss */
+/* line 327, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 387, base.scss */
+/* line 338, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   height: 35em;
   padding: 13.2em 4em 0;
   margin-left: 50%;
 }
-/* line 392, base.scss */
+/* line 343, base.scss */
 body.homepage section.homepage-right .learn-more {
   margin-top: 3em;
   text-align: center;
 }
-/* line 395, base.scss */
+/* line 346, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -427,8 +366,98 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 401, base.scss */
+/* line 352, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
+}
+
+@media screen and (min-width: 44em) {
+  /* line 1, breakpoint-medium.scss */
+  nav {
+    display: block;
+    height: 78px;
+  }
+  /* line 4, breakpoint-medium.scss */
+  nav .logo {
+    height: 1.3em;
+    margin-top: .2em;
+    width: 3em;
+    display: inline-block;
+  }
+  /* line 10, breakpoint-medium.scss */
+  nav ul {
+    float: right;
+    padding-right: 2em;
+    padding-top: 30px;
+  }
+  /* line 14, breakpoint-medium.scss */
+  nav ul li {
+    display: inline-block;
+    padding: .2em .2em;
+    vertical-align: middle;
+  }
+  /* line 18, breakpoint-medium.scss */
+  nav ul li a:link,
+  nav ul li a:visited,
+  nav ul li a:hover,
+  nav ul li a:active,
+  nav ul li a.active {
+    position: relative;
+    display: inline-block;
+    margin: .2em .4em;
+    font-family: "Adelle Sans", sans-serif;
+    color: #7F716B;
+    font-size: .9em;
+  }
+  /* line 30, breakpoint-medium.scss */
+  nav ul li a:hover,
+  nav ul li a:focus {
+    text-decoration: none;
+  }
+  /* line 34, breakpoint-medium.scss */
+  nav ul li a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #E86432;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  /* line 50, breakpoint-medium.scss */
+  nav ul li a:hover::after,
+  nav ul li a:focus::after,
+  nav ul li a.active::after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+
+  /* line 63, breakpoint-medium.scss */
+  body.homepage header#hero {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+@media screen and (min-width: 56em) {
+  /* line 2, breakpoint-large.scss */
+  nav .logo {
+    width: 4em;
+  }
+  /* line 6, breakpoint-large.scss */
+  nav ul li {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }

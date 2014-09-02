@@ -1,0 +1,67 @@
+nav {
+	display: block;
+	height: 78px;
+	.logo {
+		height: 1.3em;
+		margin-top: .2em;
+		width: 3em;
+		display: inline-block;
+	}
+	ul {
+		float: right;
+		padding-right: 2em;
+		padding-top: 30px;
+		li {
+			display: inline-block;
+			padding: .2em .2em;
+			vertical-align: middle;
+			a:link,
+			a:visited,
+			a:hover,
+			a:active,
+			a.active {
+				position: relative;
+				display: inline-block;
+				margin: .2em .4em;
+				font-family: $adelle_sans;
+				color: $secondary4;
+				font-size: .9em;
+			}
+			a:hover,
+			a:focus {
+				text-decoration: none;
+			}
+			a::after {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background: $primary1;
+				content: '';
+				opacity: 0;
+				-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+				-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+				transition: height 0.3s, opacity 0.3s, transform 0.3s;
+				-webkit-transform: translateY(-8px);
+				-moz-transform: translateY(-8px);
+				transform: translateY(-8px);
+			}
+			a:hover::after,
+			a:focus::after,
+			a.active::after {
+				height: 2px;
+				opacity: 1;
+				-webkit-transform: translateY(2px);
+				-moz-transform: translateY(2px);
+				transform: translateY(2px);
+			}
+		}
+	}
+}
+
+body.homepage header#hero {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

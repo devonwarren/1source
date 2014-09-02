@@ -1,0 +1,9 @@
+/* line 2, breakpoint-large.scss */
+nav .logo {
+  width: 4em;
+}
+/* line 6, breakpoint-large.scss */
+nav ul li {
+  padding-left: 1em;
+  padding-right: 1em;
+}
