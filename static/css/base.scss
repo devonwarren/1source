@@ -206,13 +206,12 @@ nav {
 		margin: .4em;
 	}
 	ul#fullmenu {
-		display: none;
-		height: 0;
-		transition: all 300ms ease-in;
+		max-height: 0;
+		transition: all 500ms ease-in;
+		overflow: hidden;
 		&.open {
-			display: block;
-			height: auto;
-			transition: all 300ms ease-in;
+			max-height: 60em;
+			transition: all 600ms ease-in;
 		}
 		li {
 			width: 100%;

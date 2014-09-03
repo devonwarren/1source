@@ -19,7 +19,7 @@ nav {
 		display: inline-block;
 	}
 	ul#fullmenu {
-		display: block;
+		max-height: none;
 		float: right;
 		padding-right: 2em;
 		padding-top: 30px;
