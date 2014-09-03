@@ -52,6 +52,10 @@ function scrollEvent() {
   }
 }
 
+function toggleMobileMenu() {
+  $('ul#fullmenu').toggleClass('open');
+}
+
 $(document).ready(function() {
 
   $(window).scroll(function() {

@@ -188,13 +188,44 @@ article {
 nav {
 	display: none;
 	width: 100%;
-	ul {
-		list-style: none !important;
-		margin: 0 !important;
-	}
 	&.sticky {
 		display: block;
 	}
+	ul {
+		list-style: none !important;
+		margin: 0 !important;
+		padding: 0;
+	}
+	a#mobileMenuOpen {
+		height: 2em;
+		width: 2em;
+		float: right;
+		padding: .2em;
+		margin: .4em;
+	}
+	ul#fullmenu {
+		display: none;
+		height: 0;
+		transition: all 300ms ease-in;
+		&.open {
+			display: block;
+			height: auto;
+			transition: all 300ms ease-in;
+		}
+		li {
+			width: 100%;
+			text-align: center;
+			padding: .4em;
+			display: block;
+			a {
+				width: 100%;
+				padding: .4em;
+				display: block;
+			}
+		}
+	}
+
+
 }
 
 

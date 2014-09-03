@@ -1,6 +1,7 @@
 		<nav id="main">
+			<a href="javascript:toggleMobileMenu();" id="mobileMenuOpen"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32"><path d="m4 10h24c1.104 0 2-.896 2-2s-.896-2-2-2h-24c-1.104 0-2 .896-2 2s.896 2 2 2m24 4h-24c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2m0 8h-24c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2"/></svg></a>
 			<a href="/#top" id="nav-logo"><h1 class="logo-{{ logoTheme|default:'color' }} logo">1Source</h1></a>
-			<ul>
+			<ul id="fullmenu">
 				<li><a href="/#story" id="nav-story">STORY</a>
 				<li><a href="/#services" id="nav-services">SERVICES</a>
 				<li><a href="/#success" id="nav-success">SUCCESS</a>
@@ -8,4 +9,5 @@
 				<li><a href="/contact" id="nav-contact"{% if active == "contact" %} class="active"{% endif %}>CONTACT</a>
 				<li><a href="http://www.linkedin.com" id="nav-linkedin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.799999 31.7"><path d="m28.6 1h-25.4c-1.2 0-2.2 1-2.2 2.1v25.5c0 1.2 1 2.1 2.2 2.1h25.4c1.2 0 2.2-1 2.2-2.1v-25.5c0-1.2-1-2.1-2.2-2.1m-18.6 24.9h-4.5v-13.4h4.5v13.4m-2.2-15.3c-1.5 0-2.5-1-2.5-2.3 0-1.3 1-2.3 2.5-2.3 1.5 0 2.5 1 2.5 2.3 0 1.3-.9 2.3-2.5 2.3m18.5 15.3h-4.5v-7.2c0-1.8-.7-3-2.3-3-1.2 0-2 .8-2.3 1.6-.1.3-.1.7-.1 1.1v7.5h-4.5c0 0 .1-12.2 0-13.5h4.5v1.9c.6-.9 1.7-2.2 4.1-2.2 3 0 5.2 1.9 5.2 6.1v7.7zm-9.3-11.5c0 0 0 0 0 0" fill="#a99e99"/></svg></a>
 			</ul>
+
 		</nav>
