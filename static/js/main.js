@@ -62,4 +62,10 @@ $(document).ready(function() {
     window.requestAnimationFrame(scrollEvent);
   });
 
+  $('ul#fullmenu a').click(function() {
+    if ($('ul#fullmenu').hasClass('open')) {
+      toggleMobileMenu();
+    }
+  });
+
 });
