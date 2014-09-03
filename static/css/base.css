@@ -350,49 +350,45 @@ body.homepage section.homepage-summary {
 }
 /* line 340, base.scss */
 body.homepage aside.homepage-left {
-  width: 50%;
-  float: left;
-  height: 33em;
   margin-top: 14em;
   text-align: center;
 }
-/* line 346, base.scss */
+/* line 343, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 350, base.scss */
+/* line 347, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: "Adelle Sans", sans-serif;
   padding: .4em 1em;
   margin: 1em;
 }
-/* line 354, base.scss */
+/* line 351, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .2em .5em;
 }
-/* line 358, base.scss */
+/* line 355, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 369, base.scss */
+/* line 366, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   height: 35em;
   padding: 13.2em 4em 0;
-  margin-left: 50%;
 }
-/* line 374, base.scss */
+/* line 370, base.scss */
 body.homepage section.homepage-right .learn-more {
   margin-top: 3em;
   text-align: center;
 }
-/* line 377, base.scss */
+/* line 373, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -400,7 +396,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 383, base.scss */
+/* line 379, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
@@ -500,6 +496,16 @@ body.homepage section.homepage-right .learn-more a:active {
   body.homepage section.homepage-summary {
     padding: 3.6em;
     font-size: 2.6em;
+  }
+  /* line 84, breakpoint-medium.scss */
+  body.homepage aside.homepage-left {
+    width: 50%;
+    float: left;
+    height: 33em;
+  }
+  /* line 89, breakpoint-medium.scss */
+  body.homepage section.homepage-right {
+    margin-left: 50%;
   }
 }
 @media screen and (min-width: 56em) {
