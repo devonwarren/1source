@@ -250,19 +250,15 @@ footer {
 		list-style: none;
 		font-family: $adelle_sans;
 		& > li {
-			display: inline-block;
+			display: block;
 			vertical-align: top;
 			padding: 1em;
-			text-align: left;
+			text-align: center;
 			ul {
 				list-style: none;
 				font-size: .8em;
 				padding-left: 0;
 				li {
-					max-width: 17em;
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
 					padding-top: .4em;
 				}
 			}
