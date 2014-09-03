@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$adelle_sans".
-        on line 41 of /home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss
+        on line 42 of /home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss
 
-36: 				position: relative;
-37: 				display: inline-block;
-38: 				margin: .2em .4em;
-39: 				padding: 0;
-40: 				width: auto;
-41: 				font-family: $adelle_sans;
-42: 				color: $secondary4;
-43: 				font-size: .9em;
-44: 			}
-45: 			a:hover,
-46: 			a:focus {
+37: 				position: relative;
+38: 				display: inline-block;
+39: 				margin: .2em .4em;
+40: 				padding: 0;
+41: 				width: auto;
+42: 				font-family: $adelle_sans;
+43: 				color: $secondary4;
+44: 				font-size: .9em;
+45: 			}
+46: 			a:hover,
+47: 			a:focus {
 
 Backtrace:
-/home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss:41
+/home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss:42
 /usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/script/tree/node.rb:50:in `perform'
 /usr/lib/ruby/gems/2.1.0/gems/compass-1.0.1/vendor/bundle/ruby/2.1.0/gems/sass-3.4.1/lib/sass/tree/visitors/perform.rb:378:in `visit_prop'
@@ -100,4 +100,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$adelle_sans\".\A         on line 41 of /home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss\A \A 36: 				position: relative;\A 37: 				display: inline-block;\A 38: 				margin: .2em .4em;\A 39: 				padding: 0;\A 40: 				width: auto;\A 41: 				font-family: $adelle_sans;\A 42: 				color: $secondary4;\A 43: 				font-size: .9em;\A 44: 			}\A 45: 			a:hover,\A 46: 			a:focus {"; }
+  content: "Error: Undefined variable: \"$adelle_sans\".\A         on line 42 of /home/devon/Projects/onesource/onesource/static/css/breakpoint-medium.scss\A \A 37: 				position: relative;\A 38: 				display: inline-block;\A 39: 				margin: .2em .4em;\A 40: 				padding: 0;\A 41: 				width: auto;\A 42: 				font-family: $adelle_sans;\A 43: 				color: $secondary4;\A 44: 				font-size: .9em;\A 45: 			}\A 46: 			a:hover,\A 47: 			a:focus {"; }
