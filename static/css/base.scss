@@ -366,8 +366,8 @@ body.homepage {
 
 	section.homepage-right {
 		background-color: white;
-		height: 35em;
-		padding: 1em 1em 0;
+		min-height: 32em;
+		padding: 1em;
 		.learn-more {
 			margin-top: 3em;
 			text-align: center;

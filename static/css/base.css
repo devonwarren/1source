@@ -381,8 +381,8 @@ body.homepage aside.homepage-left ul li a:hover {
 /* line 367, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
-  height: 35em;
-  padding: 1em 1em 0;
+  min-height: 32em;
+  padding: 1em;
 }
 /* line 371, base.scss */
 body.homepage section.homepage-right .learn-more {
@@ -516,8 +516,9 @@ body.homepage section.homepage-right .learn-more a:active {
   }
   /* line 97, breakpoint-medium.scss */
   body.homepage section.homepage-right {
+    min-height: 35em;
     margin-left: 50%;
-    padding: 13.2em 1em 0;
+    padding: 13.2em 4em 1em;
   }
 }
 @media screen and (min-width: 56em) {
