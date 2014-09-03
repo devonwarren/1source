@@ -259,6 +259,10 @@ footer {
 				font-size: .8em;
 				padding-left: 0;
 				li {
+					max-width: 17em;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
 					padding-top: .4em;
 				}
 			}

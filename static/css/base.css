@@ -266,35 +266,39 @@ footer > ul > li ul {
 }
 /* line 261, base.scss */
 footer > ul > li ul li {
+  max-width: 17em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding-top: .4em;
 }
-/* line 267, base.scss */
+/* line 271, base.scss */
 footer #copyright {
   font-family: "Adelle Sans", sans-serif;
   font-size: .7em;
   padding-bottom: 1em;
 }
 
-/* line 277, base.scss */
+/* line 281, base.scss */
 body.homepage div#logo {
   position: absolute;
   top: 30%;
   width: 100%;
   text-align: center;
 }
-/* line 282, base.scss */
+/* line 286, base.scss */
 body.homepage div#logo h1.logo-color {
   height: 4em;
 }
-/* line 286, base.scss */
+/* line 290, base.scss */
 body.homepage header#hero {
   height: 100em;
 }
-/* line 288, base.scss */
+/* line 292, base.scss */
 body.homepage header#hero nav {
   transition: all 300ms ease-in;
 }
-/* line 290, base.scss */
+/* line 294, base.scss */
 body.homepage header#hero nav.sticky {
   position: fixed;
   top: 0;
@@ -304,40 +308,40 @@ body.homepage header#hero nav.sticky {
   opacity: .95;
   transition: all 300ms ease-in;
 }
-/* line 298, base.scss */
+/* line 302, base.scss */
 body.homepage header#hero nav.sticky a#nav-logo {
   opacity: 1;
   transition: all 300ms ease-in;
 }
-/* line 303, base.scss */
+/* line 307, base.scss */
 body.homepage header#hero nav a#nav-logo {
   opacity: 0;
   transition: all 300ms ease-in;
 }
-/* line 309, base.scss */
+/* line 313, base.scss */
 body.homepage div#enter {
   position: absolute;
   bottom: 8%;
   width: 100%;
   text-align: center;
 }
-/* line 314, base.scss */
+/* line 318, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 318, base.scss */
+/* line 322, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 322, base.scss */
+/* line 326, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 329, base.scss */
+/* line 333, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 1em;
@@ -349,46 +353,46 @@ body.homepage section.homepage-summary {
   font-size: 1.8em;
   font-weight: normal;
 }
-/* line 341, base.scss */
+/* line 345, base.scss */
 body.homepage aside.homepage-left {
   text-align: center;
 }
-/* line 343, base.scss */
+/* line 347, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 347, base.scss */
+/* line 351, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: "Adelle Sans", sans-serif;
   padding: .4em 1em;
   margin: .6em;
 }
-/* line 351, base.scss */
+/* line 355, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .2em .5em;
 }
-/* line 355, base.scss */
+/* line 359, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 366, base.scss */
+/* line 370, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   min-height: 32em;
   padding: 1em;
 }
-/* line 370, base.scss */
+/* line 374, base.scss */
 body.homepage section.homepage-right .learn-more {
   margin-top: 3em;
   text-align: center;
 }
-/* line 373, base.scss */
+/* line 377, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -396,7 +400,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 379, base.scss */
+/* line 383, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
