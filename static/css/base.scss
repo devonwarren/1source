@@ -75,7 +75,7 @@ h1 {
 h2 {
 	font-family: $officina;
 	color: white;
-	font-size: 2.8em;
+	font-size: 2.6em;
 	font-weight: normal;
 	margin: 0;
 	padding: .4em;
@@ -329,13 +329,13 @@ body.homepage {
 
 	section.homepage-summary {
 		display: block;
-		padding: 2em;
+		padding: 1em;
 		text-align: center;
 		background-color: $primary1;
 		color: white;
 		opacity: .9;
 		font-family: $officina;
-		font-size: 2em;
+		font-size: 1.8em;
 		font-weight: normal;
 	}
 
@@ -348,7 +348,7 @@ body.homepage {
 			li {
 				font-family: $adelle_sans;
 				padding: .4em 1em;
-				margin: 1em;
+				margin: .6em;
 				a {
 					color: white;
 					padding: .2em .5em;
@@ -367,7 +367,7 @@ body.homepage {
 	section.homepage-right {
 		background-color: white;
 		height: 35em;
-		padding: 1em 4em 0;
+		padding: 1em 1em 0;
 		.learn-more {
 			margin-top: 3em;
 			text-align: center;

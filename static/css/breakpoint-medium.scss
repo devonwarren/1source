@@ -90,9 +90,12 @@ body.homepage {
 		float: left;
 		height: 33em;
 		margin-top: 14em;
+		ul li {
+			margin: 1em;
+		}
 	}
 	section.homepage-right {
 		margin-left: 50%;
-		padding-top: 13.2em;
+		padding: 13.2em 1em 0;
 	}
 }
