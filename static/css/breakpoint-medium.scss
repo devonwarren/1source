@@ -80,6 +80,14 @@ body.homepage {
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		&.sticky {
+			a#nav-logo {
+				width: auto;
+				float: left;
+				padding: 0;
+				display: inline-block;
+			}
+		}
 	}
 	section.homepage-summary {
 		padding: 3.6em;
