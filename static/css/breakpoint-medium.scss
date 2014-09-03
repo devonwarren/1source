@@ -98,9 +98,11 @@ body.homepage {
 			a#nav-logo {
 				width: auto;
 				float: left;
-				padding: 0;
 				display: inline-block;
 			}
+		}
+		a#nav-logo {
+			padding: 0;
 		}
 	}
 	section.homepage-summary {
