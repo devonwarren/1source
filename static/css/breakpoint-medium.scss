@@ -1,3 +1,7 @@
+h2 {
+	font-size: 2.8em;
+}
+
 h4 {
 	font-size: 1.7em;
 }
@@ -85,8 +89,10 @@ body.homepage {
 		width: 50%;
 		float: left;
 		height: 33em;
+		margin-top: 14em;
 	}
 	section.homepage-right {
 		margin-left: 50%;
+		padding-top: 13.2em;
 	}
 }
