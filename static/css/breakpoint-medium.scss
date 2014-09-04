@@ -89,6 +89,23 @@ footer {
 	}
 }
 
+header.not-fullscreen {
+	height: 18em;
+	border-bottom: solid 3px $primary1;
+	nav {
+		a#nav-logo {
+			padding: 0;
+			float: left;
+			width: auto;
+			h1 {
+				height: 1.3em;
+			}
+		}
+		ul#fullmenu {
+			background-color: transparent;
+		}
+	}
+}
 
 body.homepage {
 	header#hero {
