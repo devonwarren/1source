@@ -108,35 +108,15 @@ body.homepage {
 			}
 		}
 		div.tagline {
-			position: absolute;
-			z-index: 101;
 			display: block;
-			font-size: 1em;
+			font-size: 1.6em;
 			letter-spacing: .1em;
 			font-family: $officina;
 			color: white;
-			width: auto;
-		}
-		div#tagline1 {
-			top: 3em;
-			left: 1em;
-		}
-		div#tagline2 {
-			top: 3em;
-			right: 1em;
-		}
-		div#tagline3 {
-			bottom: 4em;
-			right: 1em;
-		}
-		div#tagline4 {
-			bottom: 4em;
-			left: 1em;
-		}
-		div#tagline5 {
-			top: 65%;
 			width: 100%;
 			text-align: center;
+			height: 0;
+			overflow: visible;
 		}
 	}
 	section.homepage-summary {

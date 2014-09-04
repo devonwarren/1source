@@ -58,14 +58,19 @@ function toggleMobileMenu() {
 
 function fullHeightHero() {
   $('#hero').css('height', window.innerHeight + 'px');
+  var targetCenter = Math.round((window.innerHeight - $('#logo h1').height()) / 2);
+  $('#logo').css('top', targetCenter);
 }
 
 function homepageTagFades(currentIdx) {
-  $($('div.tagline')[currentIdx]).fadeTo(1500, .5, function() {
-    var delay = 0;
-    if ($(this).hasClass('longfade')) {
-      delay = 2000;
-    }
+  var current = $('div.tagline')[currentIdx];
+  var delay = 0;
+  var opacity = .5;
+  if ($(current).hasClass('longfade')) {
+    delay = 2000;
+    opacity = 1;
+  }
+  $(current).fadeTo(1500, opacity, function() {
     $(this).delay(delay).fadeTo(1500, 0, function() {
       if ($('div.tagline')[currentIdx+1]) {
         homepageTagFades(currentIdx+1);  
