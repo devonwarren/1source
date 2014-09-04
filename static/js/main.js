@@ -61,12 +61,12 @@ function fullHeightHero() {
 }
 
 function homepageTagFades(currentIdx) {
-  $($('div.tagline')[currentIdx]).fadeIn(1500, function() {
+  $($('div.tagline')[currentIdx]).fadeTo(1500, .5, function() {
     var delay = 0;
     if ($(this).hasClass('longfade')) {
       delay = 2000;
     }
-    $(this).delay(delay).fadeOut(1500, function() {
+    $(this).delay(delay).fadeTo(1500, 0, function() {
       if ($('div.tagline')[currentIdx+1]) {
         homepageTagFades(currentIdx+1);  
       } else {

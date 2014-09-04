@@ -276,26 +276,30 @@ footer #copyright {
   padding-bottom: 1em;
 }
 
-/* line 278, base.scss */
+/* line 279, base.scss */
 body.homepage div#logo {
-  position: absolute;
-  top: 30%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 100%;
   text-align: center;
 }
-/* line 283, base.scss */
+/* line 287, base.scss */
 body.homepage div#logo h1.logo-color {
   height: 4em;
 }
-/* line 287, base.scss */
+/* line 291, base.scss */
 body.homepage header#hero {
   height: 100em;
+  background: url("../images/gradient-dark.png") repeat-x bottom;
 }
-/* line 289, base.scss */
+/* line 294, base.scss */
 body.homepage header#hero nav {
   transition: all 300ms ease-in;
 }
-/* line 291, base.scss */
+/* line 296, base.scss */
 body.homepage header#hero nav.sticky {
   position: fixed;
   top: 0;
@@ -305,26 +309,26 @@ body.homepage header#hero nav.sticky {
   opacity: 1;
   transition: all 300ms ease-in;
 }
-/* line 299, base.scss */
+/* line 304, base.scss */
 body.homepage header#hero nav.sticky a#nav-logo {
   width: 100%;
   opacity: 1;
   transition: all 300ms ease-in;
   display: block;
 }
-/* line 306, base.scss */
+/* line 311, base.scss */
 body.homepage header#hero nav a#nav-logo {
   opacity: 0;
   transition: all 300ms ease-in;
   padding: 0 3.2em;
 }
-/* line 313, base.scss */
+/* line 318, base.scss */
 body.homepage div.tagline {
   display: none;
   width: 0;
   overflow: hidden;
 }
-/* line 318, base.scss */
+/* line 323, base.scss */
 body.homepage div#enter {
   position: absolute;
   z-index: 102;
@@ -332,23 +336,23 @@ body.homepage div#enter {
   width: 100%;
   text-align: center;
 }
-/* line 324, base.scss */
+/* line 329, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 328, base.scss */
+/* line 333, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 332, base.scss */
+/* line 337, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 339, base.scss */
+/* line 344, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 1em;
@@ -360,51 +364,51 @@ body.homepage section.homepage-summary {
   font-size: 1.8em;
   font-weight: normal;
 }
-/* line 351, base.scss */
+/* line 356, base.scss */
 body.homepage aside.homepage-left {
   text-align: center;
   padding: 3em 0 1em;
 }
-/* line 354, base.scss */
+/* line 359, base.scss */
 body.homepage aside.homepage-left a {
   text-decoration: none;
 }
-/* line 357, base.scss */
+/* line 362, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 361, base.scss */
+/* line 366, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: "Adelle Sans", sans-serif;
   padding: .4em 1em;
   margin: .6em;
 }
-/* line 365, base.scss */
+/* line 370, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .2em .5em;
 }
-/* line 369, base.scss */
+/* line 374, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 380, base.scss */
+/* line 385, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   min-height: 32em;
   padding: 1em;
 }
-/* line 384, base.scss */
+/* line 389, base.scss */
 body.homepage section.homepage-right .learn-more {
   margin-top: 3em;
   text-align: center;
 }
-/* line 387, base.scss */
+/* line 392, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -412,7 +416,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 393, base.scss */
+/* line 398, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
@@ -550,27 +554,27 @@ body.homepage section.homepage-right .learn-more a:active {
   }
   /* line 120, breakpoint-medium.scss */
   body.homepage header#hero div#tagline1 {
-    top: 2em;
+    top: 3em;
     left: 1em;
   }
   /* line 124, breakpoint-medium.scss */
   body.homepage header#hero div#tagline2 {
-    top: 2em;
+    top: 3em;
     right: 1em;
   }
   /* line 128, breakpoint-medium.scss */
   body.homepage header#hero div#tagline3 {
-    bottom: 3em;
+    bottom: 4em;
     right: 1em;
   }
   /* line 132, breakpoint-medium.scss */
   body.homepage header#hero div#tagline4 {
-    bottom: 3em;
+    bottom: 4em;
     left: 1em;
   }
   /* line 136, breakpoint-medium.scss */
   body.homepage header#hero div#tagline5 {
-    top: 62%;
+    top: 65%;
     width: 100%;
     text-align: center;
   }
@@ -609,6 +613,6 @@ body.homepage section.homepage-right .learn-more a:active {
   }
   /* line 14, breakpoint-large.scss */
   body.homepage header#hero div.tagline {
-    font-size: 1.4em;
+    font-size: 2.2em;
   }
 }
