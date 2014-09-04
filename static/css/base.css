@@ -385,7 +385,7 @@ body.homepage section.homepage-summary {
 /* line 367, base.scss */
 body.homepage aside.homepage-left {
   text-align: center;
-  padding: 3em 0 1em;
+  padding: 2em 0;
 }
 /* line 370, base.scss */
 body.homepage aside.homepage-left a {

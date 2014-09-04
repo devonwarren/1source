@@ -12,7 +12,7 @@
 			<div class="tagline" id="tagline2" style="display:none;">award-winning dedication</div>
 			<div class="tagline" id="tagline3" style="display:none;">large-scale information technology</div>
 			<div class="tagline" id="tagline4" style="display:none;">business and strategic consulting</div>
-			<div class="tagline longfade" id="tagline5" style="display:none;">IT's about service.</div>
+			<div class="tagline longfade" id="tagline5" style="display:none;">It's About Service.</div>
 		</div>
 
 		<div id="enter">
@@ -23,6 +23,7 @@
 	</header>
 
 {% for section, subsections in section_list %}
+<a id="{{ section.title|slugify }}" class="anchor section-anchor"></a>
 	<section class="homepage-summary">
 		{{ section.featured_text }}
 	</section>
@@ -30,7 +31,7 @@
 {% with imgsrc="images/"|add:section.title|lower|add:".jpg" %}
 <div class="bgimage" style="background-image:url('{% static imgsrc %}');">
 {% endwith %}
-	<a id="{{ section.title|slugify }}" class="anchor section-anchor"></a>
+	
 	{% for subsection in subsections %}
 		<a id="subsec-{{ subsection.name|slugify }}" class="anchor"></a>
 	{% endfor %}
