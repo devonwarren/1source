@@ -63,15 +63,18 @@ function fullHeightHero() {
 }
 
 function homepageTagFades(currentIdx) {
+  if (!currentIdx) {
+    currentIdx = 0;
+  }
   var current = $('div.tagline')[currentIdx];
-  var delay = 0;
+  var delay = 500;
   var opacity = .5;
   if ($(current).hasClass('longfade')) {
     delay = 2000;
     opacity = 1;
   }
-  $(current).fadeTo(1500, opacity, function() {
-    $(this).delay(delay).fadeTo(1500, 0, function() {
+  $(current).fadeTo(1000, opacity, function() {
+    $(this).delay(delay).fadeTo(1000, 0, function() {
       if ($('div.tagline')[currentIdx+1]) {
         homepageTagFades(currentIdx+1);  
       } else {
@@ -130,5 +133,5 @@ $(document).ready(function() {
 
   scrollEvent();
 
-  homepageTagFades(0);
+  window.setTimeout(homepageTagFades, 2000);
 });
