@@ -211,7 +211,7 @@ nav ul#fullmenu {
 }
 /* line 213, base.scss */
 nav ul#fullmenu.open {
-  max-height: 60em;
+  max-height: 25em;
   transition: all 600ms ease-in;
 }
 /* line 217, base.scss */
@@ -323,8 +323,10 @@ body.homepage header#hero nav a#nav-logo {
 body.homepage div.tagline {
   position: relative;
   display: none;
+  height: 0;
+  overflow: hidden;
 }
-/* line 319, base.scss */
+/* line 321, base.scss */
 body.homepage div#enter {
   position: absolute;
   z-index: 102;
@@ -332,23 +334,23 @@ body.homepage div#enter {
   width: 100%;
   text-align: center;
 }
-/* line 325, base.scss */
+/* line 327, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 329, base.scss */
+/* line 331, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 333, base.scss */
+/* line 335, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 340, base.scss */
+/* line 342, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 1em;
@@ -360,51 +362,51 @@ body.homepage section.homepage-summary {
   font-size: 1.8em;
   font-weight: normal;
 }
-/* line 352, base.scss */
+/* line 354, base.scss */
 body.homepage aside.homepage-left {
   text-align: center;
   padding: 3em 0 1em;
 }
-/* line 355, base.scss */
+/* line 357, base.scss */
 body.homepage aside.homepage-left a {
   text-decoration: none;
 }
-/* line 358, base.scss */
+/* line 360, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 362, base.scss */
+/* line 364, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: "Adelle Sans", sans-serif;
   padding: .4em 1em;
   margin: .6em;
 }
-/* line 366, base.scss */
+/* line 368, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .2em .5em;
 }
-/* line 370, base.scss */
+/* line 372, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 381, base.scss */
+/* line 383, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   min-height: 32em;
   padding: 1em;
 }
-/* line 385, base.scss */
+/* line 387, base.scss */
 body.homepage section.homepage-right .learn-more {
   margin-top: 3em;
   text-align: center;
 }
-/* line 388, base.scss */
+/* line 390, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -412,7 +414,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 394, base.scss */
+/* line 396, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
@@ -546,26 +548,25 @@ body.homepage section.homepage-right .learn-more a:active {
     color: white;
     width: 100%;
     text-align: center;
-    height: 0;
     overflow: visible;
   }
-  /* line 122, breakpoint-medium.scss */
+  /* line 121, breakpoint-medium.scss */
   body.homepage section.homepage-summary {
     padding: 3.6em;
     font-size: 2.6em;
   }
-  /* line 126, breakpoint-medium.scss */
+  /* line 125, breakpoint-medium.scss */
   body.homepage aside.homepage-left {
     width: 50%;
     float: left;
     height: 25em;
     margin-top: 14em;
   }
-  /* line 131, breakpoint-medium.scss */
+  /* line 130, breakpoint-medium.scss */
   body.homepage aside.homepage-left ul li {
     margin: 1em;
   }
-  /* line 135, breakpoint-medium.scss */
+  /* line 134, breakpoint-medium.scss */
   body.homepage section.homepage-right {
     min-height: 35em;
     margin-left: 50%;

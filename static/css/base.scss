@@ -211,7 +211,7 @@ nav {
 		overflow: hidden;
 		border-bottom: solid 2px $primary1;
 		&.open {
-			max-height: 60em;
+			max-height: 25em;
 			transition: all 600ms ease-in;
 		}
 		li {
@@ -315,6 +315,8 @@ body.homepage {
 	div.tagline {
 		position: relative;
 		display: none;
+		height: 0;
+		overflow: hidden;
 	}
 	div#enter {
 		position: absolute;
