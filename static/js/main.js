@@ -60,12 +60,29 @@ function fullHeightHero() {
   $('#hero').css('height', window.innerHeight + 'px');
 }
 
+function homepageTagFades(currentIdx) {
+  $($('div.tagline')[currentIdx]).fadeIn(1500, function() {
+    var delay = 0;
+    if ($(this).hasClass('longfade')) {
+      delay = 2000;
+    }
+    $(this).delay(delay).fadeOut(1500, function() {
+      if ($('div.tagline')[currentIdx+1]) {
+        homepageTagFades(currentIdx+1);  
+      } else {
+        homepageTagFades(0);
+      }
+    });
+  });
+}
+
 $(window).load(function() {
   fullHeightHero();
 });
 
 $(window).resize(function() { 
   fullHeightHero();
+  scrollEvent();
 });
 
 function homepageDetailLoad(subsection) {
@@ -108,4 +125,5 @@ $(document).ready(function() {
 
   scrollEvent();
 
+  homepageTagFades(0);
 });

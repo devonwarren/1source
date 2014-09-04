@@ -319,29 +319,36 @@ body.homepage header#hero nav a#nav-logo {
   padding: 0 3.2em;
 }
 /* line 313, base.scss */
+body.homepage div.tagline {
+  display: none;
+  width: 0;
+  overflow: hidden;
+}
+/* line 318, base.scss */
 body.homepage div#enter {
   position: absolute;
-  bottom: 8%;
+  z-index: 102;
+  bottom: 4%;
   width: 100%;
   text-align: center;
 }
-/* line 318, base.scss */
+/* line 324, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 322, base.scss */
+/* line 328, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 326, base.scss */
+/* line 332, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 333, base.scss */
+/* line 339, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 1em;
@@ -353,51 +360,51 @@ body.homepage section.homepage-summary {
   font-size: 1.8em;
   font-weight: normal;
 }
-/* line 345, base.scss */
+/* line 351, base.scss */
 body.homepage aside.homepage-left {
   text-align: center;
   padding: 3em 0 1em;
 }
-/* line 348, base.scss */
+/* line 354, base.scss */
 body.homepage aside.homepage-left a {
   text-decoration: none;
 }
-/* line 351, base.scss */
+/* line 357, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 355, base.scss */
+/* line 361, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: "Adelle Sans", sans-serif;
   padding: .4em 1em;
   margin: .6em;
 }
-/* line 359, base.scss */
+/* line 365, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .2em .5em;
 }
-/* line 363, base.scss */
+/* line 369, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 374, base.scss */
+/* line 380, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   min-height: 32em;
   padding: 1em;
 }
-/* line 378, base.scss */
+/* line 384, base.scss */
 body.homepage section.homepage-right .learn-more {
   margin-top: 3em;
   text-align: center;
 }
-/* line 381, base.scss */
+/* line 387, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -405,7 +412,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 387, base.scss */
+/* line 393, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
@@ -514,39 +521,76 @@ body.homepage section.homepage-right .learn-more a:active {
     text-overflow: ellipsis;
   }
 
-  /* line 94, breakpoint-medium.scss */
+  /* line 95, breakpoint-medium.scss */
   body.homepage header#hero nav {
     position: absolute;
     bottom: 0;
     right: 0;
   }
-  /* line 99, breakpoint-medium.scss */
+  /* line 100, breakpoint-medium.scss */
   body.homepage header#hero nav.sticky a#nav-logo {
     width: auto;
     float: left;
     display: inline-block;
   }
-  /* line 105, breakpoint-medium.scss */
+  /* line 106, breakpoint-medium.scss */
   body.homepage header#hero nav a#nav-logo {
     padding: 0;
   }
-  /* line 109, breakpoint-medium.scss */
+  /* line 110, breakpoint-medium.scss */
+  body.homepage header#hero div.tagline {
+    position: absolute;
+    z-index: 101;
+    display: block;
+    font-size: 1em;
+    letter-spacing: .1em;
+    font-family: "OfficinaSerITCStd", serif;
+    color: white;
+    width: auto;
+  }
+  /* line 120, breakpoint-medium.scss */
+  body.homepage header#hero div#tagline1 {
+    top: 2em;
+    left: 1em;
+  }
+  /* line 124, breakpoint-medium.scss */
+  body.homepage header#hero div#tagline2 {
+    top: 2em;
+    right: 1em;
+  }
+  /* line 128, breakpoint-medium.scss */
+  body.homepage header#hero div#tagline3 {
+    bottom: 3em;
+    right: 1em;
+  }
+  /* line 132, breakpoint-medium.scss */
+  body.homepage header#hero div#tagline4 {
+    bottom: 3em;
+    left: 1em;
+  }
+  /* line 136, breakpoint-medium.scss */
+  body.homepage header#hero div#tagline5 {
+    top: 62%;
+    width: 100%;
+    text-align: center;
+  }
+  /* line 142, breakpoint-medium.scss */
   body.homepage section.homepage-summary {
     padding: 3.6em;
     font-size: 2.6em;
   }
-  /* line 113, breakpoint-medium.scss */
+  /* line 146, breakpoint-medium.scss */
   body.homepage aside.homepage-left {
     width: 50%;
     float: left;
     height: 25em;
     margin-top: 14em;
   }
-  /* line 118, breakpoint-medium.scss */
+  /* line 151, breakpoint-medium.scss */
   body.homepage aside.homepage-left ul li {
     margin: 1em;
   }
-  /* line 122, breakpoint-medium.scss */
+  /* line 155, breakpoint-medium.scss */
   body.homepage section.homepage-right {
     min-height: 35em;
     margin-left: 50%;
@@ -554,13 +598,17 @@ body.homepage section.homepage-right .learn-more a:active {
   }
 }
 @media screen and (min-width: 56em) {
-  /* line 2, breakpoint-large.scss */
-  nav .logo {
+  /* line 4, breakpoint-large.scss */
+  body.homepage header#hero nav .logo {
     width: 4em;
   }
-  /* line 6, breakpoint-large.scss */
-  nav ul#fullmenu li {
+  /* line 8, breakpoint-large.scss */
+  body.homepage header#hero nav ul#fullmenu li {
     padding-left: 1em;
     padding-right: 1em;
+  }
+  /* line 14, breakpoint-large.scss */
+  body.homepage header#hero div.tagline {
+    font-size: 1.4em;
   }
 }

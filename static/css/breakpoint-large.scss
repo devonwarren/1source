@@ -1,11 +1,18 @@
-nav {
-	.logo {
-		width: 4em;
-	}
-	ul#fullmenu {
-		li {
-			padding-left: 1em;
-			padding-right: 1em;
+body.homepage {
+	header#hero {
+		nav {
+			.logo {
+				width: 4em;
+			}
+			ul#fullmenu {
+				li {
+					padding-left: 1em;
+					padding-right: 1em;
+				}
+			}
+		}
+		div.tagline {
+			font-size: 1.4em;
 		}
 	}
 }

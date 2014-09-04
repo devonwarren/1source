@@ -5,7 +5,7 @@ from ckeditor.fields import RichTextField
 class Section(OrderedModel):
 	title = models.CharField(max_length=100, unique=True)
 	featured_text = models.TextField(help_text="Orange bar section of text")
-	teaser_text = models.TextField(help_text="Text displayed when no subsections are selected")
+	teaser_text = models.TextField(help_text="Text displayed when no subsections are selected", blank=True)
 
 	class Meta(OrderedModel.Meta):
 		pass

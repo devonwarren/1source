@@ -91,19 +91,52 @@ footer {
 
 
 body.homepage {
-	header#hero nav {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		&.sticky {
+	header#hero {
+		nav {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			&.sticky {
+				a#nav-logo {
+					width: auto;
+					float: left;
+					display: inline-block;
+				}
+			}
 			a#nav-logo {
-				width: auto;
-				float: left;
-				display: inline-block;
+				padding: 0;
 			}
 		}
-		a#nav-logo {
-			padding: 0;
+		div.tagline {
+			position: absolute;
+			z-index: 101;
+			display: block;
+			font-size: 1em;
+			letter-spacing: .1em;
+			font-family: $officina;
+			color: white;
+			width: auto;
+		}
+		div#tagline1 {
+			top: 2em;
+			left: 1em;
+		}
+		div#tagline2 {
+			top: 2em;
+			right: 1em;
+		}
+		div#tagline3 {
+			bottom: 3em;
+			right: 1em;
+		}
+		div#tagline4 {
+			bottom: 3em;
+			left: 1em;
+		}
+		div#tagline5 {
+			top: 62%;
+			width: 100%;
+			text-align: center;
 		}
 	}
 	section.homepage-summary {
