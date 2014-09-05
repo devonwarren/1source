@@ -111,6 +111,23 @@ header.not-fullscreen {
 	top: -76px;
 }
 
+content#main {
+	padding: 1em 4em;
+	max-width: 70em;
+	margin: 20em auto 0;
+}
+
+article {
+	.article-image {
+		height: 28em;
+		width: 28em;
+		float: left;
+	}
+	.article-content {
+		margin-left: 30em;
+	}
+}
+
 body.homepage {
 	header#hero {
 		nav {
