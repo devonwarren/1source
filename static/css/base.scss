@@ -211,6 +211,7 @@ article {
 
 // mobile first nav
 nav {
+	z-index: 1000;
 	display: none;
 	width: 100%;
 	&.sticky {

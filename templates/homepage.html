@@ -28,9 +28,17 @@
 	</section>
 </div>
 <a id="{{ section.title|slugify }}" class="anchor section-anchor"></a>
-{% with imgsrc="images/"|add:section.title|lower|add:".jpg" %}
-<div class="bgimage" style="background-image:url('{% static imgsrc %}');">
-{% endwith %}
+<style type="text/css">
+	#section-image-{{ section.id }} {
+			background-image: url('{{ section.image_mobile.url }}');
+	}
+	@media screen and (min-width : 480px) {
+		#section-image-{{ section.id }} {
+			background-image: url('{{ section.image.url }}');
+		}
+	}
+</style>
+<div class="bgimage" id="section-image-{{ section.id }}">
 	
 	{% for subsection in subsections %}
 		<a id="subsec-{{ subsection.name|slugify }}" class="anchor"></a>
