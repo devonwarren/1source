@@ -12,7 +12,7 @@ class Section(OrderedModel):
 	image_mobile = ImageSpecField(source='image',
                                       processors=[ResizeToFit(width=480)],
                                       format='JPEG',
-                                      options={'quality': 90})
+                                      options={'quality': 95})
 
 	class Meta(OrderedModel.Meta):
 		pass
