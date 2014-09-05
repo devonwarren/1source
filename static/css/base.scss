@@ -159,8 +159,13 @@ header.not-fullscreen {
 	z-index: 100;
 	nav {
 		display: block;
-		a#mobileMenuOpen svg path {
-			fill: gray;
+		a#mobileMenuOpen {
+			svg path {
+				fill: gray;
+			}
+			&:hover svg path {
+				fill: $primary1;
+			}
 		}
 		a#nav-logo {
 			width: 100%;
@@ -221,6 +226,9 @@ nav {
 		float: right;
 		padding: .2em;
 		margin: .4em;
+		&:hover svg path {
+			fill: $primary1;
+		}
 	}
 	ul#fullmenu {
 		max-height: 0;
