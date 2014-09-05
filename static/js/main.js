@@ -93,6 +93,12 @@ $(window).resize(function() {
   scrollEvent();
 });
 
+$(window).on('orientationchange', function() {
+  fullHeightHero();
+  scrollEvent();
+});
+
+
 function homepageDetailLoad(subsection) {
   // scroll to section top
   $(window).scrollTop($('#subsec-' + subsection).offset().top);
