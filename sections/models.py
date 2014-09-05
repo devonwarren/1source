@@ -1,11 +1,18 @@
 from django.db import models
 from ordered_model.models import OrderedModel
 from ckeditor.fields import RichTextField
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFit
 
 class Section(OrderedModel):
 	title = models.CharField(max_length=100, unique=True)
 	featured_text = models.TextField(help_text="Orange bar section of text")
 	teaser_text = models.TextField(help_text="Text displayed when no subsections are selected", blank=True)
+	image = models.ImageField(blank=True, default=None, upload_to='section', help_text="Background image for section")
+	image_mobile = ImageSpecField(source='image',
+                                      processors=[ResizeToFit(width=420)],
+                                      format='JPEG',
+                                      options={'quality': 68})
 
 	class Meta(OrderedModel.Meta):
 		pass
