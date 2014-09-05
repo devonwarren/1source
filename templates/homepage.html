@@ -23,11 +23,11 @@
 	</header>
 
 {% for section, subsections in section_list %}
-<a id="{{ section.title|slugify }}" class="anchor section-anchor"></a>
 	<section class="homepage-summary">
 		{{ section.featured_text }}
 	</section>
 </div>
+<a id="{{ section.title|slugify }}" class="anchor section-anchor"></a>
 {% with imgsrc="images/"|add:section.title|lower|add:".jpg" %}
 <div class="bgimage" style="background-image:url('{% static imgsrc %}');">
 {% endwith %}

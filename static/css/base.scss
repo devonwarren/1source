@@ -167,13 +167,18 @@ header.not-fullscreen {
 			display: block;
 			padding: 0 3.2em;
 			h1 {
-				height: 1.6em;
+				height: 3.2rem;
 			}
 		}
 		ul#fullmenu {
 			background-color: white;
 		}
 	}
+}
+
+.section-anchor {
+	position: relative;
+	top: -3.2rem;
 }
 
 content#main {
