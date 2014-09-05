@@ -362,14 +362,14 @@ body.homepage div.tagline {
 body.homepage div#enter {
   position: absolute;
   z-index: 102;
-  bottom: 4%;
+  bottom: 1rem;
   width: 100%;
   text-align: center;
 }
 /* line 351, base.scss */
 body.homepage div#enter a svg {
-  height: 4em;
-  width: 4em;
+  height: 3rem;
+  width: 3rem;
   display: inline-block;
 }
 /* line 355, base.scss */
@@ -625,23 +625,32 @@ body.homepage section.homepage-right .learn-more a:active {
     text-align: center;
     overflow: visible;
   }
-  /* line 159, breakpoint-medium.scss */
+  /* line 158, breakpoint-medium.scss */
+  body.homepage header#hero div#enter {
+    bottom: 1.6rem;
+  }
+  /* line 160, breakpoint-medium.scss */
+  body.homepage header#hero div#enter a svg {
+    height: 4rem;
+    width: 4rem;
+  }
+  /* line 166, breakpoint-medium.scss */
   body.homepage section.homepage-summary {
     padding: 3.6em;
     font-size: 2.6em;
   }
-  /* line 163, breakpoint-medium.scss */
+  /* line 170, breakpoint-medium.scss */
   body.homepage aside.homepage-left {
     width: 50%;
     float: left;
     height: 25em;
     margin-top: 14em;
   }
-  /* line 168, breakpoint-medium.scss */
+  /* line 175, breakpoint-medium.scss */
   body.homepage aside.homepage-left ul li {
     margin: 1em;
   }
-  /* line 172, breakpoint-medium.scss */
+  /* line 179, breakpoint-medium.scss */
   body.homepage section.homepage-right {
     min-height: 35em;
     margin-left: 50%;

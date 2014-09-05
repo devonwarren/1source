@@ -345,12 +345,12 @@ body.homepage {
 	div#enter {
 		position: absolute;
 		z-index: 102;
-		bottom: 4%;
+		bottom: 1rem;
 		width: 100%;
 		text-align: center;
 		a svg {
-			height: 4em;
-			width: 4em;
+			height: 3rem;
+			width: 3rem;
 			display: inline-block;
 			path {
 				fill: white;
