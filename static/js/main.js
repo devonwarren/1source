@@ -94,6 +94,9 @@ $(window).resize(function() {
 });
 
 function homepageDetailLoad(subsection) {
+  // scroll to section top
+  $(window).scrollTop($('#subsec-' + subsection).offset().top);
+
   var section = $('#subsection-' + subsection).parent().parent();
   // change content
 
