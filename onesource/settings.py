@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'ordered_model',
     'ckeditor',
     'compressor',
+    'imagekit',
     'sections',
     'journal',
     'layout_elements',

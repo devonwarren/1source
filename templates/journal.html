@@ -12,8 +12,18 @@
 
 {% for entry in journal %}
 	<article>
-		<div class="article-image" style="background-image: url('{{ entry.image.url }}');">
-		</div>
+		<style type="text/css">
+			#article-image-{{ entry.id }} {
+					background-image: url('{{ entry.image_mobile.url }}');
+			}
+			@media screen and (min-width : 460px) {
+				#article-image-{{ entry.id }} {
+					background-image: url('{{ entry.image.url }}');
+				}
+			}
+		</style>
+		<div class="article-image" id="article-image-{{ entry.id }}"></div>
+
 		<div class="article-content">
 			<h4>{{ entry.title }}</h4>
 			{{ entry.body|safe }}

@@ -194,71 +194,72 @@ article {
 article .article-image {
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 12rem;
 }
-/* line 203, base.scss */
+/* line 204, base.scss */
 article .article-content {
   margin-top: 2em;
 }
-/* line 205, base.scss */
+/* line 206, base.scss */
 article .article-content p {
   margin: 0 0 2em;
 }
 
-/* line 212, base.scss */
+/* line 213, base.scss */
 nav {
   display: none;
   width: 100%;
 }
-/* line 215, base.scss */
+/* line 216, base.scss */
 nav.sticky {
   display: block;
 }
-/* line 218, base.scss */
+/* line 219, base.scss */
 nav ul {
   list-style: none !important;
   margin: 0 !important;
   padding: 0;
 }
-/* line 223, base.scss */
+/* line 224, base.scss */
 nav a#mobileMenuOpen {
   height: 2em;
   width: 2em;
   float: right;
   padding: .6em;
 }
-/* line 228, base.scss */
+/* line 229, base.scss */
 nav a#mobileMenuOpen:hover svg path {
   fill: #E86432;
 }
-/* line 232, base.scss */
+/* line 233, base.scss */
 nav ul#fullmenu {
   max-height: 0;
   transition: all 500ms ease-in;
   overflow: hidden;
   border-bottom: solid 2px #E86432;
 }
-/* line 237, base.scss */
+/* line 238, base.scss */
 nav ul#fullmenu.open {
   max-height: 25em;
   transition: all 600ms ease-in;
 }
-/* line 241, base.scss */
+/* line 242, base.scss */
 nav ul#fullmenu li {
   width: 100%;
   text-align: center;
   padding: .4em;
   display: block;
 }
-/* line 246, base.scss */
+/* line 247, base.scss */
 nav ul#fullmenu li a {
   width: 100%;
   padding: .4em;
   display: block;
 }
 
-/* line 258, base.scss */
+/* line 259, base.scss */
 footer {
   text-align: center;
   background-color: #C7522A;
@@ -266,7 +267,7 @@ footer {
   clear: both;
   opacity: .9;
 }
-/* line 264, base.scss */
+/* line 265, base.scss */
 footer a:link,
 footer a:hover,
 footer a:visited,
@@ -274,7 +275,7 @@ footer a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 271, base.scss */
+/* line 272, base.scss */
 footer > ul {
   margin: 0 auto;
   max-width: 80em;
@@ -282,51 +283,51 @@ footer > ul {
   list-style: none;
   font-family: "Adelle Sans", sans-serif;
 }
-/* line 277, base.scss */
+/* line 278, base.scss */
 footer > ul > li {
   display: block;
   vertical-align: top;
   padding: 1em;
   text-align: center;
 }
-/* line 282, base.scss */
+/* line 283, base.scss */
 footer > ul > li ul {
   list-style: none;
   font-size: .8em;
   padding-left: 0;
 }
-/* line 286, base.scss */
+/* line 287, base.scss */
 footer > ul > li ul li {
   padding-top: .4em;
 }
-/* line 292, base.scss */
+/* line 293, base.scss */
 footer #copyright {
   font-family: "Adelle Sans", sans-serif;
   font-size: .7em;
   padding-bottom: 1em;
 }
 
-/* line 301, base.scss */
+/* line 302, base.scss */
 body.homepage div#logo {
   position: absolute;
   top: 40%;
   width: 100%;
   text-align: center;
 }
-/* line 306, base.scss */
+/* line 307, base.scss */
 body.homepage div#logo h1.logo-color {
   height: 4em;
 }
-/* line 310, base.scss */
+/* line 311, base.scss */
 body.homepage header#hero {
   height: 100em;
   background: url("../images/gradient-dark.png") repeat-x bottom;
 }
-/* line 313, base.scss */
+/* line 314, base.scss */
 body.homepage header#hero nav {
   transition: all 300ms ease-in;
 }
-/* line 315, base.scss */
+/* line 316, base.scss */
 body.homepage header#hero nav.sticky {
   position: fixed;
   top: 0;
@@ -336,27 +337,27 @@ body.homepage header#hero nav.sticky {
   opacity: 1;
   transition: all 300ms ease-in;
 }
-/* line 323, base.scss */
+/* line 324, base.scss */
 body.homepage header#hero nav.sticky a#nav-logo {
   width: 100%;
   opacity: 1;
   transition: all 300ms ease-in;
   display: block;
 }
-/* line 330, base.scss */
+/* line 331, base.scss */
 body.homepage header#hero nav a#nav-logo {
   opacity: 0;
   transition: all 300ms ease-in;
   margin: 0 3.5em;
 }
-/* line 337, base.scss */
+/* line 338, base.scss */
 body.homepage div.tagline {
   position: relative;
   display: none;
   height: 0;
   overflow: hidden;
 }
-/* line 343, base.scss */
+/* line 344, base.scss */
 body.homepage div#enter {
   position: absolute;
   z-index: 102;
@@ -364,23 +365,23 @@ body.homepage div#enter {
   width: 100%;
   text-align: center;
 }
-/* line 349, base.scss */
+/* line 350, base.scss */
 body.homepage div#enter a svg {
   height: 4em;
   width: 4em;
   display: inline-block;
 }
-/* line 353, base.scss */
+/* line 354, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 357, base.scss */
+/* line 358, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 364, base.scss */
+/* line 365, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 1em;
@@ -392,51 +393,51 @@ body.homepage section.homepage-summary {
   font-size: 1.8em;
   font-weight: normal;
 }
-/* line 376, base.scss */
+/* line 377, base.scss */
 body.homepage aside.homepage-left {
   text-align: center;
   padding: 2em 0;
 }
-/* line 379, base.scss */
+/* line 380, base.scss */
 body.homepage aside.homepage-left a {
   text-decoration: none;
 }
-/* line 382, base.scss */
+/* line 383, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 386, base.scss */
+/* line 387, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: "Adelle Sans", sans-serif;
   padding: .4em 1em;
   margin: .6em;
 }
-/* line 390, base.scss */
+/* line 391, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .2em .5em;
 }
-/* line 394, base.scss */
+/* line 395, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 405, base.scss */
+/* line 406, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   min-height: 32em;
   padding: 1em;
 }
-/* line 409, base.scss */
+/* line 410, base.scss */
 body.homepage section.homepage-right .learn-more {
   margin-top: 3em;
   text-align: center;
 }
-/* line 412, base.scss */
+/* line 413, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -444,7 +445,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 418, base.scss */
+/* line 419, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
@@ -587,8 +588,8 @@ body.homepage section.homepage-right .learn-more a:active {
 
   /* line 121, breakpoint-medium.scss */
   article .article-image {
-    height: 28em;
-    width: 28em;
+    height: 28rem;
+    width: 28rem;
     float: left;
   }
   /* line 126, breakpoint-medium.scss */
