@@ -1,10 +1,10 @@
 	<footer>
 		<ul>
 			{% for section, subsections in section_list %}
-				<li><a href="/#{{ section.title|slugify }}">{{ section.title|upper }}</a>
-					<ul class="subsection-links">
+				<li class="subsection-link"><a href="/#{{ section.title|slugify }}">{{ section.title|upper }}</a>
+					<ul>
 					{% for subsection in subsections %}
-						<li><a href="/#subsec-{{ subsection.name|slugify }}">{{ subsection.name|upper }}
+						<li class="subsection-link"><a href="/#subsec-{{ subsection.name|slugify }}">{{ subsection.name|upper }}
 					{% endfor %}
 					</ul>
 			{% endfor %}

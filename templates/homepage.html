@@ -41,7 +41,7 @@
 <div class="bgimage" id="section-image-{{ section.id }}">
 	
 	{% for subsection in subsections %}
-		<a id="subsec-{{ subsection.name|slugify }}" class="anchor"></a>
+		<a id="subsec-{{ subsection.name|slugify }}" class="anchor subsection-anchor"></a>
 	{% endfor %}
 	<section class="homepage-detail section-{{ section|slugify }}">
 		<aside class="homepage-left" id="aside-{{ section.title|slugify }}">

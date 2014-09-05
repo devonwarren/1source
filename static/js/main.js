@@ -132,7 +132,7 @@ $(document).ready(function() {
       homepageDetailLoad(window.location.hash.replace('#subsec-',''));
     }
 
-    $('ul.subsection-links a').click(function() {
+    $('li.subsection-link a').click(function() {
       idx = this.href.indexOf('#');
       if (idx != -1) {
         homepageDetailLoad(this.href.substring(idx).replace('#subsec-',''));  
