@@ -1,13 +1,14 @@
-/* line 4, breakpoint-large.scss */
-body.homepage header#hero nav .logo {
-  width: 4em;
-}
-/* line 8, breakpoint-large.scss */
-body.homepage header#hero nav ul#fullmenu li {
+/* line 2, breakpoint-large.scss */
+ul#fullmenu li {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 14, breakpoint-large.scss */
+
+/* line 11, breakpoint-large.scss */
+body.homepage header#hero nav .logo {
+  width: 4em;
+}
+/* line 16, breakpoint-large.scss */
 body.homepage header#hero div.tagline {
   font-size: 2.2em;
 }

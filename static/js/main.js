@@ -101,7 +101,9 @@ $(window).on('orientationchange', function() {
 
 function homepageDetailLoad(subsection) {
   // scroll to section top
-  $(window).scrollTop($('#subsec-' + subsection).offset().top);
+  if ($('#subsec-' + subsection).length > 0) {
+    $(window).scrollTop($('#subsec-' + subsection).offset().top);
+  }
 
   var section = $('#subsection-' + subsection).parent().parent();
   // change content
