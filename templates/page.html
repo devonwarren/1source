@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block bodyclass %}page{% endblock %}
+{% block content %}
+
+<header class="page not-fullscreen">
+		{% load navigation %}
+		{% navigation %}
+</header>
+<content id="main">
+
+	<h4>{{ page.title }}</h4>
+
+	<div class="body">{{ page.content|safe }}</div>
+
+</content>
+
+{% load footer %}
+{% footer %}
+{% endblock %}

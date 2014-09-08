@@ -185,7 +185,7 @@ header.not-fullscreen nav ul#fullmenu {
 content#main {
   display: block;
   padding: 1rem;
-  margin: 4rem auto 0;
+  margin: 4rem auto 3rem;
 }
 
 /* line 197, base.scss */
@@ -395,7 +395,7 @@ body.homepage section.homepage-summary {
   font-family: "OfficinaSerITCStd", serif;
   font-size: 1.8em;
   font-weight: normal;
-  line-height: 1.1em;
+  line-height: 1.2em;
 }
 /* line 381, base.scss */
 body.homepage aside.homepage-left {
@@ -588,7 +588,7 @@ body.homepage section.homepage-right .learn-more a:active {
   content#main {
     padding: 1em 4em;
     max-width: 70em;
-    margin: 20em auto 0;
+    margin: 20rem auto 4rem;
   }
 
   /* line 122, breakpoint-medium.scss */
@@ -642,7 +642,7 @@ body.homepage section.homepage-right .learn-more a:active {
   body.homepage section.homepage-summary {
     padding: 3.6em;
     font-size: 2.6em;
-    line-height: 1.2em;
+    line-height: 1.3em;
   }
   /* line 172, breakpoint-medium.scss */
   body.homepage aside.homepage-left {

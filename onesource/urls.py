@@ -7,10 +7,12 @@ admin.autodiscover()
 
 from onesource.views import homepage, style_guide
 from journal.views import journal
+from pages.views import page
 
 urlpatterns = patterns('',
 	url(r'^$', homepage, name='homepage'),
 	url(r'^journal$', journal, name='journal'),
+	url(r'^page/(?P<page_alias>.+?)/$', page),
 	url(r'^style_guide$', style_guide, name='style_guide'),
 
 	url(r'^grappelli/', include('grappelli.urls')),

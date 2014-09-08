@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'sections',
     'journal',
     'layout_elements',
+    'pages',
 )
 
 MIDDLEWARE_CLASSES = (
