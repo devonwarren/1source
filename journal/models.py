@@ -6,8 +6,12 @@ from ckeditor.fields import RichTextField
 class JournalEntry(models.Model):
 	title = models.CharField(max_length=150)
 	image = models.ImageField(upload_to='journal')
+	image_web = ImageSpecField(source='image',
+                                      processors=[ResizeToFit(width=500)],
+                                      format='JPEG',
+                                      options={'quality': 75})
 	image_mobile = ImageSpecField(source='image',
-                                      processors=[ResizeToFit(width=420)],
+                                      processors=[ResizeToFit(width=320)],
                                       format='JPEG',
                                       options={'quality': 68})
 	body = RichTextField()
