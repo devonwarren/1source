@@ -641,19 +641,20 @@ body.homepage section.homepage-right .learn-more a:active {
   body.homepage section.homepage-summary {
     padding: 3.6em;
     font-size: 2.6em;
+    line-height: 1.2em;
   }
-  /* line 171, breakpoint-medium.scss */
+  /* line 172, breakpoint-medium.scss */
   body.homepage aside.homepage-left {
     width: 50%;
     float: left;
     height: 25em;
     margin-top: 14em;
   }
-  /* line 176, breakpoint-medium.scss */
+  /* line 177, breakpoint-medium.scss */
   body.homepage aside.homepage-left ul li {
     margin: 1em;
   }
-  /* line 180, breakpoint-medium.scss */
+  /* line 181, breakpoint-medium.scss */
   body.homepage section.homepage-right {
     min-height: 35em;
     margin-left: 50%;
