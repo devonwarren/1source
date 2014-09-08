@@ -90,7 +90,7 @@ footer {
 }
 
 header.not-fullscreen {
-	height: 18em;
+	height: 17rem;
 	border-bottom: solid 3px $primary1;
 	nav {
 		a#nav-logo {
@@ -115,7 +115,7 @@ header.not-fullscreen {
 content#main {
 	padding: 1em 4em;
 	max-width: 70em;
-	margin: 20rem auto 4rem;
+	margin: 18rem auto 4rem;
 }
 
 article {
@@ -123,6 +123,7 @@ article {
 		height: 28rem;
 		width: 28rem;
 		float: left;
+		background-position: center top;
 	}
 	.article-content {
 		margin-left: 30em;

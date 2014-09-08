@@ -560,7 +560,7 @@ body.homepage section.homepage-right .learn-more a:active {
 
   /* line 92, breakpoint-medium.scss */
   header.not-fullscreen {
-    height: 18em;
+    height: 17rem;
     border-bottom: solid 3px #E86432;
   }
   /* line 96, breakpoint-medium.scss */
@@ -588,7 +588,7 @@ body.homepage section.homepage-right .learn-more a:active {
   content#main {
     padding: 1em 4em;
     max-width: 70em;
-    margin: 20rem auto 4rem;
+    margin: 18rem auto 4rem;
   }
 
   /* line 122, breakpoint-medium.scss */
@@ -596,29 +596,30 @@ body.homepage section.homepage-right .learn-more a:active {
     height: 28rem;
     width: 28rem;
     float: left;
+    background-position: center top;
   }
-  /* line 127, breakpoint-medium.scss */
+  /* line 128, breakpoint-medium.scss */
   article .article-content {
     margin-left: 30em;
   }
 
-  /* line 134, breakpoint-medium.scss */
+  /* line 135, breakpoint-medium.scss */
   body.homepage header#hero nav {
     position: absolute;
     bottom: 0;
     right: 0;
   }
-  /* line 139, breakpoint-medium.scss */
+  /* line 140, breakpoint-medium.scss */
   body.homepage header#hero nav.sticky a#nav-logo {
     width: auto;
     float: left;
     display: inline-block;
   }
-  /* line 145, breakpoint-medium.scss */
+  /* line 146, breakpoint-medium.scss */
   body.homepage header#hero nav a#nav-logo {
     padding: 0;
   }
-  /* line 149, breakpoint-medium.scss */
+  /* line 150, breakpoint-medium.scss */
   body.homepage header#hero div.tagline {
     display: block;
     font-size: 1.6em;
@@ -629,33 +630,33 @@ body.homepage section.homepage-right .learn-more a:active {
     text-align: center;
     overflow: visible;
   }
-  /* line 159, breakpoint-medium.scss */
+  /* line 160, breakpoint-medium.scss */
   body.homepage header#hero div#enter {
     bottom: 1.6rem;
   }
-  /* line 161, breakpoint-medium.scss */
+  /* line 162, breakpoint-medium.scss */
   body.homepage header#hero div#enter a svg {
     height: 4rem;
     width: 4rem;
   }
-  /* line 167, breakpoint-medium.scss */
+  /* line 168, breakpoint-medium.scss */
   body.homepage section.homepage-summary {
     padding: 3.6em;
     font-size: 2.6em;
     line-height: 1.3em;
   }
-  /* line 172, breakpoint-medium.scss */
+  /* line 173, breakpoint-medium.scss */
   body.homepage aside.homepage-left {
     width: 50%;
     float: left;
     height: 25em;
     margin-top: 14em;
   }
-  /* line 177, breakpoint-medium.scss */
+  /* line 178, breakpoint-medium.scss */
   body.homepage aside.homepage-left ul li {
     margin: 1em;
   }
-  /* line 181, breakpoint-medium.scss */
+  /* line 182, breakpoint-medium.scss */
   body.homepage section.homepage-right {
     min-height: 35em;
     margin-left: 50%;
