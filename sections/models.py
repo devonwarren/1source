@@ -3,6 +3,7 @@ from ordered_model.models import OrderedModel
 from ckeditor.fields import RichTextField
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFit
+from pages.models import Page
 
 class Section(OrderedModel):
 	title = models.CharField(max_length=100, unique=True)
@@ -25,6 +26,7 @@ class SubSection(OrderedModel):
 	title = models.TextField(help_text="Large text beginning the subsection")
 	description = RichTextField(blank=True, help_text="Small text of the subsection")
 	section = models.ForeignKey(Section)
+	learn_more = models.ForeignKey(Page, blank=True, null=True, help_text="Page to go to when clicking <em>Learn more</em>")
 
 	class Meta(OrderedModel.Meta):
 		pass

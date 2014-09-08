@@ -65,7 +65,7 @@
 					<div class="details" id="subsection-{{ subsection.name|slugify }}" style="display: none;">
 						<h4>{{ subsection.title }}</h4>
 						<p>{{ subsection.description|safe }}</p>
-						<p class="learn-more"><a href="javascript:;">Learn more</a></p>
+						{% if subsection.learn_more %}<p class="learn-more"><a href="/page/{{ subsection.learn_more.alias }}">Learn more</a></p>{% endif %}
 					</div>
 				{% endif %}
 			{% endfor %}
