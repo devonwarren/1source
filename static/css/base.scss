@@ -183,6 +183,7 @@ header.not-fullscreen {
 
 .section-anchor,
 .subsection-anchor {
+	display: block;
 	position: relative;
 	top: -3.2rem;
 }

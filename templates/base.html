@@ -10,14 +10,14 @@
 {% compress css %}
 <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css">
 {% endcompress %}
+</head>
+<body class="{% block bodyclass %}other{% endblock %}">
+<a id="top" class="anchor"></a>
+{% block content %}{% endblock %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 {% compress js %}
 <script src="{% static "js/main.js" %}"></script>
 {% block scriptload %}{% endblock %}
 {% endcompress %}
-</head>
-<body class="{% block bodyclass %}other{% endblock %}">
-<a id="top" class="anchor"></a>
-{% block content %}{% endblock %}
 </body>
 </html>
