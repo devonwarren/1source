@@ -11,13 +11,13 @@ class Section(OrderedModel):
 	teaser_text = models.TextField(help_text="Text displayed when no subsections are selected", blank=True)
 	image = models.ImageField(blank=True, default=None, upload_to='section', help_text="Background image for section")
 	image_web = ImageSpecField(source='image',
-                                      processors=[ResizeToFit(width=1080)],
+                                      processors=[ResizeToFit(width=1024)],
                                       format='JPEG',
-                                      options={'quality': 95})
+                                      options={'quality': 90})
 	image_mobile = ImageSpecField(source='image',
                                       processors=[ResizeToFit(width=480)],
                                       format='JPEG',
-                                      options={'quality': 95})
+                                      options={'quality': 94})
 
 	class Meta(OrderedModel.Meta):
 		pass

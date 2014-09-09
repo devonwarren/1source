@@ -144,8 +144,7 @@ h1.logo-dark {
 .bgimage {
 	background-repeat: no-repeat;
 	background-position: center top;
-	background-size: cover;
-	background-attachment: fixed;
+	background-size: 100%;
 }
 
 header.not-fullscreen {
@@ -371,7 +370,6 @@ body.homepage {
 		text-align: center;
 		background-color: $primary1;
 		color: white;
-		opacity: .9;
 		font-family: $officina;
 		font-size: 1.8em;
 		font-weight: normal;

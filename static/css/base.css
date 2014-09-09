@@ -131,11 +131,10 @@ h1.logo-dark {
 .bgimage {
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: 100%;
 }
 
-/* line 151, base.scss */
+/* line 150, base.scss */
 header.not-fullscreen {
   width: 100%;
   background-image: url("../images/story.jpg");
@@ -146,34 +145,34 @@ header.not-fullscreen {
   left: 0;
   z-index: 100;
 }
-/* line 160, base.scss */
+/* line 159, base.scss */
 header.not-fullscreen nav {
   display: block;
 }
-/* line 163, base.scss */
+/* line 162, base.scss */
 header.not-fullscreen nav a#mobileMenuOpen svg path {
   fill: gray;
 }
-/* line 166, base.scss */
+/* line 165, base.scss */
 header.not-fullscreen nav a#mobileMenuOpen:hover svg path {
   fill: #E86432;
 }
-/* line 170, base.scss */
+/* line 169, base.scss */
 header.not-fullscreen nav a#nav-logo {
   width: 100%;
   display: block;
   margin: 0 2.5em;
 }
-/* line 174, base.scss */
+/* line 173, base.scss */
 header.not-fullscreen nav a#nav-logo h1 {
   height: 3.2rem;
 }
-/* line 178, base.scss */
+/* line 177, base.scss */
 header.not-fullscreen nav ul#fullmenu {
   background-color: white;
 }
 
-/* line 184, base.scss */
+/* line 183, base.scss */
 .section-anchor,
 .subsection-anchor {
   display: block;
@@ -181,18 +180,18 @@ header.not-fullscreen nav ul#fullmenu {
   top: -3.2rem;
 }
 
-/* line 191, base.scss */
+/* line 190, base.scss */
 content#main {
   display: block;
   padding: 1rem;
   margin: 4rem auto 3rem;
 }
 
-/* line 197, base.scss */
+/* line 196, base.scss */
 article {
   clear: both;
 }
-/* line 199, base.scss */
+/* line 198, base.scss */
 article .article-image {
   background-size: 100%;
   background-repeat: no-repeat;
@@ -200,69 +199,69 @@ article .article-image {
   width: 100%;
   height: 12rem;
 }
-/* line 206, base.scss */
+/* line 205, base.scss */
 article .article-content {
   margin-top: 2em;
 }
-/* line 208, base.scss */
+/* line 207, base.scss */
 article .article-content p {
   margin: 0 0 2em;
 }
 
-/* line 215, base.scss */
+/* line 214, base.scss */
 nav {
   z-index: 1000;
   display: none;
   width: 100%;
 }
-/* line 219, base.scss */
+/* line 218, base.scss */
 nav.sticky {
   display: block;
 }
-/* line 222, base.scss */
+/* line 221, base.scss */
 nav ul {
   list-style: none !important;
   margin: 0 !important;
   padding: 0;
 }
-/* line 227, base.scss */
+/* line 226, base.scss */
 nav a#mobileMenuOpen {
   height: 2em;
   width: 2em;
   float: right;
   padding: .6em;
 }
-/* line 232, base.scss */
+/* line 231, base.scss */
 nav a#mobileMenuOpen:hover svg path {
   fill: #E86432;
 }
-/* line 236, base.scss */
+/* line 235, base.scss */
 nav ul#fullmenu {
   max-height: 0;
   transition: all 500ms ease-in;
   overflow: hidden;
   border-bottom: solid 2px #E86432;
 }
-/* line 241, base.scss */
+/* line 240, base.scss */
 nav ul#fullmenu.open {
   max-height: 25em;
   transition: all 600ms ease-in;
 }
-/* line 245, base.scss */
+/* line 244, base.scss */
 nav ul#fullmenu li {
   width: 100%;
   text-align: center;
   padding: .4em;
   display: block;
 }
-/* line 250, base.scss */
+/* line 249, base.scss */
 nav ul#fullmenu li a {
   width: 100%;
   padding: .4em;
   display: block;
 }
 
-/* line 262, base.scss */
+/* line 261, base.scss */
 footer {
   text-align: center;
   background-color: #C7522A;
@@ -270,7 +269,7 @@ footer {
   clear: both;
   opacity: .9;
 }
-/* line 268, base.scss */
+/* line 267, base.scss */
 footer a:link,
 footer a:hover,
 footer a:visited,
@@ -278,7 +277,7 @@ footer a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 275, base.scss */
+/* line 274, base.scss */
 footer > ul {
   margin: 0 auto;
   max-width: 80em;
@@ -286,51 +285,51 @@ footer > ul {
   list-style: none;
   font-family: "Adelle Sans", sans-serif;
 }
-/* line 281, base.scss */
+/* line 280, base.scss */
 footer > ul > li {
   display: block;
   vertical-align: top;
   padding: 1em;
   text-align: center;
 }
-/* line 286, base.scss */
+/* line 285, base.scss */
 footer > ul > li ul {
   list-style: none;
   font-size: .8em;
   padding-left: 0;
 }
-/* line 290, base.scss */
+/* line 289, base.scss */
 footer > ul > li ul li {
   padding-top: .4em;
 }
-/* line 296, base.scss */
+/* line 295, base.scss */
 footer #copyright {
   font-family: "Adelle Sans", sans-serif;
   font-size: .7em;
   padding-bottom: 1em;
 }
 
-/* line 305, base.scss */
+/* line 304, base.scss */
 body.homepage div#logo {
   position: absolute;
   top: 40%;
   width: 100%;
   text-align: center;
 }
-/* line 310, base.scss */
+/* line 309, base.scss */
 body.homepage div#logo h1.logo-color {
   height: 4em;
 }
-/* line 314, base.scss */
+/* line 313, base.scss */
 body.homepage header#hero {
   height: 100em;
   background: url("../images/gradient-dark.png") repeat-x bottom;
 }
-/* line 317, base.scss */
+/* line 316, base.scss */
 body.homepage header#hero nav {
   transition: all 300ms ease-in;
 }
-/* line 319, base.scss */
+/* line 318, base.scss */
 body.homepage header#hero nav.sticky {
   position: fixed;
   top: 0;
@@ -340,27 +339,27 @@ body.homepage header#hero nav.sticky {
   opacity: 1;
   transition: all 300ms ease-in;
 }
-/* line 327, base.scss */
+/* line 326, base.scss */
 body.homepage header#hero nav.sticky a#nav-logo {
   width: 100%;
   opacity: 1;
   transition: all 300ms ease-in;
   display: block;
 }
-/* line 334, base.scss */
+/* line 333, base.scss */
 body.homepage header#hero nav a#nav-logo {
   opacity: 0;
   transition: all 300ms ease-in;
   margin: 0 2.5em;
 }
-/* line 341, base.scss */
+/* line 340, base.scss */
 body.homepage div.tagline {
   position: relative;
   display: none;
   height: 0;
   overflow: hidden;
 }
-/* line 347, base.scss */
+/* line 346, base.scss */
 body.homepage div#enter {
   position: absolute;
   z-index: 102;
@@ -368,80 +367,79 @@ body.homepage div#enter {
   width: 100%;
   text-align: center;
 }
-/* line 353, base.scss */
+/* line 352, base.scss */
 body.homepage div#enter a svg {
   height: 3rem;
   width: 3rem;
   display: inline-block;
 }
-/* line 357, base.scss */
+/* line 356, base.scss */
 body.homepage div#enter a svg path {
   fill: white;
   transition: all 300ms ease-in;
 }
-/* line 361, base.scss */
+/* line 360, base.scss */
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
 }
-/* line 368, base.scss */
+/* line 367, base.scss */
 body.homepage section.homepage-summary {
   display: block;
   padding: 1em;
   text-align: center;
   background-color: #E86432;
   color: white;
-  opacity: .9;
   font-family: "OfficinaSerITCStd", serif;
   font-size: 1.8em;
   font-weight: normal;
   line-height: 1.2em;
 }
-/* line 381, base.scss */
+/* line 379, base.scss */
 body.homepage aside.homepage-left {
   text-align: center;
   padding: 2em 0;
 }
-/* line 384, base.scss */
+/* line 382, base.scss */
 body.homepage aside.homepage-left a {
   text-decoration: none;
 }
-/* line 387, base.scss */
+/* line 385, base.scss */
 body.homepage aside.homepage-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 391, base.scss */
+/* line 389, base.scss */
 body.homepage aside.homepage-left ul li {
   font-family: "Adelle Sans", sans-serif;
   padding: .4em 1em;
   margin: .6em;
 }
-/* line 395, base.scss */
+/* line 393, base.scss */
 body.homepage aside.homepage-left ul li a {
   color: white;
   padding: .2em .5em;
 }
-/* line 399, base.scss */
+/* line 397, base.scss */
 body.homepage aside.homepage-left ul li.active a,
 body.homepage aside.homepage-left ul li a:hover {
   border: solid 0.15em #E86432;
   border-radius: .4em;
   text-decoration: none;
 }
-/* line 410, base.scss */
+/* line 408, base.scss */
 body.homepage section.homepage-right {
   background-color: white;
   min-height: 32em;
   padding: 1em;
 }
-/* line 414, base.scss */
+/* line 412, base.scss */
 body.homepage section.homepage-right .learn-more {
   margin-top: 3em;
   text-align: center;
 }
-/* line 417, base.scss */
+/* line 415, base.scss */
 body.homepage section.homepage-right .learn-more a {
   border: solid 0.15em #E86432;
   border-radius: .4em;
@@ -449,7 +447,7 @@ body.homepage section.homepage-right .learn-more a {
   color: #E86432;
   text-decoration: none;
 }
-/* line 423, base.scss */
+/* line 421, base.scss */
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
@@ -559,67 +557,73 @@ body.homepage section.homepage-right .learn-more a:active {
   }
 
   /* line 92, breakpoint-medium.scss */
+  .bgimage {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  /* line 97, breakpoint-medium.scss */
   header.not-fullscreen {
     height: 17rem;
     border-bottom: solid 3px #E86432;
   }
-  /* line 96, breakpoint-medium.scss */
+  /* line 101, breakpoint-medium.scss */
   header.not-fullscreen nav a#nav-logo {
     padding: 0;
     float: left;
     width: auto;
   }
-  /* line 100, breakpoint-medium.scss */
+  /* line 105, breakpoint-medium.scss */
   header.not-fullscreen nav a#nav-logo h1 {
     height: 1.3em;
   }
-  /* line 104, breakpoint-medium.scss */
+  /* line 109, breakpoint-medium.scss */
   header.not-fullscreen nav ul#fullmenu {
     background-color: transparent;
   }
 
-  /* line 110, breakpoint-medium.scss */
+  /* line 115, breakpoint-medium.scss */
   .section-anchor,
   .subsection-anchor {
     top: -76px;
   }
 
-  /* line 115, breakpoint-medium.scss */
+  /* line 120, breakpoint-medium.scss */
   content#main {
     padding: 1em 4em;
     max-width: 70em;
     margin: 18rem auto 4rem;
   }
 
-  /* line 122, breakpoint-medium.scss */
+  /* line 127, breakpoint-medium.scss */
   article .article-image {
     height: 28rem;
     width: 28rem;
     float: left;
     background-position: center top;
   }
-  /* line 128, breakpoint-medium.scss */
+  /* line 133, breakpoint-medium.scss */
   article .article-content {
     margin-left: 30em;
   }
 
-  /* line 135, breakpoint-medium.scss */
+  /* line 140, breakpoint-medium.scss */
   body.homepage header#hero nav {
     position: absolute;
     bottom: 0;
     right: 0;
   }
-  /* line 140, breakpoint-medium.scss */
+  /* line 145, breakpoint-medium.scss */
   body.homepage header#hero nav.sticky a#nav-logo {
     width: auto;
     float: left;
     display: inline-block;
   }
-  /* line 146, breakpoint-medium.scss */
+  /* line 151, breakpoint-medium.scss */
   body.homepage header#hero nav a#nav-logo {
     padding: 0;
   }
-  /* line 150, breakpoint-medium.scss */
+  /* line 155, breakpoint-medium.scss */
   body.homepage header#hero div.tagline {
     display: block;
     font-size: 1.6em;
@@ -630,33 +634,34 @@ body.homepage section.homepage-right .learn-more a:active {
     text-align: center;
     overflow: visible;
   }
-  /* line 160, breakpoint-medium.scss */
+  /* line 165, breakpoint-medium.scss */
   body.homepage header#hero div#enter {
     bottom: 1.6rem;
   }
-  /* line 162, breakpoint-medium.scss */
+  /* line 167, breakpoint-medium.scss */
   body.homepage header#hero div#enter a svg {
     height: 4rem;
     width: 4rem;
   }
-  /* line 168, breakpoint-medium.scss */
+  /* line 173, breakpoint-medium.scss */
   body.homepage section.homepage-summary {
     padding: 3.6em;
     font-size: 2.6em;
     line-height: 1.3em;
+    opacity: .9;
   }
-  /* line 173, breakpoint-medium.scss */
+  /* line 179, breakpoint-medium.scss */
   body.homepage aside.homepage-left {
     width: 50%;
     float: left;
     height: 25em;
     margin-top: 14em;
   }
-  /* line 178, breakpoint-medium.scss */
+  /* line 184, breakpoint-medium.scss */
   body.homepage aside.homepage-left ul li {
     margin: 1em;
   }
-  /* line 182, breakpoint-medium.scss */
+  /* line 188, breakpoint-medium.scss */
   body.homepage section.homepage-right {
     min-height: 35em;
     margin-left: 50%;

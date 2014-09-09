@@ -89,6 +89,11 @@ footer {
 	}
 }
 
+.bgimage {
+	background-size: cover;
+	background-attachment: fixed;
+}
+
 header.not-fullscreen {
 	height: 17rem;
 	border-bottom: solid 3px $primary1;
@@ -169,6 +174,7 @@ body.homepage {
 		padding: 3.6em;
 		font-size: 2.6em;
 		line-height: 1.3em;
+		opacity: .9;
 	}
 	aside.homepage-left {
 		width: 50%;
