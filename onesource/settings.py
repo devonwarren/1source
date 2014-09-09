@@ -54,6 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'layout_elements.browserdetection.BrowserDetectionMiddleware',
 )
 
 ROOT_URLCONF = 'onesource.urls'
