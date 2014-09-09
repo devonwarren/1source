@@ -164,12 +164,27 @@ content#main {
 .field {
   width: 100%;
 }
-.field,
-.field label,
 .field input,
 .field textarea {
-  float: left;
-  clear: both;
+  width: 100%;
+  max-width: 22rem;
+  padding: .1rem;
+}
+.field input[type="submit"] {
+  border: solid 0.15em #E86432;
+  border-radius: .4em;
+  padding: .2em .6em;
+  color: #E86432;
+  background-color: white;
+  cursor: hand;
+}
+
+.errorlist {
+  margin: .2em 0 0;
+  padding: 0;
+  color: red;
+  list-style: none;
+  font-size: .9rem;
 }
 
 article {

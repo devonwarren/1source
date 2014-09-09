@@ -23,22 +23,24 @@
     
         <form action="" method="post">
             <div class="field">
+                <label for="id_subject">Subject:</label><br>
                 {{ form.subject.errors }}
-                <label for="id_subject">Subject:</label>
                 {{ form.subject }}
             </div>
             <div class="field">
+                <label for="id_email">Your e-mail address:</label><br>
                 {{ form.email.errors }}
-                <label for="id_email">Your e-mail address:</label>
                 {{ form.email }}
             </div>
             <div class="field">
+                <label for="id_message">Message:</label><br>
                 {{ form.message.errors }}
-                <label for="id_message">Message:</label>
                 {{ form.message }}
             </div>
             {% csrf_token %}
-            <input type="submit" value="Submit">
+            <div class="field">
+                <input type="submit" value="Submit">
+            </div>
         </form>
     </div>
 
