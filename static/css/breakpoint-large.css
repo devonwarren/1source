@@ -1,1 +1,11 @@
-ul#fullmenu li{padding-left:1em;padding-right:1em}body.homepage header#hero nav .logo{width:4em}body.homepage header#hero div.tagline{font-size:2.2em}
+ul#fullmenu li {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+body.homepage header#hero nav .logo {
+  width: 4em;
+}
+body.homepage header#hero div.tagline {
+  font-size: 2.2em;
+}

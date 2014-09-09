@@ -192,6 +192,17 @@ content#main {
 	margin: 4rem auto 3rem;
 }
 
+.field {
+	width: 100%;
+	&,
+	label,
+	input,
+	textarea {
+		float: left;
+		clear: both;
+	}
+}
+
 article {
 	clear: both;
 	.article-image {

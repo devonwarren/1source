@@ -7,11 +7,13 @@ admin.autodiscover()
 
 from onesource.views import homepage, style_guide
 from journal.views import journal
+from contact.views import contact
 from pages.views import page
 
 urlpatterns = patterns('',
 	url(r'^$', homepage, name='homepage'),
 	url(r'^journal$', journal, name='journal'),
+	url(r'^contact$', contact, name='contact'),
 	url(r'^page/(?P<page_alias>.+?)/$', page),
 	url(r'^style_guide$', style_guide, name='style_guide'),
 
