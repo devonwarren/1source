@@ -10,6 +10,10 @@ class Section(OrderedModel):
 	featured_text = models.TextField(help_text="Orange bar section of text")
 	teaser_text = models.TextField(help_text="Text displayed when no subsections are selected", blank=True)
 	image = models.ImageField(blank=True, default=None, upload_to='section', help_text="Background image for section")
+	image_web = ImageSpecField(source='image',
+                                      processors=[ResizeToFit(width=1080)],
+                                      format='JPEG',
+                                      options={'quality': 95})
 	image_mobile = ImageSpecField(source='image',
                                       processors=[ResizeToFit(width=480)],
                                       format='JPEG',
