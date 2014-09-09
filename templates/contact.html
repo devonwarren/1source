@@ -11,12 +11,16 @@
 
     <h4>Contact Us</h4>
 
-    {% if form.errors %}
-        <p style="color: red;">
-            Please correct the error{{ form.errors|pluralize }} below.
-        </p>
-    {% endif %}
     <div class="body">
+
+        <p>Telephone: <a href="tel:+13019160050">301.916.0050</a></p>
+
+        {% if form.errors %}
+            <p style="color: red;">
+                Please correct the error{{ form.errors|pluralize }} below.
+            </p>
+        {% endif %}
+    
         <form action="" method="post">
             <div class="field">
                 {{ form.subject.errors }}
