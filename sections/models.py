@@ -7,7 +7,7 @@ from pages.models import Page
 
 class Section(OrderedModel):
 	title = models.CharField(max_length=100, unique=True)
-	featured_text = models.TextField(help_text="Orange bar section of text")
+	featured_text = RichTextField(help_text="Orange bar section of text")
 	teaser_text = models.TextField(help_text="Text displayed when no subsections are selected", blank=True)
 	image = models.ImageField(blank=True, default=None, upload_to='section', help_text="Background image for section")
 	image_web = ImageSpecField(source='image',

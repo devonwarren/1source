@@ -22,7 +22,7 @@
 
 {% for section, subsections in section_list %}
 	<section class="homepage-summary">
-		{{ section.featured_text }}
+		{{ section.featured_text|safe }}
 	</section>
 </div>
 <a id="{{ section.title|slugify }}" class="anchor section-anchor"></a>
