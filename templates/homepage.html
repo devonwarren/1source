@@ -25,8 +25,8 @@
 		{{ section.featured_text|safe }}
 	</section>
 </div>
-<a id="{{ section.title|slugify }}" class="anchor section-anchor"></a>
-<a id="subsec-{{ section.title|slugify }}" class="anchor subsection-anchor"></a>
+<a id="{{ section.slug }}" class="anchor section-anchor"></a>
+<a id="subsec-{{ section.slug }}" class="anchor subsection-anchor"></a>
 <style type="text/css">
 	#section-image-{{ section.id }} {
 			background-image: url('{{ section.image_mobile.url }}');
@@ -40,31 +40,31 @@
 <div class="bgimage section-bgimage" id="section-image-{{ section.id }}">
 	
 	{% for subsection in subsections %}
-		<a id="subsec-{{ subsection.name|slugify }}" class="anchor subsection-anchor"></a>
+		<a id="subsec-{{ subsection.slug }}" class="anchor subsection-anchor"></a>
 	{% endfor %}
-	<section class="homepage-detail section-{{ section|slugify }}">
-		<aside class="homepage-left" id="aside-{{ section.title|slugify }}">
-			<a class="subsection-select-{{ section.title|slugify }}" href="javascript:homepageDetailLoad('{{ section.title|slugify }}');">
+	<section class="homepage-detail section-{{ section.slug }}">
+		<aside class="homepage-left" id="aside-{{ section.slug }}">
+			<a class="subsection-select-{{ section.slug }}" href="javascript:homepageDetailLoad('{{ section.slug }}');">
 				<h2>{{ section.title|upper }}</h2>
 			</a>
 			<ul>
 			{% for subsection in subsections %}
-				<li id="subsection-select-{{ subsection.name|slugify }}">
-					<a href="javascript:homepageDetailLoad('{{ subsection.name|slugify }}');">{{ subsection.name|upper }}</a>
+				<li id="subsection-select-{{ subsection.slug }}">
+					<a href="javascript:homepageDetailLoad('{{ subsection.slug }}');">{{ subsection.name|upper }}</a>
 			{% endfor %}
 			</ul>
 		</aside>
-		<section class="homepage-right section-{{ section|slugify }}" id="section-{{ section.title|slugify }}">
-			<div class="details active" id="subsection-{{ section.title|slugify }}">
+		<section class="homepage-right section-{{ section.slug }}" id="section-{{ section.slug }}">
+			<div class="details active" id="subsection-{{ section.slug }}">
 				<h4>{{ section.teaser_text }}</h4>
 			</div>
 			{% for subsection in subsections %}
 				
 				{% if subsection.section.id = section.id %}
-					<div class="details" id="subsection-{{ subsection.name|slugify }}" style="display: none;">
+					<div class="details" id="subsection-{{ subsection.slug }}" style="display: none;">
 						<h4>{{ subsection.title }}</h4>
 						<p>{{ subsection.description|safe }}</p>
-						{% if subsection.learn_more %}<p class="learn-more"><a href="/page/{{ subsection.learn_more.alias }}">Learn more</a></p>{% endif %}
+						{% if subsection.learn_more %}<p class="learn-more"><a href="/learn-more/{{ subsection.slug }}">Learn more</a></p>{% endif %}
 					</div>
 				{% endif %}
 			{% endfor %}

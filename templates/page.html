@@ -3,7 +3,7 @@
 {% block bodyclass %}page{% endblock %}
 {% block content %}
 
-<header class="page not-fullscreen">
+<header class="page not-fullscreen"{% if bgimage %} style="background-image:url('{{ bgimage }}');"{% endif %}>
 		{% load navigation %}
 		{% navigation %}
 </header>
