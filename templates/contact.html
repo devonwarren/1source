@@ -17,6 +17,8 @@
     <div class="body">
 
         <p>Telephone: <a href="tel:+13019160050">301.916.0050</a></p>
+        
+        <p>Address: <a href="http://maps.google.com/maps?daddr=39.1926623,-77.2669107&z=10">20440 Century Blvd, Germantown, MD 20874</a></p>
 
         <div id="map" style="width: 100%; height: 16rem"></div>
 
@@ -24,7 +26,7 @@
         <link href="{% static "css/leaflet.css" %}" rel="stylesheet" type="text/css">
         <script>
             L.Icon.Default.imagePath = '/static/images/';
-            
+
             var map = L.map('map', {
                 zoomControl: false,
                 attributionControl: false,
