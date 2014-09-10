@@ -414,6 +414,14 @@ body.homepage section.homepage-right .learn-more a:active {
   div#enter {
     display: none;
   }
+
+  header.not-fullscreen {
+    height: 10rem !important;
+  }
+
+  content#main {
+    margin-top: 10rem !important;
+  }
 }
 @media screen and (min-width: 44em) {
   h2 {
