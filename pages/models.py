@@ -1,9 +1,10 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from autoslug import AutoSlugField
 
 class Page(models.Model):
 	title = models.CharField(max_length=255)
-	alias = models.SlugField(verbose_name="URL", max_length=40, help_text="URL from which the page is accessible. /pages/url-here")
+	alias = AutoSlugField(populate_from='title', unique=True, verbose_name="URL", max_length=40, help_text="URL from which the page is accessible. /pages/url-here", editable=True)
 	content = RichTextField(blank=True, help_text="Body text of the page")
 
 	def __str__(self):

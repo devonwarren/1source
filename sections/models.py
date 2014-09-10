@@ -8,7 +8,7 @@ from autoslug import AutoSlugField
 
 class Section(OrderedModel):
 	title = models.CharField(max_length=100, unique=True)
-	slug = AutoSlugField(populate_from='title', editable=False, always_update=True)
+	slug = AutoSlugField(populate_from='title', editable=False, always_update=True, unique=True)
 	featured_text = RichTextField(help_text="Orange bar section of text")
 	teaser_text = models.TextField(help_text="Text displayed when no subsections are selected", blank=True)
 	image = models.ImageField(blank=True, default=None, upload_to='section', help_text="Background image for section")
@@ -29,7 +29,7 @@ class Section(OrderedModel):
 
 class SubSection(OrderedModel):
 	name = models.CharField(max_length=100, unique=True)
-	slug = AutoSlugField(populate_from='name', editable=False, always_update=True)
+	slug = AutoSlugField(populate_from='name', editable=False, always_update=True, unique=True)
 	title = models.TextField(help_text="Large text beginning the subsection")
 	description = RichTextField(blank=True, help_text="Small text of the subsection")
 	section = models.ForeignKey(Section)
