@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block bodyclass %}page{% endblock %}
+
+{% load staticfiles %}
+
 {% block content %}
 
 <header class="contact not-fullscreen">
@@ -14,6 +17,27 @@
     <div class="body">
 
         <p>Telephone: <a href="tel:+13019160050">301.916.0050</a></p>
+
+        <div id="map" style="width: 100%; height: 16rem"></div>
+
+        <script src="{% static "js/leaflet.js" %}"></script>
+        <link href="{% static "css/leaflet.css" %}" rel="stylesheet" type="text/css">
+        <script>
+            L.Icon.Default.imagePath = '/static/images/';
+            
+            var map = L.map('map', {
+                zoomControl: false,
+                attributionControl: false,
+            }).setView([39.1926623,-77.2669107], 15);
+
+            L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+
+                id: 'examples.map-i87786ca'
+            }).addTo(map);
+
+            var marker = L.marker([39.1928691,-77.2667025]).addTo(map);
+        </script>
 
         {% if form.errors %}
             <p style="color: red;">
