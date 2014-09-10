@@ -452,6 +452,12 @@ body.homepage {
 	}
 }
 
+@media screen and (min-aspect-ratio: 8/3) {
+	div#enter {
+		display: none;
+	}
+}
+
 @media screen and (min-width : $break-medium) {
 	@import "breakpoint-medium";
 }
