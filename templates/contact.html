@@ -25,7 +25,7 @@
         <script src="{% static "js/leaflet.js" %}"></script>
         <link href="{% static "css/leaflet.css" %}" rel="stylesheet" type="text/css">
         <script>
-            L.Icon.Default.imagePath = '/static/images/';
+            L.Icon.Default.imagePath = '/static/images';
 
             var map = L.map('map', {
                 zoomControl: false,
@@ -37,8 +37,18 @@
 
                 id: 'examples.map-i87786ca'
             }).addTo(map);
-
-            var marker = L.marker([39.1928691,-77.2667025]).addTo(map);
+            
+            var onesourceMarker = L.icon({
+                iconUrl: '/static/images/1source-marker-2x.png',
+                shadowUrl: '/static/images/1source-marker-shadow.png',
+                iconSize: [35, 45],
+                iconAnchor:   [17, 42],
+                popupAnchor: [1, -32],
+                shadowAnchor: [10, 12],
+                shadowSize: [36, 16],
+            });
+    
+            var marker = L.marker([39.1928691,-77.2667025], {icon: onesourceMarker}).addTo(map);
         </script>
 
         {% if form.errors %}
