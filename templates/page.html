@@ -5,11 +5,11 @@
 
 <header class="page not-fullscreen"{% if bgimage %} style="background-image:url('{{ bgimage }}');"{% endif %}>
 		{% load navigation %}
-		{% navigation %}
+		{% navigation active_nav %}
 </header>
 <content id="main">
 
-	<h4>{{ page.title }}</h4>
+	<h4>{{ page.title|safe }}</h4>
 
 	<div class="body">{{ page.content|safe }}</div>
 
