@@ -537,6 +537,9 @@ body.homepage section.homepage-right .learn-more a:active {
   header.not-fullscreen nav ul#fullmenu {
     background-color: transparent;
   }
+  header.not-fullscreen nav ul#fullmenu li a {
+    color: white;
+  }
 
   .section-anchor,
   .subsection-anchor {
