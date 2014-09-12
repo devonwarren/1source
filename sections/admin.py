@@ -6,8 +6,6 @@ class SubSectionInline(admin.StackedInline):
 	model = models.SubSection
 	extra = 0
 
-	def view_on_site(self, subsec):
-		return subsec.get_absolute_url
 
 class SectionAdmin(OrderedModelAdmin):
 	verbose_name = 'Homepage Sections'
@@ -16,7 +14,5 @@ class SectionAdmin(OrderedModelAdmin):
 		SubSectionInline,
 	]
 
-	def view_on_site(self, section):
-		return section.get_absolute_url
 
 admin.site.register(models.Section, SectionAdmin)

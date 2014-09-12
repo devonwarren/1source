@@ -6,8 +6,5 @@ class PageAdmin(admin.ModelAdmin):
 	prepopulated_fields = {'alias': ('title',)}
 	search_fields = ('title',)
 
-	def view_on_site(self, page):
-		return page.get_absolute_url
-
 
 admin.site.register(models.Page, PageAdmin)
