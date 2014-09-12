@@ -41,7 +41,7 @@
             var onesourceMarker = L.icon({
                 iconUrl: '/static/images/1source-marker-2x.png',
                 shadowUrl: '/static/images/1source-marker-shadow.png',
-                iconSize: [35, 45],
+                iconSize: [32, 45],
                 iconAnchor:   [17, 42],
                 popupAnchor: [1, -32],
                 shadowAnchor: [10, 12],
@@ -59,9 +59,9 @@
     
         <form action="" method="post">
             <div class="field">
-                <label for="id_subject">Subject:</label><br>
-                {{ form.subject.errors }}
-                {{ form.subject }}
+                <label for="id_name">Full Name:</label><br>
+                {{ form.name.errors }}
+                {{ form.name }}
             </div>
             <div class="field">
                 <label for="id_email">Your e-mail address:</label><br>

@@ -27,6 +27,9 @@ class Section(OrderedModel):
 	def __str__(self):
 		return self.title
 
+	def get_absolute_url(self):
+		return '/#' + self.slug
+
 class SubSection(OrderedModel):
 	name = models.CharField(max_length=100, unique=True)
 	slug = AutoSlugField(populate_from='name', editable=False, always_update=True, unique=True)
@@ -40,3 +43,6 @@ class SubSection(OrderedModel):
 
 	def __str__(self):
 		return self.name
+
+	def get_absolute_url(self):
+		return '/#subsec-' + self.slug
