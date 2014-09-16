@@ -59,7 +59,8 @@ a:active {
 }
 
 a:hover {
-	text-decoration: underline;
+	color: $primary1;
+	text-decoration: none;
 }
 
 h1 {

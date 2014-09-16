@@ -32,7 +32,8 @@ a:active {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #E86432;
+  text-decoration: none;
 }
 
 h1 {
