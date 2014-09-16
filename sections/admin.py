@@ -14,5 +14,10 @@ class SectionAdmin(OrderedModelAdmin):
 		SubSectionInline,
 	]
 
+class HeroImageAdmin(OrderedModelAdmin):
+	verbose_name = 'Homepage Hero Images'
+	list_display = ('image_tag',)
+
 
 admin.site.register(models.Section, SectionAdmin)
+admin.site.register(models.HeroImage, HeroImageAdmin)

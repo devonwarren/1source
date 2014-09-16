@@ -3,7 +3,24 @@
 
 {% block bodyclass %}homepage{% endblock %}
 {% block content %}
-<div class="bgimage" style="background-image:url('{% static "images/homepage_welcome.jpg" %}'); background-size: cover;">
+<div class="bgimage-container">
+	<style type="text/css">
+		{% for hero in heroes %}
+			#bgimage-{{ hero.id }} {
+					background-image: url('{{ hero.image_mobile.url }}');
+			}
+		{% endfor %}
+		@media screen and (min-width : 480px) {
+		{% for hero in heroes %}
+			#bgimage-{{ hero.id }} {
+				background-image: url('{{ hero.image_web.url }}');
+			}
+		{% endfor %}
+		}
+	</style>
+	{% for hero in heroes %}
+		<div class="bgimage" id="bgimage-{{ hero.id }}" style="z-index: 0;"></div>
+	{% endfor %}
 	<header id="hero">
 		<div id="logo">
 			<a href="/#story"><h1 class="logo-color">1Source. It&rsquo;s About Service.</h1></a>

@@ -115,13 +115,15 @@ MEDIA_URL = '/media/'
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
 GRAPPELLI_ADMIN_TITLE = '1Source Admin'
 
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': [
             [ '-', 'Bold', 'Italic', 'Underline',
-              '-', 'Link', 'Unlink',
+              '-', 'Link', 'Unlink', 'Styles',
             ],
             [ '-', 'BulletedList', 'NumberedList',
               '-', 'Copy','PasteText','PasteFromWord',

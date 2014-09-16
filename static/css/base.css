@@ -122,6 +122,18 @@ h1.logo-dark {
   background-position: center top;
 }
 
+.bgimage-container {
+  overflow: hidden;
+  position: relative;
+}
+.bgimage-container .bgimage {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
 header.not-fullscreen {
   width: 100%;
   background-image: url("../images/story.jpg");
@@ -306,6 +318,8 @@ body.homepage div#logo h1.logo-color {
 body.homepage header#hero {
   height: 100em;
   background: url("../images/gradient-dark.png") repeat-x bottom;
+  position: relative;
+  z-index: 999;
 }
 body.homepage header#hero nav {
   transition: all 300ms ease-in;
@@ -358,6 +372,8 @@ body.homepage div#enter a svg:hover path {
 }
 body.homepage section.homepage-summary {
   display: block;
+  position: relative;
+  z-index: 999;
   padding: 1em;
   text-align: center;
   background-color: #E86432;

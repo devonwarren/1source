@@ -46,3 +46,20 @@ class SubSection(OrderedModel):
 
 	def get_absolute_url(self):
 		return '/#subsec-' + self.slug
+
+class HeroImage(models.Model):
+	image = models.ImageField(blank=False, default=None, upload_to='hero', help_text="Background image for hero")
+	image_web = ImageSpecField(source='image',
+                                      processors=[ResizeToFit(width=1024)],
+                                      format='JPEG',
+                                      options={'quality': 90})
+	image_mobile = ImageSpecField(source='image',
+                                      processors=[ResizeToFit(width=480)],
+                                      format='JPEG',
+                                      options={'quality': 94})
+
+	def image_tag(self):
+	    return u'<img src="%s" />' % self.image_mobile.url
+	
+	image_tag.short_description = 'Image'
+	image_tag.allow_tags = True
