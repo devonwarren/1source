@@ -50,11 +50,11 @@ class SubSection(OrderedModel):
 class HeroImage(models.Model):
 	image = models.ImageField(blank=False, default=None, upload_to='hero', help_text="Background image for hero")
 	image_web = ImageSpecField(source='image',
-                                      processors=[ResizeToFit(width=1024)],
+                                      processors=[ResizeToFit(width=1280)],
                                       format='JPEG',
-                                      options={'quality': 90})
+                                      options={'quality': 94})
 	image_mobile = ImageSpecField(source='image',
-                                      processors=[ResizeToFit(width=480)],
+                                      processors=[ResizeToFit(width=860)],
                                       format='JPEG',
                                       options={'quality': 94})
 

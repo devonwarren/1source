@@ -98,8 +98,10 @@ $(window).on('orientationchange', function() {
 });
 
 function bgimageCycle(currentIdx) {
+  var delay = 1000;
   if (!currentIdx) {
     currentIdx = 0;
+    delay = 0;
   }
 
   var heroes = $('.bgimage-container .bgimage')
@@ -112,8 +114,6 @@ function bgimageCycle(currentIdx) {
     var next = heroes[0];
   }
   if ($(next).css('display') != 'none') {
-
-    var delay = 1000;
 
     $(heroes).each(function() {
       $(this).css('z-index', -2);
