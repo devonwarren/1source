@@ -6,14 +6,21 @@
 <div class="bgimage-container">
 	<style type="text/css">
 		{% for hero in heroes %}
-			#bgimage-{{ hero.id }} {
+			{% if forloop.first %}
+				#bgimage-{{ hero.id }} {
 					background-image: url('{{ hero.image_mobile.url }}');
-			}
+				}
+			{% else %}
+				#bgimage-{{ hero.id }} {
+					display: none;
+				}
+			{% endif %}
 		{% endfor %}
 		@media screen and (min-width : 480px) {
 		{% for hero in heroes %}
 			#bgimage-{{ hero.id }} {
-				background-image: url('{{ hero.image_web.url }}');
+					background-image: url('{{ hero.image_web.url }}');
+					display: block;
 			}
 		{% endfor %}
 		}

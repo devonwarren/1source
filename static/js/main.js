@@ -89,6 +89,7 @@ function homepageTagFades(currentIdx) {
 $(window).resize(function() { 
   fullHeightHero();
   scrollEvent();
+  bgimageCycle();
 });
 
 $(window).on('orientationchange', function() {
@@ -110,19 +111,20 @@ function bgimageCycle(currentIdx) {
     var nextIdx = 0;
     var next = heroes[0];
   }
+  if ($(next).css('display') != 'none') {
 
-  var delay = 1000;
+    var delay = 1000;
 
-  $(heroes).each(function() {
-    $(this).css('z-index', -2);
-  });
-  $(current).css('z-index', -1);
-  $(next).css('z-index', 0).css('opacity', 0).fadeTo(4000, 1.0, function() {
-    setTimeout(function() {
-      bgimageCycle(nextIdx); 
-    }, delay);
-  });
-  
+    $(heroes).each(function() {
+      $(this).css('z-index', -2);
+    });
+    $(current).css('z-index', -1);
+    $(next).css('z-index', 0).css('opacity', 0).fadeTo(4000, 1.0, function() {
+      setTimeout(function() {
+        bgimageCycle(nextIdx); 
+      }, delay);
+    });
+  }
 }
 
 function homepageDetailLoad(subsection) {
