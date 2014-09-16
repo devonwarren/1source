@@ -100,19 +100,26 @@ function bgimageCycle(currentIdx) {
   if (!currentIdx) {
     currentIdx = 0;
   }
-  var current = $('.bgimage-container .bgimage')[currentIdx];
-  var delay = 5000;
 
-  $('.bgimage-container .bgimage').each(function() {
-    $(this).css('z-index', -1);
+  var heroes = $('.bgimage-container .bgimage')
+  var current = heroes[currentIdx];
+  if (heroes[currentIdx+1]) {
+    var nextIdx = currentIdx + 1;
+    var next = heroes[nextIdx];
+  } else {
+    var nextIdx = 0;
+    var next = heroes[0];
+  }
+
+  var delay = 1000;
+
+  $(heroes).each(function() {
+    $(this).css('z-index', -2);
   });
-  $(current).css('z-index', 0).css('opacity', 0).fadeTo(4000, 1.0, function() {
+  $(current).css('z-index', -1);
+  $(next).css('z-index', 0).css('opacity', 0).fadeTo(4000, 1.0, function() {
     setTimeout(function() {
-      if ($('.bgimage-container .bgimage')[currentIdx+1]) {
-        bgimageCycle(currentIdx+1);  
-      } else {
-        bgimageCycle(0);
-      }
+      bgimageCycle(nextIdx); 
     }, delay);
   });
   
@@ -150,7 +157,7 @@ $(document).ready(function() {
 
   if ($('body').hasClass('homepage')) {
     bgimageCycle();
-    
+
     if (window.location.hash) {
       homepageDetailLoad(window.location.hash.replace('#subsec-',''));
     }
