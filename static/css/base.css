@@ -180,13 +180,14 @@ content#main {
 }
 
 .field {
+  padding-top: .4rem;
   width: 100%;
 }
 .field input,
 .field textarea {
   width: 100%;
   max-width: 22rem;
-  padding: .1rem;
+  padding: .3rem;
 }
 .field input[type="submit"] {
   border: solid 0.15em #E86432;
@@ -195,6 +196,8 @@ content#main {
   color: #E86432;
   background-color: white;
   cursor: hand;
+  width: auto;
+  font-size: 1rem;
 }
 
 .errorlist {
