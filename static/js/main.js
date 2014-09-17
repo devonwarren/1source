@@ -91,7 +91,7 @@ function homepageTagFades(currentIdx) {
 $(window).resize(function() { 
   fullHeightHero();
   scrollEvent();
-  bgimageCycle();
+  setTimeout(bgimageCycle(), 4000);
 });
 
 $(window).on('orientationchange', function() {
@@ -100,10 +100,9 @@ $(window).on('orientationchange', function() {
 });
 
 function bgimageCycle(currentIdx) {
-  var delay = 1000;
+  var delay = 4000;
   if (!currentIdx) {
     currentIdx = 0;
-    delay = 0;
   }
 
   var heroes = $('.bgimage-container .bgimage')
@@ -160,7 +159,7 @@ $(document).ready(function() {
   });
 
   if ($('body').hasClass('homepage')) {
-    bgimageCycle();
+    setTimeout(bgimageCycle(), 4000);
 
     if (window.location.hash) {
       homepageDetailLoad(window.location.hash.replace('#subsec-',''));
