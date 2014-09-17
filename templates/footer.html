@@ -12,7 +12,7 @@
 			<li><a href="/journal">JOURNAL</a>
 				<ul>
 					{% for entry in journal %}
-						<li>{{ entry.title|upper }}
+						<li><a href="{{ entry.get_absolute_url }}">{{ entry.title|upper }}</a>
 					{% endfor %}
 				</ul>
 			<li><a href="/contact">CONTACT</a>
