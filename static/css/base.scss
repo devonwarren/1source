@@ -166,7 +166,7 @@ h1.logo-dark {
 
 header.not-fullscreen {
 	width: 100%;
-	background-image: url('../images/story.jpg');
+	background-image: url('../images/default_header.jpg');
 	background-size: 100%;
 	background-position: center top;
 	position: fixed;
@@ -306,7 +306,7 @@ nav {
 
 footer {
 	text-align: center;
-	background-color: $primary2;
+	background-color: $primary1;
 	color: white;
 	clear: both;
 	opacity: .9;
@@ -337,6 +337,9 @@ footer {
 				}
 			}
 		}
+	}
+	#branding {
+		margin-top: 1rem;
 	}
 	#copyright {
 		font-family: $adelle_sans;
