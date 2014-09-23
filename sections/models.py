@@ -79,5 +79,8 @@ class StaffProfile(OrderedModel):
                                       options={'quality': 94})
 	founder = models.BooleanField(default=False, help_text="Is this a 1Source founder profile?")
 
+	def __str__(self):
+		return self.name
+
 	class Meta(OrderedModel.Meta):
 		pass
