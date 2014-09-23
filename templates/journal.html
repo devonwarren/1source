@@ -9,26 +9,30 @@
 </header>
 <content id="main">
 
-{% for entry in journal %}
-	<article>
-		<style type="text/css">
-			#article-image-{{ entry.id }} {
-					background-image: url('{{ entry.image_mobile.url }}');
-			}
-			@media screen and (min-width : 420px) {
-				#article-image-{{ entry.id }} {
-					background-image: url('{{ entry.image_web.url }}');
-				}
-			}
-		</style>
-		<div class="article-image" id="article-image-{{ entry.id }}"></div>
+<div class="content-center">
 
-		<div class="article-content">
-			<h4><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h4>
-			{{ entry.body|safe }}
-		</div>
-	</article>
-{% endfor %}
+	{% for entry in journal %}
+		<article>
+			<style type="text/css">
+				#article-image-{{ entry.id }} {
+						background-image: url('{{ entry.image_mobile.url }}');
+				}
+				@media screen and (min-width : 420px) {
+					#article-image-{{ entry.id }} {
+						background-image: url('{{ entry.image_web.url }}');
+					}
+				}
+			</style>
+			<div class="article-image" id="article-image-{{ entry.id }}"></div>
+
+			<div class="article-content">
+				<h4><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h4>
+				{{ entry.body|safe }}
+			</div>
+		</article>
+	{% endfor %}
+
+</div>
 
 </content>
 

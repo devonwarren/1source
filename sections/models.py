@@ -52,11 +52,11 @@ class HeroImage(models.Model):
 	image_web = ImageSpecField(source='image',
                                       processors=[ResizeToFit(width=1280)],
                                       format='JPEG',
-                                      options={'quality': 94})
+                                      options={'quality': 97})
 	image_mobile = ImageSpecField(source='image',
                                       processors=[ResizeToFit(width=860)],
                                       format='JPEG',
-                                      options={'quality': 94})
+                                      options={'quality': 97})
 
 	def image_tag(self):
 	    return u'<img src="%s" />' % self.image_mobile.url

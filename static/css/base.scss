@@ -94,6 +94,7 @@ h4 {
 	color: $secondary3;
 	font-size: 1.4em;
 	font-weight: normal;
+	margin: 1rem 0;
 }
 
 a img {
@@ -205,24 +206,11 @@ header.not-fullscreen {
 }
 
 content#main {
+	padding: 0;
+	margin: 4rem 0 0;
 	display: block;
-	padding: 1rem;
-	margin: 4rem auto 3rem;
-	&.no-padding {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-		max-width: 100%;
-		article {
-			display: block;
-			padding: 1rem;
-			margin: 0 auto;
-		}
-	}
-	article {
-		padding: 0;
-		margin: 0;
+	.content-center {
+		padding: 1rem;
 	}
 	
 }
@@ -348,7 +336,6 @@ footer {
 	background-color: $primary1;
 	color: white;
 	clear: both;
-	opacity: .9;
 	a:link,
 	a:hover,
 	a:visited,

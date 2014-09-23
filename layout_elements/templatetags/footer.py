@@ -8,7 +8,7 @@ register = template.Library()
 
 @register.simple_tag
 def footer():
-	journal = JournalEntry.objects.all().order_by('-published_date')[:5]
+	journal = JournalEntry.objects.all().order_by('-published_date')[:3]
 
 	subsections = []
 	sections = Section.objects.prefetch_related('subsection_set').all()

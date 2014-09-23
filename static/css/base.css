@@ -67,6 +67,7 @@ h4 {
   color: #5C4C46;
   font-size: 1.4em;
   font-weight: normal;
+  margin: 1rem 0;
 }
 
 a img {
@@ -174,25 +175,12 @@ header.not-fullscreen nav ul#fullmenu {
 }
 
 content#main {
-  display: block;
-  padding: 1rem;
-  margin: 4rem auto 3rem;
-}
-content#main.no-padding {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  max-width: 100%;
-}
-content#main.no-padding article {
-  display: block;
-  padding: 1rem;
-  margin: 0 auto;
-}
-content#main article {
   padding: 0;
-  margin: 0;
+  margin: 4rem 0 0;
+  display: block;
+}
+content#main .content-center {
+  padding: 1rem;
 }
 
 .field {
@@ -310,7 +298,6 @@ footer {
   background-color: #E86432;
   color: white;
   clear: both;
-  opacity: .9;
 }
 footer a:link,
 footer a:hover,
@@ -570,7 +557,7 @@ body.homepage section.homepage-right .learn-more a:active {
   }
 
   header.not-fullscreen {
-    height: 17rem;
+    height: 15rem;
     border-bottom: solid 3px #E86432;
   }
   header.not-fullscreen nav a#nav-logo {
@@ -594,16 +581,12 @@ body.homepage section.homepage-right .learn-more a:active {
   }
 
   content#main {
+    margin: 15rem 0 0 0;
+  }
+  content#main .content-center {
     padding: 1em 4em;
+    margin: 2rem auto 4rem;
     max-width: 70em;
-    margin: 18rem auto 4rem;
-  }
-  content#main.no-padding {
-    margin-top: 18rem;
-  }
-  content#main.no-padding article {
-    max-width: 70em;
-    margin: 0 auto;
   }
 
   article .article-image {
@@ -666,6 +649,14 @@ body.homepage section.homepage-right .learn-more a:active {
     min-height: 35em;
     margin-left: 50%;
     padding: 13.2em 4em 1em;
+  }
+}
+@media screen and (min-width: 44em) and (min-aspect-ratio: 8 / 3) {
+  body.homepage aside.homepage-left {
+    margin-top: 8rem;
+  }
+  body.homepage section.homepage-right {
+    padding-top: 8rem;
   }
 }
 @media screen and (min-width: 56em) {

@@ -95,7 +95,7 @@ footer {
 }
 
 header.not-fullscreen {
-	height: 17rem;
+	height: 15rem;
 	border-bottom: solid 3px $primary1;
 	nav {
 		a#nav-logo {
@@ -121,16 +121,13 @@ header.not-fullscreen {
 }
 
 content#main {
-	padding: 1em 4em;
-	max-width: 70em;
-	margin: 18rem auto 4rem;
-	&.no-padding {
-		margin-top: 18rem;
-		article {
-			max-width: 70em;
-			margin: 0 auto;
-		}
+	margin: 15rem 0 0 0;
+	.content-center {
+		padding: 1em 4em;
+		margin: 2rem auto 4rem;
+		max-width: 70em;
 	}
+	
 }
 
 article {
@@ -200,5 +197,16 @@ body.homepage {
 		min-height: 35em;
 		margin-left: 50%;
 		padding: 13.2em 4em 1em;
+	}
+}
+
+@media screen and (min-aspect-ratio: 8/3) {
+	body.homepage {
+		aside.homepage-left {
+			margin-top: 8rem;
+		}
+		section.homepage-right {
+			padding-top: 8rem;
+		}
 	}
 }
