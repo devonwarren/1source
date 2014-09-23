@@ -81,7 +81,7 @@ footer {
 		display: inline-block;
 		text-align: left;
 		ul li {
-			max-width: 17em;
+			max-width: 16em;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -132,10 +132,17 @@ content#main {
 
 article {
 	.article-image {
+
 		height: 28rem;
 		width: 28rem;
 		float: left;
 		background-position: center top;
+	}
+	.article-inline-image {
+		float: left;
+		img {
+			width: 28rem;
+		}
 	}
 	.article-content {
 		margin-left: 30em;

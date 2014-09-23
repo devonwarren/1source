@@ -15,17 +15,7 @@
 
 	{% for profile in founders %}
 		<article>
-			<style type="text/css">
-				#article-image-{{ profile.id }} {
-						background-image: url('{{ profile.image_mobile.url }}');
-				}
-				@media screen and (min-width : 420px) {
-					#article-image-{{ profile.id }} {
-						background-image: url('{{ profile.image_web.url }}');
-					}
-				}
-			</style>
-			<div class="article-image" id="article-image-{{ profile.id }}"></div>
+			<div class="article-inline-image"><img src="{{ profile.image_web.url }}"></div>
 
 			<div class="article-content">
 				<h4>{{ profile.name }}</h4>
@@ -35,6 +25,7 @@
 		</article>
 	{% endfor %}
 </div>
+
 <div class="bgimage section-bgimage" style="background-image:url('{% static "images/teambg.jpg" %}');">
 	<section class="summary">
 		1 Source Team... Copy blurb about how awesome the 1 Source Team is etc..
@@ -44,17 +35,7 @@
 <div class="content-center">
 	{% for profile in profiles %}
 		<article>
-			<style type="text/css">
-				#article-image-{{ profile.id }} {
-						background-image: url('{{ profile.image_mobile.url }}');
-				}
-				@media screen and (min-width : 420px) {
-					#article-image-{{ profile.id }} {
-						background-image: url('{{ profile.image_web.url }}');
-					}
-				}
-			</style>
-			<div class="article-image" id="article-image-{{ profile.id }}"></div>
+			<div class="article-inline-image"><img src="{{ profile.image_web.url }}"></div>
 
 			<div class="article-content">
 				<h4>{{ profile.name }}</h4>
@@ -63,7 +44,7 @@
 			</div>
 		</article>
 	{% endfor %}
-<div class="content-center">
+</div>
 
 </content>
 

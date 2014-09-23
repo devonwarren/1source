@@ -272,6 +272,11 @@ article {
 		width: 100%;
 		height: 12rem;
 	}
+	.article-inline-image {
+		img {
+			max-width: 100%;
+		}
+	}
 	.article-content {
     	h4, h5 {
     		margin: 0 0 .4rem 0;

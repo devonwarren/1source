@@ -241,6 +241,9 @@ article .article-image {
   width: 100%;
   height: 12rem;
 }
+article .article-inline-image img {
+  max-width: 100%;
+}
 article .article-content h4, article .article-content h5 {
   margin: 0 0 .4rem 0;
   padding: 0;
@@ -545,7 +548,7 @@ body.homepage section.homepage-right .learn-more a:active {
     text-align: left;
   }
   footer > ul > li ul li {
-    max-width: 17em;
+    max-width: 16em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -594,6 +597,12 @@ body.homepage section.homepage-right .learn-more a:active {
     width: 28rem;
     float: left;
     background-position: center top;
+  }
+  article .article-inline-image {
+    float: left;
+  }
+  article .article-inline-image img {
+    width: 28rem;
   }
   article .article-content {
     margin-left: 30em;
