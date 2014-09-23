@@ -124,6 +124,13 @@ content#main {
 	padding: 1em 4em;
 	max-width: 70em;
 	margin: 18rem auto 4rem;
+	&.no-padding {
+		margin-top: 18rem;
+		article {
+			max-width: 70em;
+			margin: 0 auto;
+		}
+	}
 }
 
 article {
@@ -136,6 +143,13 @@ article {
 	.article-content {
 		margin-left: 30em;
 	}
+}
+
+section.summary {
+	padding: 3.6em;
+	font-size: 2.6em;
+	line-height: 1.3em;
+	opacity: .9;
 }
 
 body.homepage {
@@ -172,12 +186,6 @@ body.homepage {
 				width: 4rem;
 			}
 		}
-	}
-	section.homepage-summary {
-		padding: 3.6em;
-		font-size: 2.6em;
-		line-height: 1.3em;
-		opacity: .9;
 	}
 	aside.homepage-left {
 		width: 50%;

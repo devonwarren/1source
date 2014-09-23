@@ -18,6 +18,11 @@ class HeroImageAdmin(OrderedModelAdmin):
 	verbose_name = 'Homepage Hero Images'
 	list_display = ('image_tag',)
 
+class StaffProfileAdmin(OrderedModelAdmin):
+	verbose_name = 'Staff Profiles'
+	list_display = ('name', 'job_title', 'move_up_down_links')
+
 
 admin.site.register(models.Section, SectionAdmin)
 admin.site.register(models.HeroImage, HeroImageAdmin)
+admin.site.register(models.StaffProfile, StaffProfileAdmin)

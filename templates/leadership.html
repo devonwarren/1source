@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block bodyclass %}leadership story{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<header class="leadership not-fullscreen">
+		{% load navigation %}
+		{% navigation "story" %}
+</header>
+<content id="main" class="no-padding">
+
+{% for profile in founders %}
+	<article>
+		<style type="text/css">
+			#article-image-{{ profile.id }} {
+					background-image: url('{{ profile.image_mobile.url }}');
+			}
+			@media screen and (min-width : 420px) {
+				#article-image-{{ profile.id }} {
+					background-image: url('{{ profile.image_web.url }}');
+				}
+			}
+		</style>
+		<div class="article-image" id="article-image-{{ profile.id }}"></div>
+
+		<div class="article-content">
+			<h4>{{ profile.name }}</h4>
+			<h5>{{ profile.job_title }}</h5>
+			{{ profile.description|safe }}
+		</div>
+	</article>
+{% endfor %}
+<div class="bgimage section-bgimage" style="background-image:url('{% static "images/teambg.jpg" %}');">
+	<section class="summary">
+		1 Source Team... Copy blurb about how awesome the 1 Source Team is etc..
+	</section>
+</div>
+
+{% for profile in profiles %}
+	<article>
+		<style type="text/css">
+			#article-image-{{ profile.id }} {
+					background-image: url('{{ profile.image_mobile.url }}');
+			}
+			@media screen and (min-width : 420px) {
+				#article-image-{{ profile.id }} {
+					background-image: url('{{ profile.image_web.url }}');
+				}
+			}
+		</style>
+		<div class="article-image" id="article-image-{{ profile.id }}"></div>
+
+		<div class="article-content">
+			<h4>{{ profile.name }}</h4>
+			<h5>{{ profile.job_title }}</h5>
+			{{ profile.description|safe }}
+		</div>
+	</article>
+{% endfor %}
+
+</content>
+
+{% load footer %}
+{% footer %}
+{% endblock %}

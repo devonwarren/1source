@@ -63,3 +63,21 @@ class HeroImage(models.Model):
 	
 	image_tag.short_description = 'Image'
 	image_tag.allow_tags = True
+
+class StaffProfile(OrderedModel):
+	name = models.CharField(max_length=250)
+	job_title = models.CharField(max_length=250)
+	description = RichTextField()
+	image = models.ImageField(blank=False, default=None, upload_to='profiles', help_text="Background image for hero")
+	image_web = ImageSpecField(source='image',
+                                      processors=[ResizeToFit(width=420)],
+                                      format='JPEG',
+                                      options={'quality': 94})
+	image_mobile = ImageSpecField(source='image',
+                                      processors=[ResizeToFit(width=320)],
+                                      format='JPEG',
+                                      options={'quality': 94})
+	founder = models.BooleanField(default=False, help_text="Is this a 1Source founder profile?")
+
+	class Meta(OrderedModel.Meta):
+		pass

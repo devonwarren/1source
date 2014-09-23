@@ -178,6 +178,22 @@ content#main {
   padding: 1rem;
   margin: 4rem auto 3rem;
 }
+content#main.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100%;
+}
+content#main.no-padding article {
+  display: block;
+  padding: 1rem;
+  margin: 0 auto;
+}
+content#main article {
+  padding: 0;
+  margin: 0;
+}
 
 .field {
   padding-top: .4rem;
@@ -208,7 +224,26 @@ content#main {
   font-size: .9rem;
 }
 
+section.summary {
+  display: block;
+  position: relative;
+  z-index: 99;
+  padding: 1em;
+  text-align: center;
+  background-color: #E86432;
+  color: white;
+  font-family: "OfficinaSerITCStd", serif;
+  font-size: 1.8em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+section.summary p {
+  padding: 0;
+  margin: 0;
+}
+
 article {
+  margin-top: 2em;
   clear: both;
 }
 article .article-image {
@@ -218,8 +253,9 @@ article .article-image {
   width: 100%;
   height: 12rem;
 }
-article .article-content {
-  margin-top: 2em;
+article .article-content h4, article .article-content h5 {
+  margin: 0 0 .4rem 0;
+  padding: 0;
 }
 article .article-content p {
   margin: 0 0 2em;
@@ -376,23 +412,6 @@ body.homepage div#enter a svg path {
 body.homepage div#enter a svg:hover path {
   fill: #E86432 !important;
   transition: all 300ms ease-in;
-}
-body.homepage section.homepage-summary {
-  display: block;
-  position: relative;
-  z-index: 100;
-  padding: 1em;
-  text-align: center;
-  background-color: #E86432;
-  color: white;
-  font-family: "OfficinaSerITCStd", serif;
-  font-size: 1.8em;
-  font-weight: normal;
-  line-height: 1.2em;
-}
-body.homepage section.homepage-summary p {
-  padding: 0;
-  margin: 0;
 }
 body.homepage aside.homepage-left {
   text-align: center;
@@ -579,6 +598,13 @@ body.homepage section.homepage-right .learn-more a:active {
     max-width: 70em;
     margin: 18rem auto 4rem;
   }
+  content#main.no-padding {
+    margin-top: 18rem;
+  }
+  content#main.no-padding article {
+    max-width: 70em;
+    margin: 0 auto;
+  }
 
   article .article-image {
     height: 28rem;
@@ -588,6 +614,13 @@ body.homepage section.homepage-right .learn-more a:active {
   }
   article .article-content {
     margin-left: 30em;
+  }
+
+  section.summary {
+    padding: 3.6em;
+    font-size: 2.6em;
+    line-height: 1.3em;
+    opacity: .9;
   }
 
   body.homepage header#hero nav {
@@ -619,12 +652,6 @@ body.homepage section.homepage-right .learn-more a:active {
   body.homepage header#hero div#enter a svg {
     height: 4rem;
     width: 4rem;
-  }
-  body.homepage section.homepage-summary {
-    padding: 3.6em;
-    font-size: 2.6em;
-    line-height: 1.3em;
-    opacity: .9;
   }
   body.homepage aside.homepage-left {
     width: 50%;
