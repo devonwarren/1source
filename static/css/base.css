@@ -158,7 +158,7 @@ header.not-fullscreen nav a#mobileMenuOpen:hover svg path {
 header.not-fullscreen nav a#nav-logo {
   width: 100%;
   display: block;
-  margin: 0 2.5em;
+  margin: 0 3.2rem;
 }
 header.not-fullscreen nav a#nav-logo h1 {
   height: 3.2rem;
@@ -266,8 +266,8 @@ nav ul {
   padding: 0;
 }
 nav a#mobileMenuOpen {
-  height: 2em;
-  width: 2em;
+  height: 2rem;
+  width: 2rem;
   float: right;
   padding: .6em;
 }
@@ -375,7 +375,7 @@ body.homepage header#hero nav.sticky a#nav-logo {
 body.homepage header#hero nav a#nav-logo {
   opacity: 0;
   transition: all 300ms ease-in;
-  margin: 0 2.5em;
+  margin: 0 3.2rem;
 }
 body.homepage div.tagline {
   position: relative;
@@ -658,6 +658,9 @@ body.homepage section.homepage-right .learn-more a:active {
     min-height: 35em;
     margin-left: 50%;
     padding: 13.2em 4em 1em;
+  }
+  body.homepage section.homepage-right div.teaser {
+    margin-top: 4rem;
   }
 }
 @media screen and (min-width: 44em) and (min-aspect-ratio: 8 / 3) {
