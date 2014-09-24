@@ -18,8 +18,7 @@ def entry_view(request, entry):
 	
 	t = get_template('page.html')
 	html = t.render(Context({ 
-		'page' : entry, 
-		'bgimage' : entry.image_web.url, 
+		'page' : entry,
 		'active_nav' : 'journal',
 	}))
 	return HttpResponse(html)

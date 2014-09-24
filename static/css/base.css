@@ -567,6 +567,7 @@ body.homepage section.homepage-right .learn-more a:active {
     padding: 0;
     float: left;
     width: auto;
+    margin: 0 2rem;
   }
   header.not-fullscreen nav a#nav-logo h1 {
     height: 1.3em;
@@ -621,6 +622,7 @@ body.homepage section.homepage-right .learn-more a:active {
     right: 0;
   }
   body.homepage header#hero nav.sticky a#nav-logo {
+    margin: 0 2rem;
     width: auto;
     float: left;
     display: inline-block;

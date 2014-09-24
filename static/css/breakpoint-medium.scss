@@ -102,6 +102,7 @@ header.not-fullscreen {
 			padding: 0;
 			float: left;
 			width: auto;
+			margin: 0 2rem;
 			h1 {
 				height: 1.3em;
 			}
@@ -164,6 +165,7 @@ body.homepage {
 			right: 0;
 			&.sticky {
 				a#nav-logo {
+					margin: 0 2rem;
 					width: auto;
 					float: left;
 					display: inline-block;
