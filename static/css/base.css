@@ -276,13 +276,13 @@ nav a#mobileMenuOpen:hover svg path {
 }
 nav ul#fullmenu {
   max-height: 0;
-  transition: all 500ms ease-in;
+  transition: all 300ms ease-in;
   overflow: hidden;
   border-bottom: solid 2px #E86432;
 }
 nav ul#fullmenu.open {
   max-height: 25em;
-  transition: all 600ms ease-in;
+  transition: all 400ms ease-in;
 }
 nav ul#fullmenu li {
   width: 100%;
@@ -449,6 +449,10 @@ body.homepage section.homepage-right .learn-more a {
 body.homepage section.homepage-right .learn-more a:active {
   padding: .16em .55em;
   font-size: .92em;
+}
+
+.gm-style-cc {
+  display: none;
 }
 
 @media screen and (min-aspect-ratio: 8 / 3) {

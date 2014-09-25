@@ -24,34 +24,54 @@
 
         <div id="map" style="width: 100%; height: 16rem"></div>
 
-        <script src="{% static "js/leaflet.js" %}"></script>
-        <link href="{% static "css/leaflet.css" %}" rel="stylesheet" type="text/css">
-        <script>
-            L.Icon.Default.imagePath = '/static/images';
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>        
+        <script type="text/javascript">
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                var myLatlng = new google.maps.LatLng(39.1926623,-77.2669107);
+                var mapOptions = {
+                    zoom: 15,
+                    center: myLatlng,
+                    disableDefaultUI: true,
+                    styles: [
+                                {
+                                    "stylers": [
+                                        {"hue": "#ff1a00"},
+                                        {"invert_lightness": true},
+                                        {"saturation": -100},
+                                        {"lightness": 33},
+                                        {"gamma": 0.5}
+                                    ]
+                                },
+                                {
+                                    "featureType": "water",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {"color": "#2D333C"}
+                                    ]
+                                },{
+                                     "featureType": "poi",
+                                     "elementType": "labels",
+                                     "stylers": [
+                                       { "visibility": "off" }
+                                     ]
+                                }
+                            ]
+                };
 
-            var map = L.map('map', {
-                zoomControl: false,
-                attributionControl: false,
-            }).setView([39.1926623,-77.2669107], 15);
-
-            L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-
-                id: 'examples.map-i87786ca'
-            }).addTo(map);
-            
-            var onesourceMarker = L.icon({
-                iconUrl: '/static/images/1source-marker-2x.png',
-                iconSize: [47, 75],
-                iconAnchor:   [23, 75],
-                shadowUrl: '/static/images/1source-marker-shadow.png',
-                popupAnchor: [1, -32],
-                shadowAnchor: [10, 12],
-                shadowSize: [36, 16],
-            });
-    
-            var marker = L.marker([39.1928691,-77.2667025], {icon: onesourceMarker}).addTo(map);
+                var mapElement = document.getElementById('map');
+                var map = new google.maps.Map(mapElement, mapOptions);
+                var image = '{% static "images/1source-marker.svg" %}';
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    icon: image,
+                    map: map,
+                    title: '1Source'
+                });
+            }
         </script>
+
 
         {% if form.errors %}
             <p style="color: red;">
