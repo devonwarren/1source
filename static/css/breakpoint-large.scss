@@ -1,7 +1,10 @@
-ul#fullmenu {
+nav ul#fullmenu {
 	li {
 		padding-left: 1em;
 		padding-right: 1em;
+		a {
+  			margin: .2rem 1rem;
+  		}
 	}
 }
 
