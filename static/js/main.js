@@ -100,7 +100,7 @@ $(window).on('orientationchange', function() {
 });
 
 function bgimageCycle(currentIdx) {
-  var delay = 4000;
+  var delay = 6000;
   if (!currentIdx) {
     currentIdx = 0;
   }
@@ -121,6 +121,7 @@ function bgimageCycle(currentIdx) {
     }
     $(current).css('z-index', -1);
     $(next).css('z-index', 0).css('opacity', 0).fadeTo(4000, 1.0, function() {
+      console.log('Fade done');
       setTimeout(function() {
         bgimageCycle(nextIdx); 
       }, delay);
