@@ -69,7 +69,7 @@
 	<section class="homepage-detail section-{{ section.slug }}">
 		<aside class="homepage-left" id="aside-{{ section.slug }}">
 			<a class="subsection-select-{{ section.slug }}" href="javascript:homepageDetailLoad('{{ section.slug }}');">
-				<h2>{{ section.title|upper }}</h2>
+				<h2>{{ section.title|upper|safe }}</h2>
 			</a>
 			<ul>
 			{% for subsection in subsections %}
