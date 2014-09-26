@@ -236,7 +236,8 @@ section.summary p {
 }
 
 article {
-  margin-top: 2em;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
   clear: both;
 }
 article .article-image {
@@ -258,7 +259,7 @@ article .article-content h5 {
   padding: 0;
 }
 article .article-content p {
-  margin: 0 0 2em;
+  margin: 0 0 1rem;
 }
 
 nav {
@@ -615,10 +616,10 @@ body.homepage section.homepage-right .learn-more a:active {
     float: left;
   }
   article .article-inline-image img {
-    width: 28rem;
+    width: 20rem;
   }
   article .article-content {
-    margin-left: 30em;
+    margin-left: 23rem;
   }
 
   section.summary {

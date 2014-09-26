@@ -58,6 +58,8 @@ class HeroImage(models.Model):
                                       format='JPEG',
                                       options={'quality': 97})
 
+	mobile_hero = models.BooleanField(default=False, help_text="Is this the mobile hero to use?")
+
 	def image_tag(self):
 	    return u'<img src="%s" />' % self.image_mobile.url
 	
@@ -68,7 +70,7 @@ class StaffProfile(OrderedModel):
 	name = models.CharField(max_length=250)
 	job_title = models.CharField(max_length=250)
 	description = RichTextField()
-	image = models.ImageField(blank=False, default=None, upload_to='profiles', help_text="Background image for hero")
+	image = models.ImageField(blank=True, default=None, upload_to='profiles', help_text="Background image for hero")
 	image_web = ImageSpecField(source='image',
                                       processors=[ResizeToFit(width=420)],
                                       format='JPEG',

@@ -268,7 +268,8 @@ section.summary {
 }
 
 article {
-	margin-top: 2em;
+	margin-top: 2rem;
+	padding-bottom: 1rem;
 	clear: both;
 	.article-image {
 		background-size: 100%;
@@ -292,7 +293,7 @@ article {
     		padding: 0;
     	}
     	p {
-    		margin: 0 0 2em;
+    		margin: 0 0 1rem;
     	}
 	}
 }

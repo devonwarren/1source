@@ -12,13 +12,15 @@
 
 <div class="content-center">
 
-	<img src="{% static "images/leadership_header.jpg" %}" style="width:100%">
+	<img src="{% static "images/leadership_header.jpg" %}" style="width:100%; max-width: 42rem;">
 
 	<h4><a href="/#story">Story</a> : Leadership</h4>
 
 	{% for profile in founders %}
 		<article>
-			<div class="article-inline-image"><img src="{{ profile.image_web.url }}"></div>
+			{% if profile.image %}
+				<div class="article-inline-image"><img src="{{ profile.image_web.url }}"></div>
+			{% endif %}
 
 			<div class="article-content">
 				<h4>{{ profile.name }}</h4>
@@ -38,7 +40,9 @@
 <div class="content-center">
 	{% for profile in profiles %}
 		<article>
-			<div class="article-inline-image"><img src="{{ profile.image_web.url }}"></div>
+			{% if profile.image %}
+				<div class="article-inline-image"><img src="{{ profile.image_web.url }}"></div>
+			{% endif %}
 
 			<div class="article-content">
 				<h4>{{ profile.name }}</h4>
