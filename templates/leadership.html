@@ -10,9 +10,13 @@
 </header>
 <content id="main">
 
-<div class="content-center">
+<div class="bgimage section-bgimage" style="background-image:url('{% static "images/teambg.jpg" %}');">
+	<section class="summary">
+		One Company. One Vision. 1Source.
+	</section>
+</div>
 
-	<img src="{% static "images/leadership_header.jpg" %}" style="width:100%; max-width: 42rem;">
+<div class="content-center">
 
 	<h4><a href="/#story">Story</a> : Leadership</h4>
 
@@ -22,7 +26,7 @@
 				<div class="article-inline-image"><img src="{{ profile.image_web.url }}"></div>
 			{% endif %}
 
-			<div class="article-content">
+			<div class="article-content{% if profile.image %} has-inline-image{% endif %}">
 				<h4>{{ profile.name }}</h4>
 				<h5>{{ profile.job_title }}</h5>
 				{{ profile.description|safe }}
@@ -51,6 +55,9 @@
 			</div>
 		</article>
 	{% endfor %}
+
+	<img src="{% static "images/teambg.jpg" %}" style="width:100%;">
+
 </div>
 
 </content>

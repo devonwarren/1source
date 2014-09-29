@@ -341,7 +341,7 @@ footer > ul > li ul li {
   padding-top: .4em;
 }
 footer #branding {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 footer #copyright {
   font-family: "Adelle Sans", sans-serif;
@@ -618,7 +618,7 @@ body.homepage section.homepage-right .learn-more a:active {
   article .article-inline-image img {
     width: 20rem;
   }
-  article .article-content {
+  article .article-content.has-inline-image {
     margin-left: 23rem;
   }
 
