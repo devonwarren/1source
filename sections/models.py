@@ -33,7 +33,7 @@ class Section(OrderedModel):
 class SubSection(OrderedModel):
 	name = models.CharField(max_length=100, unique=True)
 	slug = AutoSlugField(populate_from='name', editable=False, always_update=True, unique=True)
-	title = models.TextField(help_text="Large text beginning the subsection")
+	title = models.TextField(blank=True, help_text="Large text beginning the subsection")
 	description = RichTextField(blank=True, help_text="Small text of the subsection")
 	section = models.ForeignKey(Section)
 	learn_more = RichTextField(blank=True, null=True, help_text="Details page of the <em>Learn more</em> button")
