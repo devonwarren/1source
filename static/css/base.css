@@ -139,6 +139,10 @@ h1.logo-dark {
   height: 100%;
   position: absolute;
   top: 0;
+  display: none;
+}
+.bgimage-container .bgimage.mobile {
+  display: block;
 }
 
 header.not-fullscreen {
@@ -365,6 +369,8 @@ body.homepage header#hero {
   z-index: 999;
 }
 body.homepage header#hero nav {
+  -moz-transition: all 300ms ease-in;
+  -webkit-transition: all 300ms ease-in;
   transition: all 300ms ease-in;
 }
 body.homepage header#hero nav.sticky {
@@ -570,6 +576,9 @@ body.homepage section.homepage-right .learn-more a:active {
   .section-bgimage {
     background-size: cover;
     background-attachment: fixed;
+  }
+  .section-bgimage .bgimage {
+    display: block;
   }
 
   header.not-fullscreen {

@@ -26,7 +26,7 @@
 		}
 	</style>
 	{% for hero in heroes %}
-		<div class="bgimage" id="bgimage-{{ hero.id }}" style="z-index: 0;"></div>
+		<div class="bgimage{% if hero.mobile_hero %} mobile{% endif %}" id="bgimage-{{ hero.id }}" style="z-index: 0;"></div>
 	{% endfor %}
 	<header id="hero">
 		<div id="logo">

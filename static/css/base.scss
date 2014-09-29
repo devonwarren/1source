@@ -167,6 +167,10 @@ h1.logo-dark {
 		height: 100%;
 		position: absolute;
 		top: 0;
+		display: none;
+	}
+	.bgimage.mobile {
+		display: block;
 	}
 }
 
@@ -404,6 +408,8 @@ body.homepage {
 		position: relative;
 		z-index: 999;
 		nav {
+			-moz-transition: all 300ms ease-in;
+			-webkit-transition: all 300ms ease-in;
 			transition: all 300ms ease-in;
 			&.sticky {
 				position: fixed;

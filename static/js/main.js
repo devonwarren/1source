@@ -114,17 +114,18 @@ function bgimageCycle(currentIdx) {
     var nextIdx = 0;
     var next = heroes[0];
   }
-
-  for (var x=0; x<heroes.length; x++) {
-    $(heroes[x]).css('z-index', -2);
+  if ($(next).is(':visible')) {
+    for (var x=0; x<heroes.length; x++) {
+      $(heroes[x]).css('z-index', -2);
+    }
+    $(current).css('z-index', -1);
+    $(next).css('z-index', 0).css('opacity', 0).fadeTo(4000, 1.0, function() {
+      console.log('Fade done');
+      setTimeout(function() {
+        bgimageCycle(nextIdx); 
+      }, delay);
+    });
   }
-  $(current).css('z-index', -1);
-  $(next).css('z-index', 0).css('opacity', 0).fadeTo(4000, 1.0, function() {
-    console.log('Fade done');
-    setTimeout(function() {
-      bgimageCycle(nextIdx); 
-    }, delay);
-  });
 }
 
 function homepageDetailLoad(subsection) {

@@ -92,6 +92,9 @@ footer {
 .section-bgimage {
 	background-size: cover;
 	background-attachment: fixed;
+	.bgimage {
+		display: block;
+	}
 }
 
 header.not-fullscreen {
