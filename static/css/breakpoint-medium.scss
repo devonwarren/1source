@@ -12,13 +12,16 @@ nav {
 	a#mobileMenuOpen {
 		display: none;
 	}
-	.logo {
-		height: 1.3em;
-		margin-top: .2em;
-		width: 10rem;
+	a#nav-logo h1.logo {
+		margin: 1.4rem;
+		width: 8rem;
+		height: auto;
 		display: inline-block;
 	}
 	ul#fullmenu {
+		background-color: transparent;
+		position: initial;
+		width: auto;
 		max-height: none;
 		float: right;
 		padding-right: 1rem;
@@ -173,7 +176,9 @@ body.homepage {
 			position: absolute;
 			bottom: 0;
 			right: 0;
+
 			&.sticky {
+
 				a#nav-logo {
 					margin: 0;
 					width: auto;
