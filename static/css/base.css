@@ -142,7 +142,7 @@ h1.logo-dark {
   display: none;
 }
 .bgimage-container .bgimage.mobile {
-  display: block;
+  display: block !important;
 }
 
 header.not-fullscreen {

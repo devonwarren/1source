@@ -6,13 +6,10 @@
 <div class="bgimage-container">
 	<style type="text/css">
 		{% for hero in heroes %}
-			{% if forloop.first %}
+			{% if hero.mobile_hero %}
 				#bgimage-{{ hero.id }} {
 					background-image: url('{{ hero.image_mobile.url }}');
-				}
-			{% else %}
-				#bgimage-{{ hero.id }} {
-					display: none;
+					opacity: 1;
 				}
 			{% endif %}
 		{% endfor %}

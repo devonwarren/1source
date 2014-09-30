@@ -1,6 +1,6 @@
 function fullHeightHero() {
   $('#hero').css('height', window.innerHeight + 'px');
-  var targetCenter = Math.round((window.innerHeight - $('#logo h1').height()) / 2);
+  var targetCenter = Math.round((window.innerHeight - $('#logo h1').height()) / 2.1);
   $('#logo').css('top', targetCenter);
 }
 
@@ -12,9 +12,7 @@ $(function() {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 400);
+        $(target).velocity("scroll", 400);
         return false;
       }
     }
@@ -77,21 +75,20 @@ function homepageTagFades(currentIdx) {
     delay = 2000;
     opacity = 1;
   }
-  $(current).fadeTo(1000, opacity, function() {
-    $(this).delay(delay).fadeTo(1000, 0, function() {
+  $(current).velocity({opacity:opacity}, {display:'block', duration:1000, complete:function() {
+    $(this).delay(delay).velocity({opacity:0}, {display:'block', duration:1000, complete:function() {
       if ($('div.tagline')[currentIdx+1]) {
         homepageTagFades(currentIdx+1);  
       } else {
         homepageTagFades(0);
       }
-    });
-  });
+    }});
+  }});
 }
 
 $(window).resize(function() { 
   fullHeightHero();
   scrollEvent();
-  setTimeout(bgimageCycle(), 4000);
 });
 
 $(window).on('orientationchange', function() {
@@ -119,26 +116,25 @@ function bgimageCycle(currentIdx) {
       $(heroes[x]).css('z-index', -2);
     }
     $(current).css('z-index', -1);
-    $(next).css('z-index', 0).css('opacity', 0).fadeTo(4000, 1.0, function() {
-      console.log('Fade done');
+    $(next).css('z-index', 0).css('opacity', 0).velocity({opacity:1.0}, {duration:4000, complete:function() {
       setTimeout(function() {
         bgimageCycle(nextIdx); 
       }, delay);
-    });
+    }});
   }
 }
 
 function homepageDetailLoad(subsection) {
   // scroll to section top
   if ($('#subsec-' + subsection).length > 0) {
-    $('html,body').animate({ scrollTop: $('#subsec-' + subsection).offset().top }, 400);
+    $('#subsec-' + subsection).velocity("scroll", 400);
   }
 
   var section = $('#subsection-' + subsection).parent().parent();
   // change content
 
-  $(section).find('div.active').fadeOut(function() {
-    $(this).removeClass('active').parent().find('div#subsection-' + subsection).fadeIn().addClass('active');
+  $(section).find('div.active').velocity("fadeOut", function() {
+    $(this).removeClass('active').parent().find('div#subsection-' + subsection).velocity("fadeIn").addClass('active');
   });
 
   // change link active
@@ -159,7 +155,7 @@ $(document).ready(function() {
   });
 
   if ($('body').hasClass('homepage')) {
-    setTimeout(bgimageCycle(), 4000);
+    bgimageCycle();
 
     if (window.location.hash) {
       homepageDetailLoad(window.location.hash.replace('#subsec-',''));
