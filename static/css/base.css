@@ -737,9 +737,6 @@ body.homepage section.homepage-right .learn-more a:active {
     height: 8rem;
     margin: 2rem;
   }
-  body.homepage header#hero nav .logo {
-    width: 4em;
-  }
   body.homepage header#hero div.tagline {
     font-size: 2.2em;
   }
