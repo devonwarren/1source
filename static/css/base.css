@@ -537,7 +537,7 @@ body.homepage section.homepage-right .learn-more a:active {
   }
   nav ul#fullmenu {
     background-color: transparent;
-    position: initial;
+    position: static;
     width: auto;
     max-height: none;
     float: right;
