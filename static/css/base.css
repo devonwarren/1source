@@ -255,7 +255,7 @@ article .article-inline-image img {
   max-width: 100%;
 }
 article .article-content h4 {
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
 }
 article .article-content h5 {
@@ -620,9 +620,12 @@ body.homepage section.homepage-right .learn-more a:active {
     max-width: 70em;
   }
 
+  article h4 {
+    margin: 0;
+  }
   article .article-image {
-    height: 28rem;
-    width: 28rem;
+    height: 26rem;
+    width: 26rem;
     float: left;
     background-position: center top;
   }
@@ -634,6 +637,9 @@ body.homepage section.homepage-right .learn-more a:active {
   }
   article .article-content.has-inline-image {
     margin-left: 23rem;
+  }
+  article .article-content.has-floating-image {
+    margin-left: 28rem;
   }
 
   section.summary {

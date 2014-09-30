@@ -137,9 +137,12 @@ content#main {
 }
 
 article {
+	h4 {
+		margin: 0;
+	}
 	.article-image {
-		height: 28rem;
-		width: 28rem;
+		height: 26rem;
+		width: 26rem;
 		float: left;
 		background-position: center top;
 	}
@@ -151,6 +154,9 @@ article {
 	}
 	.article-content.has-inline-image {
 		margin-left: 23rem;
+	}
+	.article-content.has-floating-image {
+		margin-left: 28rem;
 	}
 }
 
