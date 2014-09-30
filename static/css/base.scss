@@ -257,9 +257,12 @@ section.summary {
 	background-color: $primary1;
 	color: white;
 	font-family: $officina;
-	font-size: 1.8em;
+	font-size: 1.8rem;
 	font-weight: normal;
 	line-height: 1.2em;
+	&.largetext {
+		font-size: 2.2rem;
+	}
 	p {
 		padding: 0;
 		margin: 0;
