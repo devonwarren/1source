@@ -360,7 +360,8 @@ body.homepage div#logo {
   text-align: center;
 }
 body.homepage div#logo h1.logo-color {
-  height: 4em;
+  height: 5.6rem;
+  margin: 1.6rem;
 }
 body.homepage header#hero {
   height: 100em;
@@ -562,7 +563,11 @@ body.homepage section.homepage-right .learn-more a:active {
     transform: translateY(2px);
   }
 
+  footer {
+    font-size: .9em;
+  }
   footer > ul > li {
+    padding: .8em;
     display: inline-block;
     text-align: left;
   }
@@ -654,7 +659,7 @@ body.homepage section.homepage-right .learn-more a:active {
   }
   body.homepage header#hero div.tagline {
     display: block;
-    font-size: 1.6em;
+    font-size: 1.5em;
     letter-spacing: .1em;
     font-family: "OfficinaSerITCStd", serif;
     color: white;
@@ -695,7 +700,7 @@ body.homepage section.homepage-right .learn-more a:active {
     padding-top: 8rem;
   }
 }
-@media screen and (min-width: 56em) {
+@media screen and (min-width: 64em) {
   nav ul#fullmenu li {
     padding-left: 1em;
     padding-right: 1em;
@@ -704,6 +709,17 @@ body.homepage section.homepage-right .learn-more a:active {
     margin: .2rem 1rem;
   }
 
+  footer {
+    font-size: 1em;
+  }
+  footer > ul > li {
+    padding: 1em;
+  }
+
+  body.homepage header#hero h1.logo-color {
+    height: 8rem;
+    margin: 2rem;
+  }
   body.homepage header#hero nav .logo {
     width: 4em;
   }

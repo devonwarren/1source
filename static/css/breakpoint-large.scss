@@ -8,8 +8,19 @@ nav ul#fullmenu {
 	}
 }
 
+footer {
+	font-size: 1em;
+	& > ul > li {
+		padding: 1em;
+	}
+}
+
 body.homepage {
 	header#hero {
+		h1.logo-color {
+			height: 8rem;
+			margin: 2rem;
+		}
 		nav {
 			.logo {
 				width: 4em;

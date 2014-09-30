@@ -11,7 +11,7 @@ $secondary5: #A99E98;
 $secondary6: #D8D8D2;
 
 // breakpoints
-$break-large: 56em;
+$break-large: 64em;
 $break-medium: 44em;
 $break-small: 32em;
 
@@ -399,7 +399,8 @@ body.homepage {
 		width: 100%;
 		text-align: center;
 		h1.logo-color {
-			height: 4em;
+			height: 5.6rem;
+			margin: 1.6rem;
 		}
 	}
 	header#hero {

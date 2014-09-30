@@ -6,6 +6,17 @@ nav ul#fullmenu li a {
   margin: .2rem 1rem;
 }
 
+footer {
+  font-size: 1em;
+}
+footer > ul > li {
+  padding: 1em;
+}
+
+body.homepage header#hero h1.logo-color {
+  height: 8rem;
+  margin: 2rem;
+}
 body.homepage header#hero nav .logo {
   width: 4em;
 }

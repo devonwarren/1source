@@ -77,7 +77,9 @@ nav {
 }
 
 footer {
+	font-size: .9em;
 	& > ul > li {
+		padding: .8em;
 		display: inline-block;
 		text-align: left;
 		ul li {
@@ -179,7 +181,7 @@ body.homepage {
 		}
 		div.tagline {
 			display: block;
-			font-size: 1.6em;
+			font-size: 1.5em;
 			letter-spacing: .1em;
 			font-family: $officina;
 			color: white;
