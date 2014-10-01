@@ -145,7 +145,11 @@ function homepageDetailLoad(subsection) {
 $(document).ready(function() {
 
   $(window).scroll(function() {
-    window.requestAnimationFrame(scrollEvent);
+    if (!window.requestAnimationFrame) {
+      scrollEvent();
+    } else {
+      window.requestAnimationFrame(scrollEvent);
+    }
   });
 
   $('ul#fullmenu a').click(function() {
