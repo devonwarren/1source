@@ -4,7 +4,7 @@
 				<li class="subsection-link"><a href="{{ section.get_absolute_url }}">{{ section.title|upper }}</a>
 					<ul>
 					{% for subsection in subsections %}
-						<li class="subsection-link"><a href="{{ subsection.get_absolute_url }}">{{ subsection.name|upper }}
+						<li class="subsection-link"><a href="{{ subsection.get_absolute_url }}">{{ subsection.name|upper }}</a>
 					{% endfor %}
 					</ul>
 			{% endfor %}
