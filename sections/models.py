@@ -54,9 +54,9 @@ class HeroImage(models.Model):
                                       format='JPEG',
                                       options={'quality': 97})
 	image_mobile = ImageSpecField(source='image',
-                                      processors=[ResizeToFit(width=860)],
+                                      processors=[ResizeToFit(width=780)],
                                       format='JPEG',
-                                      options={'quality': 97})
+                                      options={'quality': 80})
 
 	mobile_hero = models.BooleanField(default=False, help_text="Is this the mobile hero to use?")
 
