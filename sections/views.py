@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from sections.models import SubSection, StaffProfile
+from sections.models import Section, SubSection, StaffProfile
 from django.template.loader import get_template
 from django.template import Context
 from django.http import HttpResponse
@@ -20,10 +20,12 @@ def learn_more_view(request, subsection):
 def leadership(request):
 	founders = StaffProfile.objects.filter(founder=True)
 	profiles = StaffProfile.objects.filter(founder=False)
+	section = Section.objects.get(slug='story')
 
 	t = get_template('leadership.html')
 	html = t.render(Context({ 
 		'founders' : founders,
-		'profiles' : profiles
+		'profiles' : profiles,
+		'section' : section
 	}))
 	return HttpResponse(html)

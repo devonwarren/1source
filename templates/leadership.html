@@ -4,7 +4,7 @@
 {% load staticfiles %}
 {% block content %}
 
-<header class="leadership not-fullscreen">
+<header class="leadership not-fullscreen" style="background-image: url('{{ section.image_web.url }}');">
 		{% load navigation %}
 		{% navigation "story" %}
 </header>
