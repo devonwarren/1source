@@ -180,6 +180,7 @@ h1.logo-dark {
 
 header.not-fullscreen {
 	width: 100%;
+	height: 3.2rem;
 	background-image: url('../images/default_header_mobile.jpg');
 	background-size: 100%;
 	background-position: center top;
@@ -356,7 +357,8 @@ nav {
 			display: block;
 			a {
 				width: 100%;
-				font-size: 1rem;
+				font-size: 1rem !important;
+				font-weight: normal;
 				padding: .4rem;
 				display: block;
 			}
@@ -434,6 +436,7 @@ body.homepage {
 				top: 0;
 				left: 0;
 				z-index: 100;
+				height: 3.2rem;
 				background-color: white;
 				opacity: 1;
 				-moz-transition: background-color 300ms ease-in;

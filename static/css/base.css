@@ -151,6 +151,7 @@ h1.logo-dark {
 
 header.not-fullscreen {
   width: 100%;
+  height: 3.2rem;
   background-image: url("../images/default_header_mobile.jpg");
   background-size: 100%;
   background-position: center top;
@@ -321,7 +322,8 @@ nav ul#fullmenu li {
 }
 nav ul#fullmenu li a {
   width: 100%;
-  font-size: 1rem;
+  font-size: 1rem !important;
+  font-weight: normal;
   padding: .4rem;
   display: block;
 }
@@ -395,6 +397,7 @@ body.homepage header#hero nav.sticky {
   top: 0;
   left: 0;
   z-index: 100;
+  height: 3.2rem;
   background-color: white;
   opacity: 1;
   -moz-transition: background-color 300ms ease-in;
@@ -697,6 +700,9 @@ body.homepage section.homepage-right .learn-more a:active {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+  body.homepage header#hero nav.sticky {
+    height: 78px;
   }
   body.homepage header#hero nav.sticky a#nav-logo {
     margin: 0;

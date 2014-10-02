@@ -187,9 +187,8 @@ body.homepage {
 			position: absolute;
 			bottom: 0;
 			right: 0;
-
 			&.sticky {
-
+				height: 78px;
 				a#nav-logo {
 					margin: 0;
 					width: auto;
