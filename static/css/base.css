@@ -308,7 +308,7 @@ nav ul#fullmenu {
   border-bottom: solid 2px #E86432;
 }
 nav ul#fullmenu.open {
-  max-height: 25em;
+  max-height: 22rem;
   -moz-transition: max-height 400ms ease-in;
   -webkit-transition: max-height 400ms ease-in;
   transition: max-height 400ms ease-in;
@@ -316,7 +316,8 @@ nav ul#fullmenu.open {
 nav ul#fullmenu li {
   width: 100%;
   text-align: center;
-  padding: .4em;
+  padding: .4rem;
+  font-size: 1rem;
   display: block;
 }
 nav ul#fullmenu li a {

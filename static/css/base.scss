@@ -344,7 +344,7 @@ nav {
 		overflow: hidden;
 		border-bottom: solid 2px $primary1;
 		&.open {
-			max-height: 25em;
+			max-height: 22rem;
 			-moz-transition: max-height 400ms ease-in;
 			-webkit-transition: max-height 400ms ease-in;
 			transition: max-height 400ms ease-in;
@@ -352,7 +352,8 @@ nav {
 		li {
 			width: 100%;
 			text-align: center;
-			padding: .4em;
+			padding: .4rem;
+			font-size: 1rem;
 			display: block;
 			a {
 				width: 100%;
