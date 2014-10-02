@@ -151,7 +151,7 @@ h1.logo-dark {
 
 header.not-fullscreen {
   width: 100%;
-  background-image: url("../images/default_header.jpg");
+  background-image: url("../images/default_header_mobile.jpg");
   background-size: 100%;
   background-position: center top;
   position: fixed;
@@ -624,6 +624,7 @@ body.homepage section.homepage-right .learn-more a:active {
   }
 
   header.not-fullscreen {
+    background-image: url("../images/default_header.jpg");
     height: 15rem;
     border-bottom: solid 3px #E86432;
   }
