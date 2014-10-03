@@ -10,8 +10,9 @@ def learn_more_view(request, subsection):
 	if (subsec.slug == 'awards-testimonials'):
 		subsec.teaser = """Certified in:
 		<ul>
-			<li>ISO 9001:2008
-			<li>SEI CMMI Maturity Level 3
+			<li>ISO 9001:2008 Certified
+			<li>CMMI Maturity Level III (Software Development)
+			<li>Top Secret Facility Clearance
 		</ul>
 		"""
 	subsec.content  = subsec.learn_more

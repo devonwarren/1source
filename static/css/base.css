@@ -239,6 +239,9 @@ section.summary {
 section.summary.largetext {
   font-size: 2.2rem;
 }
+section.summary.smalltext {
+  font-size: 1.6rem;
+}
 section.summary p {
   padding: 0;
   margin: 0;
