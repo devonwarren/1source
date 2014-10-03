@@ -9,6 +9,8 @@
 </header>
 <content id="main">
 
+{% if page.teaser %}<section class="summary">{{ page.teaser|safe }}</section>{% endif %}
+
 <div class="content-center">
 
 	<h4>{{ page.title|safe }}</h4>
