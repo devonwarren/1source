@@ -7,13 +7,11 @@ from django.http import HttpResponse
 def learn_more_view(request, subsection):
 	subsec = get_object_or_404(SubSection, slug=subsection)
 	subsec.title  = '<a href="/#' + subsec.section.slug + '">' + subsec.section.title + '</a> : ' + subsec.name
-	if (subsec.slug == 'awards-testimonials'):
-		subsec.teaser = """Certified in:
-		<ul>
-			<li>ISO 9001:2008 Certified
-			<li>CMMI Maturity Level III (Software Development)
-			<li>Top Secret Facility Clearance
-		</ul>
+	if (subsec.slug == 'technical-competencies'):
+		subsec.teaser = """Certified in:<br>
+			ISO 9001:2008 Certified<br>
+			CMMI Maturity Level III (Software Development)<br>
+			Top Secret Facility Clearance
 		"""
 	subsec.content  = subsec.learn_more
 

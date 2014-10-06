@@ -239,8 +239,8 @@ section.summary {
 section.summary.largetext {
   font-size: 2.2rem;
 }
-section.summary.smalltext {
-  font-size: 1.6rem;
+section.summary.teaser {
+  font-size: 1.7rem;
 }
 section.summary p {
   padding: 0;
@@ -697,6 +697,11 @@ body.homepage section.homepage-right .learn-more a:active {
   }
   section.summary.largetext {
     font-size: 3.4rem;
+  }
+  section.summary.teaser {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    padding: 4rem !important;
   }
 
   body.homepage header#hero nav {
