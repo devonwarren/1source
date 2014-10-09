@@ -611,7 +611,7 @@ body.homepage section.homepage-right .learn-more a:active {
     text-align: left;
   }
   footer > ul > li ul li {
-    max-width: 16em;
+    max-width: 14em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -701,7 +701,7 @@ body.homepage section.homepage-right .learn-more a:active {
   section.summary.teaser {
     font-size: 2.2rem;
     line-height: 2.6rem;
-    padding: 4rem !important;
+    padding: 3rem !important;
   }
 
   body.homepage header#hero nav {
