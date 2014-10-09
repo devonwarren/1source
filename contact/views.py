@@ -11,10 +11,10 @@ def contact(request):
         if form.is_valid():
             cd = form.cleaned_data
             send_mail(
-                'Contact Us from "' + cd['name'],
+                'Contact Us from "' + cd['name'] + '"',
                 cd['message'],
-                cd.get('email', 'devon.warren+from@gmail.com'),
-                ['devon.warren@gmail.com'],
+                cd.get('email', 'noreply@1-sc.com'),
+                ['info@1-sc.com'],
             )
             return HttpResponseRedirect('/contact/thanks/')
     else:

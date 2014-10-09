@@ -85,8 +85,8 @@
 					<div class="details" id="subsection-{{ subsection.slug }}" style="display: none;">
 						{% if subsection.title %}<h4>{{ subsection.title|safe }}</h4>{% endif %}
 						<p>{{ subsection.description|safe }}</p>
-						{% if subsection.slug == 'leadership' %}<p class="learn-more"><a href="/leadership">Learn more</a></p>
-						{% elif subsection.learn_more %}<p class="learn-more"><a href="/learn-more/{{ subsection.slug }}">Learn more</a></p>{% endif %}
+						{% if subsection.slug == 'leadership' %}<p class="learn-more"><a href="/leadership/">Learn more</a></p>
+						{% elif subsection.learn_more %}<p class="learn-more"><a href="/learn-more/{{ subsection.slug }}/">Learn more</a></p>{% endif %}
 					</div>
 				{% endif %}
 			{% endfor %}

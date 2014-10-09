@@ -23,7 +23,7 @@ class JournalEntry(models.Model):
 		return self.title
 
 	def get_absolute_url(self):
-		return '/journal/' + self.slug
+		return '/journal/' + self.slug + '/'
 
 	class Meta:
 		verbose_name = 'Entry'

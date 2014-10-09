@@ -9,16 +9,16 @@
 					</ul>
 			{% endfor %}
 
-			<li><a href="/journal">JOURNAL</a>
+			<li><a href="/journal/">JOURNAL</a>
 				<ul>
 					{% for entry in journal %}
 						<li><a href="{{ entry.get_absolute_url }}">{{ entry.title|upper }}</a>
 					{% endfor %}
 				</ul>
-			<li><a href="/contact">CONTACT</a>
+			<li><a href="/contact/">CONTACT</a>
 				<ul>
 					<li><a href="/page/join-our-team/">JOIN OUR TEAM</a>
-					<li><a href="/contact">CONTACT / DIRECTIONS</a>
+					<li><a href="/contact/">CONTACT / DIRECTIONS</a>
 					<li><a href="/page/sitemap">SITE MAP</a>
 				</ul>
 		</ul>

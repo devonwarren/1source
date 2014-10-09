@@ -135,3 +135,9 @@ CKEDITOR_CONFIGS = {
         'toolbarCanCollapse': False,
     }
 }
+
+EMAIL_HOST = 'mail032-1.exch032.serverdata.net'
+EMAIL_HOST_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'noreply@1-sc.com'
+EMAIL_HOST_PASSWORD = '1SCn0reply2014!'
