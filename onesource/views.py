@@ -4,10 +4,8 @@ from django.http import HttpResponse
 from sections.models import Section, SubSection, HeroImage
 
 
-def style_guide(request):
-	t = get_template('style_guide.html')
-	html = t.render(Context())
-	return HttpResponse(html)
+def page_not_found(request):
+    return render(request,'404.html')
     
 def homepage(request):
 	subsections = []

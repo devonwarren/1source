@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 admin.autodiscover()
 
-from onesource.views import homepage, style_guide
+from onesource.views import homepage
 from journal.views import journal, entry_view
 from contact.views import contact, contact_thanks
 from sections.views import learn_more_view, leadership
@@ -25,3 +25,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^ckeditor/', include('ckeditor.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'onesource.views.page_not_found'
