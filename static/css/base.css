@@ -520,7 +520,7 @@ body.homepage section.homepage-right .learn-more a:active {
     margin-top: 10rem !important;
   }
 }
-@media screen and (min-width: 44em) {
+@media screen and (min-width: 48em) {
   h2 {
     font-size: 2.8em;
   }
@@ -756,7 +756,7 @@ body.homepage section.homepage-right .learn-more a:active {
     margin-top: 6rem;
   }
 }
-@media screen and (min-width: 44em) and (min-aspect-ratio: 8 / 3) {
+@media screen and (min-width: 48em) and (min-aspect-ratio: 8 / 3) {
   body.homepage aside.homepage-left {
     margin-top: 8rem;
   }
