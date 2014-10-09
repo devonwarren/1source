@@ -1,0 +1,26 @@
+body {
+  font-family: 'Adelle Sans', sans-serif;
+  background-color: white;
+  color: #5C4C46;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #5C4C46;
+  font-weight: normal;
+  text-decoration: underline;
+  outline: none;
+}
+
+a:hover {
+  color: #E86432;
+  text-decoration: none;
+}
