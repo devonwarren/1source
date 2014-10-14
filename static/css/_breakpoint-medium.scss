@@ -242,7 +242,7 @@ body.homepage {
 	}
 }
 
-@media screen and (min-aspect-ratio: 8/3) {
+@media screen and (min-aspect-ratio: 8/3), screen and (max-height : 32rem) {
 	body.homepage {
 		aside.homepage-left {
 			margin-top: 8rem;
@@ -250,5 +250,11 @@ body.homepage {
 		section.homepage-right {
 			padding-top: 8rem;
 		}
+	}
+	header.not-fullscreen {
+		height: 10rem !important;
+	}
+	content#main {
+		margin-top: 10rem !important;
 	}
 }
