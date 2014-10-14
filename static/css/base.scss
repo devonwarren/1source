@@ -111,6 +111,8 @@ ul {
 	list-style-image: url('../images/bullet.png');
 }
 
+.velocity-animating { transition: none }
+
 h1.logo-color {
 	background: url('../images/logo_large.svg') no-repeat center top;
 	height: 1em;
@@ -562,6 +564,12 @@ body.homepage {
 	}
 	content#main {
 		margin-top: 10rem !important;
+	}
+}
+
+@media screen and (max-height : 36rem) {
+	body.homepage div#logo h1.logo-color {
+		margin-top: 0 !important;
 	}
 }
 
