@@ -190,6 +190,12 @@ header.not-fullscreen {
 	top: 0;
 	left: 0;
 	z-index: 100;
+	&.journal {
+		background-image: url('../images/journal_header_mobile.jpg');
+	}
+	&.contact {
+		background-image: url('../images/contact_header_mobile.jpg');
+	}
 	nav {
 		display: block;
 		a#mobileMenuOpen {

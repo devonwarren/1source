@@ -164,6 +164,12 @@ header.not-fullscreen {
   left: 0;
   z-index: 100;
 }
+header.not-fullscreen.journal {
+  background-image: url("../images/journal_header_mobile.jpg");
+}
+header.not-fullscreen.contact {
+  background-image: url("../images/contact_header_mobile.jpg");
+}
 header.not-fullscreen nav {
   display: block;
 }
@@ -634,6 +640,12 @@ body.homepage section.homepage-right .learn-more a:active {
     background-image: url("../images/default_header.jpg");
     height: 15rem;
     border-bottom: solid 3px #E86432;
+  }
+  header.not-fullscreen.journal {
+    background-image: url("../images/journal_header.jpg");
+  }
+  header.not-fullscreen.contact {
+    background-image: url("../images/contact_header.jpg");
   }
   header.not-fullscreen nav a#nav-logo {
     padding: 0;
