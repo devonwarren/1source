@@ -203,6 +203,9 @@ content#main {
 content#main .content-center {
   padding: 1rem;
 }
+content#main .content-center img {
+  max-width: 100%;
+}
 
 .field {
   padding-top: .4rem;

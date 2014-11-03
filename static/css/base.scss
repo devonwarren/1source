@@ -228,6 +228,9 @@ content#main {
 	display: block;
 	.content-center {
 		padding: 1rem;
+		img {
+			max-width: 100%;
+		}
 	}
 	
 }

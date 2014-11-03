@@ -126,7 +126,8 @@ CKEDITOR_CONFIGS = {
             [ '-', 'Bold', 'Italic', 'Underline',
               '-', 'Link', 'Unlink', 'Styles',
             ],
-            [ '-', 'BulletedList', 'NumberedList',
+            [ '-', 'Image',
+              '-', 'BulletedList', 'NumberedList',
               '-', 'Copy','PasteText','PasteFromWord',
               '-', 'Source',
             ]
