@@ -7,6 +7,7 @@ admin.autodiscover()
 
 from onesource.views import homepage
 from journal.views import journal, entry_view
+from news.views import news_list, news_view
 from contact.views import contact, contact_thanks
 from sections.views import learn_more_view, leadership
 from pages.views import page
@@ -15,6 +16,8 @@ urlpatterns = patterns('',
 	url(r'^$', homepage, name='homepage'),
 	url(r'^journal/$', journal, name='journal'),
 	url(r'^journal/(?P<entry>.+?)/$', entry_view),
+	url(r'^news/$', news_list, name='news_list'),
+	url(r'^news/(?P<entry>.+?)/$', news_view),
 	url(r'^contact/$', contact, name='contact'),
 	url(r'^contact/thanks/$', contact_thanks, name='contact_thanks'),
 	url(r'^leadership/$', leadership),

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block bodyclass %}journal{% endblock %}
+{% block content %}
+
+<header class="journal not-fullscreen">
+		{% load navigation %}
+		{% navigation %}
+</header>
+<content id="main">
+
+<div class="content-center">
+
+	{% for entry in news %}
+		<article>
+			<div class="article-content">
+				<h4><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h4>
+
+				{% if entry.teaser %}
+					<section class="summary teaser">{{ entry.teaser|safe }}</section><br>
+				{% endif %}
+
+				{{ entry.body|safe }}
+			</div>
+		</article>
+	{% endfor %}
+
+</div>
+
+</content>
+
+{% load footer %}
+{% footer %}
+{% endblock %}

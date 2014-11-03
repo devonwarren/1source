@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'layout_elements',
     'pages',
     'contact',
+    'news',
 )
 
 MIDDLEWARE_CLASSES = (
