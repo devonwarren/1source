@@ -446,7 +446,7 @@ body.homepage div.tagline {
 }
 body.homepage div#enter {
   position: absolute;
-  z-index: 102;
+  z-index: 1001;
   bottom: 1rem;
   width: 100%;
   text-align: center;
