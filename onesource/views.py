@@ -4,6 +4,11 @@ from django.http import HttpResponse
 from sections.models import Section, SubSection, HeroImage
 
 
+def unsupported_browser(request):
+	t = get_template('unsupported_browser.html')
+	html = t.render(Context())
+	return HttpResponse(html)
+
 def page_not_found(request):
     return render(request,'404.html')
     

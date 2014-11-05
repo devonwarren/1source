@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 admin.autodiscover()
 
-from onesource.views import homepage
+from onesource.views import homepage, unsupported_browser
 from journal.views import journal, entry_view
 from news.views import news_list, news_view
 from contact.views import contact, contact_thanks
@@ -26,6 +26,8 @@ urlpatterns = patterns('',
 	url(r'^jobs/$', job_listings),
 	url(r'^job/(?P<job_id>.+?)/$', job_details),
 	url(r'^page/(?P<page_alias>.+?)/$', page),
+	url(r'^unsupported_browser/$', unsupported_browser),
+
 
 	url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
