@@ -15,7 +15,7 @@ class BrowserDetectionMiddleware(object):
         if 'HTTP_USER_AGENT' in request.META:
             user_agent = request.META['HTTP_USER_AGENT']
  
-            pattern = "msie [1-8]\."
+            pattern = "msie [4-8]\."
             prog = re.compile(pattern, re.IGNORECASE)
             match = prog.search(user_agent)
  
