@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block bodyclass %}job-details{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<header class="jobs not-fullscreen">
+        {% load navigation %}
+        {% navigation %}
+</header>
+<content id="main">
+
+<div class="content-center">
+
+    <h4>{{ job.title }} ({{ job.code }})</h4>
+
+    <div class="body">
+
+        {% if not job.status %}
+            <p><strong class="red">THIS JOB IS NO LONGER APPLICABLE</strong></p>
+        {% endif %}
+
+        {% if job.location %}
+            <p><strong>Location: </strong> {{ job.location }}</p>
+        {% endif %}
+
+        {% if job.security_clearance %}
+            <p><strong>Security Clearance Eligibility: </strong> {{ job.security_clearance }}</p>
+        {% endif %}
+
+        <p><strong>Duties and Responsibilities:</strong></p>
+        {{ job.duties|safe }}
+
+        <p></p>
+
+        <p><strong>Qualifications:</strong></p>
+        {{ job.qualifications|safe }}
+
+        {% if job.desired %}
+            <p></p>
+            <p><strong>Desired:</strong></p>
+            {{ job.desired|safe }}
+        {% endif %}
+
+        <p>NOTE: 1 Source in accordance with applicable law, does not discriminate in hiring or otherwise in employment
+        on the basis of race, color, religion, sex, national origin, age, marital or veteran status, disability, 
+        sexual orientation, or any other legally protected status.</p>
+
+
+    </div>
+
+</div>
+
+</content>
+
+{% load footer %}
+{% footer %}
+{% endblock %}

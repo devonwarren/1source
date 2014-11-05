@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'pages',
     'contact',
     'news',
+    'jobs',
 )
 
 MIDDLEWARE_CLASSES = (

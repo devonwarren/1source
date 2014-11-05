@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block bodyclass %}job-listing{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<header class="jobs not-fullscreen">
+        {% load navigation %}
+        {% navigation %}
+</header>
+<content id="main">
+
+<div class="content-center">
+
+    <h4>Join Our Team</h4>
+
+    <div class="body">
+
+        <p>1 Source, LLC welcomes qualified applicants to submit their resumes for consideration to work in the areas of IT systems strategic planning and architecture development, systems engineering, software development, operations and maintenance, and cyber security. If you are interested in joining a highly motivated workforce, working in an exciting and challenging environment, while receiving industry competitive benefits and recognition. Please visit our current openings and apply now.</p>
+
+        <p></p>
+
+        <p><strong>Current Openings</strong></p>
+
+        <ul>
+        {% for job in jobs %}
+            <li><strong><a href="{{ job.get_absolute_url }}">{{ job.title }}</a></strong> ({{ job.code }}) {{ job.location }}</li>
+        {% empty %}
+            <li><strong>We do not have any openings currently</strong></li>
+        {% endfor %}
+        </ul>
+
+        <p>1 Source is proud to be an equal opportunity employer. 1 Source in accordance with applicable law, does not discriminate in hiring or otherwise in employment on the basis of race, color, religion, sex, national origin, age, marital or Veteran status, disability, sexual orientation, or any other legally protected status.</p>
+
+        <p></p>
+
+        <p><strong>Benefits</strong></p>
+
+        <p><br><em>Medical Insurance</em></p>
+
+        <p>1 Source understands that everyone's medical needs are different and offers a choice between two-tiers of Preferred Provider Organization (PPO) Plans allowing employees to better manage their costs.</p>
+
+        <p><br><em>Prescription Drug</em></p>
+
+        <p>Participants in the group medical plan are eligible for the prescription drug program administered through our health insurance provider. A mail order program is also available that provides substantial savings to employees.</p>
+
+        <p><br><em>Dental Insurance</em></p>
+
+        <p>Employees and their eligible dependents may elect to enroll in the 1 Source Dental Plan. Employees have the opportunity to maximize dental benefits by selecting providers within the preferred network. Orthodontic benefits are also included. This plan provides a great deal of flexibility as it allows you to use the dentist of your choice. Like all dental plans, claims under this plan are subject to reasonable and customary limitations.</p>
+
+        <p><br><em>Vision Savings Plan</em></p>
+
+        <p>Vision insurance is offered through a third-party vision care provider. Doctors within the plan provide a variety of discounted benefits including eye exams, frames, lenses and products.</p>
+
+        <p><br><em>Flexible Spending Plan</em></p>
+
+        <p>A flexible spending account allows the employee to direct a part of his/her pay, on a pretax basis, into a special account that can be used throughout the year to pay for certain out-of-pocket health and/or dependent care expenses.</p>
+
+        <p><br><em>Employee Assistance Plan</em></p>
+
+        <p>The Employee Assistance Program provides short-term counseling for employees and their eligible family members to assist with personal, job, or family issues.</p>
+
+        <p><br><em>Short Term/Long Term Disability Plans</em></p>
+
+        <p>1 Source offers employees company-paid short-term and long term disability insurance, which provides for employee salary continuation in the event of an illness, accident or hospitalization.</p>
+
+        <p><br><em>Basic Life and Accidental Death and Dismemberment Insurance</em></p>
+
+        <p>1 Source offers company-provided life insurance and accidental death and dismemberment insurance for regular, full-time employees.</p>
+
+        <p><br><em>Supplemental, Spousal, and Dependent Life Insurance</em></p>
+
+        <p>This voluntary life insurance program allows employees to purchase additional life insurance for themselves, spouses, and dependent children.</p>
+
+        <p><br><em>401(k) Plan</em></p>
+
+        <p>Eligible employees may also participate in the 1 Source, LLC 401(k) Plan. Employees may contribute a percentage of their pre-tax pay, subject to annual IRS-set maximums, to be invested in a wide variety of investment options. A generous company match is also provided to plan participants. Under certain conditions, employees can arrange loans and hardship distributions from their 401(k) account. In addition, new employees may rollover existing funds from other qualified plans as soon as they have made one payroll contribution to the plan.</p>
+
+        <p><br><em>Paid Universal Leave</em></p>
+
+        <p>To assist in maintaining a positive work/life balance, active employees will accrue universal leave to be used for vacations, sick time or personal time off. Actual accrual rates are determined by length of service with the company.</p>
+
+        <p><br><em>Holidays</em></p>
+
+        <p>1 Source observes ten (10) paid federal holidays each year: New Year's Day, Martin Luther King Jr.'s Birthday, President's Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans' Day, Thanksgiving Day, and Christmas Day.</p>
+
+        <p><br><em>Education/Training Assistance</em></p>
+
+        <p>1 Source encourages all employees to continue to grow through learning and educational development. 1 Source will reimburse the cost of tuition, registration, books, or lab fees for job-related courses/programs.</p>
+
+        <p><br><em>Parking/Public Transportation Allowance</em></p>
+
+        <p>1 Source encourages employees to utilize public transportation by participating in the Public Transportation Benefit Program and provides for parking and public transportation subsidies in most locations.</p>
+
+        <p><br><em>Professional Organizations</em></p>
+
+        <p>1 Source reimburses employees for job-related professional affiliations and magazine subscriptions.</p>
+
+        <p><br><em>Employee Referral Bonus</em></p>
+
+        <p>Referral/recruitment bonuses are paid to full-time employees who refer an individual to 1 Source for any open position.</p>
+
+    </div>
+
+</div>
+
+</content>
+
+{% load footer %}
+{% footer %}
+{% endblock %}

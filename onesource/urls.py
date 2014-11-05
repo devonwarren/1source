@@ -10,6 +10,7 @@ from journal.views import journal, entry_view
 from news.views import news_list, news_view
 from contact.views import contact, contact_thanks
 from sections.views import learn_more_view, leadership
+from jobs.views import job_listings, job_details
 from pages.views import page
 
 urlpatterns = patterns('',
@@ -22,6 +23,8 @@ urlpatterns = patterns('',
 	url(r'^contact/thanks/$', contact_thanks, name='contact_thanks'),
 	url(r'^leadership/$', leadership),
 	url(r'^learn-more/(?P<subsection>.+?)/$', learn_more_view),
+	url(r'^jobs/$', job_listings),
+	url(r'^job/(?P<job_id>.+?)/$', job_details),
 	url(r'^page/(?P<page_alias>.+?)/$', page),
 
 	url(r'^grappelli/', include('grappelli.urls')),
