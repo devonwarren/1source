@@ -6,7 +6,7 @@ from .models import Job
 
 
 def job_listings(request):
-	jobs = Job.objects.filter(status=True).order_by('title')
+	jobs = Job.objects.filter(active=True).order_by('title')
 
 	t = get_template('job_listings.html')
 	html = t.render(Context({ 'jobs' : jobs }))

@@ -2,7 +2,7 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 class Job(models.Model):
-	status = models.BooleanField(default=False, help_text='Enable this if the job should be listed')
+	active = models.BooleanField(default=False, help_text='Enable this if the job should be listed')
 	title = models.CharField(max_length=200)
 	code = models.CharField(max_length=15)
 	location = models.CharField(max_length=250, blank=True)
