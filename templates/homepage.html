@@ -42,12 +42,8 @@
 	</header>
 
 {% for section, subsections in section_list %}
-	<section class="summary">
-		{{ section.featured_text|safe }}
-	</section>
+
 </div>
-<a id="{{ section.slug }}" class="anchor section-anchor"></a>
-<a id="subsec-{{ section.slug }}" class="anchor subsection-anchor"></a>
 <style type="text/css">
 	#section-image-{{ section.id }} {
 			background-image: url('{{ section.image_mobile.url }}');
@@ -59,6 +55,13 @@
 	}
 </style>
 <div class="bgimage section-bgimage" id="section-image-{{ section.id }}">
+
+	<a id="{{ section.slug }}" class="anchor section-anchor"></a>
+	<a id="subsec-{{ section.slug }}" class="anchor subsection-anchor"></a>
+
+	<section class="summary">
+		{{ section.featured_text|safe }}
+	</section>
 	
 	{% for subsection in subsections %}
 		<a id="subsec-{{ subsection.slug }}" class="anchor subsection-anchor"></a>

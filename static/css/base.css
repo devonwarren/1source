@@ -196,7 +196,7 @@ header.not-fullscreen nav a#nav-logo {
 .subsection-anchor {
   display: block;
   position: relative;
-  top: -3.2rem;
+  top: -3.1rem;
 }
 
 content#main {
@@ -710,7 +710,7 @@ body.homepage section.homepage-right .learn-more a:active {
   }
 
   section.summary {
-    padding: 10rem;
+    padding: 8rem;
     font-size: 2.6rem;
     line-height: 3rem;
   }
@@ -760,16 +760,16 @@ body.homepage section.homepage-right .learn-more a:active {
   body.homepage aside.homepage-left {
     width: 50%;
     float: left;
-    height: 25em;
-    margin-top: 14em;
+    height: 15rem;
+    margin-top: 4rem;
   }
   body.homepage aside.homepage-left ul li {
-    margin: 1em;
+    margin: 1rem;
   }
   body.homepage section.homepage-right {
-    min-height: 35em;
+    min-height: 25rem;
     margin-left: 50%;
-    padding: 13.2em 4em 1em;
+    padding: 3.2rem 4rem 1rem;
   }
   body.homepage section.homepage-right div.teaser {
     margin-top: 6rem;
@@ -777,10 +777,10 @@ body.homepage section.homepage-right .learn-more a:active {
 }
 @media screen and (min-width: 48em) and (min-aspect-ratio: 8 / 3), screen and (min-width: 48em) and (max-height: 32rem) {
   body.homepage aside.homepage-left {
-    margin-top: 8rem;
+    margin-top: 2rem;
   }
   body.homepage section.homepage-right {
-    padding-top: 8rem;
+    padding-top: 2rem;
   }
 
   header.not-fullscreen {

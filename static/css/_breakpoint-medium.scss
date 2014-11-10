@@ -179,7 +179,7 @@ article {
 }
 
 section.summary {
-	padding: 10rem;
+	padding: 8rem;
 	font-size: 2.6rem;
 	line-height: 3rem;
 	&.largetext {
@@ -232,16 +232,16 @@ body.homepage {
 	aside.homepage-left {
 		width: 50%;
 		float: left;
-		height: 25em;
-		margin-top: 14em;
+		height: 15rem;
+		margin-top: 4rem;
 		ul li {
-			margin: 1em;
+			margin: 1rem;
 		}
 	}
 	section.homepage-right {
-		min-height: 35em;
+		min-height: 25rem;
 		margin-left: 50%;
-		padding: 13.2em 4em 1em;
+		padding: 3.2rem 4rem 1rem;
 		div.teaser {
 			margin-top: 6rem;
 		}
@@ -251,10 +251,10 @@ body.homepage {
 @media screen and (min-aspect-ratio: 8/3), screen and (max-height : 32rem) {
 	body.homepage {
 		aside.homepage-left {
-			margin-top: 8rem;
+			margin-top: 2rem;
 		}
 		section.homepage-right {
-			padding-top: 8rem;
+			padding-top: 2rem;
 		}
 	}
 	header.not-fullscreen {
