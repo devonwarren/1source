@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block bodyclass %}page{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<header class="job not-fullscreen">
+        {% load navigation %}
+        {% navigation %}
+</header>
+<content id="main">
+
+<div class="content-center">
+
+    <h4>Job Application - {{ job.title }}</h4>
+
+    <div class="body">
+
+        {% if form.errors %}
+            <p style="color: red;">
+                Please correct the error{{ form.errors|pluralize }} below.
+            </p>
+        {% endif %}
+    
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="field">
+                <label for="id_first_name">First name:</label><br>
+                {{ form.first_name.errors }}
+                {{ form.first_name }}
+            </div>
+            <div class="field">
+                <label for="id_last_name">Last name:</label><br>
+                {{ form.last_name.errors }}
+                {{ form.last_name }}
+            </div>
+            <div class="field">
+                <label for="id_middle_initial">Middle initial:</label><br>
+                {{ form.middle_initial.errors }}
+                {{ form.middle_initial }}
+            </div>
+            <div class="field">
+                <label for="id_email">Your e-mail address:</label><br>
+                {{ form.email.errors }}
+                {{ form.email }}
+            </div>
+            <div class="field">
+                <label for="id_phone">Phone number:</label><br>
+                {{ form.phone.errors }}
+                {{ form.phone }}
+            </div>
+            <div class="field">
+                <label for="id_resume">Resume:</label><br>
+                {{ form.resume.errors }}
+                {{ form.resume }}
+            </div>
+            <input type="hidden" id="id_job" name="job" value="{{ job.id }}">
+            {% csrf_token %}
+            <div class="field">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <p></p>
+
+    </div>
+
+</div>
+
+</content>
+
+{% load footer %}
+{% footer %}
+{% endblock %}

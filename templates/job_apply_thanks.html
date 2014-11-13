@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block bodyclass %}page{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<header class="job not-fullscreen">
+        {% load navigation %}
+        {% navigation %}
+</header>
+<content id="main">
+
+<div class="content-center">
+
+    <h4>Thanks</h4>
+
+    <div class="body">
+
+        <p>
+        	Thank you for applying to the {{ job.title }} position! 
+        </p>
+
+        <p>
+        	We will get back to you once we have reviewed your resume.
+        </p>
+
+		<p>
+			<div class="button"><a href="/jobs/">BACK TO OPEN POSITIONS</a></div>
+		</p>
+
+    </div>
+
+</div>
+
+</content>
+
+{% load footer %}
+{% footer %}
+{% endblock %}

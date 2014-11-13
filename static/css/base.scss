@@ -63,6 +63,10 @@ a:hover {
 	text-decoration: none;
 }
 
+strong a {
+	font-weight: bold !important;
+}
+
 h1 {
 	font-family: $officina;
 	color: white;
@@ -428,6 +432,18 @@ footer {
 	}
 }
 
+div.button a {
+	border: solid .15em $primary1;
+	border-radius: .4em;
+	padding: .2em .6em;
+	color: $primary1;
+	text-decoration: none;
+	&:active {
+		padding: .16em .55em;
+		font-size: .92em;
+	}
+}
+
 // specific sections and overrides
 body.homepage {
 	div#logo {
@@ -548,17 +564,6 @@ body.homepage {
 		.learn-more {
 			margin-top: 3em;
 			text-align: center;
-			a {
-				border: solid .15em $primary1;
-				border-radius: .4em;
-				padding: .2em .6em;
-				color: $primary1;
-				text-decoration: none;
-				&:active {
-					padding: .16em .55em;
-					font-size: .92em;
-				}
-			}
 		}
 	}
 }
