@@ -3,6 +3,14 @@ from django.forms import ModelForm, FileInput, TextInput
 from ckeditor.fields import RichTextField
 
 class Job(models.Model):
+	JOB_GROUPS = (
+		('E', 'Executive'),
+		('P', 'Professional'),
+		('1', '1st Level Manager'),
+		('T', 'Technician'),
+		('A', 'Administrative'),
+	)
+
 	active = models.BooleanField(default=False, help_text='Enable this if the job should be listed')
 	title = models.CharField(max_length=200)
 	code = models.CharField(max_length=15)
@@ -11,6 +19,7 @@ class Job(models.Model):
 	duties = RichTextField()
 	qualifications = RichTextField()
 	desired = RichTextField(blank=True)
+	group = models.CharField(max_length=1, choices=JOB_GROUPS, help_text='EEO-1 Category')
 
 	def __str__(self):
 		return self.title + ' (' + self.code + ')'
