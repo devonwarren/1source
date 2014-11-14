@@ -1,5 +1,5 @@
 from django.db import models
-from django.forms import ModelForm
+from django.forms import ModelForm, FileInput, TextInput
 from ckeditor.fields import RichTextField
 
 class Job(models.Model):
@@ -33,6 +33,13 @@ class Application(models.Model):
 
 
 class ApplicationForm(ModelForm):
+	def __init__(self, *args, **kwargs):
+		super(ApplicationForm, self).__init__(*args, **kwargs)
+		self.fields['phone'].input_type = "tel"
+		self.fields['phone'].widget=TextInput(attrs={'type': 'tel'})
+		self.fields['email'].input_type = "email"
+		self.fields['resume'].widget=FileInput(attrs={'accept': 'application/pdf'})
+
 	class Meta:
 		model = Application
 		fields = ['job', 'first_name', 'last_name', 'middle_initial', 'phone', 'email', 'resume']

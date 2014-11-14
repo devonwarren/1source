@@ -4,7 +4,7 @@ django-appconf==0.6
 django-autoslug==1.7.2
 django-ckeditor==4.4.6
 django-compressor==1.4
-django-grappelli==2.6.2
+django-grappelli==2.6.3
 django-imagekit==3.2.4
 django-ordered-model==0.4.0
 pilkit==1.1.12
