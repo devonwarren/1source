@@ -28,6 +28,30 @@ class Job(models.Model):
 		return '/job/' + str(self.id) + '/'
 
 class Application(models.Model):
+	citizenship_statuses = (
+		('Y', 'Yes'),
+		('A', 'No, but I am authorized to work in the US'),
+		('N', 'No, and I am not authorized to work in the US')
+	)
+
+	statuses = (
+		('N', 'New'),
+		('R', 'Rejected'),
+		('H', 'Hired'),
+	)
+
+	rejected_reasons = (
+		('S', 'Skills'),
+		('E', 'Years of Experience'),
+		('U', 'US Citizenship'),
+		('C', 'Clearance Requirement'),
+		('O', 'Other'),
+		('IS', 'Interviewed - Skills'),
+		('IE', 'Interviewed - Years of Experience'),
+		('IP', 'Interviewed - Presentation/Communication Skills'),
+		('SB', 'Selected but failed badging'),
+	)
+
 	job = models.ForeignKey(Job)
 	first_name = models.CharField(max_length=120)
 	last_name = models.CharField(max_length=120)
@@ -35,7 +59,14 @@ class Application(models.Model):
 	phone = models.CharField(max_length=10)
 	email = models.EmailField()
 	resume = models.FileField(upload_to='resumes')
+	desired_salary = models.IntegerField()
+	us_citizenship = models.CharField(max_length=1, choices=citizenship_statuses)
 	submitted = models.DateTimeField(auto_now_add=True)
+
+	# internal tracking fields
+	status = models.CharField(max_length=1, choices=statuses, default='N')
+	rejected_reason = models.CharField(max_length=2, choices=rejected_reasons, blank=True)
+	rejected_explaination = models.TextField(blank=True)
 
 	def __str__(self):
 		return self.first_name + ' ' + self.last_name + ' (' + self.job.title + ')'
@@ -48,7 +79,8 @@ class ApplicationForm(ModelForm):
 		self.fields['phone'].widget=TextInput(attrs={'type': 'tel'})
 		self.fields['email'].input_type = "email"
 		self.fields['resume'].widget=FileInput(attrs={'accept': 'application/pdf'})
+		self.fields['desired_salary'].widget=TextInput(attrs={'type': 'number', 'min': 1})
 
 	class Meta:
 		model = Application
-		fields = ['job', 'first_name', 'last_name', 'middle_initial', 'phone', 'email', 'resume']
+		fields = ['job', 'first_name', 'last_name', 'middle_initial', 'phone', 'email', 'resume', 'desired_salary', 'us_citizenship']

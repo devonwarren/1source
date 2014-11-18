@@ -120,6 +120,8 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 
 GRAPPELLI_ADMIN_TITLE = '1Source Admin'
 
+GRAPPELLI_CLEAN_INPUT_TYPES = False
+
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': [

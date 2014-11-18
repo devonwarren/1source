@@ -55,6 +55,16 @@
                 {{ form.resume.errors }}
                 {{ form.resume }}
             </div>
+            <div class="field">
+                <label for="id_desired_salary">Desired Salary:</label><br>
+                {{ form.desired_salary.errors }}
+                {{ form.desired_salary }}
+            </div>
+            <div class="field">
+                <label for="id_desired_salary">Are you a US Citizen?</label><br>
+                {{ form.us_citizenship.errors }}
+                {{ form.us_citizenship }}
+            </div>
             <input type="hidden" id="id_job" name="job" value="{{ job.id }}">
             {% csrf_token %}
             <div class="field">
