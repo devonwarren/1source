@@ -4,6 +4,10 @@
 
 {% load staticfiles %}
 
+{% block scriptload %}
+<script src="{% static "js/job_application_admin.js" %}"></script>
+{% endblock %}
+
 {% block content %}
 
 <header class="job not-fullscreen">
@@ -61,9 +65,28 @@
                 {{ form.desired_salary }}
             </div>
             <div class="field">
-                <label for="id_desired_salary">Are you a US Citizen?</label><br>
+                <label for="id_us_citizenship">Are you a US Citizen?</label><br>
                 {{ form.us_citizenship.errors }}
                 {{ form.us_citizenship }}
+            </div>
+            <div class="field">
+                <label for="id_clearance">Do you have a security clearance?</label>
+                {{ form.clearance.errors }}
+                {{ form.clearance }}
+            </div>
+            <div class="field clearance_type">
+                <label for="id_clearance_type">What type?</label><br>
+                {{ form.clearance_type.errors }}
+                {{ form.clearance_type }}
+            </div>
+            <div class="field race">
+                <label for="id_race">Race</label><br>
+                {{ form.race.errors }}
+                {{ form.race }}
+            </div>
+            <div class="field race_other">
+                {{ form.race_other.errors }}
+                {{ form.race_other }}
             </div>
             <input type="hidden" id="id_job" name="job" value="{{ job.id }}">
             {% csrf_token %}

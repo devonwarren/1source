@@ -225,6 +225,9 @@ content#main .content-center img {
   max-width: 22rem;
   padding: .3rem;
 }
+.field input[type="checkbox"] {
+  width: auto;
+}
 .field input[type="submit"] {
   border: solid 0.15em #E86432;
   border-radius: .4em;

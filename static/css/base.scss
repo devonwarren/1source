@@ -252,6 +252,9 @@ content#main {
 		max-width: 22rem;
 		padding: .3rem;
 	}
+	input[type="checkbox"] {
+		width: auto;
+	}
 	input[type="submit"] {
 		border: solid 0.15em #E86432;
 		border-radius: .4em;

@@ -28,6 +28,11 @@ class Job(models.Model):
 		return '/job/' + str(self.id) + '/'
 
 class Application(models.Model):
+	genders = (
+		('M', 'Male'),
+		('F', 'Female'),
+	)
+
 	citizenship_statuses = (
 		('Y', 'Yes'),
 		('A', 'No, but I am authorized to work in the US'),
@@ -52,6 +57,16 @@ class Application(models.Model):
 		('SB', 'Selected but failed badging'),
 	)
 
+	races = (
+		('I', 'American Indian/Alaskan'),
+		('A', 'Asian'),
+		('B', 'Black/African American'),
+		('H', 'Hispanic/Latino'),
+		('P', 'Hawaiian/Pacific Islander'),
+		('W', 'White/Caucasian'),
+		('O', 'Other'),
+	)
+
 	job = models.ForeignKey(Job)
 	first_name = models.CharField(max_length=120)
 	last_name = models.CharField(max_length=120)
@@ -60,7 +75,12 @@ class Application(models.Model):
 	email = models.EmailField()
 	resume = models.FileField(upload_to='resumes')
 	desired_salary = models.IntegerField()
+	gender = models.CharField(max_length=1, choices=genders)
 	us_citizenship = models.CharField(max_length=1, choices=citizenship_statuses)
+	clearance = models.BooleanField(default=False, help_text='Do you have a security clearance?')
+	clearance_type = models.CharField(max_length=120, blank=True)
+	race = models.CharField(max_length=1, choices=races)
+	race_other = models.CharField(max_length=120, blank=True)
 	submitted = models.DateTimeField(auto_now_add=True)
 
 	# internal tracking fields
@@ -80,7 +100,9 @@ class ApplicationForm(ModelForm):
 		self.fields['email'].input_type = "email"
 		self.fields['resume'].widget=FileInput(attrs={'accept': 'application/pdf'})
 		self.fields['desired_salary'].widget=TextInput(attrs={'type': 'number', 'min': 1})
+		self.fields['clearance_type'].widget=TextInput(attrs={'placeholder': 'example: NACLC, Public Trust, Secret'})
 
 	class Meta:
 		model = Application
-		fields = ['job', 'first_name', 'last_name', 'middle_initial', 'phone', 'email', 'resume', 'desired_salary', 'us_citizenship']
+		fields = ['job', 'first_name', 'last_name', 'middle_initial', 'phone', 'email', 'resume', 'desired_salary', 
+		'us_citizenship', 'clearance', 'clearance_type', 'race', 'race_other']
