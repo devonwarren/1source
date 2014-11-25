@@ -80,13 +80,27 @@
                 {{ form.clearance_type }}
             </div>
             <div class="field race">
-                <label for="id_race">Race</label><br>
+                <label for="id_race">What is your race/ethnicity?</label><br>
                 {{ form.race.errors }}
                 {{ form.race }}
             </div>
             <div class="field race_other">
                 {{ form.race_other.errors }}
                 {{ form.race_other }}
+            </div>
+             <div class="field referred">
+                <label for="id_referred">How were you referred?</label><br>
+                {{ form.referred.errors }}
+                {{ form.referred }}
+            </div>
+            <div class="field referred_other">
+                {{ form.referred_other.errors }}
+                {{ form.referred_other }}
+            </div>
+            <div class="field military_service">
+                <label for="id_military_service">Have you served in the military?</label><br>
+                {{ form.military_service.errors }}
+                {{ form.military_service }}
             </div>
             <input type="hidden" id="id_job" name="job" value="{{ job.id }}">
             {% csrf_token %}

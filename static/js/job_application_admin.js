@@ -25,6 +25,16 @@ function check_race_options() {
 	}
 }
 
+function check_referred_options() {
+	if ($('#id_referred')) {
+		if ($('#id_referred').val() == 'O') {
+			$('div.referred_other').show();
+		} else {
+			$('div.referred_other').hide();
+		}
+	}
+}
+
 function check_rejection_options() {
 	if ($('#id_status')) {
 		if ($('#id_status').val() == 'R') {
@@ -46,4 +56,7 @@ $(document).ready(function() {
 
 	check_race_options();
 	$('#id_race').change(check_race_options);	
+
+	check_referred_options();
+	$('#id_referred').change(check_referred_options);	
 });

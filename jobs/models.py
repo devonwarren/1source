@@ -27,6 +27,12 @@ class Job(models.Model):
 	def get_absolute_url(self):
 		return '/job/' + str(self.id) + '/'
 
+class MilitaryService(models.Model):
+	name = models.CharField(max_length=120)
+
+	def __str__(self):
+		return self.name
+
 class Application(models.Model):
 	genders = (
 		('M', 'Male'),
@@ -67,6 +73,24 @@ class Application(models.Model):
 		('O', 'Other'),
 	)
 
+	disability = (
+		('Y', 'Yes, I have or had a disability'),
+		('N', 'No, I don\'t have a disability'),
+		('D', 'I don\'t wish to answer'),
+	)
+
+	referred = (
+		('W', '1Source Website'),
+		('L', 'LinkedIn'),
+		('M', 'Monster'),
+		('D', 'Dice'),
+		('I', 'Indeed'),
+		('E', 'Employee Referral'),
+		('S', 'State Employment Commission'),
+		('C', 'Contract Transition'),
+		('O', 'Other'),
+	)
+
 	job = models.ForeignKey(Job)
 	first_name = models.CharField(max_length=120)
 	last_name = models.CharField(max_length=120)
@@ -78,10 +102,14 @@ class Application(models.Model):
 	gender = models.CharField(max_length=1, choices=genders)
 	us_citizenship = models.CharField(max_length=1, choices=citizenship_statuses)
 	clearance = models.BooleanField(default=False, help_text='Do you have a security clearance?')
-	clearance_type = models.CharField(max_length=120, blank=True)
+	clearance_type = models.CharField(max_length=120, blank=True, help_text='example: NACLC, Public Trust, Secret')
 	race = models.CharField(max_length=1, choices=races)
 	race_other = models.CharField(max_length=120, blank=True)
 	submitted = models.DateTimeField(auto_now_add=True)
+	disability = models.CharField(default='D', max_length=1, choices=disability)
+	referred = models.CharField(max_length=1, choices=referred)
+	referred_other = models.CharField(max_length=120, blank=True)
+	military_service = models.ManyToManyField(MilitaryService, blank=True, null=True)
 
 	# internal tracking fields
 	status = models.CharField(max_length=1, choices=statuses, default='N')
@@ -105,4 +133,5 @@ class ApplicationForm(ModelForm):
 	class Meta:
 		model = Application
 		fields = ['job', 'first_name', 'last_name', 'middle_initial', 'phone', 'email', 'resume', 'desired_salary', 
-		'us_citizenship', 'clearance', 'clearance_type', 'race', 'race_other']
+		'us_citizenship', 'clearance', 'clearance_type', 'race', 'race_other', 'referred', 'referred_other', 
+		'military_service']
