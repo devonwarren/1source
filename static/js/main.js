@@ -8,6 +8,26 @@ function fullHeightHero() {
 
 fullHeightHero(); // run this as soon as possible
 
+function fixBgImageHomepage() {
+  // only run if on mobile
+  var sections = $('.section-bgimage');
+
+  for (i=0; i<sections.length; i++) {
+    var section = $(sections[i]);
+    if ($('#isMobile').css('display') == 'block') {
+      var height = $(section).find('section.summary').outerHeight();
+    } else {
+      height = 0;
+    }
+    
+    $(section).css('background-position-y', height + 'px')
+  }
+}
+
+
+fixBgImageHomepage();
+
+
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -93,11 +113,13 @@ function homepageTagFades(currentIdx) {
 $(window).resize(function() { 
   fullHeightHero();
   scrollEvent();
+  fixBgImageHomepage();
 });
 
 $(window).on('orientationchange', function() {
   fullHeightHero();
   scrollEvent();
+  fixBgImageHomepage();
 });
 
 function bgimageCycle(currentIdx) {

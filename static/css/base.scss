@@ -121,6 +121,11 @@ ul {
 	color: red;
 }
 
+div#isMobile {
+	display: block;
+	height: 0;
+}
+
 h1.logo-color {
 	background: url('../images/logo_large.svg') no-repeat center top;
 	height: 1em;
