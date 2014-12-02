@@ -9,7 +9,7 @@ def learn_more_view(request, subsection):
 	subsec.title  = '<a href="/#' + subsec.section.slug + '">' + subsec.section.title + '</a> : ' + subsec.name
 	if (subsec.slug == 'technical-competencies'):
 		subsec.teaser = """Certified in:<br>
-			ISO 9001:2008 Certified<br>
+			ISO 9001:2008<br>
 			CMMI Maturity Level III (Software Development)
 		"""
 	subsec.content  = subsec.learn_more
