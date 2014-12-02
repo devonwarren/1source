@@ -12,6 +12,10 @@ def learn_more_view(request, subsection):
 			ISO 9001:2008<br>
 			CMMI Maturity Level III (Software Development)
 		"""
+	elif (subsec.slug == 'our-heritage'):
+		subsec.teaser = """Small Business.<br>
+			BIG AMBITION.
+		"""
 	subsec.content  = subsec.learn_more
 
 	t = get_template('page.html')
