@@ -91,10 +91,10 @@ function homepageTagFades(currentIdx) {
     currentIdx = 0;
   }
   var current = $('div.tagline')[currentIdx];
-  var delay = 500;
+  var delay = 700;
   var opacity = .5;
   if ($(current).hasClass('longfade')) {
-    delay = 2000;
+    delay = 2400;
     opacity = 1;
   }
   $(current).velocity({opacity:opacity}, {display:'block', duration:1000, complete:function() {

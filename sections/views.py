@@ -10,8 +10,7 @@ def learn_more_view(request, subsection):
 	if (subsec.slug == 'technical-competencies'):
 		subsec.teaser = """Certified in:<br>
 			ISO 9001:2008 Certified<br>
-			CMMI Maturity Level III (Software Development)<br>
-			Top Secret Facility Clearance
+			CMMI Maturity Level III (Software Development)
 		"""
 	subsec.content  = subsec.learn_more
 
