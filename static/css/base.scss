@@ -21,6 +21,16 @@ $officina: 'OfficinaSerITCStd', serif;
 
 @font-face {
 	font-family: 'Adelle Sans';
+	src: url('../fonts/AdelleSans.eot');
+	src: url('../fonts/AdelleSans.woff2') format('woff2'),
+		url('../fonts/AdelleSans.woff') format('woff'),
+		url('../fonts/AdelleSans.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Adelle Sans';
 	src: url('../fonts/AdelleSansLight.eot');
 	src: url('../fonts/AdelleSansLight.woff2') format('woff2'),
 		url('../fonts/AdelleSansLight.woff') format('woff'),

@@ -14,13 +14,11 @@ function fixBgImageHomepage() {
 
   for (i=0; i<sections.length; i++) {
     var section = $(sections[i]);
+    var height = 0;
     if ($('#isMobile').css('display') == 'block') {
-      var height = $(section).find('section.summary').outerHeight();
-    } else {
-      height = 0;
+      height = $($(section).find('section.summary')[0]).outerHeight() - 10;
     }
-    
-    $(section).css('background-position-y', height + 'px')
+    $(section).css('background-position', 'center ' + height + 'px')
   }
 }
 
