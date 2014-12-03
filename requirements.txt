@@ -9,4 +9,4 @@ django-imagekit==3.2.4
 django-ordered-model==0.4.0
 pilkit==1.1.12
 six==1.8.0
-sqlparse==0.1.13
+sqlparse==0.1.14
