@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.template.loader import get_template
 from django.template import RequestContext, Context
 from django.http import HttpResponse
@@ -11,6 +12,9 @@ def unsupported_browser(request):
 
 def page_not_found(request):
     return render(request,'404.html')
+
+def robots(request):
+    return render(request,'robots.txt')
     
 def homepage(request):
 	subsections = []
