@@ -64,6 +64,7 @@ class Application(models.Model):
 		('N', 'New'),
 		('R', 'Rejected'),
 		('H', 'Hired'),
+		('D', 'Declined'),
 	)
 
 	rejected_reasons = (
@@ -130,6 +131,7 @@ class Application(models.Model):
 	status = models.CharField(max_length=1, choices=statuses, default='N')
 	rejected_reason = models.CharField(max_length=2, choices=rejected_reasons, blank=True)
 	rejected_explaination = models.TextField(blank=True)
+	notes = models.TextField(blank=True, help_text='Internal staff notes')
 
 	def __str__(self):
 		return self.first_name + ' ' + self.last_name + ' (' + self.job.title + ')'
