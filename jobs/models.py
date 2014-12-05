@@ -1,6 +1,7 @@
 from django.db import models
 from django.forms import ModelForm, FileInput, TextInput
 from ckeditor.fields import RichTextField
+from datetime import datetime
 
 class Job(models.Model):
 	JOB_GROUPS = (
@@ -20,12 +21,26 @@ class Job(models.Model):
 	qualifications = RichTextField()
 	desired = RichTextField(blank=True)
 	group = models.CharField(max_length=1, choices=JOB_GROUPS, help_text='EEO-1 Category')
+	closed_date = models.DateTimeField(blank=True, null=True)
+	closed_reason = models.TextField(blank=True)
 
 	def __str__(self):
 		return self.title + ' (' + self.code + ')'
 
 	def get_absolute_url(self):
 		return '/job/' + str(self.id) + '/'
+
+	def save(self, *args, **kw):
+		# if closing the job update the closed date
+		if not self.active:
+			if self.pk is not None:
+				orig = Job.objects.get(pk=self.pk)
+				if orig.active:
+					self.closed_date = datetime.now()
+			else:
+				self.closed_date = datetime.now()
+
+		super(Job, self).save(*args, **kw)
 
 class MilitaryService(models.Model):
 	name = models.CharField(max_length=120)
