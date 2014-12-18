@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.formtools',
-    'debug_toolbar',
     'ordered_model',
     'autoslug',
     'ckeditor',
