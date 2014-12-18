@@ -1,0 +1,48 @@
+{% extends "job_apply.html" %}
+
+{% block form %}
+    <form method="post" enctype="multipart/form-data">
+
+        {{ wizard.management_form }}
+        {% csrf_token %}
+
+        <p><strong>1 Source is a federal contractor and must routinely maintain and report statistical analyses of applications for employment. Completion of this form is voluntary and we would greatly appreciate your cooperation. This information is confidential. It will not be maintained with your application file and will not be considered in making any employment decision.</strong></p>
+
+        <div class="field gender">
+            <label for="id_gender">What is your gender?</label><br>
+            {{ form.gender.errors }}
+            {{ form.gender }}
+        </div>
+        <div class="field race">
+            <label for="id_race">What is your race/ethnicity?</label><br>
+            {{ form.race.errors }}
+            {{ form.race }}
+        </div>
+        <div class="field race_other">
+            {{ form.race_other.errors }}
+            {{ form.race_other }}
+        </div>
+         <div class="field referred">
+            <label for="id_referred">How were you referred?</label><br>
+            {{ form.referred.errors }}
+            {{ form.referred }}
+        </div>
+        <div class="field referred_other">
+            {{ form.referred_other.errors }}
+            {{ form.referred_other }}
+        </div>
+        <div class="field military_service">
+            <label for="id_military_service">Have you served in the military?</label><br>
+            {{ form.military_service.errors }}
+            {{ form.military_service }}
+        </div>
+        <div class="field button">
+            <input class="button" name="wizard_goto_step" type="submit" value="Next">
+        </div>
+
+    </form>
+
+{% endblock %}
+
+
+

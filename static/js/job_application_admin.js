@@ -3,7 +3,6 @@ if (!$) {
 }
 
 function check_clearance_options() {
-	console.log('ss');
 	if ($('#id_clearance')) {
 		if ($('#id_clearance').is(':checked')) {
 			$('#id_clearance_type').show();

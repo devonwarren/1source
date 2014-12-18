@@ -22,94 +22,18 @@
 
     <div class="body">
 
+        {{ wizard.form.media }}
+
+        <p>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</p>
+
         {% if form.errors %}
             <p style="color: red;">
                 Please correct the error{{ form.errors|pluralize }} below.
+                {# {{ form.errors }} #}
             </p>
         {% endif %}
-    
-        <form action="" method="post" enctype="multipart/form-data">
-            <div class="field">
-                <label for="id_first_name">First name:</label><br>
-                {{ form.first_name.errors }}
-                {{ form.first_name }}
-            </div>
-            <div class="field">
-                <label for="id_last_name">Last name:</label><br>
-                {{ form.last_name.errors }}
-                {{ form.last_name }}
-            </div>
-            <div class="field">
-                <label for="id_middle_initial">Middle initial:</label><br>
-                {{ form.middle_initial.errors }}
-                {{ form.middle_initial }}
-            </div>
-            <div class="field">
-                <label for="id_email">Your e-mail address:</label><br>
-                {{ form.email.errors }}
-                {{ form.email }}
-            </div>
-            <div class="field">
-                <label for="id_phone">Phone number:</label><br>
-                {{ form.phone.errors }}
-                {{ form.phone }}
-            </div>
-            <div class="field">
-                <label for="id_resume">Resume:</label><br>
-                {{ form.resume.errors }}
-                {{ form.resume }}
-            </div>
-            <div class="field">
-                <label for="id_desired_salary">Desired Salary:</label><br>
-                {{ form.desired_salary.errors }}
-                {{ form.desired_salary }}
-            </div>
-            <div class="field">
-                <label for="id_us_citizenship">Are you a US Citizen?</label><br>
-                {{ form.us_citizenship.errors }}
-                {{ form.us_citizenship }}
-            </div>
-            <div class="field">
-                <label for="id_clearance">Do you have a security clearance?</label>
-                {{ form.clearance.errors }}
-                {{ form.clearance }}
-            </div>
-            <div class="field clearance_type">
-                <label for="id_clearance_type">What type?</label><br>
-                {{ form.clearance_type.errors }}
-                {{ form.clearance_type }}
-            </div>
-            <div class="field race">
-                <label for="id_race">What is your race/ethnicity?</label><br>
-                {{ form.race.errors }}
-                {{ form.race }}
-            </div>
-            <div class="field race_other">
-                {{ form.race_other.errors }}
-                {{ form.race_other }}
-            </div>
-             <div class="field referred">
-                <label for="id_referred">How were you referred?</label><br>
-                {{ form.referred.errors }}
-                {{ form.referred }}
-            </div>
-            <div class="field referred_other">
-                {{ form.referred_other.errors }}
-                {{ form.referred_other }}
-            </div>
-            <div class="field military_service">
-                <label for="id_military_service">Have you served in the military?</label><br>
-                {{ form.military_service.errors }}
-                {{ form.military_service }}
-            </div>
-            <input type="hidden" id="id_job" name="job" value="{{ job.id }}">
-            {% csrf_token %}
-            <div class="field">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
 
-        <p></p>
+        {% block form %}{% endblock %}
 
     </div>
 

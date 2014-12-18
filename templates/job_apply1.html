@@ -1,0 +1,65 @@
+{% extends "job_apply.html" %}
+
+{% block form %}
+    <form method="post" enctype="multipart/form-data">
+
+        {{ wizard.management_form }}
+        {% csrf_token %}
+
+        <div class="field">
+            <label for="id_first_name">First name:</label><br>
+            {{ form.first_name.errors }}
+            {{ form.first_name }}
+        </div>
+        <div class="field">
+            <label for="id_last_name">Last name:</label><br>
+            {{ form.last_name.errors }}
+            {{ form.last_name }}
+        </div>
+        <div class="field">
+            <label for="id_middle_initial">Middle initial:</label><br>
+            {{ form.middle_initial.errors }}
+            {{ form.middle_initial }}
+        </div>
+        <div class="field">
+            <label for="id_email">Your e-mail address:</label><br>
+            {{ form.email.errors }}
+            {{ form.email }}
+        </div>
+        <div class="field">
+            <label for="id_phone">Phone number:</label><br>
+            {{ form.phone.errors }}
+            {{ form.phone }}
+        </div>
+        <div class="field">
+            <label for="id_resume">Resume:</label><br>
+            {{ form.resume.errors }}
+            {{ form.resume }}
+        </div>
+        <div class="field">
+            <label for="id_desired_salary">Desired Salary:</label><br>
+            {{ form.desired_salary.errors }}
+            {{ form.desired_salary }}
+        </div>
+        <div class="field">
+            <label for="id_us_citizenship">Are you a US Citizen?</label><br>
+            {{ form.us_citizenship.errors }}
+            {{ form.us_citizenship }}
+        </div>
+        <div class="field">
+            <label for="id_clearance">Do you have a security clearance?</label>
+            {{ form.clearance.errors }}
+            {{ form.clearance }}
+        </div>
+        <div class="field clearance_type">
+            <label for="id_clearance_type">What type of clearance?</label><br>
+            {{ form.clearance_type.errors }}
+            {{ form.clearance_type }}
+        </div>
+        <div class="field button">
+            <input class="button" name="wizard_goto_step" type="submit" value="Next">
+        </div>
+    </form>
+
+{% endblock %}
+

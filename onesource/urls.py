@@ -10,7 +10,8 @@ from journal.views import journal, entry_view
 from news.views import news_list, news_view
 from contact.views import contact, contact_thanks
 from sections.views import learn_more_view, leadership
-from jobs.views import job_listings, job_details, job_apply
+from jobs.views import job_listings, job_details, job_apply, ApplicationWizard
+from jobs.forms import ApplicationForm1
 from pages.views import page
 
 urlpatterns = patterns('',
@@ -25,7 +26,7 @@ urlpatterns = patterns('',
 	url(r'^learn-more/(?P<subsection>.+?)/$', learn_more_view),
 	url(r'^jobs/$', job_listings),
 	url(r'^job/(?P<job_id>\d)/$', job_details),
-	url(r'^job/(?P<job_id>\d)/apply/$', job_apply),
+	url(r'^job/(?P<job_id>\d)/apply/$', ApplicationWizard.as_view(ApplicationWizard.FORMS)),
 	url(r'^page/(?P<page_alias>.+?)/$', page),
 	url(r'^unsupported_browser/$', unsupported_browser),
 	url(r'^robots\.txt$', robots),
