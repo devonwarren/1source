@@ -18,13 +18,13 @@
 
 <div class="content-center">
 
-    <h4>Job Application - {{ job.title }}</h4>
+    <h4>Job Application</h4>
 
     <div class="body">
 
         {{ wizard.form.media }}
 
-        <p>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</p>
+        <p>Step <em>{{ wizard.steps.step1 }}</em> of <em>{{ wizard.steps.count }}</em></p>
 
         {% if form.errors %}
             <p style="color: red;">
