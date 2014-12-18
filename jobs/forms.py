@@ -39,7 +39,10 @@ class ApplicationForm1(forms.Form):
 
     resume = forms.FileField(
         widget=FileInput(attrs={
-            'accept': 'application/pdf',
+            'accept':
+                '.doc,.docx,application/msword,' +
+                'application/vnd.openxmlformats-officedocument' +
+                '.wordprocessingml.document',
             'id': 'id_resume'}))
 
     desired_salary = forms.IntegerField(
