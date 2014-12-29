@@ -91,6 +91,7 @@ class Application(models.Model):
             ('H', 'Hispanic/Latino'),
             ('P', 'Hawaiian/Pacific Islander'),
             ('W', 'White/Caucasian'),
+            ('M', 'Two or more'),
             ('O', 'Other'),
     )
 
