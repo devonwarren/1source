@@ -1,6 +1,6 @@
 from django import forms
 from django.forms.widgets import Input, FileInput, NumberInput, \
-    Select, SelectMultiple, CheckboxInput
+    Select, SelectMultiple, CheckboxInput, RadioSelect
 from .models import Application, MilitaryService
 
 
@@ -100,8 +100,8 @@ class ApplicationForm2(forms.Form):
 
 
 class ApplicationForm3(forms.Form):
-    disability_options = (('', '----'),) + Application.disability_options
+    disability_options = Application.disability_options
 
     disability = forms.ChoiceField(
-        widget=Select(attrs={'id': 'id_disability'}),
+        widget=RadioSelect(attrs={'id': 'id_disability'}),
         choices=disability_options)

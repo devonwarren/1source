@@ -241,7 +241,8 @@ content#main .content-center img {
   max-width: 22rem;
   padding: .3rem;
 }
-.field input[type="checkbox"] {
+.field input[type="checkbox"],
+.field input[type="radio"] {
   width: auto;
 }
 .field input[type="submit"] {
@@ -550,6 +551,10 @@ body.homepage section.homepage-right .learn-more {
 
 .gm-style-cc {
   display: none;
+}
+
+ul#id_disability li {
+  list-style-image: none;
 }
 
 @media screen and (min-aspect-ratio: 8 / 3), screen and (max-height: 36rem) {
