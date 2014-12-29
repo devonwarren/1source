@@ -27,8 +27,8 @@
         <p>Step <em>{{ wizard.steps.step1 }}</em> of <em>{{ wizard.steps.count }}</em></p>
 
         {% if form.errors %}
-            <p style="color: red;">
-                Please correct the error{{ form.errors|pluralize }} below.
+            <p class="red">
+                <strong>Please correct the error{{ form.errors|pluralize }} below.</strong>
                 {# {{ form.errors }} #}
             </p>
         {% endif %}
