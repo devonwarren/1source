@@ -32,7 +32,12 @@ $(function() {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
-        $(target).velocity("scroll", 400);
+        var position = target.length
+        if ($('header')) {
+          position = $(target).position().top - $('header').height() - 15;
+        }
+        console.log('position:' + position);
+        $('html,body').animate({scrollTop: position}, 400);
         return false;
       }
     }

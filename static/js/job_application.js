@@ -34,6 +34,16 @@ function check_referred_options() {
     }
 }
 
+function check_military_options() {
+    if ($('#id_military_service_option')) {
+        if ($('#id_military_service_option').val() == 'on') {
+            $('div.military_service').show();
+        } else {
+            $('div.military_service').hide();
+        }
+    }
+}
+
 function check_rejection_options() {
     if ($('#id_status')) {
         if ($('#id_status').val() == 'R') {
@@ -58,4 +68,7 @@ $(document).ready(function() {
 
     check_referred_options();
     $('#id_referred').change(check_referred_options);   
+
+    check_military_options();
+    $('#id_military_service_option').change(check_military_options);       
 });

@@ -31,8 +31,13 @@
             {{ form.referred_other.errors }}
             {{ form.referred_other }}
         </div>
-        <div class="field military_service">
-            <label for="id_military_service">Have you served in the military?</label><br>
+        <div class="field military_service_select">
+            <label for="id_military_service_select">Have you served in the military?</label>
+            {{ form.military_service_select.errors }}
+            {{ form.military_service_select }}
+        </div>
+        <div class="field military_service no-bullets">
+            <label for="id_military_service">What is your veteran status?</label><br>
             {{ form.military_service.errors }}
             {{ form.military_service }}
         </div>

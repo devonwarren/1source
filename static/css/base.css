@@ -553,7 +553,7 @@ body.homepage section.homepage-right .learn-more {
   display: none;
 }
 
-ul#id_disability li {
+.no-bullets ul li {
   list-style-image: none;
 }
 

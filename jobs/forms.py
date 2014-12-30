@@ -1,6 +1,6 @@
 from django import forms
 from django.forms.widgets import Input, FileInput, NumberInput, \
-    Select, SelectMultiple, CheckboxInput, RadioSelect
+    Select, CheckboxSelectMultiple, CheckboxInput, RadioSelect
 from .models import Application, MilitaryService
 
 
@@ -94,8 +94,12 @@ class ApplicationForm2(forms.Form):
         widget=Input(attrs={'id': 'id_referred_other'}),
         max_length=120, required=False)
 
+    military_service_select = forms.BooleanField(
+        widget=CheckboxInput(attrs={'id': 'id_military_service_select'}),
+        required=False)
+
     military_service = forms.ModelMultipleChoiceField(
-        widget=SelectMultiple(attrs={'id': 'id_military_service'}),
+        widget=CheckboxSelectMultiple(attrs={'id': 'id_military_service'}),
         queryset=MilitaryService.objects.all(), required=False)
 
 
