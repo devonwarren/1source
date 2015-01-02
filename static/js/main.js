@@ -33,11 +33,13 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         var position = target.length
-        if ($('header')) {
+        if ($('header.not-fullscreen').length) {
           position = $(target).position().top - $('header').height() - 15;
+          $('html,body').animate({scrollTop: position}, 400);
+        } else {
+          $(target).velocity("scroll", 400);
         }
-        console.log('position:' + position);
-        $('html,body').animate({scrollTop: position}, 400);
+
         return false;
       }
     }
