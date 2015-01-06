@@ -4,31 +4,33 @@ from . import models
 
 
 def close_job(modeladmin, request, queryset):
-	for job in queryset:
-		job.active = False
-		job.save()
+    for job in queryset:
+        job.active = False
+        job.save()
 close_job.short_description = "Close job listing"
 
+
 def open_job(modeladmin, request, queryset):
-	queryset.update(active=True)
+    queryset.update(active=True)
 open_job.short_description = "Open job listing"
 
 
 class JobAdmin(admin.ModelAdmin):
-	list_display = ('code', 'title', 'active', )
-	actions = [close_job, open_job]
+    list_display = ('code', 'title', 'active', )
+    actions = [close_job, open_job]
+
 
 class ApplicationAdmin(admin.ModelAdmin):
-	list_display = ('job', 'first_name', 'last_name', 'submitted', 'status', 'desired_salary', 
-		'rejected_reason', )
-	readonly_fields = ('submitted', )
-	list_filter = ('job', 'status', 'rejected_reason', )
-	search_fields = ('first_name', 'last_name', )
+    list_display = ('job', 'first_name', 'last_name', 'submitted',
+                    'status', 'desired_salary', 'rejected_reason', )
+    readonly_fields = ('submitted', )
+    list_filter = ('job', 'status', 'rejected_reason', )
+    search_fields = ('first_name', 'last_name', )
 
-	class Media:
-		js = (
-			settings.STATIC_URL + 'js/job_application_admin.js',
-		)
+    class Media:
+        js = (
+            settings.STATIC_URL + 'js/job_application_admin.js',
+        )
 
 
 admin.site.register(models.Job, JobAdmin)

@@ -1,6 +1,6 @@
 from django.db import models
-from django.forms import ModelForm, FileInput, TextInput
 from ckeditor.fields import RichTextField
+from multiselectfield import MultiSelectField
 from datetime import datetime
 
 
@@ -46,33 +46,26 @@ class Job(models.Model):
         super(Job, self).save(*args, **kw)
 
 
-class MilitaryService(models.Model):
-    name = models.CharField(max_length=120)
-
-    def __str__(self):
-        return self.name
-
-
 class Application(models.Model):
-    genders = (
+    GENDERS = (
         ('M', 'Male'),
         ('F', 'Female'),
     )
 
-    citizenship_statuses = (
+    CITIZENSHIP_STATUSES = (
         ('Y', 'Yes'),
         ('A', 'No, but I am authorized to work in the US'),
         ('N', 'No, and I am not authorized to work in the US')
     )
 
-    statuses = (
+    STATUSES = (
         ('N', 'New'),
         ('R', 'Rejected'),
         ('H', 'Hired'),
         ('D', 'Declined'),
     )
 
-    rejected_reasons = (
+    REJECTED_REASONS = (
         ('S', 'Skills'),
         ('E', 'Years of Experience'),
         ('U', 'US Citizenship'),
@@ -84,7 +77,7 @@ class Application(models.Model):
         ('SB', 'Selected but failed badging'),
     )
 
-    races = (
+    RACES = (
             ('I', 'American Indian/Alaskan'),
             ('A', 'Asian'),
             ('B', 'Black/African American'),
@@ -95,13 +88,7 @@ class Application(models.Model):
             ('O', 'Other'),
     )
 
-    disability_options = (
-        ('Y', 'Yes, I have or had a disability'),
-        ('N', 'No, I don\'t have a disability'),
-        ('D', 'I don\'t wish to answer'),
-    )
-
-    referred_options = (
+    REFERRED_OPTIONS = (
         ('W', '1Source Website'),
         ('L', 'LinkedIn'),
         ('M', 'Monster'),
@@ -113,6 +100,15 @@ class Application(models.Model):
         ('O', 'Other'),
     )
 
+    MILITARY_OPTIONS = (
+        ('P', 'Pre-Vietnam Era'),
+        ('V', 'Post-Vietnam Era'),
+        ('D', 'Disabled Veteran'),
+        ('R', 'Recently Separated Veteran'),
+        ('A', 'Active Wartime or Campaign Badge'),
+        ('M', 'Armed Forces Service Medal Veteran'),
+    )
+
     job = models.ForeignKey(Job)
     first_name = models.CharField(max_length=120)
     last_name = models.CharField(max_length=120)
@@ -121,31 +117,41 @@ class Application(models.Model):
     email = models.EmailField()
     resume = models.FileField(upload_to='resumes')
     desired_salary = models.IntegerField()
-    gender = models.CharField(max_length=1, choices=genders)
+    gender = models.CharField(max_length=1, choices=GENDERS)
     us_citizenship = models.CharField(
-        max_length=1, choices=citizenship_statuses)
+        max_length=1, choices=CITIZENSHIP_STATUSES)
     clearance = models.BooleanField(
         default=False, help_text='Do you have a security clearance?')
     clearance_type = models.CharField(
         max_length=120, blank=True,
         help_text='example: NACLC, Public Trust, Secret')
-    race = models.CharField(max_length=1, choices=races)
+    race = models.CharField(max_length=1, choices=RACES)
     race_other = models.CharField(max_length=120, blank=True)
     submitted = models.DateTimeField(auto_now_add=True)
-    disability = models.CharField(
-        default='D', max_length=1, choices=disability_options)
-    referred = models.CharField(max_length=1, choices=referred_options)
+    referred = models.CharField(max_length=1, choices=REFERRED_OPTIONS)
     referred_other = models.CharField(max_length=120, blank=True)
-    military_service = models.ManyToManyField(
-        MilitaryService, blank=True, null=True)
+    military_service = MultiSelectField(blank=True, choices=MILITARY_OPTIONS)
 
     # internal tracking fields
-    status = models.CharField(max_length=1, choices=statuses, default='N')
+    status = models.CharField(max_length=1, choices=STATUSES, default='N')
     rejected_reason = models.CharField(
-        max_length=2, choices=rejected_reasons, blank=True)
+        max_length=2, choices=REJECTED_REASONS, blank=True)
     rejected_explaination = models.TextField(blank=True)
     notes = models.TextField(blank=True, help_text='Internal staff notes')
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name + \
             ' (' + self.job.title + ')'
+
+
+# Keep disability entries seperate to comply with federal regulations
+class ApplicationDisability(models.Model):
+    DISABILITY_OPTIONS = (
+        ('Y', 'Yes, I have or had a disability'),
+        ('N', 'No, I don\'t have a disability'),
+        ('D', 'I don\'t wish to answer'),
+    )
+
+    application = models.ForeignKey(Application)
+    disability = models.CharField(
+        default='D', max_length=1, choices=DISABILITY_OPTIONS)

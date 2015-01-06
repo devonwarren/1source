@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 from django.contrib.formtools.wizard.views import SessionWizardView
-from .models import Job, Application, MilitaryService
+from .models import Job, Application, ApplicationDisability
 from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3
 
 
@@ -49,13 +49,16 @@ class ApplicationWizard(SessionWizardView):
             clearance_type=application_data['clearance_type'],
             race=application_data['race'],
             race_other=application_data['race_other'],
-            disability=application_data['disability'],
             referred=application_data['referred'],
-            referred_other=application_data['referred_other']
+            referred_other=application_data['referred_other'],
+            military_service=application_data['military_service'],
         )
         app.save()
-        app.military_service = application_data['military_service']
-        app.save()
+        app_dis = ApplicationDisability(
+            application=app,
+            disability=application_data['disability'],
+        )
+        app_dis.save()
 
         t = get_template('job_apply_thanks.html')
         context = Context({'job': job})

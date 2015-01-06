@@ -1,7 +1,7 @@
 from django import forms
 from django.forms.widgets import Input, FileInput, NumberInput, \
     Select, CheckboxSelectMultiple, CheckboxInput, RadioSelect
-from .models import Application, MilitaryService
+from .models import Application, ApplicationDisability
 
 
 class PhoneInput(Input):
@@ -53,7 +53,7 @@ class ApplicationForm1(forms.Form):
 
     us_citizenship = forms.ChoiceField(
         widget=Select(attrs={'id': 'id_us_citizenship'}),
-        choices=Application.citizenship_statuses)
+        choices=Application.CITIZENSHIP_STATUSES)
 
     clearance = forms.BooleanField(
         widget=CheckboxInput(attrs={'id': 'id_clearance'}),
@@ -68,19 +68,18 @@ class ApplicationForm1(forms.Form):
 
 class ApplicationForm2(forms.Form):
     # Allow blank choices
-    genders = (('', '----'),) + Application.genders
-    races = (('', '----'),) + Application.races
-    referred_options = (('', '----'),) + Application.referred_options
-    referred_options = (('', '----'),) + Application.referred_options
+    GENDERS = (('', '----'),) + Application.GENDERS
+    RACES = (('', '----'),) + Application.RACES
+    REFERRED_OPTIONS = (('', '----'),) + Application.REFERRED_OPTIONS
 
     gender = forms.ChoiceField(
         widget=Select(attrs={'id': 'id_gender'}),
-        choices=genders,
+        choices=GENDERS,
         required=False)
 
     race = forms.ChoiceField(
         widget=Select(attrs={'id': 'id_race'}),
-        choices=races, required=False)
+        choices=RACES, required=False)
 
     race_other = forms.CharField(
         widget=Input(attrs={'id': 'id_race_other'}),
@@ -88,7 +87,7 @@ class ApplicationForm2(forms.Form):
 
     referred = forms.ChoiceField(
         widget=Select(attrs={'id': 'id_referred'}),
-        choices=referred_options, required=False)
+        choices=REFERRED_OPTIONS, required=False)
 
     referred_other = forms.CharField(
         widget=Input(attrs={'id': 'id_referred_other'}),
@@ -98,14 +97,14 @@ class ApplicationForm2(forms.Form):
         widget=CheckboxInput(attrs={'id': 'id_military_service_select'}),
         required=False)
 
-    military_service = forms.ModelMultipleChoiceField(
+    military_service = forms.MultipleChoiceField(
         widget=CheckboxSelectMultiple(attrs={'id': 'id_military_service'}),
-        queryset=MilitaryService.objects.all(), required=False)
+        choices=Application.MILITARY_OPTIONS, required=False)
 
 
 class ApplicationForm3(forms.Form):
-    disability_options = Application.disability_options
+    DISABILITY_OPTIONS = ApplicationDisability.DISABILITY_OPTIONS
 
     disability = forms.ChoiceField(
         widget=RadioSelect(attrs={'id': 'id_disability'}),
-        choices=disability_options)
+        choices=DISABILITY_OPTIONS)

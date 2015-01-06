@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'ckeditor',
     'compressor',
     'imagekit',
+    'multiselectfield',
     'sections',
     'journal',
     'layout_elements',
