@@ -15,6 +15,8 @@ class Job(models.Model):
 
     active = models.BooleanField(
         default=False, help_text='Enable this if the job should be listed')
+    fulltime = models.BooleanField(
+        default=True, help_text='Enable if this is a full-time position')
     title = models.CharField(max_length=200)
     code = models.CharField(max_length=15)
     location = models.CharField(max_length=250, blank=True)
@@ -50,6 +52,7 @@ class Application(models.Model):
     GENDERS = (
         ('M', 'Male'),
         ('F', 'Female'),
+        ('D', 'I do not wish to answer'),
     )
 
     CITIZENSHIP_STATUSES = (
@@ -78,14 +81,15 @@ class Application(models.Model):
     )
 
     RACES = (
-            ('I', 'American Indian/Alaskan'),
-            ('A', 'Asian'),
-            ('B', 'Black/African American'),
-            ('H', 'Hispanic/Latino'),
-            ('P', 'Hawaiian/Pacific Islander'),
-            ('W', 'White/Caucasian'),
-            ('M', 'Two or more'),
-            ('O', 'Other'),
+            ('1', 'American Indian/Alaskan'),
+            ('2', 'Asian'),
+            ('3', 'Black/African American'),
+            ('4', 'Hispanic/Latino'),
+            ('5', 'Hawaiian/Pacific Islander'),
+            ('6', 'White/Caucasian'),
+            ('7', 'Other'),
+            ('8', 'Two or more'),
+            ('0', 'I do not wish to answer'),
     )
 
     REFERRED_OPTIONS = (
@@ -95,6 +99,7 @@ class Application(models.Model):
         ('D', 'Dice'),
         ('I', 'Indeed'),
         ('E', 'Employee Referral'),
+        ('F', 'Former Employee'),
         ('S', 'State Employment Commission'),
         ('C', 'Contract Transition'),
         ('O', 'Other'),
@@ -147,11 +152,12 @@ class Application(models.Model):
 # Keep disability entries seperate to comply with federal regulations
 class ApplicationDisability(models.Model):
     DISABILITY_OPTIONS = (
-        ('Y', 'Yes, I have or had a disability'),
-        ('N', 'No, I don\'t have a disability'),
-        ('D', 'I don\'t wish to answer'),
+        ('Y', 'YES, I HAVE A DISABILITY (or previously had a disability)'),
+        ('N', 'NO, I DON\'T HAVE A DISABILITY'),
+        ('D', 'I DON\'T WISH TO ANSWER'),
     )
 
+    job = models.ForeignKey(Job)
     application = models.ForeignKey(Application)
     disability = models.CharField(
         default='D', max_length=1, choices=DISABILITY_OPTIONS)

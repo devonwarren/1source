@@ -8,6 +8,8 @@ from django.conf import settings
 from django.contrib.formtools.wizard.views import SessionWizardView
 from .models import Job, Application, ApplicationDisability
 from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3
+import xlsxwriter
+import tempfile
 
 
 class ApplicationWizard(SessionWizardView):
@@ -55,6 +57,7 @@ class ApplicationWizard(SessionWizardView):
         )
         app.save()
         app_dis = ApplicationDisability(
+            job=job,
             application=app,
             disability=application_data['disability'],
         )
@@ -93,3 +96,39 @@ def job_apply(request, job_id):
         form = ApplicationWizard()
 
     return form.as_view(ApplicationWizard.FORMS)
+
+
+def job_application_spreadsheet(request):
+    # create a tmp file to save in
+    tmpfile = tempfile.NamedTemporaryFile(prefix="xls")
+    workbook = xlsxwriter.Workbook(tmpfile.name)
+    # do all the spreadsheet work
+    worksheet = workbook.add_worksheet()
+    # add headings
+    worksheet.write('A1', 'Job ID')
+    worksheet.write('B1', 'Position Name')
+    worksheet.write('C1', 'Full Time/Part Time')
+    worksheet.write('D1', 'Location')
+    worksheet.write('E1', 'EEO-1 Category/Job Group')
+    worksheet.write('F1', 'Total Applicants')
+    worksheet.write('G1', 'Minorities')
+    worksheet.write('H1', 'Female')
+    worksheet.write('I1', 'Veteran')
+    worksheet.write('J1', 'Disability')
+    worksheet.write('L1', 'Last Name')
+    worksheet.write('M1', 'First Name')
+    worksheet.write('N1', 'Race')
+    worksheet.write('O1', 'Gender')
+    worksheet.write('P1', 'Veteran')
+    worksheet.write('Q1', 'Disability')
+    worksheet.write('R1', 'Date of Application')
+    worksheet.write('S1', 'Date of Hire')
+    # done working
+    workbook.close()
+    output = open(tmpfile.name, 'rb').read()
+    # save response so we can close and delete the temp file
+    response = HttpResponse(output,
+        content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = "attachment; filename=job_applications.xlsx"
+    tmpfile.close()
+    return response

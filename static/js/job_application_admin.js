@@ -16,7 +16,7 @@ function check_clearance_options() {
 
 function check_race_options() {
 	if ($('#id_race')) {
-		if ($('#id_race').val() == 'O') {
+		if ($('#id_race').val() == '7') {
 			$('div.race_other').show();
 		} else {
 			$('div.race_other').hide();

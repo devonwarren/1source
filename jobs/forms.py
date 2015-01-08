@@ -62,7 +62,7 @@ class ApplicationForm1(forms.Form):
     clearance_type = forms.CharField(
         widget=Input(attrs={
             'id': 'id_clearance_type',
-            'placeholder': 'example: NACLC, Public Trust, Secret'}),
+            'placeholder': 'example: NACLC, Public Trust, Top Secret'}),
         required=False)
 
 
@@ -74,12 +74,11 @@ class ApplicationForm2(forms.Form):
 
     gender = forms.ChoiceField(
         widget=Select(attrs={'id': 'id_gender'}),
-        choices=GENDERS,
-        required=False)
+        choices=GENDERS)
 
     race = forms.ChoiceField(
         widget=Select(attrs={'id': 'id_race'}),
-        choices=RACES, required=False)
+        choices=RACES)
 
     race_other = forms.CharField(
         widget=Input(attrs={'id': 'id_race_other'}),
@@ -87,7 +86,7 @@ class ApplicationForm2(forms.Form):
 
     referred = forms.ChoiceField(
         widget=Select(attrs={'id': 'id_referred'}),
-        choices=REFERRED_OPTIONS, required=False)
+        choices=REFERRED_OPTIONS)
 
     referred_other = forms.CharField(
         widget=Input(attrs={'id': 'id_referred_other'}),
