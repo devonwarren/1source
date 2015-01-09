@@ -20,11 +20,11 @@ class Section(OrderedModel):
     image_web = ImageSpecField(source='image',
                                processors=[ResizeToFit(width=1024)],
                                format='JPEG',
-                               options={'quality': 90})
+                               options={'quality': 88})
     image_mobile = ImageSpecField(source='image',
                                   processors=[ResizeToFit(width=480)],
                                   format='JPEG',
-                                  options={'quality': 94})
+                                  options={'quality': 84})
 
     class Meta(OrderedModel.Meta):
         pass
@@ -66,7 +66,7 @@ class HeroImage(models.Model):
     image_web = ImageSpecField(source='image',
                                processors=[ResizeToFit(width=1280)],
                                format='JPEG',
-                               options={'quality': 90})
+                               options={'quality': 82})
     image_mobile = ImageSpecField(source='image',
                                   processors=[ResizeToFit(width=780)],
                                   format='JPEG',
