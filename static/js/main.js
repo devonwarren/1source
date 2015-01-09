@@ -194,8 +194,6 @@ $(document).ready(function() {
   });
 
   if ($('body').hasClass('homepage')) {
-    bgimageCycle();
-
     if (window.location.hash) {
       homepageDetailLoad(window.location.hash.replace('#subsec-',''));
     }
@@ -206,6 +204,8 @@ $(document).ready(function() {
         homepageDetailLoad(this.href.substring(idx).replace('#subsec-',''));  
       }
     });
+
+    setTimeout(bgimageCycle, 3000);
   }
 
   scrollEvent();

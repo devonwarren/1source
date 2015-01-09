@@ -23,7 +23,7 @@
 		}
 	</style>
 	{% for hero in heroes %}
-		<div class="bgimage{% if hero.mobile_hero %} mobile{% endif %}" id="bgimage-{{ hero.id }}" style="z-index: 0;"></div>
+		<div class="bgimage{% if hero.mobile_hero %} mobile{% endif %}" id="bgimage-{{ hero.id }}" style="z-index: {% if forloop.counter == 1 %}0{% else %}-1{% endif %};"></div>
 	{% endfor %}
 	<header id="hero">
 		<div id="logo">
