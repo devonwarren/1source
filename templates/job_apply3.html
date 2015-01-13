@@ -34,23 +34,27 @@
 
         <p>
             Disabilities include, but are not limited to:
-            <ul>
+            <ul style="float:left;">
                 <li>Blindness
-                <li>Autism
-                <li>Bipolar disorder
                 <li>Deafness
-                <li>Cerebral palsy
-                <li>Major depression
                 <li>Cancer
-                <li>HIV/AIDS
-                <li>Multiple sclerosis (MS)
                 <li>Diabetes
-                <li>Schizophrenia
-                <li>Missing limbs or
                 <li>Epilepsy
-                <li>Muscular
-                <li>Partially missing limbs
-                <li>Dystrophy
+            </ul>
+            <ul style="float:left;">
+                <li>Autism
+                <li>Cerebral palsy
+                <li>HIV/AIDS
+                <li>Schizophrenia
+                <li>Muscular dystrophy
+            </ul>
+            <ul style="float:left;">
+                <li>Bipolar disorder
+                <li>Major depression
+                <li>Multiple sclerosis (MS)
+                <li>Missing limbs or partially missing limbs
+            </ul>
+            <ul style="float:left;">
                 <li>Post-traumatic stress disorder (PTSD)
                 <li>Obsessive compulsive disorder
                 <li>Impairments requiring the use of a wheelchair
@@ -58,7 +62,7 @@
             </ul>
         </p>
 
-        <div class="field disability no-bullets">
+        <div class="field disability no-bullets" style="float:none; clear:both;">
             {{ form.disability.errors }}
             {{ form.disability }}
         </div>
