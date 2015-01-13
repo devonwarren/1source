@@ -6,8 +6,9 @@ from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 from django.contrib.formtools.wizard.views import SessionWizardView
-from .models import Job, Application, ApplicationDisability
+from .models import Job, Application, ApplicationDisability, ApplicationLog
 from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3
+import json
 import xlsxwriter
 import tempfile
 
@@ -62,6 +63,15 @@ class ApplicationWizard(SessionWizardView):
             disability=application_data['disability'],
         )
         app_dis.save()
+
+        # save a log of everything
+        application_data['resume'] = application_data['resume'].name
+        log = ApplicationLog(
+            application=app,
+            ip_address=self.request.META.get('REMOTE_ADDR'),
+            form_data=json.dumps(application_data)
+        )
+        log.save()
 
         t = get_template('job_apply_thanks.html')
         context = Context({'job': job})
@@ -123,6 +133,10 @@ def job_application_spreadsheet(request):
     worksheet.write('Q1', 'Disability')
     worksheet.write('R1', 'Date of Application')
     worksheet.write('S1', 'Date of Hire')
+
+    jobs = Job.objects.all()
+    
+
     # done working
     workbook.close()
     output = open(tmpfile.name, 'rb').read()

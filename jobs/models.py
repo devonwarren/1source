@@ -161,3 +161,10 @@ class ApplicationDisability(models.Model):
     application = models.ForeignKey(Application)
     disability = models.CharField(
         default='D', max_length=1, choices=DISABILITY_OPTIONS)
+
+
+class ApplicationLog(models.Model):
+    application = models.ForeignKey(Application)
+    ip_address = models.CharField(max_length=30)
+    time = models.DateTimeField(auto_now_add=True)
+    form_data = models.TextField(blank=True)
