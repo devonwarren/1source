@@ -1,4 +1,5 @@
 from django import forms
+from datetime import datetime
 from django.forms.widgets import Input, FileInput, NumberInput, \
     Select, CheckboxSelectMultiple, CheckboxInput, RadioSelect
 from .models import Application, ApplicationDisability, Job
@@ -111,11 +112,14 @@ class ApplicationForm3(forms.Form):
 
 class ApplicationReportForm(forms.Form):
     first_application = Application.objects.order_by('-submitted')[0]
-    #application_years_option = first_application['submitted']
+
+    # create an array of years to go through
+    application_years_options = []
+    for y in range(first_application.submitted.year, datetime.now().year+1):
+        application_years_options.append((y, y),)
 
 
     job = forms.ModelChoiceField(
         queryset=Job.objects.all(), required=False)
 
-    year = forms.MultipleChoiceField(
-        choices=())
+    year = forms.MultipleChoiceField(choices=application_years_options)

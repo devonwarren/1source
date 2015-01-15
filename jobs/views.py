@@ -1,5 +1,5 @@
 import os
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.template.loader import get_template
 from django.template import Context
 from django.http import HttpResponse
@@ -8,7 +8,8 @@ from django.conf import settings
 from django.contrib.formtools.wizard.views import SessionWizardView
 from django.views.generic.edit import FormView
 from .models import Job, Application, ApplicationDisability, ApplicationLog
-from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3, ApplicationReportForm
+from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3, \
+    ApplicationReportForm
 import json
 import xlsxwriter
 import tempfile
@@ -109,14 +110,20 @@ def job_apply(request, job_id):
     return form.as_view(ApplicationWizard.FORMS)
 
 
-class ApplicationReport(FormView):
-    form_class = ApplicationReportForm
-
-    def form_valid(self, form):
-        return job_application_spreadsheet(form)
-        
-
 def job_application_spreadsheet(request):
+    if request.method == 'POST':
+        form = ApplicationReportForm(request.POST)
+        if form.is_valid():
+            return generate_job_application_spreadsheet(form.cleaned_data)
+    else:
+        form = ApplicationReportForm()
+    return render(request, 'job_applications_report.html', {
+        'form': form,
+        'title': 'Job Applications Report'
+    })
+
+
+def generate_job_application_spreadsheet(form_data):
     # create a tmp file to save in
     tmpfile = tempfile.NamedTemporaryFile(prefix="xls")
     workbook = xlsxwriter.Workbook(tmpfile.name)
