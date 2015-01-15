@@ -26,5 +26,5 @@ class JournalEntry(models.Model):
 		return '/journal/' + self.slug + '/'
 
 	class Meta:
-		verbose_name = 'Entry'
-		verbose_name_plural = 'Entries'
+		verbose_name = 'Journal entry'
+		verbose_name_plural = 'Journal entries'

@@ -1,7 +1,7 @@
 from django import forms
 from django.forms.widgets import Input, FileInput, NumberInput, \
     Select, CheckboxSelectMultiple, CheckboxInput, RadioSelect
-from .models import Application, ApplicationDisability
+from .models import Application, ApplicationDisability, Job
 
 
 class PhoneInput(Input):
@@ -107,3 +107,15 @@ class ApplicationForm3(forms.Form):
     disability = forms.ChoiceField(
         widget=RadioSelect(attrs={'id': 'id_disability'}),
         choices=DISABILITY_OPTIONS)
+
+
+class ApplicationReportForm(forms.Form):
+    first_application = Application.objects.order_by('-submitted')[0]
+    #application_years_option = first_application['submitted']
+
+
+    job = forms.ModelChoiceField(
+        queryset=Job.objects.all(), required=False)
+
+    year = forms.MultipleChoiceField(
+        choices=())

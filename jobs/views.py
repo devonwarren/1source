@@ -6,8 +6,9 @@ from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 from django.contrib.formtools.wizard.views import SessionWizardView
+from django.views.generic.edit import FormView
 from .models import Job, Application, ApplicationDisability, ApplicationLog
-from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3
+from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3, ApplicationReportForm
 import json
 import xlsxwriter
 import tempfile
@@ -107,6 +108,13 @@ def job_apply(request, job_id):
 
     return form.as_view(ApplicationWizard.FORMS)
 
+
+class ApplicationReport(FormView):
+    form_class = ApplicationReportForm
+
+    def form_valid(self, form):
+        return job_application_spreadsheet(form)
+        
 
 def job_application_spreadsheet(request):
     # create a tmp file to save in
