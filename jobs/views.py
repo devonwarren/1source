@@ -56,6 +56,7 @@ class ApplicationWizard(SessionWizardView):
             race_other=application_data['race_other'],
             referred=application_data['referred'],
             referred_other=application_data['referred_other'],
+            veteran=application_data['veteran'],
             military_service=application_data['military_service'],
         )
         app.save()
@@ -148,16 +149,54 @@ def generate_job_application_spreadsheet(form_data):
     worksheet.write('Q1', 'Disability')
     worksheet.write('R1', 'Date of Application')
     worksheet.write('S1', 'Date of Hire')
+    row = 2
 
-    jobs = Job.objects.all()
-    
+    # If there is a job selected only use that
+    if form_data['job']:
+        jobs = Job.objects.filter(id=form_data['job'].id)
+    else:
+        jobs = Job.objects.all()
+
+    # Add all the jobs
+    for job in jobs:
+
+        # get the applicants
+        if form_data['year'] == 'All':
+            applicants = Application.objects.filter(job=job.id)
+        else:
+            applicants = Application.objects.filter(
+                job=job.id,
+                submitted__year=form_data['year'])
+        disabilities = ApplicationDisability.objects.filter(
+            application__in=applicants)
+
+        # Add their info to spreadsheet
+        worksheet.write('A' + str(row), job.code)
+        worksheet.write('B' + str(row), job.title)
+        if (job.fulltime):
+            worksheet.write('C' + str(row), 'Full Time')
+        else:
+            worksheet.write('C' + str(row), 'Part Time')
+        worksheet.write('D' + str(row), job.location)
+        worksheet.write('E' + str(row),
+                        [k for k in Job.JOB_GROUPS if k[0] == job.group][0][1])
+
+        worksheet.write('F' + str(row), len(applicants))
+        worksheet.write('G' + str(row), len(applicants.exclude(race=6)))
+        worksheet.write('H' + str(row), len(applicants.filter(gender='F')))
+        worksheet.write('I' + str(row), len(applicants.filter(veteran=True)))
+        worksheet.write('J' + str(row), len(disabilities.filter(
+            disability='Y')))
+
+        row += 1
 
     # done working
     workbook.close()
     output = open(tmpfile.name, 'rb').read()
     # save response so we can close and delete the temp file
     response = HttpResponse(output,
-        content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-    response['Content-Disposition'] = "attachment; filename=job_applications.xlsx"
+                            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response[
+        'Content-Disposition'] = "attachment; filename=job_applications.xlsx"
     tmpfile.close()
     return response

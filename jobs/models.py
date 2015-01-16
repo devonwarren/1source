@@ -136,6 +136,8 @@ class Application(models.Model):
     submitted = models.DateTimeField(auto_now_add=True)
     referred = models.CharField(max_length=1, choices=REFERRED_OPTIONS)
     referred_other = models.CharField(max_length=120, blank=True)
+    veteran = models.BooleanField(
+        default=False, help_text='Are you a veteran?')
     military_service = MultiSelectField(blank=True, choices=MILITARY_OPTIONS)
 
     # internal tracking fields

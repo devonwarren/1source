@@ -93,8 +93,8 @@ class ApplicationForm2(forms.Form):
         widget=Input(attrs={'id': 'id_referred_other'}),
         max_length=120, required=False)
 
-    military_service_select = forms.BooleanField(
-        widget=CheckboxInput(attrs={'id': 'id_military_service_select'}),
+    veteran = forms.BooleanField(
+        widget=CheckboxInput(attrs={'id': 'id_veteran'}),
         required=False)
 
     military_service = forms.MultipleChoiceField(
@@ -114,12 +114,11 @@ class ApplicationReportForm(forms.Form):
     first_application = Application.objects.order_by('-submitted')[0]
 
     # create an array of years to go through
-    application_years_options = []
+    application_years_options = [('All', 'All')]
     for y in range(first_application.submitted.year, datetime.now().year+1):
         application_years_options.append((y, y),)
-
 
     job = forms.ModelChoiceField(
         queryset=Job.objects.all(), required=False)
 
-    year = forms.MultipleChoiceField(choices=application_years_options)
+    year = forms.ChoiceField(choices=application_years_options)

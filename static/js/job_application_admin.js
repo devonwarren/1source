@@ -35,8 +35,8 @@ function check_referred_options() {
 }
 
 function check_military_options() {
-    if ($('#id_military_service_select')) {
-        if ($('#id_military_service_select').is(':checked')) {
+    if ($('#id_veteran')) {
+        if ($('#id_veteran').is(':checked')) {
         	$('#id_military_service').show();
             $('div.military_service').show();
         } else {
@@ -72,5 +72,5 @@ $(document).ready(function() {
 	$('#id_referred').change(check_referred_options);	
 
     check_military_options();
-    $('#id_military_service_select').change(check_military_options);      
+    $('#id_veteran').change(check_military_options);      
 });
