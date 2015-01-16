@@ -63,6 +63,7 @@ class Application(models.Model):
 
     STATUSES = (
         ('N', 'New'),
+        ('I', 'Reviewing'),
         ('R', 'Rejected'),
         ('H', 'Hired'),
         ('D', 'Declined'),
