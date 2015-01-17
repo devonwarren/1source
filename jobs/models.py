@@ -75,9 +75,7 @@ class Application(models.Model):
         ('U', 'US Citizenship'),
         ('C', 'Clearance Requirement'),
         ('O', 'Other'),
-        ('IS', 'Interviewed - Skills'),
-        ('IE', 'Interviewed - Years of Experience'),
-        ('IP', 'Interviewed - Presentation/Communication Skills'),
+        ('IP', 'Presentation/Communication Skills'),
         ('SB', 'Selected but failed badging'),
     )
 
@@ -142,6 +140,10 @@ class Application(models.Model):
 
     # internal tracking fields
     status = models.CharField(max_length=1, choices=STATUSES, default='N')
+    interviewed = models.BooleanField(
+        default=False,
+        help_text='Where they interviewed?')
+    interview_date = models.DateField(blank=True, null=True)
     hired_date = models.DateField(blank=True, null=True)
     rejected_reason = models.CharField(
         max_length=2, choices=REJECTED_REASONS, blank=True)

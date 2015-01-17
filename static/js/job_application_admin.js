@@ -62,6 +62,16 @@ function check_status_options() {
 	}
 }
 
+function check_interviewed_options() {
+    if ($('#id_interviewed')) {
+        if ($('#id_interviewed').is(':checked')) {
+            $('div.interview_date').show();
+        } else {
+            $('div.interview_date').hide();
+        }
+    }
+}
+
 $(document).ready(function() {
 	check_status_options();
 	$('#id_status').change(check_status_options);
@@ -77,4 +87,7 @@ $(document).ready(function() {
 
     check_military_options();
     $('#id_veteran').change(check_military_options);      
+
+    check_interviewed_options();
+    $('#id_interviewed').change(check_interviewed_options);      
 });
