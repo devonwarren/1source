@@ -46,21 +46,25 @@ function check_military_options() {
     }
 }
 
-function check_rejection_options() {
+function check_status_options() {
 	if ($('#id_status')) {
 		if ($('#id_status').val() == 'R') {
-			$('div.rejected_reason').show();
-			$('div.rejected_explaination').show();
-		} else {
+            $('div.rejected_reason').show();
+            $('div.rejected_explaination').show();
+            $('div.hired_date').hide();
+		} else if ($('#id_status').val() == 'H') {
+            $('div.hired_date').show();
+        } else {
 			$('div.rejected_reason').hide();
 			$('div.rejected_explaination').hide();
+            $('div.hired_date').hide();
 		}
 	}
 }
 
 $(document).ready(function() {
-	check_rejection_options();
-	$('#id_status').change(check_rejection_options);
+	check_status_options();
+	$('#id_status').change(check_status_options);
 
 	check_clearance_options();
 	$('#id_clearance').change(check_clearance_options);	

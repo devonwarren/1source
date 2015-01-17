@@ -142,6 +142,7 @@ class Application(models.Model):
 
     # internal tracking fields
     status = models.CharField(max_length=1, choices=STATUSES, default='N')
+    hired_date = models.DateField(blank=True, null=True)
     rejected_reason = models.CharField(
         max_length=2, choices=REJECTED_REASONS, blank=True)
     rejected_explaination = models.TextField(blank=True)

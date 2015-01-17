@@ -111,12 +111,16 @@ class ApplicationForm3(forms.Form):
 
 
 class ApplicationReportForm(forms.Form):
-    first_application = Application.objects.order_by('-submitted')[0]
-
     # create an array of years to go through
     application_years_options = [('All', 'All')]
-    for y in range(first_application.submitted.year, datetime.now().year+1):
-        application_years_options.append((y, y),)
+
+    # Application field changes break the migration functionality without this
+    try:
+        first_application = Application.objects.all().order_by('-submitted')[0]
+        for y in range(first_application.submitted.year, datetime.now().year+1):
+            application_years_options.append((y, y),)
+    except Exception:
+        pass
 
     job = forms.ModelChoiceField(
         queryset=Job.objects.all(), required=False)
