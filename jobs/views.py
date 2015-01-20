@@ -6,7 +6,6 @@ from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 from django.contrib.formtools.wizard.views import SessionWizardView
-from django.views.generic.edit import FormView
 from .models import Job, Application, ApplicationDisability, ApplicationLog
 from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3, \
     ApplicationReportForm
@@ -124,12 +123,58 @@ def job_application_spreadsheet(request):
     })
 
 
-def generate_job_application_spreadsheet(form_data):
-    # create a tmp file to save in
-    tmpfile = tempfile.NamedTemporaryFile(prefix="xls")
-    workbook = xlsxwriter.Workbook(tmpfile.name)
-    # do all the spreadsheet work
-    worksheet = workbook.add_worksheet()
+def job_application_details(form, worksheet):
+    # get job and applicants list
+    job = Job.objects.get(id=form['job'].id)
+    applicants = Application.objects.filter(job=job)
+    if form['year'] and form['year'] != 'All':
+        applicants.filter(submitted__year=int(form['year']))
+
+    # add headings
+    worksheet.write('A1', 'Application Date')
+    worksheet.write('B1', 'Last Name')
+    worksheet.write('C1', 'First Name')
+    worksheet.write('D1', 'Req # and Position Title')
+    worksheet.write('E1', 'Full Time/Part Time')
+    worksheet.write('F1', 'Location')
+    worksheet.write('G1', 'Race')
+    worksheet.write('H1', 'Gender')
+    worksheet.write('I1', 'Disposition Code')
+    worksheet.write('J1', 'Referral Source')
+    worksheet.write('K1', 'Hire Date')
+    row = 2
+
+    # Add all the applicants
+    for app in applicants:
+        # get the applicants
+
+        # Add their info to spreadsheet
+        worksheet.write('A' + str(row), app.submitted.strftime('%m/%d/%Y'))
+        worksheet.write('B' + str(row), app.last_name)
+        worksheet.write('C' + str(row), app.first_name)
+        worksheet.write('D' + str(row), job.code + ' ' + job.title)
+        if job.fulltime:
+            worksheet.write('E' + str(row), 'FT')
+        else:
+            worksheet.write('E' + str(row), 'PT')
+        worksheet.write('F' + str(row), job.location)
+        worksheet.write('G' + str(row), app.race)
+        worksheet.write('H' + str(row), app.gender)
+        worksheet.write('I' + str(row), '')
+        worksheet.write(
+            'J' + str(row),
+            [k for k in Application.REFERRED_OPTIONS if k[0] == app.referred][0][1])
+        if app.hired_date:
+            worksheet.write(
+                'K' + str(row),
+                app.hired_date.strftime('%m/%d/%Y'))
+
+        row += 1
+
+
+def job_application_overview(form, worksheet):
+    jobs = Job.objects.all()
+
     # add headings
     worksheet.write('A1', 'Job ID')
     worksheet.write('B1', 'Position Name')
@@ -151,22 +196,15 @@ def generate_job_application_spreadsheet(form_data):
     worksheet.write('S1', 'Date of Hire')
     row = 2
 
-    # If there is a job selected only use that
-    if form_data['job']:
-        jobs = Job.objects.filter(id=form_data['job'].id)
-    else:
-        jobs = Job.objects.all()
-
     # Add all the jobs
     for job in jobs:
-
         # get the applicants
-        if form_data['year'] == 'All':
+        if form['year'] == 'All':
             applicants = Application.objects.filter(job=job.id)
         else:
             applicants = Application.objects.filter(
                 job=job.id,
-                submitted__year=form_data['year'])
+                submitted__year=form['year'])
         disabilities = ApplicationDisability.objects.filter(
             application__in=applicants)
 
@@ -178,8 +216,9 @@ def generate_job_application_spreadsheet(form_data):
         else:
             worksheet.write('C' + str(row), 'Part Time')
         worksheet.write('D' + str(row), job.location)
-        worksheet.write('E' + str(row),
-                        [k for k in Job.JOB_GROUPS if k[0] == job.group][0][1])
+        worksheet.write(
+            'E' + str(row),
+            [k for k in Job.JOB_GROUPS if k[0] == job.group][0][1])
 
         worksheet.write('F' + str(row), len(applicants))
         worksheet.write('G' + str(row), len(applicants.exclude(race=6)))
@@ -188,7 +227,50 @@ def generate_job_application_spreadsheet(form_data):
         worksheet.write('J' + str(row), len(disabilities.filter(
             disability='Y')))
 
+        # grab the hired applicant if there is one
+        hired_app = Application.objects.filter(
+            job=job,
+            status='H'
+            ).order_by('hired_date')
+        if hired_app:
+            disabled = ApplicationDisability.objects.filter(
+                application=hired_app)
+            worksheet.write('L' + str(row), hired_app[0].last_name)
+            worksheet.write('M' + str(row), hired_app[0].first_name)
+            worksheet.write('N' + str(row), hired_app[0].race)
+            worksheet.write('O' + str(row), hired_app[0].gender)
+
+            if hired_app[0].veteran:
+                worksheet.write('P' + str(row), 'Y')
+            else:
+                worksheet.write('P' + str(row), 'N')
+
+            if disabled[0].disability == 'Y':
+                worksheet.write('Q' + str(row), 'Y')
+            else:
+                worksheet.write('Q' + str(row), 'N')
+
+            worksheet.write(
+                'R' + str(row),
+                hired_app[0].submitted.strftime('%m/%d/%Y'))
+            worksheet.write(
+                'S' + str(row),
+                hired_app[0].hired_date.strftime('%m/%d/%Y'))
+
         row += 1
+
+
+def generate_job_application_spreadsheet(form_data):
+    # create a tmp file to save in
+    tmpfile = tempfile.NamedTemporaryFile(prefix="xls")
+    workbook = xlsxwriter.Workbook(tmpfile.name)
+    # do all the spreadsheet work
+    worksheet = workbook.add_worksheet()
+
+    if form_data['job']:
+        job_application_details(form_data, worksheet)
+    else:
+        job_application_overview(form_data, worksheet)
 
     # done working
     workbook.close()

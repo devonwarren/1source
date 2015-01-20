@@ -14,13 +14,15 @@
             {{ form.job }}
         </div>
         <div class="field">
+            <br>
             <label for="id_year">Year:</label><br>
             {{ form.year.errors }}
             {{ form.year }}
         </div>
         {% csrf_token %}
         <div class="field">
-            <input type="submit" value="Submit">
+            <br><br>
+            <input type="submit" value="Generate">
         </div>
     </form> 
 {% endblock %}

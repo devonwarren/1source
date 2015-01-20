@@ -1,9 +1,6 @@
 from django.contrib import admin
 from django.conf import settings
-from django.conf.urls import patterns, url
 from . import models
-from . import views
-from . import forms
 
 
 def close_job(modeladmin, request, queryset):
