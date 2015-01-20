@@ -123,6 +123,6 @@ class ApplicationReportForm(forms.Form):
         pass
 
     job = forms.ModelChoiceField(
-        queryset=Job.objects.all(), required=False)
+        queryset=Job.objects.all(), required=False, empty_label='All')
 
     year = forms.ChoiceField(choices=application_years_options)
