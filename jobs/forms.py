@@ -49,7 +49,7 @@ class ApplicationForm1(forms.Form):
     desired_salary = forms.IntegerField(
         widget=MoneyInput(attrs={
             'min': 10000,
-            'step': 2000
+            'step': 1000
         }))
 
     us_citizenship = forms.ChoiceField(
