@@ -45,7 +45,21 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             column=1,
             css_classes=('collapse closed',),
-            models=('pages.*','journal.*','news.*','sections.models.StaffProfile',),
+            models=(
+                'pages.*',
+                'journal.*',
+                'news.*',
+                'sections.models.StaffProfile',
+            ),
+        ))
+
+        # GWAC
+        self.children.append(modules.ModelList(
+            _('GWAC'),
+            collapsible=True,
+            column=1,
+            css_classes=('collapse closed',),
+            models=('gwac.*',),
         ))
 
         # Homepage
