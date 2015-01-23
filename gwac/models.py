@@ -1,6 +1,7 @@
 import os
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.core.mail import send_mail
 
 
 class Opportunity(models.Model):
@@ -36,6 +37,17 @@ class Opportunity(models.Model):
 
     class Meta:
         verbose_name_plural = 'Opportunities'
+
+    def save(self, *args, **kw):
+        # notify everyone of new opportunity
+        if self.pk is not None:
+            send_mail(
+                '[OPP] ' + self.number + ' ' + self.title,
+                self.description,
+                'noreply@1-sc.com',
+                ['devon.warren@1-sc.com'],
+            )
+        super(Opportunity, self).save(*args, **kw)
 
 
 class OpportunityAttachment(models.Model):
