@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from ckeditor.fields import RichTextField
 
@@ -41,3 +42,6 @@ class OpportunityAttachment(models.Model):
     opportunity = models.ForeignKey(Opportunity)
     attachment = models.FileField(upload_to='opportunities')
     description = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return os.path.basename(self.attachment.name)
