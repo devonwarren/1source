@@ -1,7 +1,6 @@
 import os
 from django.db import models
 from ckeditor.fields import RichTextField
-from django.core.mail import send_mail
 
 
 class Opportunity(models.Model):
@@ -19,12 +18,23 @@ class Opportunity(models.Model):
         ('N', 'Notice'),
     )
 
+    CONTRACT_VEHICLES = (
+        ('E1', 'EAGLE I'),
+        ('E2', 'EAGLE II'),
+        ('ASB', 'Alliant SB'),
+        ('S70', 'IT Schedule 70'),
+    )
+
     number = models.CharField(
         max_length=200, unique=True,
         help_text='Unique ID for contract opportunity')
     title = models.CharField(max_length=250)
     description = RichTextField(blank=True)
     type = models.CharField(max_length=4, choices=CONTRACT_TYPES)
+    contract_vehicle = models.CharField(
+        max_length=3,
+        choices=CONTRACT_VEHICLES,
+        blank=True)
     issue_date = models.DateTimeField()
     entered_date = models.DateTimeField(
         auto_now_add=True,
@@ -38,16 +48,11 @@ class Opportunity(models.Model):
     class Meta:
         verbose_name_plural = 'Opportunities'
 
-    def save(self, *args, **kw):
-        # notify everyone of new opportunity
-        if self.pk is not None:
-            send_mail(
-                '[OPP] ' + self.number + ' ' + self.title,
-                self.description,
-                'noreply@1-sc.com',
-                ['devon.warren@1-sc.com'],
-            )
-        super(Opportunity, self).save(*args, **kw)
+    def get_type_name(self):
+        return [k for k in self.CONTRACT_TYPES if k[0] == self.type][0][1]
+
+    def get_contract_vehicle_name(self):
+        return [k for k in self.CONTRACT_VEHICLES if k[0] == self.contract_vehicle][0][1]
 
 
 class OpportunityAttachment(models.Model):

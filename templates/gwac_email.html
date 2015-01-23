@@ -1,0 +1,8 @@
+<strong>ID:</strong> {{ opp.number }}<br>
+<strong>Type:</strong> {{ opp.get_type_name }}<br>
+{% if opp.contract_vehicle %}
+    <strong>Contract Vehicle: </strong> {{ opp.get_contract_vehicle_name }}<br>
+{% endif %}
+<strong>Due Date:</strong> {{ opp.due_date }}<br>
+<br><br>
+{{ opp.description|safe }}
