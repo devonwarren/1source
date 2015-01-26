@@ -22,8 +22,8 @@ class JobAdmin(admin.ModelAdmin):
 
 class ApplicationAdmin(admin.ModelAdmin):
     list_display = ('job', 'first_name', 'last_name', 'submitted',
-                    'status', 'desired_salary', 'veteran',
-                    'clearance_type', 'rejected_reason', 'notes', )
+                    'desired_salary', 'veteran', 'clearance_type',
+                    'status', 'rejected_reason', 'notes', )
     readonly_fields = ('submitted', )
     list_filter = ('job', 'status', 'rejected_reason', )
     search_fields = ('first_name', 'last_name', )
