@@ -4,6 +4,7 @@ from django.template.loader import get_template
 from django.template import Context
 from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
+from django.contrib.auth.decorators import permission_required
 from django.conf import settings
 from django.contrib.formtools.wizard.views import SessionWizardView
 from .models import Job, Application, ApplicationDisability, ApplicationLog
@@ -110,6 +111,7 @@ def job_apply(request, job_id):
     return form.as_view(ApplicationWizard.FORMS)
 
 
+@permission_required('jobs.generate_applications_report')
 def job_application_spreadsheet(request):
     if request.method == 'POST':
         form = ApplicationReportForm(request.POST)

@@ -73,19 +73,20 @@ class CustomIndexDashboard(Dashboard):
         ))
 
         # Reports
-        self.children.append(modules.LinkList(
-            _('Reports'),
-            collapsible=True,
-            column=1,
-            css_classes=('collapse closed',),
-            children=[
-                {
-                    'title': _('Jobs'),
-                    'url': '/admin/jobs/spreadsheet/',
-                    'external': False,
-                },
-            ]
-        ))
+        if context['request'].user.has_perms('jobs.generate_applications_report'):
+            self.children.append(modules.LinkList(
+                _('Reports'),
+                collapsible=True,
+                column=1,
+                css_classes=('collapse closed',),
+                children=[
+                    {
+                        'title': _('Jobs'),
+                        'url': '/admin/jobs/spreadsheet/',
+                        'external': False,
+                    },
+                ]
+            ))
 
         # Link to other company pages
         self.children.append(modules.LinkList(

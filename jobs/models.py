@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import Permission
+from django.contrib.contenttypes.models import ContentType
 from ckeditor.fields import RichTextField
 from multiselectfield import MultiSelectField
 from datetime import datetime
@@ -153,6 +155,11 @@ class Application(models.Model):
     def __str__(self):
         return self.first_name + ' ' + self.last_name + \
             ' (' + self.job.title + ')'
+
+    class Meta:
+        permissions = (
+            ('generate_applications_report', 'Generate Applications Report'),
+        )
 
 
 # Keep disability entries seperate to comply with federal regulations
