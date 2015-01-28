@@ -44,7 +44,8 @@ class Opportunity(models.Model):
         auto_now_add=True,
         help_text='When it was entered into the system and emailed out')
     due_date = models.DateTimeField(
-        blank=True)
+        blank=True, 
+        null=True)
     comments = models.TextField(blank=True)
 
     def __str__(self):
