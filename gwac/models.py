@@ -26,6 +26,12 @@ class Opportunity(models.Model):
         ('S70', 'IT Schedule 70'),
     )
 
+    ORIGINATION_OPTIONS = (
+        ('FBO', 'FedBizOps'),
+        ('FC', 'FedConnect'),
+        ('SEA', 'SEAPORT'),
+    )
+
     number = models.CharField(
         max_length=200, unique=True,
         help_text='Unique ID for contract opportunity')
@@ -39,12 +45,25 @@ class Opportunity(models.Model):
         max_length=3,
         choices=CONTRACT_VEHICLES,
         blank=True)
+    origination = models.CharField(
+        max_length=3,
+        choices=ORIGINATION_OPTIONS,
+        default='FBO',
+        help_text='Where did we hear about this opp?')
+    department = models.CharField(
+        max_length=150,
+        blank=True,
+        help_text='example: DOD, NSA')
+    agency = models.CharField(
+        max_length=150,
+        blank=True,
+        help_text='Agency within the department. example: Navy, EERE')
     issue_date = models.DateTimeField()
     entered_date = models.DateTimeField(
         auto_now_add=True,
         help_text='When it was entered into the system and emailed out')
     due_date = models.DateTimeField(
-        blank=True, 
+        blank=True,
         null=True)
     comments = models.TextField(blank=True)
 
