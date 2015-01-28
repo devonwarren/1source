@@ -20,7 +20,10 @@ def notify_gwac_emails(modeladmin, request, queryset):
             '[OPP] ' + opp.number + ' ' + opp.title,
             strip_tags(message),
             'noreply@1-sc.com',
-            settings.GWAC_EMAILS
+            settings.GWAC_EMAILS,
+            headers={
+                'Reply-To': '<>',
+            }
         )
         email.attach_alternative(message, "text/html")
         for doc in attachments:
