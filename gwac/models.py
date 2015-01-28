@@ -5,6 +5,7 @@ from ckeditor.fields import RichTextField
 
 class Opportunity(models.Model):
     CONTRACT_TYPES = (
+        ('PS', 'Presolicitation'),
         ('DRFP', 'Draft RFP'),
         ('FRFP', 'Final RFP'),
         ('DRFQ', 'Draft RFQ'),
@@ -28,6 +29,9 @@ class Opportunity(models.Model):
     number = models.CharField(
         max_length=200, unique=True,
         help_text='Unique ID for contract opportunity')
+    track = models.BooleanField(
+        default=False,
+        help_text='Track this opportunity?')
     title = models.CharField(max_length=250)
     description = RichTextField(blank=True)
     type = models.CharField(max_length=4, choices=CONTRACT_TYPES)
@@ -39,7 +43,8 @@ class Opportunity(models.Model):
     entered_date = models.DateTimeField(
         auto_now_add=True,
         help_text='When it was entered into the system and emailed out')
-    due_date = models.DateTimeField()
+    due_date = models.DateTimeField(
+        blank=True)
     comments = models.TextField(blank=True)
 
     def __str__(self):

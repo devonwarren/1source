@@ -39,7 +39,7 @@ class OpportunityAttachmentInline(admin.StackedInline):
 
 class OpportunityAdmin(admin.ModelAdmin):
     verbose_name = 'Opportunities'
-    list_display = ('number', 'title', 'type',
+    list_display = ('number', 'track', 'title', 'type',
                     'issue_date', 'entered_date',
                     'due_date', )
     search_fields = ('number', 'title', )
