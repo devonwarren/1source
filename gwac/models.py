@@ -30,6 +30,8 @@ class Opportunity(models.Model):
         ('FBO', 'FedBizOps'),
         ('FC', 'FedConnect'),
         ('SEA', 'SEAPORT'),
+        ('GSA', 'GSA eBuy'),
+        ('O', 'Other'),
     )
 
     number = models.CharField(
