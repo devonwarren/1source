@@ -67,6 +67,10 @@ class Opportunity(models.Model):
     due_date = models.DateTimeField(
         blank=True,
         null=True)
+    url = models.CharField(
+        max_length=255,
+        blank=True,
+        help_text='The URL to find more information')
     comments = models.TextField(blank=True)
 
     def __str__(self):

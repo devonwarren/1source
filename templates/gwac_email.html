@@ -1,7 +1,11 @@
 <strong>Type:</strong> {{ opp.get_type_name }}<br>
 {% if opp.contract_vehicle %}
-    <strong>Contract Vehicle: </strong> {{ opp.get_contract_vehicle_name }}<br>
+<strong>Contract Vehicle: </strong> {{ opp.get_contract_vehicle_name }}<br>
 {% endif %}
 <strong>Due Date:</strong> {{ opp.due_date }}
 <br><br>
 {{ opp.description|safe }}
+
+{% if opp.url %}
+<br><br><strong>More info:</strong> <a href="{{ opp.url|safe }}">{{opp.url|safe }}</a>
+{% endif %}
