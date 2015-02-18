@@ -46,7 +46,7 @@ class OpportunityAdmin(admin.ModelAdmin):
                     'issue_date', 'entered_date',
                     'due_date', )
     search_fields = ('number', 'title', )
-    list_filter = ('type', )
+    list_filter = ('type', 'contract_vehicle', 'origination', )
     actions = [notify_gwac_emails]
     inlines = [
         OpportunityAttachmentInline,

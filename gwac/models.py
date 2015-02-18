@@ -6,6 +6,7 @@ from ckeditor.fields import RichTextField
 class Opportunity(models.Model):
     CONTRACT_TYPES = (
         ('PS', 'Presolicitation'),
+        ('S', 'Solicitation'),
         ('DRFP', 'Draft RFP'),
         ('FRFP', 'Final RFP'),
         ('DRFQ', 'Draft RFQ'),
