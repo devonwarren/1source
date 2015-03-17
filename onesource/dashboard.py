@@ -73,7 +73,7 @@ class CustomIndexDashboard(Dashboard):
         ))
 
         # Reports
-        if context['request'].user.has_perms('jobs.generate_applications_report'):
+        if 'jobs.generate_applications_report' in context['perms']:
             self.children.append(modules.LinkList(
                 _('Reports'),
                 collapsible=True,
