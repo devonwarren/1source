@@ -1,6 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import Permission
-from django.contrib.contenttypes.models import ContentType
 from ckeditor.fields import RichTextField
 from multiselectfield import MultiSelectField
 from datetime import datetime
@@ -73,12 +71,20 @@ class Application(models.Model):
 
     REJECTED_REASONS = (
         ('S', 'Skills'),
+        ('SA', 'Salary'),
         ('E', 'Years of Experience'),
         ('U', 'US Citizenship'),
         ('C', 'Clearance Requirement'),
         ('O', 'Other'),
         ('IP', 'Presentation/Communication Skills'),
         ('SB', 'Selected but failed badging'),
+    )
+
+    DECLINED_REASONS = (
+        ('A', 'Accepted another position'),
+        ('N', 'No longer interested'),
+        ('S', 'Salary'),
+        ('O', 'Other'),
     )
 
     RACES = (
@@ -149,6 +155,8 @@ class Application(models.Model):
     hired_date = models.DateField(blank=True, null=True)
     rejected_reason = models.CharField(
         max_length=2, choices=REJECTED_REASONS, blank=True)
+    declined_reason = models.CharField(
+        max_length=2, choices=DECLINED_REASONS, blank=True)
     rejected_explaination = models.TextField(blank=True)
     notes = models.TextField(blank=True, help_text='Internal staff notes')
 

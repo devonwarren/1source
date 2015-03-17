@@ -47,18 +47,22 @@ function check_military_options() {
 }
 
 function check_status_options() {
+
 	if ($('#id_status')) {
-		if ($('#id_status').val() == 'R') {
+        // hide all optional fields
+        $('div.declined_reason').hide();
+        $('div.rejected_reason').hide();
+        $('div.rejected_explaination').hide();
+        $('div.hired_date').hide();
+		
+        if ($('#id_status').val() == 'R') {
             $('div.rejected_reason').show();
             $('div.rejected_explaination').show();
-            $('div.hired_date').hide();
-		} else if ($('#id_status').val() == 'H') {
+		} else if ($('#id_status').val() == 'D') {
+            $('div.declined_reason').show();
+        } else if ($('#id_status').val() == 'H') {
             $('div.hired_date').show();
-        } else {
-			$('div.rejected_reason').hide();
-			$('div.rejected_explaination').hide();
-            $('div.hired_date').hide();
-		}
+        }
 	}
 }
 
