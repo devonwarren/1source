@@ -16,4 +16,5 @@ GWAC_EMAILS = [
         'Matt.Collins@1-sc.com',
         'Michael.Peck@1-sc.com',
         'William.Teel@1-sc.com',
+        'Randy.Thomas@1-sc.com',
     ]
