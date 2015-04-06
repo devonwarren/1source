@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.decorators import permission_required
 from django.conf import settings
-from formtools.wizard.views import WizardView
+from formtools.wizard.views import SessionWizardView
 from .models import Job, Application, ApplicationDisability, ApplicationLog
 from .forms import ApplicationForm1, ApplicationForm2, ApplicationForm3, \
     ApplicationReportForm
