@@ -5,6 +5,7 @@ django-appconf==1.0.1
 django-autoslug==1.7.2
 django-ckeditor==4.4.7
 django-compressor==1.4
+django-formtools==1.0
 django-grappelli==2.6.4
 django-imagekit==3.2.6
 django-multiselectfield==0.1.3
