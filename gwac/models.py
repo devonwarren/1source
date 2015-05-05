@@ -41,6 +41,9 @@ class Opportunity(models.Model):
     track = models.BooleanField(
         default=False,
         help_text='Track this opportunity?')
+    bid_nobid = models.BooleanField(
+        default=False,
+        help_text='Bid/No-Bid?')
     title = models.CharField(max_length=250)
     description = RichTextField(blank=True)
     type = models.CharField(max_length=4, choices=CONTRACT_TYPES)
@@ -65,6 +68,9 @@ class Opportunity(models.Model):
     entered_date = models.DateTimeField(
         auto_now_add=True,
         help_text='When it was entered into the system and emailed out')
+    response_date = models.DateTimeField(
+        blank=True,
+        null=True)
     due_date = models.DateTimeField(
         blank=True,
         null=True)

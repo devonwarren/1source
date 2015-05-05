@@ -42,9 +42,9 @@ class OpportunityAttachmentInline(admin.StackedInline):
 
 class OpportunityAdmin(admin.ModelAdmin):
     verbose_name = 'Opportunities'
-    list_display = ('number', 'track', 'title', 'type',
-                    'issue_date', 'entered_date',
-                    'due_date', )
+    list_display = ('number', 'track', 'bid_nobid', 'title',
+                    'type', 'issue_date', 'entered_date',
+                    'due_date', 'response_date', )
     search_fields = ('number', 'title', )
     list_filter = ('type', 'contract_vehicle', 'origination', )
     actions = [notify_gwac_emails]
